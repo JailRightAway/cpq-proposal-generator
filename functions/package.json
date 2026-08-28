@@ -16,6 +16,7 @@
     "python-shell": "^5.0.0"
   },
   "scripts": {
+    "start": "node index.js",
     "serve": "firebase emulators:start --only functions",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
