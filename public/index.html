@@ -1381,6 +1381,7 @@
       // Get tier for each year
       for (let year = 1; year <= contractYears; year++) {
         let yearlyMonthly = 0;
+        let yearlyAnnualFees = 0;
 
         lineItems.forEach(item => {
           const implFee = (year === 1) ?
@@ -1407,12 +1408,19 @@
           }
 
           yearlyMonthly += monthlyCommitment;
+
+          // Add annual fees (for Access and other fixed-fee products)
+          if (item.annualFee) {
+            yearlyAnnualFees += item.annualFee;
+          }
         });
 
         // Add platform fee for each year
         yearlyMonthly += platformFee;
 
-        const yearlyTotal = (year === 1) ? (year1Setup + yearlyMonthly * 12) : (yearlyMonthly * 12);
+        const yearlyTotal = (year === 1) ?
+          (year1Setup + yearlyMonthly * 12 + yearlyAnnualFees) :
+          (yearlyMonthly * 12 + yearlyAnnualFees);
         yearlyBreakdown[year] = yearlyTotal;
         contractTotal += yearlyTotal;
       }
