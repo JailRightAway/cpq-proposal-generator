@@ -1,0 +1,81 @@
+.proposal-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.summary-card {
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  border-color: #004b8e;
+  background-color: #f0f7ff;
+}
+
+.summary-card h4 {
+  color: #636b74;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-card .amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #004b8e;
+  margin: 0;
+}
+
+.summary-card.highlight {
+  border: 2px solid #004b8e;
+  background-color: #e8f0f8;
+}
+
+.summary-card.highlight .amount.tcv {
+  font-size: 2rem;
+  color: #00365d;
+}
+
+.summary-details {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.summary-details h4 {
+  color: #004b8e;
+  margin-bottom: 15px;
+}
+
+.summary-details table {
+  width: 100%;
+}
+
+.summary-details table td {
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-details table td.amount {
+  text-align: right;
+  font-weight: 600;
+  color: #004b8e;
+}
+
+.summary-details table td.discount {
+  color: #dc3545;
+}

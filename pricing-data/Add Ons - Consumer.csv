@@ -1,0 +1,492 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Product Category,(All),,,,,
+,,,,,,
+,,,,Values,,
+Product Of (Primary Service),Primary Service Category,Internal Product Name,Internal Notes for Sales,One Time Fees,Annual Fees,Transaction Fees
+MeridianLink Consumer/Opening,Add On - Address Verification,Address Verification Tier 1: 8K+ Apps,Specified app volume is monthly consumer/opening app commitment,0,23500,
+,,Address Verification Tier 2: 4K - 7.99K Apps,Specified app volume is monthly consumer/opening app commitment,0,18750,
+,,Address Verification Tier 3: 2K - 3.99K Apps,Specified app volume is monthly consumer/opening app commitment,0,14250,
+,,Address Verification Tier 4: 1K - 1.99K Apps,Specified app volume is monthly consumer/opening app commitment,0,9500,
+,,Address Verification Tier 5: 500 - 999 Apps,Specified app volume is monthly consumer/opening app commitment,0,4700,
+,,Address Verification Tier 6: 0 - 499 Apps,Specified app volume is monthly consumer/opening app commitment,0,1575,
+,,IST CorrectAddress,Applies to both test and production,0,,0.2
+,Add On - Ancillary Service,Advanced Decisioning Additional Referral Reasons,(blank),6000,,
+,,Advanced Decisioning Implementation for Existing Customer,(blank),23250,,
+,,Advanced Decisioning Implementation for New Customer,Standard Decisioning has no additional fee.,23250,,
+,Add On - Call Center,LSI,(blank),4600,1575,
+,,Velera (Call Center - TruStage LoanLink),White label offering for Call Center,4600,1575,
+,,Velera (Call Center),(blank),4600,1575,
+,Add On - Core Conversion,Core Conversion (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,16250,,
+,,Fiserv DNA Fee (pass through from vendor) (Consumer),In addition to ML project fee,6750,,
+,,JHA to JHA (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,5750,,
+,,Symitar Reconversion (Consumer),Update on Symitar version for additional mappings,8250,,
+,Add On - Core Integration,Bankway (Metavante) (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,CLF Export Core Booking,https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,6000,2900,
+,,COCC (Consumer) Tier 1 (>$5B AUM),(blank),15500,34750,
+,,COCC (Consumer) Tier 2 ($2B - $5B AUM),(blank),15500,29000,
+,,COCC (Consumer) Tier 3 ($1.25B - $2B AUM),(blank),15500,23250,
+,,COCC (Consumer) Tier 4 ($750M - $1.25B AUM),(blank),15500,17500,
+,,COCC (Consumer) Tier 5 ($500M - $750M AUM),(blank),15500,11750,
+,,COCC (Consumer) Tier 6 (<$500M AUM),(blank),15500,10000,
+,,Corelation KeyStone (Consumer) ,https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,CUBase (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Cunify (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,CUProdigy (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,DataSafe (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,ESP (Forza) (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Finastra Fushion Phoenix (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,FIS IBS (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,FIS Miser (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Fiserv Data Center Direct Connection (Consumer),ML directly connects to Fiserv's data center in Cherry Hill for clients who have their core hosted there.,7250,8000,
+,,Fiserv DNA (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Fiserv DNA Credit Push (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,3300,1575,
+,,Fiserv Portico (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Fiserv Precision (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Fiserv Premier (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Fiserv Signature Core (Consumer),(blank),17000,10250,
+,,Flex (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Galaxy (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Horizon (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Implementation pass-through fee from Fiserv,(blank),30000,,
+,,IPower (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Jack Henry 20/20 (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Jack Henry CoreDirector (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Jack Henry Silverlake (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Jack Henry Symitar (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,New Core Integration (Consumer),Using ML standard schema = full integration; New schema includes Import Customer and View Account and additional features can be built as prof svcs; contact Product Mgmt for project timelines,17000,10250,
+,,NewSolutions (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Sandbox (Consumer),"When customer opportunities for named cores arise, communicate to prospect that we have a strategic partnership for integration​. Provide highlights about Sandbox and their value, as needed​. Emphasize that we have created a programmatic approach to working with Sandbox, including what is described in ""External Notes for Customer"".​",0,,
+,,Send Application Records to Core (Consumer),"For Symitar clients, they can have either Loan Records or Loan App Records as a part of their contract. If they want both, we'll need to charge the fee. For Corelation clients, we enable Loan Records by default. If they want to add Loan App Records, we'll need to charge the fee.",3900,,
+,,Spectrum (Summit) (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,UltraData OpenPath (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,XP System (XP2) (Consumer),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,Add On - Credit Card Systems,FDR Vantiv (Credit Card),Batch integration,5750,2400,
+,,FIS RTDX (Credit Card),Clients are required to utilize RTDX moving forward. FKA Base2000 CC,5750,2400,
+,,Fiserv CCM (Credit Card),(blank),5750,2400,
+,,Fiserv Originate (aka Omaha/Optis/CreditCPS) (Credit Card),"Only available for personal CC, not business CC. Also referred to as the Omaha platform. AKA Optis or Omaha CC",5750,2400,
+,,JH Full Credit Service (Credit Card),Velera (fka PSCU) product white labeled by JH,5750,2400,
+,,TMG (Credit Card),(blank),5750,2400,
+,,TSYS (Credit Card),Batch integration,5750,2400,
+,,VantivFI (Credit Card),API integration,5750,2400,
+,,Velera (fka PSCU )(Credit Card),(blank),5750,2400,
+,,Visa Advanced ID Solutions (VAIS)(Credit Card),"Requires product approval, express written consent from VISA required",5750,2400,
+,Add On - Custom,Custom Product - Annual (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,
+,,Custom Product - Monthly (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,
+,,Custom Product - Transaction fee (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,-1234
+,,Custom Service - Flat Fee (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Custom Service - Hourly (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Custom Service - R&D (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,Add On - Custom Score,Experian PowerCurve,(blank),14000,7000,
+,,Fast Start,(blank),0,1575,
+,,Liquid Credit Integration,(blank),8250,2400,
+,,Point Predictive Integration (Consumer),Integration Includes Auto Pass,0,0,
+,,Scienaptic (ML Consumer),(blank),0,0,
+,,Zest Custom Score,"Only production server deployments allowed, no BETA or DEMO deployments.",0,0,
+,,Zest Protect (Consumer),(blank),0,0,
+,Add On - Debit Bureau,FIS ChexSystems (QualiFile Debit Bureau) (Consumer),"Service already offered, we are separating Consumer and DecisionLender",4100,2400,0
+,,FIS Global BizChex Systems aka FIS BizChex,(blank),4100,2400,0
+,,Telecheck- New Customer,$0 fee for existing Telecheck Customers,0,,3.3
+,Add On - Disbursement,Fiserv DNA Disbursements,(blank),4900,,
+,,Jack Henry Symitar Disbursement,(blank),4900,,
+,,Wycom,Both Wycom and native DNA check printing solutions are supported.,0,,
+,Add On - Document Archival,DocDownload,"Also often called document imaging; Includes extract of IDV/IDA, loan app summary, and credit reports",5750,5500,
+,,DocDownload - Training Refresh for Additional Phase,NOT FOR REDEPLOYMENT. Can only be sold concurrently with system setup phase. Supplementary training for customer adding new loantype modules to an existing live DocDownload setup.,2900,,
+,,DocDownload Redeploy (Consumer),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,Add On - Document Delivery,Faxing,(blank),0,,0.6
+,,Mailing (1-5 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,1625,,2.6
+,,Mailing (21-40 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,14.25
+,,Mailing (41-60 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,26.25
+,,Mailing (61-80 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,30.7
+,,Mailing (6-20 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,9.25
+,,Mailing (81-100 Page Envelope),Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,34
+,Add On - Document Prep,Additional Custom Document,(blank),0,,490
+,,Additional Vendor Deposit Document,(blank),0,,335
+,,Additional Vendor Loan Document,(blank),0,,335
+,,Client Managed Documents,No fee. Can accommodate simple mapping.,0,,
+,,CSi,"Dynamic Docs - Only supports Personal Loan, Vehicle Loan, and Home Equity Loan",8250,,
+,,Document Maintenance (additional environment),"Per environment. Waived for DEMO & LIVE and temporary waiver for BETA core integration // Most clients originate all their document changes on a ""DEMO"" environment (e.g. DEMO, EPLQA, JHADEMO, etc.)  then have the changes migrate to LIVE environment.  Thus, a standard doc migration workflow would just involve 2 environments: DEMO and LIVE. 
+
+For clients who want us to support additional environments,  please let them know that supporting an additional server complicates the maintenance and migration process and thus will incur an annual maintenance charge. 
+Exceptions:  If a client is undergoing core integration on BETA and need their docs on BETA temporarily, we will waive the fee since it is assumed once the process is complete, the docs will be removed from their BETA environment and they will revert to the standard DEMO -> LIVE workflow.",0,4700,
+,,Document Mapping (deposits),"Up to 15 standard MeridianLink Opening docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",0,5100,
+,,Document Mapping (loans),"Up to 20 standard MeridianLink Consumer docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",0,5100,
+,,Expedited Forms Requests within 1 week (Consumer),(blank),0,,265
+,,Expedited Forms Requests within 2-3 days (Consumer),(blank),0,,530
+,,Finastra DepositPro ,(blank),4100,1575,
+,,Finastra DepositPro Plus,(blank),4100,1575,
+,,Finastra LaserPro (ML Consumer),(blank),4100,1575,
+,,Finastra LaserPro Plus (ML Consumer),(blank),4100,1575,
+,,Kinective XML (fka IMM XML TotaleAtlas Doc Engine) ,does have echoSign,5750,2400,
+,,MeridianLink Consumer Document Mapping Overage,(blank),0,,320
+,,MeridianLink Custom Document Mapping Overage,(blank),0,,320
+,,MeridianLink Opening Document Mapping Overage,(blank),0,,320
+,Add On - Document Upload,Credit Mountain (Consumer),(blank),3025,,
+,,Increase max upload file size Tier 1: 45 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 2: 40 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 3: 35 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 4: 30 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 5: 25 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 6: 20 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 7: 15 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,,Increase max upload file size Tier 8: 10 MB,Quote pricing.  Price is not actually -$1234.00,0,-1234,
+,Add On - Employment/Income/Asset Verification,Equifax The Work Number Select,(blank),3500,,
+,,MeasureOne Bank Deposit Verification,Requires MeasureOne Income & Employment Verification,3200,1248,6.25
+,,"MeasureOne Education Tier 1 (500,000+ monthly orders)",(blank),0,0,7.45
+,,"MeasureOne Education Tier 2 (250,000 - 499,999 monthly orders)",(blank),0,0,8.1
+,,"MeasureOne Education Tier 3 (100,000 - 249,999 monthly orders)",(blank),0,0,8.7
+,,"MeasureOne Education Tier 4 (50,000 - 99,999 monthly orders)",(blank),0,0,9.3
+,,"MeasureOne Education Tier 5 (25,000 - 49,999 monthly orders)",(blank),0,0,9.95
+,,"MeasureOne Education Tier 6 (10,000 - 24,999 monthly orders)",(blank),0,0,10.55
+,,"MeasureOne Education Tier 7 (5,000 - 9,999 monthly orders)",(blank),0,0,11.15
+,,"MeasureOne Education Tier 8 (0 - 4,999 monthly orders)",(blank),0,0,12.45
+,,"MeasureOne Income & Employment Tier 1 (500,000+ monthly orders)",(blank),0,,5.95
+,,"MeasureOne Income & Employment Tier 2 (250,000 - 499,999 monthly orders)",(blank),0,,6.5
+,,"MeasureOne Income & Employment Tier 3 (100,000 - 249,999 monthly orders)",(blank),0,,6.95
+,,"MeasureOne Income & Employment Tier 4 (50,000 - 99,999 monthly orders)",(blank),0,,7.45
+,,"MeasureOne Income & Employment Tier 5 (25,000 - 49,999 monthly orders)",(blank),0,,7.95
+,,"MeasureOne Income & Employment Tier 6 (10,000 - 24,999 monthly orders)",(blank),0,,8.45
+,,"MeasureOne Income & Employment Tier 7 (5,000 - 9,999 monthly orders)",(blank),0,,8.95
+,,"MeasureOne Income & Employment Tier 8 (0 - 4,999 monthly orders)",(blank),0,,9.95
+,,Plaid VOI  ,"Customers must contract with Plaid first, then can sign the addendum with MeridianLink
+
+Must have Plaid Platform Fee",3500,6000,
+,,Verification of Employment (Consumer),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,Add On - eSign,DocuSign Enterprise (Consumer),"No fee. ML Agreement with DocuSign states that existing DocuSign clients can NOT be quoted directly by ML. If the client is an existing DocuSign client and requests ML pricing, ML must first get approval from DocuSign before pricing can be presented. If the client or prospect is not an existing DocuSign client, MeridianLink's ISV pricing can be presented but only if they client does not want to connect with DocuSign first for enterprise pricing.
+DocuSign Enterprise is the default relationship even for new logos. Unless specifically requesting MeridianLink pricing, we want customers to engage with DocuSign directly via DocuSign Enterprise since MeridianLink's DocuSign ISV setup is a tactical solution for use in ML Consumer/Opening only with some known limitations",0,,
+,,DocuSign Enterprise SMS Delivery,"Quote pricing.  Price is not actually -$1234.00. Not available to DocuSign ISV customers, only DocuSign Enteprise. Requires new DocuSign API (REST).",0,,0.12
+,,DocuSign ISV,"ML Agreement with DocuSign states that existing DocuSign clients can NOT be quoted directly by ML. If the client is an existing DocuSign client and requests ML pricing, ML must first get approval from DocuSign before pricing can be presented. If the client or prospect is not an existing DocuSign client, MeridianLink's ISV pricing can be presented but only if they client does not want to connect with DocuSign first for enterprise pricing. Quotes for 100+ transactions should use DocuSign Enterprise.
+DocuSign Enterprise is the default relationship even for new logos. Unless specifically requesting MeridianLink pricing, we want customers to engage with DocuSign directly via DocuSign Enterprise since MeridianLink's DocuSign ISV setup is a tactical solution for use in ML Consumer/Opening only with some known limitations
+Quote per DocuSign ISV addendum tiers. ",2300,3000,4.9
+,,Kinective Sign (fka IMM RTS),"IMM e-signature offering; fka IMM Ready-To-Sign (RTS), IMM_UDP ",5750,2400,
+,,OneSpan,fka Vasco; fka eSignLive,5750,,
+,,Synergy Esign,Rebrand of Kinective Sign (IMM RTS) for JHA clients,5750,2400,
+,Add On - Home Banking,Alkami QuickApply (Consumer),Pushes apps from Alkami Home Banking directly into MeridianLink Consumer; doesn't go through AP,4100,2400,
+,,Changing Home Banking Vendor,One-time cost to change the vendor,1625,,
+,,Mobile App Push,Pushes apps from Access Softek Home Banking directly into MeridianLink Consumer; doesn't go through AP,6500,3100,
+,Add On - Hosting,Dedicated Hosting,Quote pricing.  Price is not actually -$1234.00,-1234,-1234,-1234
+,,Dedicated Server Production Updates (Consumer),"**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",12750,,
+,,Offsite Server Production Updates (Consumer),"**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",8250,,
+,,Server Migration - High Complexity,"$100,000 rate, please confirm with Services",-1234,,
+,,Server Migration - Low Complexity,"$50,000 rate, please confirm with Services",-1234,,
+,,Server Migration - Medium Complexity,"$75,000 rate, please confirm with Services",-1234,,
+,Add On - ID Authentication,Experian CrossCore Setup Fee (Consumer),"Setup fee for Initial CrossCore Implementation.  Require to select at least one option (Option 3, Option 6, Option 11).  Each option has its own setup fee in addition to the CrossCore setup fee.",7500,,
+,,Experian CrossCore with Precise for ID Screening with KIQ/MFA (Option 3) (Consumer),Additional $805 setup fee per subcode.,975,,4.25
+,,Experian CrossCore with Precise ID for Account Opening with KIQ/MFA (Option 11) (Consumer),(blank),975,,4.25
+,,FIS QualiFile IDV & IDA,Check with the vendor on the per-transaction cost.,4100,2400,
+,,TransUnion IDMV & IDMA,now known as ID Vision suite,0,,3.7
+,Add On - ID Card Scanners,Acuant ID Scanning,"Only available for Google Chrome (not Internet Explorer), customer must be using Acuant (ScanShell) hardware scanners.",0,,0.7
+,Add On - ID Verification,Bridger OFAC Watchlist,(blank),3300,1575,
+,,Experian CrossCore with Precise ID for Account Opening Score Only (Option 6) (Consumer),(blank),975,,2.8
+,,FIS QualiFile IDV,Check with the vendor on the per-transaction cost.,4100,2400,
+,,ISTWatch OFAC Watchlist,(blank),0,,0.4
+,,TransUnion IDMV,with OFAC,0,,2.1
+,Add On - Indirect Lead,Automatic USA - Existing Indirect Relationship (Consumer),(blank),7750,,4.7
+,,Automatic USA - New Indirect Relationship (Consumer),(blank),0,,4.7
+,,CULA,Applicable to lease applications only,4600,4500,
+,,DealerApp,(blank),4100,,
+,,DealerTrack Aggregator (Consumer),(blank),0,,5.05
+,,DealerTrack Digital Contracting (Consumer),"Setup fee not discountable. $5K passthrough fee to DealerTrack included. If customer inquires why setup fee is higher than RO's, state DealerTrack has a fee.",11000,4100,9.9
+,,DealerTrack Digital Contracting Vaulted Transaction (Consumer),(blank),0,,0.65
+,,Innovative Funding Services (IFS),(blank),3300,2400,
+,,NALN - National Auto Loan Network- Existing Customer,(blank),0,2400,
+,,NALN - National Auto Loan Network- New Customer,One time fee applies only if it's a new customer,3300,2400,
+,,OttoMoto (Consumer),(blank),3300,2400,
+,,RouteOne Aggregator (Consumer),(blank),0,,6
+,,RouteOne eContracting (Consumer),(blank),10000,4100,8.65
+,,RouteOne eContracting Ancillary Document Fee,(blank),0,,0.27
+,,RouteOne eContracting Authoritative Copy Conversion (ACC),Authoritative Copy Conversion (ACC) $21 plus postage,0,,28.5
+,,RouteOne Electronic Contracting Per Vaulted Transaction,(blank),0,,0.65
+,,RouteOne TOLEC < 30 Day Turn,(blank),12750,,3.7
+,,"RouteOne TOLEC > 30 Day Turn, Multi Batch",(blank),6500,,3.7
+,Add On - Insights,Partner Data Connect,(blank),0,,
+,,Zest LuLu Strategy,(blank),0,,
+,Add On - Merchant Lending,LoanStar Technologies (Consumer),(blank),3300,2400,
+,,Merchant Lending,"For consumer-facing portal, they must buy/use AP",6250,,
+,Add On - MeridianLink Consulting,Admin Pro (Consumer),Annual fee is waived in year 1 for ML Entry clients,0,26580,325
+,,Admin Pro additional 25 hours,(blank),6750,,
+,,Admin Pro additional 50 hours,(blank),13250,,
+,,Admin Pro Lite (Consumer),(blank),0,13872,325
+,,Admin Pro Plus (Consumer),(blank),0,31800,325
+,,API Pro,Requires API Web Services. One time fee includes 20 hours.  Time and materials starts after the sooner of (a) 20 hours or (b) one year.,0,7500,325
+,,API Pro additional 50 hours,Requires API Web Services.,13000,,
+,,Bespoke Implementation Fee,Please tag in your Program Manager and Consulting for custom quote,-1234,,
+,,Capture Rate Analysis,Quote pricing.  Price is not actually -$1234.00,0,19080,
+,,Cross-Sell Analysis,"Optimization to support all cross-sells, including debt optimization; ML Mortgage not required. A minimum of 6 months of cross-sell usage is required in order to have sufficient data for this offering.  ",6000,,
+,,Custom Scorecard Tier 1 First Scorecard ($2.5B AUM +),Annual fee billed in monthly installments,53000,12720,
+,,"Custom Scorecard Tier 1, Additional Scorecards ($2.5B AUM +)",Annual fee billed in monthly installments,42500,12720,
+,,Custom Scorecard Tier 2 First Scorecard ($500M - $2.5B AUM),Annual fee billed in monthly installments,42500,12720,
+,,"Custom Scorecard Tier 2, Additional Scorecards ($500M - $2.5B AUM)",Annual fee billed in monthly installments,37250,12720,
+,,Custom Scorecard Tier 3 First Scorecard (Up to $500M AUM),Annual fee billed in monthly installments,32000,12720,
+,,"Custom Scorecard Tier 3, Additional Scorecards (Up to $500M AUM)",Annual fee billed in monthly installments,26500,12720,
+,,Declined Application Analysis,(blank),0,19080,
+,,Disparate Impact,(blank),0,19080,
+,,Member Scorecard,(blank),-1234,-1234,
+,,MeridianLink Sandbox & Study Hall,Annual fee is per User,5300,,
+,,Modern Experience Upgrade – Admin Pro,Modern Experience Upgrade for Admin Pro subscribers.,0,,
+,,Process Assessment,Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Quick Wins Project,Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.,-1234,,
+,,Reveal Pro Tier 1 ($2.5B+ AUM),(blank),0,113532,
+,,Reveal Pro Tier 2 (<$2.5B AUM),(blank),0,93492,
+,,Reveal Pro Tier 3 (<$1B AUM),(blank),0,73464,
+,,Reveal Pro Tier 4 (<$500M AUM),(blank),0,50088,
+,,Tune-Up,(blank),27000,,
+,Add On - MeridianLink Insight,Data Connect,Customer will receive a full sync of up to 5 years worth of structured and normalized data as available in Data Dictionary,7000,18750,
+,,Data Connect - 1 Additional Year of Data,Quote Pricing.  Price is not actually -$1234.00.  Pricing is $1400.00 for each additional year of data. Requires Product and Services approval.,-1234,,
+,,Data Connect & MeridianLink Insight Bundle,(blank),0,12750,
+,,Data Connect Additional Data Load,(blank),500,,
+,,MeridianLink Insight,**Includes 2 Power Users and 10 Standard Users,7000,23250,
+,,MeridianLink Insight - Additional Power User,(blank),0,1975,
+,,MeridianLink Insight - Additional Standard User,(blank),0,250,
+,,MeridianLink Insight for RevealPro Clients,**Includes 2 Power Users and 10 Standard Users,3500,23250,
+,Add On - MeridianLink Portal,"Alpharank T1: $10B+ AUM, Each Additional Service (Consumer - Portal)",(blank),0,30180,
+,,"Alpharank T1: $10B+ AUM, Initial Service (Consumer - Portal)",(blank),0,46428,
+,,"Alpharank T2: $2B-$10B AUM, Each Additional Service (Consumer - Portal)",(blank),0,27588,
+,,"Alpharank T2: $2B-$10B AUM, Initial Service (Consumer - Portal)",(blank),0,42420,
+,,"Alpharank T3: $500M-$2B AUM, Each Additional Service (Consumer - Portal)",(blank),0,21180,
+,,"Alpharank T3: $500M-$2B AUM, Initial Service (Consumer - Portal)",(blank),0,32556,
+,,"Alpharank T4: <$500M AUM, Each Additional Service (Consumer - Portal)",(blank),0,16296,
+,,"Alpharank T4: <$500M AUM, Initial Service (Consumer - Portal)",(blank),0,25140,
+,Add On - Misc,Active Directory,(blank),4200,1575,
+,,Add Additional Lender,This does not include live clients going through a core conversion where an additional lender is added to Beta for implementation purposes.,8250,3200,
+,,Additional Automated Actions,Package includes 50 reports. Additional blocks of 10 reports are available for the annual fee (up to 20 additional reports),0,2400,
+,,Additional Scheduled Reports,Package includes 50 reports. Additional blocks of 10 reports are available for the annual fee (up to 20 additional reports),0,2400,
+,,AffordIT,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,After Hours Assistance - Expedite Fee (Consumer),"In addition to per hour rate.  Applies to Services, Support, SEI, and IT.",2500,,
+,,After Hours Assistance (Consumer),"Applies to Services, Support, SIE, and IT.  No minimum.",625,,
+,,API Web Services -  Additional API Connection (Consumer),Set up fee for each additional API Web Services connection. ,775,,
+,,API Web Services (Consumer),(blank),775,7500,
+,,Auto Financial Group (AFG),(blank),3300,2400,
+,,Automail,(blank),1575,,
+,,Booking Validation,On an exception basis only. Quote pricing.  Price is not actually -$1234.00. ,-1234,,
+,,Certification Program (Consumer),(blank),700,,
+,,Certification Retake Exam - Multiple-Choice (Consumer),(blank),150,,
+,,Certification Retake Exam - Practical (Consumer),(blank),300,,
+,,Certification Training Bundle  (Consumer),(blank),1400,,
+,,CLF Export Automated Action,(blank),0,1575,
+,,Data Extraction Tool,(blank),6500,1575,
+,,Disaster Recovery Testing (Consumer),$495/hr beyond 2 hours,950,,
+,,Eltropy,Member Engagement Tool.  Text Messaging Solution,3100,2400,
+,,Expedited Deployment (Consumer),Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.,-1234,,
+,,Informed.IQ (Consumer),(blank),6500,5300,
+,,IT Professioal Services - Expedited Request (Consumer),Work to be performed in less than 10 days,2500,,
+,,IT Professional Services - Phone Support (Consumer),Price is per hour,400,,
+,,IT Unscheduled Change Request (Consumer),(blank),950,,
+,,MeridianLink Consumer & Opening Admin Training Class Series,Price is per account and valid for one year. Classes are offered on a regular monthly schedule,2800,,
+,,MeridianLink Consumer & Opening Admin Training Package,Price is per account and valid for one year. Classes are offered on a regular monthly schedule,6000,,
+,,MeridianLink Consumer & Opening Custom Training,(blank),0,,-1234
+,,MeridianLink Consumer & Opening Sandbox and Study Hall,(blank),2800,2800,
+,,Post-Live Data Migration (Consumer),Complete migration worksheet and submit a quote request via SVCS-Jira.  We ONLY support forward migrations (Test to Prod).  Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Production Sync ,This item supports migration from production to beta/demo. ,10750,,
+,,Re-deployment,(blank),-1234,,
+,,Reschedule Live Date,FI is allowed to reschedule once per project. Fee applicable for 2nd reschedule.,-1234,,
+,,Retrain: Administration Setup with SDC,"This is a 9 week course conducted via webinar.  The 9 week course will cover and show your admins in the system how to setup products, underwriting rules, rates, preferences and customize the look and feel of your online application channel.
+NOTE:  If only attending webinar sessions without an assigned software deployment consultant: No Fees Associated ",5750,,
+,,Retrain: End User Workflow - Onsite Training (Consumer),Per day per MeridianLink Consumer or MeridianLink Opening. Plus travel expenses.,3300,,
+,,Retrain: End User Workflow - Remote (Consumer),$3150 if doing MeridianLink Consumer & MeridianLink Opening,2500,,
+,,Saris.ai,(blank),6500,5300,
+,,SMS Text Feature,Per text; applies to both test and production,0,,0.13
+,,Time & Materials (Consumer),(blank),400,,
+,,Training (Consumer),"Contact Services for quote pricing. Price is not actually -$1234.00.  Hourly rate is $265, but due to custom training solutions quote required.",-1234,,
+,,VPN - Disaster Recovery Connection (Consumer),(blank),205,,
+,,VPN - Main Connection (Consumer),(blank),205,,
+,,VPN - Other Connection (Consumer),(blank),205,,
+,,Web Server Migration,(blank),7750,,
+,,Yellow Hammer,For AML/BSA compliance,3500,,
+,Add On - Payment/Funding Option,ACH Payment Platform Migration,(blank),0,,
+,,ACH Processing (NACHA),(blank),0,,
+,,Credit Card Processing (Authorize.net),(blank),3500,,
+,,MX Instant Account Verification,(blank),3200,,2.35
+,,Payment Processing,(blank),0,,
+,,Plaid Instant Account Verification,"Monthly platform fees (pass-through): 
+<$1B AUM: $500 
+$1B to $3B: $1,000 
+$3B to $10B: $1,800 
+
+Must have Plaid Platform Fee",3500,,2.6
+,,Plaid Instant Account Verification $10B+ AUM (Referral to Plaid) (Consumer),"clients above $10B AUM must contract with Plaid first, then can sign the addendum with MeridianLink",3500,6000,
+,,Plaid Instant Account Verification Identity Match (ML Consumer),(blank),0,,1.75
+,,Plaid Platform Fee Tier 1: $3B to $10B AUM (Consumer),Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee,0,30720,
+,,Plaid Platform Fee Tier 2: $1B to $3B AUM (Consumer),Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee,0,17076,
+,,Plaid Platform Fee Tier 3: <$1B AUM (Consumer),Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee,0,8544,
+,,SWBC Swivel ACH Funding,Set up fee used for Credit / Debit card funding And/OR ACH Processing,3500,,
+,,SWBC Swivel Debit/Credit Card Funding,Set up fee used for Credit Debit card Funding,3500,,
+,Add On - Professional Services,Professional Services Subscription : Monthly (Consumer),(blank),0,-1234,-1234
+,Add On - Property Data,CoreLogic GeoAVM (MeridianLink Consumer),(blank),,,35.75
+,,CoreLogic Home Value Explorer (HVE) - MeridianLink Consumer,(blank),,,28.6
+,,CoreLogic IVAL (Consumer),(blank),,,2.8
+,,CoreLogic PASS (Consumer),(blank),,,2.8
+,,Flood Transaction (Consumer),"(aggregate)
+< 2,500: $1
+2,500 - 4,999: $0.75
+>= 5,000: $0.50",,,1.3
+,,Flood Zone Determination - Basic (CoreLogic) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,Flood Zone Determination - Basic (Lereta) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,Flood Zone Determination - Basic (ServiceLink) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,Flood Zone Determination - Life of Loan (CoreLogic) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,Flood Zone Determination - Life of Loan (Lereta) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,Flood Zone Determination - Life of Loan (ServiceLink) (Consumer),Quote pricing.  Price is not actually -$1234.00,,,-1234
+,,PMC (Consumer),(blank),,,2.8
+,Add On - Settlement Services,Accurate Group-  Settlement Services,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,Corporate Settlement Solutions- Settlement Services,(blank),3300,2400,
+,,Coviance  Settlement Services,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,First American- Settlement Services,(blank),3300,2400,
+,,First Close - Settlement Services,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,LendOne Settlement Services,FKA SWBC,3300,2400,
+,,MTS Group Settlement Services,(blank),3300,2400,
+,,New Vista - Settlement Services,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,Select Business Services,(blank),3300,2400,
+,,United One Resources,(blank),3300,2400,
+,,Universal Real Estate Services - Settlement Services,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,Add On - SwitchKit,ClickSWITCH (existing CS client),(blank),8250,4700,
+,,ClickSWITCH (new CS client),(blank),12250,,35.45
+,Add On - Vehicle History,AutoCheck,Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction,1625,1575,11.85
+,,AutoCheck with Buyback Protection,Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction,1625,1575,15.6
+,,Carfax Title Brand Component,(blank),0,,0.4
+,,Carfax Vehicle History and/or Vehicle Loss Report,"Client needs to have direct relationship with client, and transaction fee will be billed directly by Carfax.  Setup fee enables both Vehicle History Report (VHR) and Vehicle Loss Report (VLR).  ",1625,800,
+,Add On - Vehicle Insurance,Allied Solutions IQQ (Consumer),(blank),3500,1275,
+,,American Services Group (ASG) aka CSO,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,Auto Exam ,Utilizes MeridianLink Consumer Synergic Framework,3300,2400,
+,,Car Solutions Auto Insurance Integration,(blank),3300,2400,
+,,First Innovations,(blank),3300,2400,
+,,Frost Visual Gap (ML Consumer),(blank),3300,,
+,,IWS Warranty (Consumer),(blank),3300,2400,
+,,Open Lending - Lenders Protection,(blank),0,,
+,,Route 66 (Consumer),(blank),3025,2215,
+,,TruStage QuoteConnect (CUNA),(blank),0,,
+,Add On - Vehicle Valuation,Black Book (Consumer),(blank),,,0.65
+,,J.D. Power,FKA NADA,,,0.65
+,,J.D. Power Other,FKA NADA Other,,,0.65
+,,Kelly Blue Book,(blank),,,0.65
+,Primary Service,MeridianLink Consumer - Business Module Tier 1 (1000-1999 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,16.35
+,,MeridianLink Consumer - Business Module Tier 2 (500-999 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,21.4
+,,MeridianLink Consumer - Business Module Tier 3 (250-499 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,26.2
+,,MeridianLink Consumer - Business Module Tier 4 (up to 249 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,32.65
+,,"MeridianLink Consumer - Consumer Module Tier 01 (30,000+ apps)","** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",-1234,,1.85
+,,"MeridianLink Consumer - Consumer Module Tier 02 (25,000-29,999 apps)","** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",-1234,,2.2
+,,"MeridianLink Consumer - Consumer Module Tier 03 (20,000-24,999 apps)","** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",-1234,,2.5
+,,"MeridianLink Consumer - Consumer Module Tier 04 (15,000-19,999 apps)","** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",-1234,,2.9
+,,"MeridianLink Consumer - Consumer Module Tier 05 (10,000-14,999 apps)","** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",-1234,,3.35
+,,MeridianLink Consumer - Consumer Module Tier 06 (8000-9999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",85750,,3.95
+,,MeridianLink Consumer - Consumer Module Tier 07 (4000-7999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",75750,,4.8
+,,MeridianLink Consumer - Consumer Module Tier 08 (2000-3999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",65750,,6.75
+,,MeridianLink Consumer - Consumer Module Tier 09 (1000-1999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",54000,,8.8
+,,MeridianLink Consumer - Consumer Module Tier 10 (500-999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",45500,,10.8
+,,MeridianLink Consumer - Consumer Module Tier 11 (250-499 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",35500,,12.5
+,,MeridianLink Consumer - Consumer Module Tier 12 (up to 249 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",28750,,14.2
+,,MeridianLink Consumer - Home Equity Module Tier 1 (1000-1999 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,11.8
+,,MeridianLink Consumer - Home Equity Module Tier 2 (500-999 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,15.15
+,,MeridianLink Consumer - Home Equity Module Tier 3 (250-499 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,20.05
+,,MeridianLink Consumer - Home Equity Module Tier 4 (up to 249 apps),Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,17000,,25.1
+,,"MeridianLink Consumer - Indirect Lending Module Tier 01 (30,000+ apps)",For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,-1234,,1.75
+,,"MeridianLink Consumer - Indirect Lending Module Tier 02 (25,000-29,999  apps)",For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,-1234,,2.05
+,,"MeridianLink Consumer - Indirect Lending Module Tier 03 (20,000-24,999  apps)",For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,-1234,,2.35
+,,"MeridianLink Consumer - Indirect Lending Module Tier 04 (15,000-19,999 apps)",For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,-1234,,2.6
+,,"MeridianLink Consumer - Indirect Lending Module Tier 05 (10,000-14,999 apps)",For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,-1234,,3
+,,MeridianLink Consumer - Indirect Lending Module Tier 06 (8000-9999 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,3.3
+,,MeridianLink Consumer - Indirect Lending Module Tier 07 (4000-7999 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,3.7
+,,MeridianLink Consumer - Indirect Lending Module Tier 08 (2000-3999 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,4.1
+,,MeridianLink Consumer - Indirect Lending Module Tier 09 (1000-1999 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,5
+,,MeridianLink Consumer - Indirect Lending Module Tier 10 (500-999 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,5.8
+,,MeridianLink Consumer - Indirect Lending Module Tier 11 (250-499 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,6.6
+,,MeridianLink Consumer - Indirect Lending Module Tier 12 (up to 249 apps),For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.,12250,,8.2
+,,"MeridianLink Opening Module Tier 01 (30,000+ apps)",(blank),-1234,,1.85
+,,"MeridianLink Opening Module Tier 02 (25,000-29,999 apps)",(blank),-1234,,2.2
+,,"MeridianLink Opening Module Tier 03 (20,000-24,999 apps)",(blank),-1234,,2.5
+,,"MeridianLink Opening Module Tier 04 (15,000-19,999 apps)",(blank),-1234,,2.9
+,,"MeridianLink Opening Module Tier 05 (10,000-14,999 apps)",(blank),-1234,,3.35
+,,MeridianLink Opening Module Tier 06 (8000-9999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",60250,,3.95
+,,MeridianLink Opening Module Tier 07 (4000-7999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",49500,,4.8
+,,MeridianLink Opening Module Tier 08 (2000-3999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",41750,,6.75
+,,MeridianLink Opening Module Tier 09 (1000-1999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",34000,,8.8
+,,MeridianLink Opening Module Tier 10 (500-999 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",28000,,10.8
+,,MeridianLink Opening Module Tier 11 (250-499 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",23250,,12.5
+,,MeridianLink Opening Module Tier 12 (up to 249 apps),"** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",18750,,14.2
+,,"Standalone MeridianLink Consumer - Indirect Lending Module Tier 01 (30,000+ apps) ",For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.,-1234,,1.75
+,,"Standalone MeridianLink Consumer - Indirect Lending Module Tier 02 (25,000-29,999  apps)",For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,-1234,,2.05
+,,"Standalone MeridianLink Consumer - Indirect Lending Module Tier 03 (20,000-24,999  apps)",For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,-1234,,2.35
+,,"Standalone MeridianLink Consumer - Indirect Lending Module Tier 04 (15,000-19,999 apps)",For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,-1234,,2.6
+,,"Standalone MeridianLink Consumer - Indirect Lending Module Tier 05 (10,000-14,999 apps)",For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,-1234,,3
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 06 (8000-9999 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,85750,,3.3
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 07 (4000-7999 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,75750,,3.7
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 08 (2000-3999 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,65750,,4.1
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 09 (1000-1999 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module,54000,,5
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 10 (500-999 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.,45500,,5.8
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 11 (250-499 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.,35500,,6.6
+,,Standalone MeridianLink Consumer - Indirect Lending Module Tier 12 (up to 249 apps),For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.,28750,,8.2
+,Add On - Modern Experience,Modern Experience Upgrade – Client Led,"Modern Experience Upgrade, client led. Includes 3 Services hours.",1325,,
+,,"Modern Experience Upgrade – ML Dedicated, Services Led","Modern Experience Upgrade for ML dedicated server clients, Services led. Includes 10 Services hours.",4700,,
+,,Modern Experience Upgrade – Services Led,"Modern Experience Upgrade for ML shared server clients, Services led. Includes 10 Services hours.",3800,,
+,Add On - Data Integration,Gestalt Database (Consumer),Refer Gestalt into clients for their database; we receive rev share,0,,
+,Add On - Fraud Protection,Digital Identity Trust (DIT),Only available for Opening,6500,2400,
+,,Socure Doc Verification Tier 1 ($5B+ AUM) (Consumer),"Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",0,,2.7
+,,Socure Doc Verification Tier 2 (<$5B AUM) (Consumer),"Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",0,,2.7
+,,Socure ID Verification Tier 1 ($5B+ AUM) (Consumer),"Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",7000,8750,2.7
+,,Socure ID Verification Tier 2 (<$5B AUM) (Consumer),"Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",7000,4400,2.7
+,,Socure Portfolio Scrub (Consumer),"Contact Services for quote pricing. Price is not actually -$1234.00. Minimum 10,000 records. $5500 setup for first 10,000 records, $0.50 per record over 10,000.",-1234,,
+,,TransUnion TruValidate Full Bundle (IDV and IDA),Full Bundle and Verification are not mutually exclusive,6500,,4.85
+,,TransUnion TruValidate Verification Only (IDV)- with Full Bundle (IDV and IDA),Full Bundle and Verification are not mutually exclusive. There is only one setup fee which covers both Full Bundle and Verification Only.,0,,2.75
+,,TransUnion TruValidate Verification Only (IDV)- without Full Bundle,Full Bundle and Verification are not mutually exclusive,6500,,2.75
+,,Verafin,Must have Modern Experience for ML Opening,3000,3500,
+,Add On - MeridianLink Access,"Alpharank T1: $10B+ AUM, Each Additional Service (Consumer - Access)",(blank),0,30180,
+,,"Alpharank T1: $10B+ AUM, Initial Service (Consumer - Access)",(blank),0,46428,
+,,"Alpharank T2: $2B-$10B AUM, Each Additional Service (Consumer - Access)",(blank),0,27588,
+,,"Alpharank T2: $2B-$10B AUM, Initial Service (Consumer - Access)",(blank),0,42420,
+,,"Alpharank T3: $500M-$2B AUM, Each Additional Service (Consumer - Access)",(blank),0,21180,
+,,"Alpharank T3: $500M-$2B AUM, Initial Service (Consumer - Access)",(blank),0,32556,
+,,"Alpharank T4: <$500M AUM, Each Additional Service (Consumer - Access)",(blank),0,16296,
+,,"Alpharank T4: <$500M AUM, Initial Service (Consumer - Access)",(blank),0,25140,
+,,MeridianLink Access (Unlimited monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,46250,
+,,MeridianLink Access (up to 1000 monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,18250,
+,,MeridianLink Access (up to 2000 monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,24250,
+,,MeridianLink Access (up to 4000 monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,30500,
+,,MeridianLink Access (up to 500 monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,12000,
+,,MeridianLink Access (up to 8000 monthly applications),"For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",11250,36500,
+,,MeridianLink Access Tune Up,Additional support from Services Team for existing Access customers that require additional support deploying specific features or functionality ,4000,,
+,,Prefill Service via Prove,per successful prefill,3025,,1.6
+,Add On - POS,MeridianLink POS - Automation Package,All automation features may not be supported for all core integrations. Core support should be confirmed prior to all sales: https://meridianlink.atlassian.net/wiki/x/HAH7zxE,0,2300,
+,,MeridianLink POS - Custom URL,(blank),0,1575,
+,,MeridianLink POS - Digital Engagement Package (co-browsing video chat),(blank),4700,2400,
+,,MeridianLink POS - Home Banking SSO (Consumer),(blank),0,2300,
+,,MeridianLink POS - Plus Package,"Includes Site Analytics (Matomo - available for Portal only & Google Tag Manager), Supported Home Banking SSO (contact PM for list), Combo Applications",0,4700,
+,Add On - Lead Intake,Auto Approve,(blank),3300,2400,
+,,Auto Lead Generation Bundle,Must have Consumer Module,3500,2500,
+,,Autopay,(blank),3300,2400,
+,,Blend,(blank),10750,5300,
+,,Caribou,refinance leads,3300,2400,
+,,Coviance Point of Sale,(blank),3300,2400,
+,,CreditSnap,"Setup via CLF Automated Action. If client is not set up with CLF Automated Action, client needs to sign an addendum for them.",12750,6250,
+,,FINOFR Direct Core Reset,(blank),4900,2400,
+,,FINOFR Pre-Approval API (Consumer),(blank),4900,2400,
+,,FirstClose Equity IQ,(blank),3300,2400,
+,,FIVISION,(blank),12750,6250,
+,,FourStars (Consumer),(blank),3300,2400,
+,,Gravity Lending,(blank),3300,2400,
+,,ILendingDirect,(blank),3300,2400,
+,,LendingTree,waived for clients we setup with LendingTree,4100,4000,
+,,Lumin Digital Banking API (Consumer),(blank),3300,2400,
+,,MarkIII,(blank),3025,2215,
+,,Members Mobile,(blank),3025,2215,
+,,MoveCU,(blank),3300,2400,
+,,Movemint Tier 1: $5B+,Also applies to LoanEngine (white label by Harland Clarke),8500,20250,
+,,Movemint Tier 2: $1B - $5B,Also applies to LoanEngine (white label by Harland Clarke),7750,15500,
+,,Movemint Tier 3: $500M - $1B,Also applies to LoanEngine (white label by Harland Clarke),7750,9250,
+,,Movemint Tier 4: $250M - $500M,Also applies to LoanEngine (white label by Harland Clarke),7750,6250,
+,,Movemint Tier 5: $100M - $250M,Also applies to LoanEngine (white label by Harland Clarke),7750,6250,
+,,Rate Genius,"refinance leads; Fee is only applicable if RateGenius apps are sent directly into MeridianLink Consumer, if routed through DealerTrack there is no separate fee",3300,2400,
+,,SavvyMoney,(blank),0,,
+,,Union Credit,(blank),3300,2400,
+,,Vericast LoanEngine Tier 1: $5B+,Vericast is a reseller of TruStage Digital Storefront (fka CuneXus),8500,20250,
+,,Vericast LoanEngine Tier 2: $1B - $5B,Vericast is a reseller of TruStage Digital Storefront (fka CuneXus),7750,15500,
+,,Vericast LoanEngine Tier 3: $500M - $1B,Vericast is a reseller of TruStage Digital Storefront (fka CuneXus),7750,9250,
+,,Vericast LoanEngine Tier 4: $250M - $500M,Vericast is a reseller of TruStage Digital Storefront (fka CuneXus),7750,6250,
+,,Vericast LoanEngine Tier 5: $100M - $250M,Vericast is a reseller of TruStage Digital Storefront (fka CuneXus),7750,6250,
+,,WithClutch,(blank),10000,5000,
+,Add On - MeridianLink POS,Conductiv,(blank),2400,,
+,,Digital Customer Service Vendor Change,(blank),1625,,
+,,Digital Engagement Package - Custom Scripting Enablement,(blank),0,0,
+,,Digital Engagement Package - Eltropy,(blank),0,0,
+,,Digital Engagement Package - Glia,(blank),0,0,
+,,Digital Engagement Package - Interface.ai,(blank),0,0,
+,,Equifax InstaTouch (Consumer),(blank),2400,,
+,,Experian Digital Risk Score,(blank),7250,,1.4

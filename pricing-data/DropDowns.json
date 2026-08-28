@@ -1,0 +1,17 @@
+[
+  {
+    "QuoteType": "Existing",
+    "Unnamed: 1": NaN,
+    "Quote Presentation Status": NaN
+  },
+  {
+    "QuoteType": "Migration",
+    "Unnamed: 1": NaN,
+    "Quote Presentation Status": "New"
+  },
+  {
+    "QuoteType": "New Customer",
+    "Unnamed: 1": NaN,
+    "Quote Presentation Status": "Existing"
+  }
+]

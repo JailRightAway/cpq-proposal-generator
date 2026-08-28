@@ -1,0 +1,148 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Product Category,Add Ons,,,,,
+,,,,,,
+,,,,Values,,
+Product Of (Primary Service),Primary Service Category,Internal Product Name,Internal Notes for Sales,One Time Fees,Annual Fees,Transaction Fees
+DecisionLender4,Add On - Address Verification,Postal Verification Database (PVD),(blank),2300,,0.11
+,Add On - Ancillary Service,Glia Integration,(blank),1775,675,
+,,Lightico,Client needs to sign contract with vendor,3400,2400,
+,,Solutions by Text,Client needs to sign contract with vendor,3400,2400,
+,,Informed.iq (DecisionLender4),(blank),6500,5300,
+,Add On - Consumer Portal,AccesSoftek SSO,(blank),1975,4700,
+,,Consumer Portal,(blank),31500,23000,
+,,Digital Insight SSO,(blank),1975,4700,
+,,Equifax InstaTouch,(blank),2125,,
+,,Net Teller SSO,(blank),1975,4700,
+,,Banno Home Banking SSO,(blank),1975,4700,
+,Add On - Core Integration,CCMC Standard Export,(blank),17000,10250,
+,,CUBase (DecisionLender),https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,17000,10250,
+,,CULA Seamless Integration,This is only Appliable for client with a auto Leasing loan type,4600,4500,
+,,DealPack Export,(blank),17000,10250,
+,,Finastra Application Exchange Interface,(blank),17000,10250,
+,,FIS - Credit Card Export,(blank),5750,2400,
+,,Goldpoint,(blank),17000,10250,
+,,Lowenstein Export,"Support for standard export, Fiserv DNA and Jack Henry Silverlake interface",17000,10250,
+,,Megasys Export,(blank),17000,10250,
+,,Nortridge NLS Export,(blank),17000,10250,
+,,Share Tech Export,(blank),17000,10250,
+,,Shaw Solutions,(blank),17000,10250,
+,,Spectrum Pathways Interface,(blank),17000,10250,
+,,Symitar Core Conversion (DecisionLender),(blank),17000,10250,
+,,Fiserv Premier (DecisionLender),https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1,17000,10250,
+,,Corelation KeyStone Interface,(blank),17000,10250,
+,,Fiserv Portico (DecisionLender),(blank),17000,10250,
+,Add On - Credit Card Processor,Velera (Credit Card),(blank),5750,2400,
+,Add On - Custom,Auto Counter Offer,"Automatic Counter Offer Configuration is limited to the following key attributes  LTV, Term, DTI, PTI, and Amount Financed",8000,2300,
+,,DecisionLender Prequalification Functionality,(blank),12750,3800,
+,,Enhanced Grid Functionality,(blank),5500,1250,
+,,Custom Product - Annual (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,
+,,Custom Service - Flat Fee (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Custom Service - Hourly (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Custom Product - Monthly (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,
+,,Custom Service - R&D (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,Custom Product - Transaction Fee (DecisionLender),Quote pricing.  Price is not actually -$1234.00,-1234,-1234,-1234
+,Add On - Custom Score,Lending Science 360,(blank),14000,6250,
+,,Zest Custom Score,(blank),0,0,
+,,Point Predictive Integration (DecisionLender),"Integration encompasses AutoOne Suite which includes Auto Pass, IEValidate, & others",0,0,
+,,Zest Protect (DecisionLender),(blank),0,0,
+,Add On - Debit Bureau,FIS ChexSystems (QualiFile Debit Bureau) (DecisionLender),"Service already offered, we are separating Consumer and DecisionLender",4100,2400,0
+,Add On - Document Archival,Synergy Image Export,(blank),5750,5500,
+,,DocDownload(DecisionLender),"Formerly known as DecisionLender Image Transfer. Also often called document imaging; Includes extract of IDV/IDA, loan app summary, and credit reports.",5750,5500,
+,Add On - Document Delivery,Archive files - Email notification of availability of monthly files in the Online Statement Management system,(blank),1175,,
+,,Archive files - standard,(blank),0,,
+,,Document Faxing- Outbound ,(blank),0,,0.27
+,,Inbound Faxing ,Requires/includes document imaging. Includes 1 GB storage.,1175,2700,0.32
+,,Mailing (1-5 Page Envelope) DecisionLender,(blank),1625,,2.55
+,,Mailing (21-40 Page Envelope) DecisionLender,(blank),0,,14.25
+,,Mailing (41-60 Page Envelope) DecisionLender,(blank),0,,26.25
+,,Mailing (61-80 Page Envelope) DecisionLender,(blank),0,,30.7
+,,Mailing (6-20 Page Envelope) DecisionLender,(blank),0,,9.25
+,,Mailing (81-100 Page Envelope) DecisionLender,(blank),0,,34
+,,Mailing service - Additional Letter Templates,Fee for each additional template,575,,
+,,"Mailing service (1-2,499)",Includes Automatic Decline Letter per DecisionLender provided sample,1625,,2.55
+,,"Mailing service (2,500-4,999)",Includes Automatic Decline Letter per DecisionLender provided sample,1625,,2.48
+,,"Mailing service (5,000 and over)",Includes Automatic Decline Letter per DecisionLender provided sample,1625,,2.21
+,,FSSI Reconciliation Report (DecisionLender),"""This is a development charge from  FSSI. No price reductions are allowed. (estimated FSSI development time to 3 hours) per client 
+ Charge to FSSI, no price reductions allowed. ""
+
+""FSSI will transmit a report directly to the client via an SFTP connection. No setup is required on the DecisionLender side. Credentials must be provided and transmitted directly to FSSI as part of the report setup. The fields currently displayed on the report include the applicant's name, address, and the date and time the letter was mailed. Additional fields may be available but could increase setup fees charged by FSSI. Confirmation of the availability of extra fields will need to be obtained from FSSI.
+ an SFTP connections,  
+ Client will need to provide credentials 
+directly to FSSI. """,1075,1908,
+,Add On - Document Prep,Indirect Document Package,"Limited to Adverse Action letters, Counter Offer Letters,  RBP Notices and Welcome Letters.   (One for Applicant and Co-Applicant Allowed)  Additional documents require the Document Mapping Loan Package. Additional documents require custom scoping ",1475,725,
+,,Laser Pro Export,"Decision Lender is Coded to Laser Pro Basic,  for other Laser pro product please consult with product before selling",8000,1575,
+,Add On - Employment/Income/Asset Verification,The Work Number,(blank),3900,1375,
+,,Point Predictive IE Validate,(blank),0,0,
+,Add On - eSign,DocuSign - Advanced API,"If quoting a commitment, the minimum monthly envelope commitment is 100.",2400,,1.45
+,,IMM eSignature Hosted (on SAS),fka IMM eSignature Hosted (on SAS),2400,,1.45
+,,IMM eSignature on Premise,fka IMM eSignature on Premise,8000,1475,
+,,Synergy Esign - DecisionLender,(blank),5500,5500,
+,Add On - Fraud Detection,LexisNexis FraudPoint,(blank),3300,1575,
+,,LexisNexis Verification of Occupancy,(blank),3300,1575,
+,Add On - Home Banking,Alkami QuickApply (DecisionLender),(blank),2050,4700,
+,Add On - ID Authentication,TransUnion Identity Manager ID Decision Bundle,(blank),2400,,
+,,Experian CrossCore with Precise ID for Account Opening with KIQ/MFA (Option 11) (DecisionLender),(blank),975,,4.25
+,,Experian CrossCore Setup Fee (DecisionLender),"Setup fee for Initial CrossCore Implementation.  Require to select at least one option (Option 3, Option 6, Option 11).  Each option has its own setup fee in addition to the CrossCore setup fee.",7250,,
+,Add On - ID Verification,IDV only,(blank),2400,,
+,,Lexis Nexis – Instant ID ,(blank),3300,1875,
+,,Lexis Nexis – Risk View ,(blank),3300,1875,
+,,OFAC,(blank),0,,0.4
+,,Experian CrossCore with Precise ID for Account Opening Score Only (Option 6) (DecisionLender),(blank),975,,2.8
+,Add On - Indirect Lead,Automatic USA,(blank),3200,3100,5
+,,DealerTrack DDS ,(blank),8000,,1.45
+,,DealerTrack Digital Contracting (DecisionLender),"Client will need to Sign  a separate Contract with DealerTrack for Digital Contracting.  DecisionLender is on the SLM to Atomic Schema, only integrated for Indirect Auto. May be subject to additional storage charges.",4600,4100,1.45
+,,DecisionLender DLX – One Way,(blank),7000,2050,
+,,DecisionLender DLX – Two Way,(blank),7000,2050,
+,,RouteOne eContracting (DecisionLender),Transaction fee per funded Econ packet,4600,4100,1.45
+,,DecisionLender Historical Data Dump,(blank),17250,,
+,,OttoMoto (DecisionLender),DecisionLender will only support vehicle loans already configured in the client's DecisionLender site. Supporting additional collateral types will require an addendum for the desired vehicle loan types.,3300,2400,
+,,DealerTrack Digital Rule Validation Package (DecisionLender),Client has the ability to select up to 20 Default Validation rules.  Any customized rule (outside of updating values) or request for additional rules not on this list would need to be quoted accordingly.,3500,700,
+,Add On - Merchant Lending,LoanStar Technologies (DecisionLender4),"A client's site must be configured for the specific loan type offering to be generated for LoanStar, For Example a Home improvement loan would require a Home Improvement Loan type already configured and contacted for in DecisionLender.  If that loan type does not exist there would be a an additional SOW  for the creation of needed loan type. ",3300,2400,
+,Add On - MeridianLink Consulting,Admin Pro (DecisionLender4),"Service already offered, we are separating Consumer and DecisionLender",0,26580,325
+,,Admin Pro Additional 25 Hours Setup Fee (DecisionLender4),"Service already offered, we are separating Consumer and DecisionLender",6750,,
+,,Admin Pro Additional 50 Hours Setup Fee (DecisionLender4),"Service already offered, we are separating Consumer and DecisionLender",13250,,
+,,Admin Pro Lite (DecisionLender4),This is not offered to clients unless there is a possibility of them leaving Admin Pro,0,13872,325
+,,Admin Pro Plus (DecisionLender4),"Service already offered, we are separating Consumer and DecisionLender",0,31800,325
+,Add On - Misc,API Web Services (DecisionLender),(blank),7000,7500,
+,,Carleton HOEPA/HPML Validation,Approval required from Product Lead.  ,0,,0.27
+,,Carleton Monthly Payment Calculation,(blank),250,,
+,,Carleton Regulation Z Calculation,"once per application, whether Regulation Z Calculation, Monthly Payment Calculation or both",0,,0.27
+,,Champion Challenger,Separate setup fee and annual fee for each loan type.,7000,8250,
+,,Cross-Sell (Existing Customers),For existing clients only; included for new clients,5500,5750,
+,,Cross-Sell (New Logos),For existing clients only; included for new clients,0,5750,
+,,CUAC Sub-Lender Standard Export,(blank),9500,4000,
+,,DecisionLender Standard Data Dump,(blank),17250,3800,
+,,DecisionLender Standard Export,(blank),17250,3800,
+,,Dedicated VPN Connection,Required for Symitar & certain other interfaces,5750,3100,
+,,Disaster Recovery VPN,(blank),5750,3100,
+,,Reschedule Live Date (DecisionLender),FI is allowed to reschedule once per project. Fee applicable for 2nd reschedule. Price should be set at 10% of initial setup fee.,-1234,,
+,,Single SignOn via SAML,(blank),6750,3800,
+,,Standard Data Warehouse Export – Hosted by Subscriber,Approval required from Product Lead.  Included dedicated VPN Connection,-1234,-1234,
+,,Custom Training,Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.,-1234,,
+,,Expedited Deployment (DecisionLender),Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.,-1234,,
+,,API Web Services -  Additional API Connection (DecisionLender),Set up fee for each additional API Web Services connection. ,775,,
+,,VPN - Main Connection (DecisionLender),(blank),205,,
+,,VPN - Disaster Recovery Connection (DecisionLender),(blank),205,,
+,,VPN - Other Connection (DecisionLender),(blank),205,,
+,,IT Professional Services - Phone Support (DecisionLender),Price is per hour,400,,
+,,IT Professioal Services - Expedited Request (DecisionLender),Work to be performed in less than 10 days,2500,,
+,Add On - Professional Services,Additional DecisionLender Sub-Lender,"Sub-lender must utilize same rules preferences and credit groups as parent Lender. Fee does not include any export/core connectivity or third party integrations Specific to that sub-lender. Additional costs would need to be scoped out of Sub-lender specific rules and preferences, export score integrations or other 3rd party integrations will need to be quoted separately. Only for Indirect Module.",2800,1375,
+,,On Site Requirements Gathering,Quote pricing.  Price is not actually -$1234.00,-1234,,
+,,PS Hourly: 1-2 hours,(blank),775,,
+,,PS Hourly: 3-4 hours,(blank),1550,,
+,,PS Hourly: 5+ hours,(blank),1925,,
+,,eContracting Rule Validation Package (RouteOne),Client has the ability to select up to 20 Default Validation rules.  Any customized rule (outside of updating values) or request for additional rules not on this list would need to be quoted accordingly.,3500,700,
+,,Professional Services Subscription : Monthly (DecisionLender4),(blank),0,-1234,-1234
+,Add On - Vehicle History,Carfax Vehicle History and/or Vehicle Loss Report (DecisionLender4),"Client needs to have direct relationship with client, and transaction fee will be billed directly by Carfax.  Setup fee enables both Vehicle History Report (VHR) and Vehicle Loss Report (VLR).  ",1625,800,
+,Add On - Vehicle Insurance,Allied Solutions IQQ (DecisionLender),(blank),3500,1275,
+,,Unity,FKA SWBC - added support for SWBC Powerbuy Equity Protection Plan and Maintenance Benefit Agreement,3900,2000,
+,,Frost Visual Gap (DecisionLender),(blank),4900,2050,
+,Add On - Vehicle Valuation,J.D. Power Guide Data - Recreational Vehicle Values,(blank),400,950,0.65
+,,J.D. Power Motorcycle Values,FKA NADA,0,,0.65
+,,J.D. Power Use Car Values,FKA NADA,0,,0.65
+,,Black Book Motorcycle Values,(blank),0,,0.65
+,Add On - Data Integration,Gestalt Database (DecisionLender4),Refer Gestalt into clients for their database; we receive rev share,0,,
+,Add On - External Decisioning Engine,Experian PowerCurve Origination Essentials,(blank),14000,7000,
+,,Scienaptic (DecisionLender),(blank),0,,
+,Add On - POS,MeridianLink POS - Home Banking SSO (DecisionLender),(blank),2050,4700,

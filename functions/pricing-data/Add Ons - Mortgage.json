@@ -1,0 +1,1109 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "Add Ons",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Max of Annual Fee",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "MeridianLink Mortgage",
+    "Unnamed: 1": "Add On - Core Conversion",
+    "Unnamed: 2": "Core Conversion (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 16000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Core Integration",
+    "Unnamed: 2": "Corelation KeyStone (Mortgage)",
+    "Unnamed: 3": "https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features",
+    "Unnamed: 4": 16500,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv DNA (Mortgage)",
+    "Unnamed: 3": "https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features",
+    "Unnamed: 4": 16500,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Spectrum (Summit) (Mortgage)",
+    "Unnamed: 3": "https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features",
+    "Unnamed: 4": 16500,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "XP System (XP2) (Mortgage)",
+    "Unnamed: 3": "https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features",
+    "Unnamed: 4": 16500,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Data Retention",
+    "Unnamed: 2": "Data Storage - Mortgage (Inactive ML Mortgage clients)",
+    "Unnamed: 3": "Data storage service for ML Mortgage customers who cancel their LOS agreement\nDeal should not be completed without Deal Desk review\nConsult with ML Mortgage product management for pricing.  Price should be highest of (1) $1500 per month, (2) 20% of current monthly minimum, or (3) 20% of average bill over the last 24 months.  \nAutomatic price increase of 10% each year after year 1.  ",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Prep",
+    "Unnamed: 2": "DocMagic Doc Service Add On",
+    "Unnamed: 3": "Not available to customers with Mortgage DocMagic Bundle or a customer that is existing Doc Magic service.  Commitment can be different than Loan Commitment (minimum of 10)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 26.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Consulting",
+    "Unnamed: 2": "Admin Pro (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 15000,
+    "Unnamed: 6": 268
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Insight",
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 01 (1200+ Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 97100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 02 (900-1199 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 75200,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 03 (675-899 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 58200,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 04 (525-674 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 46500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 05 (400-524 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 36500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 06 (300-399 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 28300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 07 (225-299 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 21900,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 08 (170-224 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 17100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 09 (135-169 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 13900,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 10 (110-134 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 11600,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 11 (90-109 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 9700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 12 (75-89 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 8300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 13 (60-74 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 6800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 14 (45-59 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 15 (30-44 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 16 (15-29 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight For Mortgage Tier 17 (10-14 Closed Loans/Mon)",
+    "Unnamed: 3": "Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Portal",
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Each Additional Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 30180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Initial Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 46428,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Each Additional Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 27588,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Initial Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 42420,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Each Additional Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 21180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Initial Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 32556,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Each Additional Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 16296,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Initial Service (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 25140,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Misc",
+    "Unnamed: 2": "MeridianLink Mortgage Cenlar Data Extract Service",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 01 (1200+ Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 02 (900-1199 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 03 (675-899 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 04 (525-674 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 05 (400-524 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 06 (300-399 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 07 (225-299 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 08 (170-224 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 09 (135-169 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 10 (110-134 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 11 (90-109 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 12 (75-89 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 13 (60-74 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 14 (45-59 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 15 (30-44 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 16 (15-29 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 17 (0-14 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 01 (1200+ Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 20750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 02 (900-1199 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 18250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 03 (675-899 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 16000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 04 (525-674 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 14250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 05 (400-524 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": 12500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 06 (300-399 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": 11000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 07 (225-299 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": 9750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 08 (170-224 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3600,
+    "Unnamed: 5": 8500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 09 (135-169 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 7750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 10 (110-134 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 7000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 11 (90-109 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 6500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 12 (75-89 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 6000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 13 (60-74 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 14 (45-59 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3000,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 15 (30-44 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3000,
+    "Unnamed: 5": 3900,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 16 (15-29 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2700,
+    "Unnamed: 5": 2800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Test (Beta) Environment Tier 17 (0-14 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2700,
+    "Unnamed: 5": 2800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage DocDownload",
+    "Unnamed: 3": "Can only be sold concurrently with MeridianLink Mortgage, or to existing MeridianLink Mortgage customers. Check the \"Mortgage DocDownload\" intranet page for a list of supported target systems. Selling this service to any customer that utilizes a target system not on the supported list will require prior approval from the product team.",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": 5100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Time & Materials (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 350,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MortgageSAT",
+    "Unnamed: 2": "MortgageSAT",
+    "Unnamed: 3": "Batch export to vendor through secure FTP. Each batch will likely contain multiple loan files, and the transaction fee is charged per loan file.",
+    "Unnamed: 4": 1600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Professional Services",
+    "Unnamed: 2": "Baseline MeridianLink Mortgage LOS Provisioning ",
+    "Unnamed: 3": "Mandatory baseline provisioning and tenant creation for MeridianLink Mortgage. This fee covers the internal technical requirements necessary to activate the LOS environment for customers utilizing external implementation services.",
+    "Unnamed: 4": 1000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Batch Field Update Service",
+    "Unnamed: 3": "Custom Quote based on number of loans to update",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Professional Services Subscription : Monthly (Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - SQL Transmission",
+    "Unnamed: 2": "SQL Transmission Service (one extract/day after hours)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": 3000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SQL Transmission Service (one extract/hour including business hours)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": 11750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - SAE Services",
+    "Unnamed: 2": "PriceMyLoan Implementation - Custom Program",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 160
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PriceMyLoan Service Package - Basic (ML Mortgage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PriceMyLoan Service Package - Plus (ML Mortgage)",
+    "Unnamed: 3": "Subject to an annual cap of 36 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 9648,
+    "Unnamed: 6": 268
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PriceMyLoan Service Package - Premium (ML Mortgage)",
+    "Unnamed: 3": "Subject to an annual cap of 72 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 15624,
+    "Unnamed: 6": 217
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PriceMyLoan Service Package - Standard (ML Mortgage)",
+    "Unnamed: 3": "Subject to an annual cap of 12 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 3468,
+    "Unnamed: 6": 289
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Debt Optimization & Cross-Sell",
+    "Unnamed: 2": "Debt Optimization & Cross-Sell",
+    "Unnamed: 3": "Must have both ML Consumer, ML Mortgage, and an MCL CRA",
+    "Unnamed: 4": 1250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - OpenClose",
+    "Unnamed: 2": "Data Storage - OpenClose",
+    "Unnamed: 3": "Data storage service for OpenClose customers who cancel their LOS agreeemnt. Deal should not be completed without Deal Desk review. Consult with ML Mortgage product management for pricing.  Price should be the highest of (1) $1500 per month, (2) 20% of current monthly minimum, or (3) 20% of average bill over the last 24 months.  Automatic price increase of 10% each year after year 1.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standard Warehouse Extract Service",
+    "Unnamed: 3": "Annual fee billed in monthly installments.",
+    "Unnamed: 4": 2800,
+    "Unnamed: 5": 3588,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Mortgage Access",
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 01 (>1200 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 16000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 31
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 01 (>1200 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 31
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 02 (900-1199 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 13500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 32.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 02 (900-1199 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 32.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 03 (675-899 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 13500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 32.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 03 (675-899 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 32.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 04 (525-674 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 33.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 04 (525-674 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 33.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 05 (400-524 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 34.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 05 (400-524 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 34.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 06 (300-399 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 35.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 06 (300-399 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 35.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 07 (225-299 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 36.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 07 (225-299 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 36.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 08 (170-224 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 37.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 08 (170-224 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 37.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 09 (135-169 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 38.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 09 (135-169 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 38.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 10 (110-134 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 39.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 10 (110-134 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 39.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 11 (90-109 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 39.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 11 (90-109 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 39.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 12 (75-89 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 40.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 12 (75-89 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 40.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 13 (60-74 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 41.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 13 (60-74 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 41.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 42.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 42.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 15 (30-44 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 44.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 15 (30-44 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 44.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 16 (15-29 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 47.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 16 (15-29 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 47.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 17 (10-14 Closed Loans/Month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 49
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 17 (10-14 Closed Loans/Month) without setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 49
+  }
+]

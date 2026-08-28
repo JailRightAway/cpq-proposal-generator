@@ -1,0 +1,1271 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "Add Ons",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Annual Fees",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "DecisionLender4",
+    "Unnamed: 1": "Add On - Address Verification",
+    "Unnamed: 2": "Postal Verification Database (PVD)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Ancillary Service",
+    "Unnamed: 2": "Glia Integration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1775,
+    "Unnamed: 5": 675,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lightico",
+    "Unnamed: 3": "Client needs to sign contract with vendor",
+    "Unnamed: 4": 3400,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Solutions by Text",
+    "Unnamed: 3": "Client needs to sign contract with vendor",
+    "Unnamed: 4": 3400,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Informed.iq (DecisionLender4)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Consumer Portal",
+    "Unnamed: 2": "AccesSoftek SSO",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1975,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consumer Portal",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 31500,
+    "Unnamed: 5": 23000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Insight SSO",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1975,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Equifax InstaTouch",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2125,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Net Teller SSO",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1975,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Banno Home Banking SSO",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1975,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Core Integration",
+    "Unnamed: 2": "CCMC Standard Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CUBase (DecisionLender)",
+    "Unnamed: 3": "https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CULA Seamless Integration",
+    "Unnamed: 3": "This is only Appliable for client with a auto Leasing loan type",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 4500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealPack Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra Application Exchange Interface",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS - Credit Card Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Goldpoint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lowenstein Export",
+    "Unnamed: 3": "Support for standard export, Fiserv DNA and Jack Henry Silverlake interface",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Megasys Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Nortridge NLS Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Share Tech Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Shaw Solutions",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Spectrum Pathways Interface",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Symitar Core Conversion (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Premier (DecisionLender)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Corelation KeyStone Interface",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Portico (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Credit Card Processor",
+    "Unnamed: 2": "Velera (Credit Card)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Custom",
+    "Unnamed: 2": "Auto Counter Offer",
+    "Unnamed: 3": "Automatic Counter Offer Configuration is limited to the following key attributes  LTV, Term, DTI, PTI, and Amount Financed",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": 2300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender Prequalification Functionality",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 12750,
+    "Unnamed: 5": 3800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Enhanced Grid Functionality",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": 1250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Product - Annual (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - Flat Fee (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - Hourly (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Product - Monthly (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - R&D (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Product - Transaction Fee (DecisionLender)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Custom Score",
+    "Unnamed: 2": "Lending Science 360",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 14000,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Zest Custom Score",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Point Predictive Integration (DecisionLender)",
+    "Unnamed: 3": "Integration encompasses AutoOne Suite which includes Auto Pass, IEValidate, & others",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Zest Protect (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Debit Bureau",
+    "Unnamed: 2": "FIS ChexSystems (QualiFile Debit Bureau) (DecisionLender)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Archival",
+    "Unnamed: 2": "Synergy Image Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 5500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DocDownload(DecisionLender)",
+    "Unnamed: 3": "Formerly known as DecisionLender Image Transfer. Also often called document imaging; Includes extract of IDV/IDA, loan app summary, and credit reports.",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 5500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Delivery",
+    "Unnamed: 2": "Archive files - Email notification of availability of monthly files in the Online Statement Management system",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1175,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Archive files - standard",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Document Faxing- Outbound ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Inbound Faxing ",
+    "Unnamed: 3": "Requires/includes document imaging. Includes 1 GB storage.",
+    "Unnamed: 4": 1175,
+    "Unnamed: 5": 2700,
+    "Unnamed: 6": 0.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (1-5 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (21-40 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 14.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (41-60 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 26.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (61-80 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 30.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (6-20 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (81-100 Page Envelope) DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 34
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing service - Additional Letter Templates",
+    "Unnamed: 3": "Fee for each additional template",
+    "Unnamed: 4": 575,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing service (1-2,499)",
+    "Unnamed: 3": "Includes Automatic Decline Letter per DecisionLender provided sample",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing service (2,500-4,999)",
+    "Unnamed: 3": "Includes Automatic Decline Letter per DecisionLender provided sample",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.48
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing service (5,000 and over)",
+    "Unnamed: 3": "Includes Automatic Decline Letter per DecisionLender provided sample",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.21
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FSSI Reconciliation Report (DecisionLender)",
+    "Unnamed: 3": "\"This is a development charge from  FSSI. No price reductions are allowed. (estimated FSSI development time to 3 hours) per client \n Charge to FSSI, no price reductions allowed. \"\n\n\"FSSI will transmit a report directly to the client via an SFTP connection. No setup is required on the DecisionLender side. Credentials must be provided and transmitted directly to FSSI as part of the report setup. The fields currently displayed on the report include the applicant's name, address, and the date and time the letter was mailed. Additional fields may be available but could increase setup fees charged by FSSI. Confirmation of the availability of extra fields will need to be obtained from FSSI.\n an SFTP connections,  \n Client will need to provide credentials \ndirectly to FSSI. \"",
+    "Unnamed: 4": 1075,
+    "Unnamed: 5": 1908,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Prep",
+    "Unnamed: 2": "Indirect Document Package",
+    "Unnamed: 3": "Limited to Adverse Action letters, Counter Offer Letters,  RBP Notices and Welcome Letters.   (One for Applicant and Co-Applicant Allowed)  Additional documents require the Document Mapping Loan Package. Additional documents require custom scoping ",
+    "Unnamed: 4": 1475,
+    "Unnamed: 5": 725,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Laser Pro Export",
+    "Unnamed: 3": "Decision Lender is Coded to Laser Pro Basic,  for other Laser pro product please consult with product before selling",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Employment/Income/Asset Verification",
+    "Unnamed: 2": "The Work Number",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 1375,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Point Predictive IE Validate",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - eSign",
+    "Unnamed: 2": "DocuSign - Advanced API",
+    "Unnamed: 3": "If quoting a commitment, the minimum monthly envelope commitment is 100.",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IMM eSignature Hosted (on SAS)",
+    "Unnamed: 3": "fka IMM eSignature Hosted (on SAS)",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IMM eSignature on Premise",
+    "Unnamed: 3": "fka IMM eSignature on Premise",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": 1475,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Synergy Esign - DecisionLender",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": 5500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Fraud Detection",
+    "Unnamed: 2": "LexisNexis FraudPoint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LexisNexis Verification of Occupancy",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Home Banking",
+    "Unnamed: 2": "Alkami QuickApply (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2050,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - ID Authentication",
+    "Unnamed: 2": "TransUnion Identity Manager ID Decision Bundle",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore with Precise ID for Account Opening with KIQ/MFA (Option 11) (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 975,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore Setup Fee (DecisionLender)",
+    "Unnamed: 3": "Setup fee for Initial CrossCore Implementation.  Require to select at least one option (Option 3, Option 6, Option 11).  Each option has its own setup fee in addition to the CrossCore setup fee.",
+    "Unnamed: 4": 7250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - ID Verification",
+    "Unnamed: 2": "IDV only",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lexis Nexis \u2013 Instant ID ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1875,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lexis Nexis \u2013 Risk View ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1875,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "OFAC",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore with Precise ID for Account Opening Score Only (Option 6) (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 975,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Indirect Lead",
+    "Unnamed: 2": "Automatic USA",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3200,
+    "Unnamed: 5": 3100,
+    "Unnamed: 6": 5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack DDS ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 8000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack Digital Contracting (DecisionLender)",
+    "Unnamed: 3": "Client will need to Sign  a separate Contract with DealerTrack for Digital Contracting.  DecisionLender is on the SLM to Atomic Schema, only integrated for Indirect Auto. May be subject to additional storage charges.",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 4100,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender DLX \u2013 One Way",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 2050,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender DLX \u2013 Two Way",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 2050,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne eContracting (DecisionLender)",
+    "Unnamed: 3": "Transaction fee per funded Econ packet",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 4100,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender Historical Data Dump",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "OttoMoto (DecisionLender)",
+    "Unnamed: 3": "DecisionLender will only support vehicle loans already configured in the client's DecisionLender site. Supporting additional collateral types will require an addendum for the desired vehicle loan types.",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack Digital Rule Validation Package (DecisionLender)",
+    "Unnamed: 3": "Client has the ability to select up to 20 Default Validation rules.  Any customized rule (outside of updating values) or request for additional rules not on this list would need to be quoted accordingly.",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Merchant Lending",
+    "Unnamed: 2": "LoanStar Technologies (DecisionLender4)",
+    "Unnamed: 3": "A client's site must be configured for the specific loan type offering to be generated for LoanStar, For Example a Home improvement loan would require a Home Improvement Loan type already configured and contacted for in DecisionLender.  If that loan type does not exist there would be a an additional SOW  for the creation of needed loan type. ",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Consulting",
+    "Unnamed: 2": "Admin Pro (DecisionLender4)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 26580,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Additional 25 Hours Setup Fee (DecisionLender4)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 6750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Additional 50 Hours Setup Fee (DecisionLender4)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 13250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Lite (DecisionLender4)",
+    "Unnamed: 3": "This is not offered to clients unless there is a possibility of them leaving Admin Pro",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 13872,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Plus (DecisionLender4)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 31800,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Misc",
+    "Unnamed: 2": "API Web Services (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 7500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Carleton HOEPA/HPML Validation",
+    "Unnamed: 3": "Approval required from Product Lead.  ",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Carleton Monthly Payment Calculation",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Carleton Regulation Z Calculation",
+    "Unnamed: 3": "once per application, whether Regulation Z Calculation, Monthly Payment Calculation or both",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Champion Challenger",
+    "Unnamed: 3": "Separate setup fee and annual fee for each loan type.",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 8250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cross-Sell (Existing Customers)",
+    "Unnamed: 3": "For existing clients only; included for new clients",
+    "Unnamed: 4": 5500,
+    "Unnamed: 5": 5750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cross-Sell (New Logos)",
+    "Unnamed: 3": "For existing clients only; included for new clients",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CUAC Sub-Lender Standard Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 9500,
+    "Unnamed: 5": 4000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender Standard Data Dump",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17250,
+    "Unnamed: 5": 3800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DecisionLender Standard Export",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17250,
+    "Unnamed: 5": 3800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Dedicated VPN Connection",
+    "Unnamed: 3": "Required for Symitar & certain other interfaces",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 3100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Disaster Recovery VPN",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 3100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reschedule Live Date (DecisionLender)",
+    "Unnamed: 3": "FI is allowed to reschedule once per project. Fee applicable for 2nd reschedule. Price should be set at 10% of initial setup fee.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Single SignOn via SAML",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6750,
+    "Unnamed: 5": 3800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standard Data Warehouse Export \u2013 Hosted by Subscriber",
+    "Unnamed: 3": "Approval required from Product Lead.  Included dedicated VPN Connection",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Training",
+    "Unnamed: 3": "Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Expedited Deployment (DecisionLender)",
+    "Unnamed: 3": "Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "API Web Services -  Additional API Connection (DecisionLender)",
+    "Unnamed: 3": "Set up fee for each additional API Web Services connection. ",
+    "Unnamed: 4": 775,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Main Connection (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Disaster Recovery Connection (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Other Connection (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IT Professional Services - Phone Support (DecisionLender)",
+    "Unnamed: 3": "Price is per hour",
+    "Unnamed: 4": 400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IT Professioal Services - Expedited Request (DecisionLender)",
+    "Unnamed: 3": "Work to be performed in less than 10 days",
+    "Unnamed: 4": 2500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Professional Services",
+    "Unnamed: 2": "Additional DecisionLender Sub-Lender",
+    "Unnamed: 3": "Sub-lender must utilize same rules preferences and credit groups as parent Lender. Fee does not include any export/core connectivity or third party integrations Specific to that sub-lender. Additional costs would need to be scoped out of Sub-lender specific rules and preferences, export score integrations or other 3rd party integrations will need to be quoted separately. Only for Indirect Module.",
+    "Unnamed: 4": 2800,
+    "Unnamed: 5": 1375,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "On Site Requirements Gathering",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PS Hourly: 1-2 hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 775,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PS Hourly: 3-4 hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1550,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PS Hourly: 5+ hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1925,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "eContracting Rule Validation Package (RouteOne)",
+    "Unnamed: 3": "Client has the ability to select up to 20 Default Validation rules.  Any customized rule (outside of updating values) or request for additional rules not on this list would need to be quoted accordingly.",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Professional Services Subscription : Monthly (DecisionLender4)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle History",
+    "Unnamed: 2": "Carfax Vehicle History and/or Vehicle Loss Report (DecisionLender4)",
+    "Unnamed: 3": "Client needs to have direct relationship with client, and transaction fee will be billed directly by Carfax.  Setup fee enables both Vehicle History Report (VHR) and Vehicle Loss Report (VLR).  ",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": 800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle Insurance",
+    "Unnamed: 2": "Allied Solutions IQQ (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 1275,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Unity",
+    "Unnamed: 3": "FKA SWBC - added support for SWBC Powerbuy Equity Protection Plan and Maintenance Benefit Agreement",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": 2000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Frost Visual Gap (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": 2050,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle Valuation",
+    "Unnamed: 2": "J.D. Power Guide Data - Recreational Vehicle Values",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 400,
+    "Unnamed: 5": 950,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "J.D. Power Motorcycle Values",
+    "Unnamed: 3": "FKA NADA",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "J.D. Power Use Car Values",
+    "Unnamed: 3": "FKA NADA",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Black Book Motorcycle Values",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Data Integration",
+    "Unnamed: 2": "Gestalt Database (DecisionLender4)",
+    "Unnamed: 3": "Refer Gestalt into clients for their database; we receive rev share",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - External Decisioning Engine",
+    "Unnamed: 2": "Experian PowerCurve Origination Essentials",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 14000,
+    "Unnamed: 5": 7000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Scienaptic (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - POS",
+    "Unnamed: 2": "MeridianLink POS - Home Banking SSO (DecisionLender)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2050,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  }
+]

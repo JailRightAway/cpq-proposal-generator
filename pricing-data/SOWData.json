@@ -1,0 +1,52 @@
+[
+  {
+    "Template Name": "Generic SOW",
+    "Template Location": "https://meridianlink365.sharepoint.com/sites/SalesPricingGuides/Shared%20Documents/General/GENERIC%20SOW%20TEMPLATE%20REDLINE_EPC.docx",
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": NaN,
+    "Template Location": NaN,
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": NaN,
+    "Template Location": NaN,
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": NaN,
+    "Template Location": NaN,
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": "Data Fields",
+    "Template Location": "Data Tag",
+    "Unnamed: 2": "Data Value"
+  },
+  {
+    "Template Name": "Case Number",
+    "Template Location": "<<CASE>>",
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": "Customer Name",
+    "Template Location": "<<CUSTOMER>>",
+    "Unnamed: 2": NaN
+  },
+  {
+    "Template Name": "Description of Services",
+    "Template Location": "<<DESCRIPTION>>",
+    "Unnamed: 2": "MeridianLink will configure MeridianLink Consumer/MeridianLink Opening setup for Customer\u2019s MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month)"
+  },
+  {
+    "Template Name": "Fee",
+    "Template Location": "<<FEE>>",
+    "Unnamed: 2": 4800
+  },
+  {
+    "Template Name": "Product Name",
+    "Template Location": "<<PRODUCT>>",
+    "Unnamed: 2": "MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month)"
+  }
+]

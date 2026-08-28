@@ -1,0 +1,127 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Product Category,Add Ons,,,,,
+,,,,,,
+,,,,Values,,
+Product Of (Primary Service),Primary Service Category,Internal Product Name,Internal Notes for Sales,One Time Fees,Max of Annual Fee,Transaction Fees
+MeridianLink Mortgage,Add On - Core Conversion,Core Conversion (Mortgage),(blank),16000,,
+,Add On - Core Integration,Corelation KeyStone (Mortgage),https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,16500,10250,
+,,Fiserv DNA (Mortgage),https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,16500,10250,
+,,Spectrum (Summit) (Mortgage),https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,16500,10250,
+,,XP System (XP2) (Mortgage),https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,16500,10250,
+,Add On - Data Retention,Data Storage - Mortgage (Inactive ML Mortgage clients),"Data storage service for ML Mortgage customers who cancel their LOS agreement
+Deal should not be completed without Deal Desk review
+Consult with ML Mortgage product management for pricing.  Price should be highest of (1) $1500 per month, (2) 20% of current monthly minimum, or (3) 20% of average bill over the last 24 months.  
+Automatic price increase of 10% each year after year 1.  ",0,-1234,
+,Add On - Document Prep,DocMagic Doc Service Add On,Not available to customers with Mortgage DocMagic Bundle or a customer that is existing Doc Magic service.  Commitment can be different than Loan Commitment (minimum of 10),0,,26.6
+,Add On - MeridianLink Consulting,Admin Pro (Mortgage),(blank),0,15000,268
+,Add On - MeridianLink Insight,MeridianLink Insight For Mortgage Tier 01 (1200+ Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,97100,
+,,MeridianLink Insight For Mortgage Tier 02 (900-1199 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,75200,
+,,MeridianLink Insight For Mortgage Tier 03 (675-899 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,58200,
+,,MeridianLink Insight For Mortgage Tier 04 (525-674 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,46500,
+,,MeridianLink Insight For Mortgage Tier 05 (400-524 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,36500,
+,,MeridianLink Insight For Mortgage Tier 06 (300-399 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,28300,
+,,MeridianLink Insight For Mortgage Tier 07 (225-299 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,21900,
+,,MeridianLink Insight For Mortgage Tier 08 (170-224 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,17100,
+,,MeridianLink Insight For Mortgage Tier 09 (135-169 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,13900,
+,,MeridianLink Insight For Mortgage Tier 10 (110-134 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,11600,
+,,MeridianLink Insight For Mortgage Tier 11 (90-109 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,9700,
+,,MeridianLink Insight For Mortgage Tier 12 (75-89 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,8300,
+,,MeridianLink Insight For Mortgage Tier 13 (60-74 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,6800,
+,,MeridianLink Insight For Mortgage Tier 14 (45-59 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,5000,
+,,MeridianLink Insight For Mortgage Tier 15 (30-44 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,5000,
+,,MeridianLink Insight For Mortgage Tier 16 (15-29 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,5000,
+,,MeridianLink Insight For Mortgage Tier 17 (10-14 Closed Loans/Mon),"Ensure tier reflects the combined commitment of closed 1st liens, closed 2nd liens, and purchased correspondent loans.",5000,5000,
+,Add On - MeridianLink Portal,"Alpharank T1: $10B+ AUM, Each Additional Service (Mortgage)",(blank),0,30180,
+,,"Alpharank T1: $10B+ AUM, Initial Service (Mortgage)",(blank),0,46428,
+,,"Alpharank T2: $2B-$10B AUM, Each Additional Service (Mortgage)",(blank),0,27588,
+,,"Alpharank T2: $2B-$10B AUM, Initial Service (Mortgage)",(blank),0,42420,
+,,"Alpharank T3: $500M-$2B AUM, Each Additional Service (Mortgage)",(blank),0,21180,
+,,"Alpharank T3: $500M-$2B AUM, Initial Service (Mortgage)",(blank),0,32556,
+,,"Alpharank T4: <$500M AUM, Each Additional Service (Mortgage)",(blank),0,16296,
+,,"Alpharank T4: <$500M AUM, Initial Service (Mortgage)",(blank),0,25140,
+,Add On - Misc,MeridianLink Mortgage Cenlar Data Extract Service,(blank),4900,5300,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 01 (1200+ Closed Loans/Month),(blank),3900,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 02 (900-1199 Closed Loans/Month),(blank),3900,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 03 (675-899 Closed Loans/Month),(blank),3900,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 04 (525-674 Closed Loans/Month),(blank),3900,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 05 (400-524 Closed Loans/Month),(blank),3600,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 06 (300-399 Closed Loans/Month),(blank),3600,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 07 (225-299 Closed Loans/Month),(blank),3600,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 08 (170-224 Closed Loans/Month),(blank),3600,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 09 (135-169 Closed Loans/Month),(blank),3300,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 10 (110-134 Closed Loans/Month),(blank),3300,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 11 (90-109 Closed Loans/Month),(blank),3300,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 12 (75-89 Closed Loans/Month),(blank),3300,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 13 (60-74 Closed Loans/Month),(blank),3300,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 14 (45-59 Closed Loans/Month),(blank),3000,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 15 (30-44 Closed Loans/Month),(blank),3000,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 16 (15-29 Closed Loans/Month),(blank),2700,,
+,,MeridianLink Mortgage Test (Beta) Environment Resync from Production Tier 17 (0-14 Closed Loans/Month),(blank),2700,,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 01 (1200+ Closed Loans/Month),(blank),3900,20750,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 02 (900-1199 Closed Loans/Month),(blank),3900,18250,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 03 (675-899 Closed Loans/Month),(blank),3900,16000,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 04 (525-674 Closed Loans/Month),(blank),3900,14250,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 05 (400-524 Closed Loans/Month),(blank),3600,12500,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 06 (300-399 Closed Loans/Month),(blank),3600,11000,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 07 (225-299 Closed Loans/Month),(blank),3600,9750,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 08 (170-224 Closed Loans/Month),(blank),3600,8500,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 09 (135-169 Closed Loans/Month),(blank),3300,7750,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 10 (110-134 Closed Loans/Month),(blank),3300,7000,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 11 (90-109 Closed Loans/Month),(blank),3300,6500,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 12 (75-89 Closed Loans/Month),(blank),3300,6000,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 13 (60-74 Closed Loans/Month),(blank),3300,5300,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 14 (45-59 Closed Loans/Month),(blank),3000,4700,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 15 (30-44 Closed Loans/Month),(blank),3000,3900,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 16 (15-29 Closed Loans/Month),(blank),2700,2800,
+,,MeridianLink Mortgage Test (Beta) Environment Tier 17 (0-14 Closed Loans/Month),(blank),2700,2800,
+,,Mortgage DocDownload,"Can only be sold concurrently with MeridianLink Mortgage, or to existing MeridianLink Mortgage customers. Check the ""Mortgage DocDownload"" intranet page for a list of supported target systems. Selling this service to any customer that utilizes a target system not on the supported list will require prior approval from the product team.",4700,5100,
+,,Time & Materials (Mortgage),(blank),350,,
+,Add On - MortgageSAT,MortgageSAT,"Batch export to vendor through secure FTP. Each batch will likely contain multiple loan files, and the transaction fee is charged per loan file.",1600,,9.8
+,Add On - Professional Services,Baseline MeridianLink Mortgage LOS Provisioning ,Mandatory baseline provisioning and tenant creation for MeridianLink Mortgage. This fee covers the internal technical requirements necessary to activate the LOS environment for customers utilizing external implementation services.,1000,,
+,,Batch Field Update Service,Custom Quote based on number of loans to update,0,,-1234
+,,Professional Services Subscription : Monthly (Mortgage),(blank),0,-1234,-1234
+,Add On - SQL Transmission,SQL Transmission Service (one extract/day after hours),(blank),5500,3000,
+,,SQL Transmission Service (one extract/hour including business hours),(blank),5500,11750,
+,Add On - SAE Services,PriceMyLoan Implementation - Custom Program,(blank),1600,,160
+,,PriceMyLoan Service Package - Basic (ML Mortgage),(blank),0,,325
+,,PriceMyLoan Service Package - Plus (ML Mortgage),Subject to an annual cap of 36 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.,0,9648,268
+,,PriceMyLoan Service Package - Premium (ML Mortgage),Subject to an annual cap of 72 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.,0,15624,217
+,,PriceMyLoan Service Package - Standard (ML Mortgage),Subject to an annual cap of 12 hours. If annual cap is reached during term of service customer may continue to use service at the hourly rate.,0,3468,289
+,Add On - Debt Optimization & Cross-Sell,Debt Optimization & Cross-Sell,"Must have both ML Consumer, ML Mortgage, and an MCL CRA",1250,,
+,Add On - OpenClose,Data Storage - OpenClose,"Data storage service for OpenClose customers who cancel their LOS agreeemnt. Deal should not be completed without Deal Desk review. Consult with ML Mortgage product management for pricing.  Price should be the highest of (1) $1500 per month, (2) 20% of current monthly minimum, or (3) 20% of average bill over the last 24 months.  Automatic price increase of 10% each year after year 1.",0,-1234,
+,,Standard Warehouse Extract Service,Annual fee billed in monthly installments.,2800,3588,
+,Add On - MeridianLink Mortgage Access,MeridianLink Mortgage Access Tier 01 (>1200 Closed Loans/Month),(blank),16000,,31
+,,MeridianLink Mortgage Access Tier 01 (>1200 Closed Loans/Month) without setup,(blank),0,,31
+,,MeridianLink Mortgage Access Tier 02 (900-1199 Closed Loans/Month),(blank),13500,,32.05
+,,MeridianLink Mortgage Access Tier 02 (900-1199 Closed Loans/Month) without setup,(blank),0,,32.05
+,,MeridianLink Mortgage Access Tier 03 (675-899 Closed Loans/Month),(blank),13500,,32.9
+,,MeridianLink Mortgage Access Tier 03 (675-899 Closed Loans/Month) without setup,(blank),0,,32.9
+,,MeridianLink Mortgage Access Tier 04 (525-674 Closed Loans/Month),(blank),10750,,33.75
+,,MeridianLink Mortgage Access Tier 04 (525-674 Closed Loans/Month) without setup,(blank),0,,33.75
+,,MeridianLink Mortgage Access Tier 05 (400-524 Closed Loans/Month),(blank),10750,,34.6
+,,MeridianLink Mortgage Access Tier 05 (400-524 Closed Loans/Month) without setup,(blank),0,,34.6
+,,MeridianLink Mortgage Access Tier 06 (300-399 Closed Loans/Month),(blank),10750,,35.45
+,,MeridianLink Mortgage Access Tier 06 (300-399 Closed Loans/Month) without setup,(blank),0,,35.45
+,,MeridianLink Mortgage Access Tier 07 (225-299 Closed Loans/Month),(blank),8000,,36.5
+,,MeridianLink Mortgage Access Tier 07 (225-299 Closed Loans/Month) without setup,(blank),0,,36.5
+,,MeridianLink Mortgage Access Tier 08 (170-224 Closed Loans/Month),(blank),8000,,37.55
+,,MeridianLink Mortgage Access Tier 08 (170-224 Closed Loans/Month) without setup,(blank),0,,37.55
+,,MeridianLink Mortgage Access Tier 09 (135-169 Closed Loans/Month),(blank),5500,,38.2
+,,MeridianLink Mortgage Access Tier 09 (135-169 Closed Loans/Month) without setup,(blank),0,,38.2
+,,MeridianLink Mortgage Access Tier 10 (110-134 Closed Loans/Month),(blank),5500,,39.05
+,,MeridianLink Mortgage Access Tier 10 (110-134 Closed Loans/Month) without setup,(blank),0,,39.05
+,,MeridianLink Mortgage Access Tier 11 (90-109 Closed Loans/Month),(blank),5500,,39.9
+,,MeridianLink Mortgage Access Tier 11 (90-109 Closed Loans/Month) without setup,(blank),0,,39.9
+,,MeridianLink Mortgage Access Tier 12 (75-89 Closed Loans/Month),(blank),5500,,40.5
+,,MeridianLink Mortgage Access Tier 12 (75-89 Closed Loans/Month) without setup,(blank),0,,40.5
+,,MeridianLink Mortgage Access Tier 13 (60-74 Closed Loans/Month),(blank),4800,,41.35
+,,MeridianLink Mortgage Access Tier 13 (60-74 Closed Loans/Month) without setup,(blank),0,,41.35
+,,MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month),(blank),4800,,42.4
+,,MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month) without setup,(blank),0,,42.4
+,,MeridianLink Mortgage Access Tier 15 (30-44 Closed Loans/Month),(blank),4800,,44.1
+,,MeridianLink Mortgage Access Tier 15 (30-44 Closed Loans/Month) without setup,(blank),0,,44.1
+,,MeridianLink Mortgage Access Tier 16 (15-29 Closed Loans/Month),(blank),4800,,47.1
+,,MeridianLink Mortgage Access Tier 16 (15-29 Closed Loans/Month) without setup,(blank),0,,47.1
+,,MeridianLink Mortgage Access Tier 17 (10-14 Closed Loans/Month),(blank),4800,,49
+,,MeridianLink Mortgage Access Tier 17 (10-14 Closed Loans/Month) without setup,(blank),0,,49

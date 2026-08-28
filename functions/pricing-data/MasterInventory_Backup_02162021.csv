@@ -1,0 +1,1224 @@
+Product Family,Product Of (Primary Service),Primary Service Category,Product Vendor,Internal Product Name,Pricing Methodology,Proposal Product Name,LoansPQ Discount Module (Y/N),One Time Fee,NSItemID - OneTime,Annual Fee,NSItemID-Annual,Per Transaction Fee,NSItemID-Transaction,NSItemID-Overage,NSItemID-Commitment,Managed Services ACV (Y/N),Monthly Minimum Commitment ($),Internal Notes for Sales,External Notes for Customer,Column2,Status
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (0-249 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 0,Y,18742,1454,,,9.26,3770,5279.0,3770.0,N,0.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (250-499 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 1,Y,23152,1454,,,8.16,3770,5279.0,3770.0,N,2040.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (500-999 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 2,Y,29767,1454,,,7.06,3770,5279.0,3770.0,N,3530.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (1000-1999 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 3,Y,35280,1454,,,5.73,3770,5279.0,3770.0,N,5730.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (2000-3999 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 4,Y,42997,1454,,,4.41,3770,5279.0,3770.0,N,8820.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (4000-7999 apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 5,Y,49612,1454,,,3.09,3770,5279.0,3770.0,N,12360.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Consumer Module (8000+  apps),App Commitment / Mon,Origination Platform - Consumer Module - Level 6,Y,56227,1454,,,2.54,3770,5279.0,3770.0,N,20320.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (0-249 apps),App Commitment / Mon,XpressAccounts Module - Level 0,Y,13230,1453,,,9.26,6031,6032.0,6031.0,N,0.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (250-499 apps),App Commitment / Mon,XpressAccounts Module - Level 1,Y,16537,1453,,,8.16,6031,6032.0,6031.0,N,2040.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (500-999 apps),App Commitment / Mon,XpressAccounts Module - Level 2,Y,19845,1453,,,7.06,6031,6032.0,6031.0,N,3530.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (1000-1999 apps),App Commitment / Mon,XpressAccounts Module - Level 3,Y,24255,1453,,,5.73,6031,6032.0,6031.0,N,5730.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (2000-3999 apps),App Commitment / Mon,XpressAccounts Module - Level 4,Y,29767,1453,,,4.41,6031,6032.0,6031.0,N,8820.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (4000-7999 apps),App Commitment / Mon,XpressAccounts Module - Level 5,Y,35280,1453,,,3.09,6031,6032.0,6031.0,N,12360.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,XpressAccounts Module (8000+  apps),App Commitment / Mon,XpressAccounts Module - Level 6,Y,42997,1453,,,2.54,6031,6032.0,6031.0,N,20320.0,"** LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module (0-249 apps),App Commitment / Mon,Origination Platform - Business Module - Level 0,Y,11025,4288,,,22.05,5319,5320.0,5319.0,N,0.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module (250-499 apps),App Commitment / Mon,Origination Platform - Business Module - Level 1,Y,11025,4288,,,17.64,5319,5320.0,5319.0,N,4410.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module (500-999 apps),App Commitment / Mon,Origination Platform - Business Module - Level 2,Y,11025,4288,,,14.33,5319,5320.0,5319.0,N,7165.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module (1000-1999 apps),App Commitment / Mon,Origination Platform - Business Module - Level 3,Y,11025,4288,,,11.03,5319,5320.0,5319.0,N,11030.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Home Equity Module (0-249 apps),App Commitment / Mon,Origination Platform - Home Equity Module - Level 0,Y,11025,1439,,,16.54,5321,5322.0,5321.0,N,0.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Home Equity Module (250-499 apps),App Commitment / Mon,Origination Platform - Home Equity Module - Level 1,Y,11025,1439,,,13.23,5321,5322.0,5321.0,N,3307.5,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Home Equity Module (500-999 apps),App Commitment / Mon,Origination Platform - Home Equity Module - Level 2,Y,11025,1439,,,9.92,5321,5322.0,5321.0,N,4960.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Home Equity Module (1000-1999 apps),App Commitment / Mon,Origination Platform - Home Equity Module - Level 3,Y,11025,1439,,,7.72,5321,5322.0,5321.0,N,7720.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (0-249 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 0,Y,7938,2612,,,5.51,5280,5281.0,5280.0,N,0.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (250-499 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 1,Y,7938,2612,,,4.41,5280,5281.0,5280.0,N,1103.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (500-999 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 2,Y,7938,2612,,,3.86,5280,5281.0,5280.0,N,1930.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (1000-1999 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 3,Y,7938,2612,,,3.31,5280,5281.0,5280.0,N,3310.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (2000-3999 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 4,Y,7938,2612,,,2.76,5280,5281.0,5280.0,N,5520.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (4000-7999 apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 5,Y,7938,2612,,,2.48,5280,5281.0,5280.0,N,9920.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Indirect Lending Module (8000+  apps),App Commitment / Mon,Origination Platform - Indirect Lending Module - Level 6,Y,7938,2612,,,2.21,5280,5281.0,5280.0,N,17680.0,LPQ/XA Global Minimum $926 per month applies if customer makes no commitments on sub-modules.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (0-2999 apps),App Commitment / Mon,Application Portal,N,6200,2580,2116,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,i used Application Portal Fee name and not Digital Lending - need to verify,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (3000-5999 apps),App Commitment / Mon,Application Portal,N,6200,2580,6350,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (6000-11999 apps),App Commitment / Mon,Application Portal,N,6200,2580,9525,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (12000-23999 apps),App Commitment / Mon,Application Portal,N,6200,2580,12700,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (24000-47999 apps),App Commitment / Mon,Application Portal,N,6200,2580,15876,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (48000-95999 apps),App Commitment / Mon,Application Portal,N,6200,2580,19051,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,Application Portal (96000-191999 apps),App Commitment / Mon,Application Portal,N,6200,2580,29635,2584,,,,,N,,**Guided Configuration and Training can be discounted up to $5198 with CRO approval before deal desk.,,,
+Shared,Shared,Add On - Application Portal,MeridianLink,Application Portal - Plus Package,Standard,Application Portal - Plus Package,N,,,3150,6558,,,,,N,,"Includes Site Analytics (Matomo & Google Tag Manager), Supported Home Banking SSO (contact PM for list), Combo Applications",,,
+Shared,Shared,Add On - Application Portal,MeridianLink,Application Portal - Additional Portal,Standard,Application Portal - Additional Portal,N,,,1050,6556,,,,,N,,,,,
+Digital Lending,LoansPQ/XpressAccounts,Add On - Application Portal,MeridianLink,"Application Portal - Automation Package (Auto-booking, online banking registration, auto-disbursements for LPQ)",Standard,"Application Portal - Automation Package (Auto-booking, online banking registration, auto-disbursements for LPQ)",N,,,1575,,,,,,N,,,,,
+Shared,Shared,Add On - Application Portal,MeridianLink,Application Portal - Digital Engagement Package (co-browsing video chat),Standard,Application Portal - Digital Engagement Package (co-browsing video chat),N,3150,6758,1575,6560,,,,,N,,,,,
+Shared,Shared,Add On - Application Portal,MeridianLink,Application Portal - Custom URL,Standard,Application Portal - Custom URL,N,,,1050,6557,,,,,N,,,,,
+Shared,Shared,Add On - Application Portal,MeridianLink,Application Portal - Equifax InstaTouch,Standard,Application Portal - Equifax InstaTouch,N,1575,6757,,,2.1,?,,,N,,,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - Up to $400M Assets - Billed Annually,"Asset Site, Annual Amount billed Annually",XpressCollect (Annual Fee Billed Annually),N,10000,1456,24000,2603,,,,,N,,**Annual Fee Billed Annually,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $400M-$600M Assets - Billed Annually,"Asset Site, Annual Amount billed Annually",XpressCollect (Annual Fee Billed Annually),N,15000,1456,36000,2603,,,,,N,,**Annual Fee Billed Annually,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $601M-$800M Assets - Billed Annually,"Asset Site, Annual Amount billed Annually",XpressCollect (Annual Fee Billed Annually),N,20000,1456,48000,2603,,,,,N,,**Annual Fee Billed Annually,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $800M-$1B Assets - Billed Annually,"Asset Site, Annual Amount billed Annually",XpressCollect (Annual Fee Billed Annually),N,30000,1456,60000,2603,,,,,N,,**Annual Fee Billed Annually,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $1B+ Assets - Billed Annually,"Asset Site, Annual Amount billed Annually",XpressCollect (Annual Fee Billed Annually),N,50000,1456,72000,2603,,,,,N,,**Annual Fee Billed Annually,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - Up to $400M Assets - Billed Monthly,"Asset Site, Annual Amount billed Monthly",XpressCollect (Annual Fee Billed Monthly),N,10000,1456,24000,5413,,,,,N,,**Annual Fee Billed Monthly,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $400M-$600M Assets - Billed Monthly,"Asset Site, Annual Amount billed Monthly",XpressCollect (Annual Fee Billed Monthly),N,15000,1456,36000,5413,,,,,N,,**Annual Fee Billed Monthly,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $601M-$800M Assets - Billed Monthly,"Asset Site, Annual Amount billed Monthly",XpressCollect (Annual Fee Billed Monthly),N,20000,1456,48000,5413,,,,,N,,**Annual Fee Billed Monthly,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $800M-$1B Assets - Billed Monthly,"Asset Site, Annual Amount billed Monthly",XpressCollect (Annual Fee Billed Monthly),N,30000,1456,60000,5413,,,,,N,,**Annual Fee Billed Monthly,,,
+Origination - Consumer,XpressCollect,Primary Service,MeridianLink,XpressCollect - $1B+ Assets - Billed Monthly,"Asset Site, Annual Amount billed Monthly",XpressCollect (Annual Fee Billed Monthly),N,50000,1456,72000,5413,,,,,N,,**Annual Fee Billed Monthly,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Insight,MeridianLink,MLX Insight,Standard,MLX Insight,N,5000,4880,16000,4778,,,,,N,,**Includes 2 Power Users and 10 Standard Users,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Insight,MeridianLink,MLX Insight - Additional Power User,Standard,MLX Insight - Additional Power User,N,,,1500,4779,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Insight,MeridianLink,MLX Insight - Additional Standard User,Standard,MLX Insight - Additional Standard User,N,,,100,4780,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Custom Scorecard,Standard,Custom Scorecard,N,Quote,5368,,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Decisioning Optimization,Standard,Decisioning Optimization,N,Quote,5369,,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Enhanced Implementation,Standard,Enhanced Implementation,N,Quote,5370,,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Software Configuration,Standard,Software Configuration,N,,,,,Quote,5371,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Process and Strategy Maintenance,Standard,Process and Strategy Maintenance,N,,,Quote,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Process Assessment,Standard,Process Assessment,N,Quote,5374,,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Tune-Up,Standard,Tune-Up,N,20350,5375,,,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Admin Pro,Standard,Admin Pro,N,,,20000,5306,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Reveal Pro,Standard,Reveal Pro,N,,,Quote,5307,,,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Capture Rate Analysis,Standard,Capture Rate Analysis,N,,,,,Quote,5308,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Declined Application Analysis,Standard,Declined Application Analysis,N,,,,,Quote,5310,,,N,,,,,
+Data Insights & Decisions,LoansPQ/XpressAccounts,Add On - MLX Consulting,MeridianLink,Disparate Impact,Standard,Disparate Impact,N,,,,,Quote,5311,,,N,,,,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 0 (0-29 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 0 (0-29 Closed Loans/Mon) with 1 implementation,N,13500,1946,,,100,3754,1943.0,2042.0,N,1500.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 0 (0-29 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 0 (0-29 Closed Loans/Mon) with 2 implementations,N,20250,1946,,,100,3754,1943.0,2042.0,N,1500.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 0 (0-29 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 0 (0-29 Closed Loans/Mon) with 3 implementations,N,23750,1946,,,100,3754,1943.0,2042.0,N,1500.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 1 (30-49 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 1 (30-49 Closed Loans/Mon) with 1 implementation,N,19000,1946,,,87,3754,1943.0,2042.0,N,2610.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 1 (30-49 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 1 (30-49 Closed Loans/Mon) with 2 implementations,N,28500,1946,,,87,3754,1943.0,2042.0,N,2610.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 1 (30-49 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 1 (30-49 Closed Loans/Mon) with 3 implementations,N,33250,1946,,,87,3754,1943.0,2042.0,N,2610.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 2 (50-99 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 2 (50-99 Closed Loans/Mon) with 1 implementation,N,23000,1946,,,78.5,3754,1943.0,2042.0,N,3925.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 2 (50-99 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 2 (50-99 Closed Loans/Mon) with 2 implementations,N,34500,1946,,,78.5,3754,1943.0,2042.0,N,3925.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 2 (50-99 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 2 (50-99 Closed Loans/Mon) with 3 implementations,N,40250,1946,,,78.5,3754,1943.0,2042.0,N,3925.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 3 (100-199 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 3 (100-199 Closed Loans/Mon) with 1 implementation,N,28500,1946,,,68.25,3754,1943.0,2042.0,N,6825.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 3 (100-199 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 3 (100-199 Closed Loans/Mon) with 2 implementations,N,42750,1946,,,68.25,3754,1943.0,2042.0,N,6825.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 3 (100-199 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 3 (100-199 Closed Loans/Mon) with 3 implementations,N,50000,1946,,,68.25,3754,1943.0,2042.0,N,6825.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 4 (200-399 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 4 (200-399 Closed Loans/Mon) with 1 implementation,N,34000,1946,,,59.5,3754,1943.0,2042.0,N,11900.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 4 (200-399 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 4 (200-399 Closed Loans/Mon) with 2 implementations,N,51000,1946,,,59.5,3754,1943.0,2042.0,N,11900.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 4 (200-399 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 4 (200-399 Closed Loans/Mon) with 3 implementations,N,59500,1946,,,59.5,3754,1943.0,2042.0,N,11900.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 5 (400-699 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 5 (400-699 Closed Loans/Mon) with 1 implementation,N,39250,1946,,,51.75,3754,1943.0,2042.0,N,20700.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 5 (400-699 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 5 (400-699 Closed Loans/Mon) with 2 implementations,N,59000,1946,,,51.75,3754,1943.0,2042.0,N,20700.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 5 (400-699 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 5 (400-699 Closed Loans/Mon) with 3 implementations,N,69000,1946,,,51.75,3754,1943.0,2042.0,N,20700.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 6 (700-999 Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 6 (700-999 Closed Loans/Mon) with 1 implementation,N,43750,1946,,,46.25,3754,1943.0,2042.0,N,32375.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 6 (700-999 Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 6 (700-999 Closed Loans/Mon) with 2 implementations,N,65750,1946,,,46.25,3754,1943.0,2042.0,N,32375.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 6 (700-999 Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 6 (700-999 Closed Loans/Mon) with 3 implementations,N,76750,1946,,,46.25,3754,1943.0,2042.0,N,32375.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 7 (1000+ Closed Loans/Mon) with 1 implementation,Closed Loans / Mon,LendingQB Level 7 (1000+ Closed Loans/Mon) with 1 implementation,N,46500,1946,,,43,3754,1943.0,2042.0,N,43000.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 7 (1000+ Closed Loans/Mon) with 2 implementations,Closed Loans / Mon,LendingQB Level 7 (1000+ Closed Loans/Mon) with 2 implementations,N,69750,1946,,,43,3754,1943.0,2042.0,N,43000.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Origination - Mortgage,LendingQB,Primary Service,MeridianLink,LendingQB Level 7 (1000+ Closed Loans/Mon) with 3 implementations,Closed Loans / Mon,LendingQB Level 7 (1000+ Closed Loans/Mon) with 3 implementations,N,81500,1946,,,43,3754,1943.0,2042.0,N,43000.0,"
+** If you create a monthly minimum between levels, you must use the per closed loan fee of the lower level.  						
+** Implementation fees should be discounted by 10% for all The Mortgage Collaborative (TMC) Lender Member Companies.
+** Retail and broker business channels are treated as a single business channel if implemented at the same time.  
+** If customer wants to add additional channels after the initial service deployment there may be additional costs. 
+
+							
+",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (0-9 Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,30,5386,5329.0,5328.0,N,0.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (10-24 Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,25,5386,5329.0,5328.0,N,250.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (25-49 Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,21,5386,5329.0,5328.0,N,525.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (50-99 Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,17.5,5386,5329.0,5328.0,N,875.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (100-399 Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,14.5,5386,5329.0,5328.0,N,1450.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage (400+ Closed Loans/Mon),Closed Loans in AP/ Mon,Application Portal - Mortgage,N,2250,5304,,,12,5386,5329.0,5328.0,N,4800.0,"*Use defined as applications originated in AP or applications using the AP status check ** if you create an app commitment between levels, you must use the per application fee of the lower level.",,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - Site Analytics,Standard,Application Portal Mortgage - Site Analytics,N,,,1050,5327,,,,,N,,,,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - Additional Portal,Standard,Application Portal Mortgage - Additional Portal,N,,,1050,4215,,,,,N,,,,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - Custom URL,Standard,Application Portal Mortgage - Custom URL,N,,,1050,4216,,,,,N,,,,,
+Digital Lending,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - Equifax InstaTouch,Standard,Application Portal Mortgage - Equifax InstaTouch,N,1500,5288,,,2.1,5289,,,N,,,,,
+Origination - Mortgage,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - AccountChek - One Time,Standard,Application Portal Mortgage - AccountChek - One Time,N,,,,,8.4,1940,,,N,,,,,
+Origination - Mortgage,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - AccountChek - 30 Day Monitoring,Standard,Application Portal Mortgage - AccountChek - 30 Day Monitoring,N,,,,,14.7,3529,,,N,,,,,
+Origination - Mortgage,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - AccountChek - 60 Day Monitoring,Standard,Application Portal Mortgage - AccountChek - 60 Day Monitoring,N,,,,,14.7,3530,,,N,,,,,
+Origination - Mortgage,LendingQB,Add On - Application Portal,MeridianLink,Application Portal Mortgage - AccountChek - 90 Day Monitoring,Standard,Application Portal Mortgage - AccountChek - 90 Day Monitoring,N,,,,,18.9,3531,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (0-249 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (250-499 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (500-999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (1000-1999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (2000-3999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (4000-7999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP (8000+  apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP,N,6500,5335,,5338,99,5339,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (0-249 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (0-249 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (250-499 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (250-499 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (500-999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (500-999 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (1000-1999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (1000-1999 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (2000-3999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (2000-3999 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (4000-7999 apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (4000-7999 apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Primary Service,MeridianLink,LoansPQ - Business Module - SBA PPP with eTrans (8000+  apps),App Commitment / Mon,LoansPQ - Business Module - SBA PPP with eTrans (8000+  apps),N,6500,5335,,5338,99,5343,,,N,,"**New Logo Only, Additional Add-Ons (Docusign Excluded) require case-by-case approval or purchase of full LPQ",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (+8k apps),App Commitment / Mon,Address Verification (+8k apps),N,,,15750,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (0 - 499 apps),App Commitment / Mon,Address Verification (0 - 499 apps),N,,,1050,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (1k - 1.99k apps),App Commitment / Mon,Address Verification (1k - 1.99k apps),N,,,6300,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (2k - 3.99k apps),App Commitment / Mon,Address Verification (2k - 3.99k apps),N,,,9450,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (4k - 7.99k apps),App Commitment / Mon,Address Verification (4k - 7.99k apps),N,,,12600,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,U.S. Postal Services,Address Verification (500 - 999 apps),App Commitment / Mon,Address Verification (500 - 999 apps),N,,,3150,741,,,,,N,,Specified app volume is monthly consumer/XA app commitment,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Address Verification,,IST CorrectAddress,Standard,IST CorrectAddress,N,,,,,0.11,2139,,,N,,Applies to both test and production,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Call Center,CUNA Loanlink,Co-op,Standard,Co-op,N,3000,5312,1050,2555,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Call Center,LSI,LSI,Standard,LSI,N,3000,4310,1050,2555,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Call Center,PSCU,PSCU,Standard,PSCU,N,3000,4315,1050,2555,,,,,N,,,,,
+SHARED,SHARED,Add On - Core Conversion,MeridianLink,Core Conversion,Standard,Core Conversion,N,10500,6761,,,,,,,N,,,,,
+SHARED,SHARED,Add On - Core Conversion,MeridianLink,Fiserv DNA Fee (pass through from vendor),Standard,Fiserv DNA Fee (pass through from vendor),N,5250,6761,,,,,,,N,,In addition to ML project fee,,,
+SHARED,SHARED,Add On - Core Conversion,MeridianLink,JHA to JHA,Standard,JHA to JHA,N,3675,6761,,,,,,,N,,,,,
+SHARED,SHARED,Add On - Core Conversion,MeridianLink,Symitar Reconversion,Standard,Symitar Reconversion,N,5250,6761,,,,,,,N,,Update on Symitar version for additional mappings,,,
+SHARED,SHARED,Add On - Core Integration,COCC,COCC,Standard,COCC,N,11025,6760,2756,6563,,,,,N,,White labeled version of DNA,,,
+SHARED,SHARED,Add On - Core Integration,CUAnswers,CUBase,Standard,CUBase,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,Cunify,Standard,Cunify,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,CUDP,CUProdigy,Standard,CUProdigy,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,DataSafe,Standard,DataSafe,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,DNA,Standard,DNA,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,JHA,Episys,Standard,Episys,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,ESP,ESP (Forza),Standard,ESP (Forza),N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,CMC,Flex,Standard,Flex,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,Galaxy,Standard,Galaxy,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FIS,Horizon,Standard,Horizon,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FIS,IBS,Standard,IBS,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,EPL,iPower,Standard,iPower,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,JHA,Jack Henry 20/20,Standard,Jack Henry 20/20,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,JHA,Jack Henry CoreDirector,Standard,Jack Henry CoreDirector,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,JHA,Jack Henry Silverlake,Standard,Jack Henry Silverlake,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,Corelation,KeyStone,Standard,KeyStone,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FIS,Bankway (Metavante),Standard,Bankway (Metavante),N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features;,,,
+SHARED,SHARED,Add On - Core Integration,FIS,Miser,Standard,Miser,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,Share One,NewSolutions,Standard,NewSolutions,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,Finastra,Phoenix EFE,Standard,Phoenix EFE,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,Portico,Standard,Portico,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,Spectrum (Summit),Standard,Spectrum (Summit),N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,Finastra,UltraData OpenPath,Standard,UltraData OpenPath,N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,FiServ,XP System (XP2),Standard,XP System (XP2),N,11025,6760,2756,6563,,,,,N,,https://mlintranet.meridianlink.com/display/LPQ/Major+Core+Features,,,
+SHARED,SHARED,Add On - Core Integration,Other,New Core Integration,Standard,New Core Integration,N,11025,6760,2756,6563,,,,,N,,Using ML standard schema = full integration; New schema includes Import Customer and View Account and additional features can be built as prof svcs; contact Product Mgmt for project timelines,,,
+SHARED,SHARED,Add On - Core Integration,MeridianLink,Send Application Records to Core,Standard,Send Application Records to Core,N,2625,?,,,,,,,N,,"For Symitar clients, they can have either Loan Records or Loan App Records as a part of their contract. If they want both, we'll need to charge the fee. For Corelation clients, we enable Loan Records by default. If they want to add Loan App Records, we'll need to charge the fee.",,,
+SHARED,SHARED,Add On - Core Integration,Fiserv,Fiserv DNA Credit Push,Standard,Fiserv DNA Credit Push,N,2100,?,1050,?,,,,,N,,,,,
+SHARED,SHARED,Add On - Core Integration,Fiserv,Fiserv Data Center Direct Connection,Standard,Fiserv Data Center Direct Connection,N,4725,?,5250,?,,,,,N,,ML directly connects to Fiserv's data center in Cherry Hill for clients who have their core hosted there.,,,
+SHARED,SHARED,Add On - Credit Verification,CreditXpert,Wayfinder (LPQ),Usage,Wayfinder,N,,,,,6.300000000000001,6656,,,N,,formerly known as Credit Analyzer,,,
+Shared,Shared,Add On - Credit Verification,CreditXpert,Wayfinder (MCL),Usage,Wayfinder,N,,,,,3.64,6656,,,N,,"(non-aggregate)
+< 5,000: $3.64
+5,001 - 10,000: $3.49
+10,001 - 20,000: $3.34
+>= 20,001: $2.90
+
+Pricing effective 1/1/2021. If this note is still here
+after that date, please reach out for pricing
+clarification/update.
+CreditXpert products collectively have a $200
+minimum.
+May still be called ""Analyzer"" in NetSuite","Units 1 to 5,000: $3.64
+Units 5,001 - 10,000: $3.49
+Units 10,001 - 20,000: $3.34
+Units >= 20,001: $2.90
+
+Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+SHARED,SHARED,Add On - Credit Verification,CreditXpert,What-If Simulator (LPQ),Usage,What-If Simulator,N,,,,,6.300000000000001,6657,,,N,,,,,
+SHARED,SHARED,Add On - Credit Verification,CreditXpert,What-If Simulator (MCL),Usage,What-If,N,,,,,4.36,6657,,,N,,"(non-aggregate)
+< 5,000: $4.36
+5,001 - 10,000: $4.14
+10,001 - 20,000: $3.92
+>= 20,001: $3.64
+
+Pricing effective 1/1/2021. If this note is still here
+after that date, please reach out for pricing
+clarification/update.
+CreditXpert products collectively have a $200
+monthly minimum.","Units 1 to 5,000: $4.36
+Units 5,001 - 10,000: $4.14
+Units 10,001 - 20,000: $3.92
+Units >= 20,001: $3.64
+
+Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,FIS,RTDX / Base2000,Standard,RTDX / Base2000,N,3675,1448,1575,749,,,,,N,,Clients are required to utilize RTDX moving forward,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,,CCM Interface with OSI,Standard,CCM Interface with OSI,N,3675,1448,1575,749,,,,,N,,Fiserv DNA Creating Credit Card Application,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,Fiserv,CPS,Standard,CPS,N,3675,1448,1575,749,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,Worldpay fka Vantiv,FDR Vantiv,Standard,FDR Vantiv,N,3675,1448,1575,749,,,,,N,,Batch integration,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,Worldpay fka Vantiv,VantivFI,Standard,VantivFI,N,3675,1448,1575,749,,,,,N,,API integration,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,Fiserv,Originate Loans,Standard,Originate Loans,N,3675,?,1575,?,,,,,N,,"Only available for personal CC, not business CC. Also referred to as the Omaha platform.
+",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,,PSCU,Standard,PSCU,N,3675,1448,1575,749,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,,TMG,Standard,TMG,N,3675,1448,1575,749,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,,Tsys ADM,Standard,Tsys ADM,N,3675,1448,1575,749,,,,,N,,Batch integration,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Credit Card Systems,,Visa Advanced ID Solutions (VAIS),Standard,Visa Advanced ID Solutions (VAIS),N,3675,1448,1575,749,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Custom Score,Experian,Fast Start,Standard,Fast Start,N,,,1050,4173,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Custom Score,Fair Isaac,Liquid Credit Integration,Standard,Liquid Credit Integration,N,5250,4280,1575,4174,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Custom Score,MeridianLink,3rd Party Algorithm using AchievEngine,Standard,3rd Party Algorithm using AchievEngine,N,10500,?,5250,?,,,,,N,,Client has a 3rd party custom score algorithm that needs to be implemented and maintained in AchievEngine. Also relies on SmartAPI for attribute configuration but no separate fee there.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Custom Score,Experian,Decisioning as a Service (DaaS),Standard,Decisioning as a Service (DaaS),N,10000,?,5000,?,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Debit Bureau,Deluxe,Deluxe Detect,Standard,Deluxe Detect,N,315,1449,,,4.06,2151,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Debit Bureau,Deluxe,Deluxe Match Fee,Standard,Deluxe Match Fee,N,,,,,7.09,2050,,,N,,7.09 add-on fee if there is a match against the account abuse database,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Debit Bureau,FIS,Qualifile ,Standard,Qualifile ,N,,,,,Check with vendor,?,,,N,,with OFAC,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Debit Bureau,FIS,BizChex,Standard,BizChex,N,,,,,Check with vendor,?,,,N,,also can support OFAC,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Debit Bureau,FirstData,Telecheck,Standard,Telecheck,N,,,,,2.21,2145,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Disbursement,,DNA Disbursements,Standard,DNA Disbursements,N,3150,4274,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Disbursement,,Episys,Standard,Episys,N,3150,4319,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Disbursement,,Wycom,Standard,Wycom,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Archival,MeridianLink,DocDownload,Standard,DocDownload,N,3675,1451,3675,753,,,,,N,,"Also often called document imaging; Includes extract of IDV/IDA, loan app summary, and credit reports",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,Odyssey Services,Faxing,Standard,Faxing,N,,,,,0.37,2169,,,N,157.5,$157.50 monthly minimum. Need to investigate incoming fax feature/fee. Currently $0.79 per incoming.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (1-5 Page Envelope),App Commitment / Mon,Mailing (1-5 Page Envelope),N,1050,2537,,,1.7,2549,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (6-20 Page Envelope),App Commitment / Mon,Mailing (6-20 Page Envelope),N,1050,2537,,,6.12,2550,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (21-40 Page Envelope),App Commitment / Mon,Mailing (21-40 Page Envelope),N,1050,2537,,,9.5,2551,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (41-60 Page Envelope),App Commitment / Mon,Mailing (41-60 Page Envelope),N,1050,2537,,,17.55,2552,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (61-80 Page Envelope),App Commitment / Mon,Mailing (61-80 Page Envelope),N,1050,2537,,,20.48,2553,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Delivery,FSSI,Mailing (81-100 Page Envelope),App Commitment / Mon,Mailing (81-100 Page Envelope),N,1050,2537,,,22.66,2554,,,N,,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,Compliance Solutions,CSi,Standard,CSi,N,5250,4302,,,,,,,N,,"Dynamic Docs - Only supports Personal Loan, Vehicle Loan, and Home Equity Loan",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,Finastra,D+H DepositPro,Standard,D+H DepositPro,N,2625,?,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,Finastra,D+H DepositPro Plus,Standard,D+H DepositPro Plus,N,2625,?,1050,4196,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,Finastra,D+H LaserPro,Standard,D+H LaserPro,N,2625,3729,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,Finastra,D+H LaserPro Plus,Standard,D+H LaserPro Plus,N,2625,?,1050,3730,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Maintenance (additional environment),Standard,Document Maintenance (additional environment),N,,,3150,4214,,,,,N,,"Per environment. Waived for DEMO & LIVE and temporary waiver for BETA core integration // Most clients originate all their document changes on a ""DEMO"" environment (e.g. DEMO, EPLQA, JHADEMO, etc.)  then have the changes migrate to LIVE environment.  Thus, a standard doc migration workflow would just involve 2 environments: DEMO and LIVE. 
+
+For clients who want us to support additional environments,  please let them know that supporting an additional server complicates the maintenance and migration process and thus will incur an annual maintenance charge. 
+Exceptions:  If a client is undergoing core integration on BETA and need their docs on BETA temporarily, we will waive the fee since it is assumed once the process is complete, the docs will be removed from their BETA environment and they will revert to the standard DEMO -> LIVE workflow.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (loans),Standard,Document Mapping (loans),N,,,3412.5,765,,,,,N,,"Up to 20 standard LPQ docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (deposits),Standard,Document Mapping (deposits),N,,,3412.5,764,,,,,N,,"Up to 15 standard XA docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (loans + deposits),Standard,Document Mapping (loans + deposits),N,,,6825,2591,,,,,N,,"Up to 15 standard XA docs, 20 LPQ docs, and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Client Managed Documents,Standard,Client Managed Documents,N,,,,,,,,,N,,No fee. Can accommodate simple mapping.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (overage),Standard,Document Mapping (overage),N,210,5303,210,5284,,,,,N,,"Standard XA docs beyond first 15 // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (overage),Standard,Document Mapping (overage),N,210,5282,210,5285,,,,,N,,"Standard LPQ docs beyond first 20 // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,MeridianLink,Document Mapping (overage),Standard,Document Mapping (overage),N,315,5283,210,5286,,,,,N,,"Custom forms beyond first 5 // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Prep,IMM,IMM XML (TotaleAtlas),Standard,IMM XML (TotaleAtlas),N,3675,4306,1575,4199,,,,,N,,Formerly known as TotaleAtlas; does have echoSign,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 10 MB,Standard,Increase max upload file size to 10 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 15 MB,Standard,Increase max upload file size to 15 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 20 MB,Standard,Increase max upload file size to 20 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 25 MB,Standard,Increase max upload file size to 25 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 30 MB,Standard,Increase max upload file size to 30 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 35 MB,Standard,Increase max upload file size to 35 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 40 MB,Standard,Increase max upload file size to 40 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Document Upload,MeridianLink,Increase max upload file size to 45 MB,Standard,Increase max upload file size to 45 MB,N,,,Quote,4193,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Employment Data,Equifax TWN,Verification of Employment,Standard,Verification of Employment,N,,,,,Quote,?,,,N,,,,,
+Shared,Shared,Add On - eSign,DocuSign,DocuSign Enterprise,Standard,DocuSign Enterprise,N,,,,,,,,,N,,No fee,,,
+Shared,Shared,Add On - eSign,DocuSign,DocuSign ISV,Standard,DocuSign ISV,N,1500,?,,,Quote,6664,,,N,,Quote per DocuSign ISV addendum tiers,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - eSign,Silanis,OneSpan,Standard,OneSpan,N,,,,,,,,,N,,No fee; fka Vasco; fka eSignLive,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - eSign,IMM,Ready-To-Sign (RTS),Standard,Ready-To-Sign (RTS),N,3675,?,1575,?,,,,,N,,IMM e-signature offering; fka IMM_UDP,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - eSign,IMM,Synergy Esign,Standard,Synergy Esign,N,3675,2597,1575,2598,,,,,N,,Rebrand of IMM RTS for JHA clients,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - GAP,American Services Group,American Services Group (ASG) - GAP,Standard,American Services Group (ASG) - GAP,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - GAP,Auto Exam,Auto Exam - GAP,Standard,Auto Exam - GAP,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Home Banking,Access Softek,Mobile App Push,Standard,Mobile App Push,N,4200,4292,2100,4180,,,,,N,,Pushes apps from Access Softek Home Banking directly into LPQ; doesn't go through AP,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Home Banking,Alkami,Alkami QuickApply,Standard,Alkami QuickApply,N,2625,4293,1575,4181,,,,,N,,Pushes apps from Alkami Home Banking directly into LPQ; doesn't go through AP,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Home Banking,MeridianLink,Changing Home Banking Vendor,Standard,Changing Home Banking Vendor,N,1050,4298,,,,,,,N,,One-time cost to change the vendor,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Hosting,,Dedicated Hosting,Standard,Dedicated Hosting,N,Quote,1437,Quote,742,Quote,?,,,N,,,,,
+Shared,Shared,Add On - Hosting,MeridianLink,Offsite Server Production Updates,Standard,Offsite Server Production Updates,N,5250,6859,,,,,,,N,,"**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",,,
+Shared,Shared,Add On - Hosting,MeridianLink,Dedicated Server Production Updates,Standard,Dedicated Server Production Updates,N,5250,6858,,,,,,,N,,"**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Authentication,FIS,eFunds IDV & IDA,Per Pull,eFunds IDV & IDA,N,2625,4283,1575,4177,Check with vendor,?,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Authentication,Equifax,eIDCompare with eIDVerifier,Per Pull,eIDCompare with eIDVerifier,N,,,,,2.1,2154,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Authentication,Experian,CrossCore Precise ID with OPT and KIQ,Per Pull,CrossCore Precise ID with OPT and KIQ,N,2000,?,,,3,5384,,,N,,"Additional $700 setup fee per subcode. With OFAC. Synthetic ID can be added by Experian.
+",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Authentication,Experian,CrossCore Precise for Compliance (aka Prescreen),Per Pull,CrossCore Precise for Compliance (aka Prescreen),N,2000,?,,,3,,,,,,"Setup Fee: $2000 (unless this is an add-on subcode to an existing CrossCore PreciseID client, then it is the $700 per subcode setup)",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Authentication,Transunion,TransUnion IDMV & IDMA,Per Pull,TransUnion IDMV & IDMA,N,,,,,2.36,2165,,,N,,now known as ID Vision suite,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Card Scanners,,ScanShell 3100D with OCR software,Standard,ScanShell 3100D with OCR software,N,682.5,4318,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Card Scanners,,ScanShell 800 or 2000 with OCR software,Standard,ScanShell 800 or 2000 with OCR software,N,577.5,4318,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,LexisNexis,Bridger OFAC Watchlist,Per Pull,Bridger OFAC Watchlist,N,2100,4300,1050,4185,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,FIS,eFunds IDV,Per Pull,eFunds IDV,N,2625,4282,1575,4176,Check with vendor,2155,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,Equifax,eIDCompare,Per Pull,eIDCompare,N,,,,,1.05,2153,,,N,,with OFAC,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,Experian,ISTWatch OFAC Watchlist,Per Pull,ISTWatch OFAC Watchlist,N,,,,,0.24,2158,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,Experian,CrossCore Precise ID,Per Pull,CrossCore Precise ID,N,2000,5385,,,1.95,5383,,,N,,"Additional $700 setup fee per subcode. With OFAC. Synthetic ID can be added by Experian.
+",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - ID Verification,TransUnion,TransUnion IDMV,Per Pull,TransUnion IDMV,N,,,,,1.31,2166,,,N,,with OFAC,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,CUDL,CUDL,Standard,CUDL,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,MeridianLink,DealerApp,Standard,DealerApp,N,2625,?,,,,,,,N,,,,,
+Shared,Shared,Add On - Indirect Lead,DealerTrack,DealerTrack,Per Pull,DealerTrack,N,,,,,3.68,?,,,N,,Not applicable if client pays directly to vendor; DealerTrack has historically charged an LOS conversion fee to Financial Institutions,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,Innovative Funding Services,Innovative Funding Services (IFS),Standard,Innovative Funding Services (IFS),N,2100,4307,1575,4200,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,National Auto Loan Network,NALN - National Auto Loan Network,Standard,NALN - National Auto Loan Network,N,2100,4312,1575,4204,,,,,N,,Only a one-time fee if it's a new client,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,RouteOne,RouteOne,Per Pull,RouteOne,N,,,,,3.68,?,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Indirect Lead,RouteOne,RouteOne eContracting,Per Pull,RouteOne eContracting,N,3000,5313,,,6.300000000000001,2238,,,N,,$0.42 per year per vaulted transaction; $0.17 per faxed page; Authoritative Copy Conversion (ACC) $21 plus postage,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,,Auto Approve,Standard,Auto Approve,N,2100,4295,1575,4183,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,Autopay,Autopay,Standard,Autopay,N,2100,4299,1575,4184,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,CuneXus,CuneXus,Standard,CuneXus,N,5250,4273,1575,4187,,,,,N,,Also applies to LoanEngine (white label by Harland Clarke),,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,First Close,EquityIQ,Standard,EquityIQ,N,2100,?,1575,?,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,fiVISION,fiVISION,Standard,fiVISION,N,2100,?,1575,?,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,iLendingDirect,iLendingDirect,Standard,iLendingDirect,N,2100,6030,1575,6029,,,,,N,,Live as of 8/2020,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,LendingTree,LendingTree,Standard,LendingTree,N,2625,4308,2625,4201,,,,,N,,waived for clients we setup with LendingTree,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,MotoRefi,MotoRefi,Standard,MotoRefi,N,2100,4311,1575,4203,,,,,N,,refinance leads,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,MoveCU,MoveCU,Standard,MoveCU,N,2100,?,1575,?,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,,Rate Genius,Standard,Rate Genius,N,4200,4316,1575,4206,,,,,N,,"refinance leads; Fee is only applicable if RateGenius apps are sent directly into LPQ, if routed through DealerTrack there is no separate fee",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,Rate Reset,Rate Reset - PreApproval API ,Standard,Rate Reset - PreApproval API ,N,3150,5332,1575,5336,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Lead In-take,Rate Reset,Rate Reset - Direct Core Reset,Standard,Rate Reset - Direct Core Reset,N,3150,5333,1575,5337,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Merchant Lending,,Clinics,Standard,Clinics,N,4000,?,,,,,,,N,,"For consumer-facing portal, they must buy/use AP",,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Merchant Lending,,LoanStar Technologies,Standard,LoanStar Technologies,N,2100,4309,1575,4202,,,,,N,,,,,
+Shared,Shared,Add On - Misc,MeridianLink,In-branch SSO (Active Directory),Standard,In-branch SSO (Active Directory),N,4200,,1575,,,,,,N,,Price is the same for LPQ and LQB. Customers of both products need to pay twice if they want it for both.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,VPN Configuration,Standard,VPN Configuration,N,3675,1452,1575,4197,,,,,N,,Related to core integration,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Data Extraction Tool,Standard,Data Extraction Tool,N,4200,4290,1050,4192,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Add Additional Lender,Standard,Add Additional Lender,N,5250,4287,2100,4189,,,,,N,,This does not include live clients going through a core conversion where an additional lender is added to Beta for implementation purposes.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Additional Automated Actions,Standard,Additional Automated Actions,N,,,1575,4188,,,,,N,,Clients get 50 by default. 1500 annual per blocks of 10 additional reports. Don't allow more than additional 20.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Additional Scheduled Reports,Standard,Additional Scheduled Reports,N,,,1575,4190,,,,,N,,Clients get 30 by default. 1500 annual per blocks of 10 additional reports. ,,,
+Shared,Shared,Add On - Misc,MeridianLink,Time & Materials,Hourly,Time & Materials,N,,,,,250,6861,,,,,,,,
+Shared,Shared,Add On - Misc,MeridianLink,After Hours Assistance,Hourly,After Hours Assistance,N,,,,,400,6857,,,N,,"Applies to Services, Support, SIE, and IT.  No minimum.",,,
+Shared,Shared,Add On - Misc,MeridianLink,After Hours Assistance - Expedite Fee,Standard,After Hours Assistance - Expedite Fee,N,1575,6863,,,,6863,,,N,,"In addition to per hour rate.  Applies to Services, Support, SEI, and IT.",,,
+Shared,Shared,Add On - Misc,MeridianLink,IT Unscheduled Change Request,Hourly,IT Unscheduled Change Request,N,,,,,600,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,CLF Export Automated Action,Standard,CLF Export Automated Action,N,,,1050,4191,,,,,N,,,,,
+Shared,Shared,Add On - Misc,MeridianLink,Disaster Recovery Testing,Standard,Disaster Recovery Testing,N,600,6860,,,,,,,N,,$300/hr beyond 2 hours,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Expedited Deployment,Standard,Expedited Deployment,N,,,,,Quote,2556,,,N,,Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates.  Requires SVP approval.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,JHA,Yellow Hammer,Standard,Yellow Hammer,N,,,,,,,,,N,,For AML/BSA compliance,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,SMS Text Feature,Standard,SMS Text Feature,N,,,,,0.05,3746,,,N,,Per text; applies to both test and production,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Re-deployment,Standard,Re-deployment,N,5250,3977,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Reschedule Live Date,Standard,Reschedule Live Date,N,1575,3978,,,,,,,N,,FI is allowed to reschedule once per project. Fee applicable for 2nd reschedule.,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Misc,MeridianLink,Retrain: Administration Setup with SDC,Standard,Retrain: Administration Setup with SDC,N,3675,3979,,,,,,,N,,"This is a 9 week course conducted via webinar.  The 9 week course will cover and show your admins in the system how to setup products, underwriting rules, rates, preferences and customize the look and feel of your online application channel.
+NOTE:  If only attending webinar sessions without an assigned software deployment consultant: No Fees Associated ",,,
+Shared,Shared,Add On - Misc,MeridianLink,Retrain: End User Workflow - Onsite Training,Daily,Retrain: End User Workflow - Onsite Training,N,,,,,2100,?,,,N,,Per day per LPQ or XA. Plus travel expenses.,,,
+Shared,Shared,Add On - Misc,MeridianLink,Retrain: End User Workflow - Remote,Standard,Retrain: End User Workflow - Remote,N,1575,?,,,,,,,N,,$3150 if doing LPQ & XA,,,
+Shared,Shared,Add On - Misc,MeridianLink,Reverse or Post-Live Data Migration,Standard,Reverse or Post-Live Data Migration,N,,,Quote,6862,,,,,N,,Submit reverse migration request to SDS team for cost,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Payment/Funding Option,Magic Wrighter,ACH Processing,Standard,ACH Processing,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Payment/Funding Option,ACH Originator via NACHA,ACH Processing,Standard,ACH Processing,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Payment/Funding Option,First Data,Credit Card Processing,Standard,Credit Card Processing,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Payment/Funding Option,Authorize.net,Credit Card Processing,Standard,Credit Card Processing,N,,,,,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Payment/Funding Option,Paypal,Payment Processing,Standard,Payment Processing,N,,,,,,,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic Home Value Explorer (HVE) - LPQ,Usage,CoreLogic Home Value Explorer (HVE),N,,,,,21,6660,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic Home Value Explorer (HVE) - MCL,Usage,CoreLogic Home Value Explorer (HVE),N,,,,,2,6660,,,N,,"(aggregate)
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50","Volume Discount
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50",,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic GeoAVM (LPQ),Usage,CoreLogic GeoAVM,N,,,,,26.25,6659,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic GeoAVM (MCL),Usage,CoreLogic GeoAVM,N,,,,,2,6659,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic IVAL,Usage,CoreLogic IVAL,N,,,,,2,6661,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,CoreLogic PASS,Usage,CoreLogic PASS,N,,,,,2,6662,,,N,,,,,
+Shared,Shared,Add On - Property Data,Stewart,PMC,Usage,PMC,N,,,,,2,6663,,,N,,,,,
+Shared,Shared,Add On - Property Data,"ServiceLink,
+Corelogic,
+Wolters
+Kluwer,
+Lereta",Flood Transaction,Usage,Flood Transaction,N,,,,,1,6665,,,N,,"(aggregate)
+< 2,500: $1
+2,500 - 4,999: $0.75
+>= 5,000: $0.50","Volume Discount
+< 2,500: $1
+2,500 - 4,999: $0.75
+>= 5,000: $0.50",,
+Shared,Shared,Add On - Property Data,ServiceLink,Flood Zone Determination - Basic,Usage,Flood Zone Determination - Basic,N,,,,,Quote,,,,N,,,,,
+Shared,Shared,Add On - Property Data,ServiceLink,Flood Zone Determination - Life of Loan,Usage,Flood Zone Determination - Life of Loan,N,,,,,Quote,,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,Flood Zone Determination - Basic,Usage,Flood Zone Determination - Basic,N,,,,,Quote,,,,N,,,,,
+Shared,Shared,Add On - Property Data,CoreLogic,Flood Zone Determination - Life of Loan,Usage,Flood Zone Determination - Life of Loan,N,,,,,Quote,,,,N,,,,,
+Shared,Shared,Add On - Property Data,Lereta,Flood Zone Determination - Basic,Usage,Flood Zone Determination - Basic,N,,,,,Quote,,,,N,,,,,
+Shared,Shared,Add On - Property Data,Lereta,Flood Zone Determination - Life of Loan,Usage,Flood Zone Determination - Life of Loan,N,,,,,Quote,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,Accurate Group,Accurate Group-  Settlement Services,Standard,Accurate Group-  Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,First Close,First Close - Settlement Services,Standard,First Close - Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,Lender Close,Lender Close-  Settlement Services,Standard,Lender Close-  Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,New Vista,New Vista - Settlement Services,Standard,New Vista - Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,SourcePoint,SourcePoint - Settlement Services,Standard,SourcePoint - Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,United One Resources,United One Resources - Settlement Services,Standard,United One Resources - Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Settlement Services,Universal Real Estate Services,Universal Real Estate Services - Settlement Services,Standard,Universal Real Estate Services - Settlement Services,N,2100,,1575,,,,,,N,,Utilizes LPQ Synergic Framework,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Storage,MeridianLink,Consumer Documents,Standard,Consumer Documents,N,,,,,,,,,N,,Placeholder to re-evaluate,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - SwitchKit,ClickSWITCH,ClickSWITCH (new CS client),Standard,ClickSWITCH,N,7875,1446,,,26.25,2140,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - SwitchKit,ClickSWITCH,ClickSWITCH (existing CS client),Standard,ClickSWITCH,N,5250,1446,3150,747,,,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Vehicle History,Experian,AutoCheck,Standard,AutoCheck,N,1050,4278,1050,4171,7.95,2175,,,N,,Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Vehicle History,Experian,AutoCheck with Buyback Protection,Standard,AutoCheck with Buyback Protection,N,1050,4279,1050,4172,10.5,?,,,N,,Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Vehicle History,CarFax,Carfax Title Brand Component,Standard,Carfax Title Brand Component,N,,,,,0.26,2177,,,N,,,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Vehicle History,CarFax,Carfax Vehicle History,Standard,Carfax Vehicle History,N,1050,2538,525,2539,,,,,N,,also enables Total Lost Report,,,
+Origination - Consumer,LoansPQ/XpressAccounts,Add On - Vehicle Insurance,American Service Group,American Service Group,Standard,American Service Group,N,,,,,,,,,N,,,,,
+Shared,Shared,Add On - Vehicle Insurance,Black Book,Black Book,Per Pull,Black Book,N,,,,,0.4,?,,,N,,"Collectible vehicle, used vehicle, and power sport values",,,
+Shared,Shared,Add On - Vehicle Insurance,KBB,KBB,Per Pull,KBB,N,,,,,0.4,?,,,N,,,,,
+Shared,Shared,Add On - Vehicle Insurance,NADA,NADA,Per Pull,NADA,N,,,,,0.4,?,,,N,,,,,
+Shared,Shared,Add On - Vehicle Insurance,NADA,NADA Other,Per Pull,NADA Other,N,,,,,0.4,?,,,N,,"Marine, RV, and power sport vehicle values",,,
+Verification Data Access,Mortgage Credit Link,Primary Service,MeridianLink,Mortgage Credit Link Platform,Standard,Mortgage Credit Link Platform,N,9000,1739,,,,,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Comparison Report,Usage,Comparison Report,N,,,,,1,851,,,N,,"(aggregate)
+<= 249: $1
+250 - 499: $0.90
+500 - 999: $0.80
+1,000 - 2,499: $0.60
+2,500 - 4,999: $0.40
+5,000 - 9,999: $0.30
+10,000 - 24,999: $0.24
+25,000 - 49,999: $0.20
+>= 50,000: $0.17
+
+Free for support-side users to minimize CRA
+costs related to CreditXpert and Repository
+Updates","Volume discount:
+<= 249: $1
+250 - 499: $0.90
+500 - 999: $0.80
+1,000 - 2,499: $0.60
+2,500 - 4,999: $0.40
+5,000 - 9,999: $0.30
+10,000 - 24,999: $0.24
+25,000 - 49,999: $0.20
+>= 50,000: $0.17",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Consumer Credit Reports - Method 2,Usage,Consumer Credit Reports,N,,,,,0.25,3756,,,N,1000.0,"**Not preferred
+
+Method 2 - $0.25 per infile","$0.25 per infile
+
+Volume Discount
+5,001-10,000: 5%
+10,001-20,000: 10%
+20,001-30,000: 20%
+30,001-50,000: 25%
+50,001+: 30%",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Consumer Credit Reports - Method 3,Usage,Consumer Credit Reports,N,,,,,1,3756,,,N,1000.0,"Method 3 - $1.00 per
+report.","$1.00 per report.
+
+Volume Discount
+5,001-10,000: 5%
+10,001-20,000: 10%
+20,001-30,000: 20%
+30,001-50,000: 25%
+50,001+: 30%",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Consumer Credit Reports - Method 4,Usage,Consumer Credit Reports,N,,,,,1,3756,,,N,1000.0,"Method 4 - $1.00 for hard
+inquiry and $0.50 for soft
+inquiry","$1.00 for hard inquiry and $0.50 for soft inquiry
+
+Volume Discount
+<5k: 5%
+5,001-10k: 10%
+10,001-20k: 20%
+20,001-30k: 25%
+30,001-50k: 30%",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Mortgage Rating,Usage,Mortgage Rating,N,,,,,0.5,856,,,N,,12 month mortgage rating,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Smart Select AutoUpgrade(Not Including Shield),Usage,Smart Select AutoUpgrade (Not Including Shield),N,,,,,0.15,859,,,N,,"Single Bureau Cascade is free. Billed when
+SmartSelect prevents an upgrade.",Billed when SmartSelect stops an upgrade,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Prequal Tier 1,Usage,SmartSelect Shield - Prequal Tier 1,N,,,,,0.25,5391,,,N,,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer
+configured in MCL","Auto Upgrade % During Billable Period : Per Order Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer configured in MCL",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Prequal Tier 2,Usage,SmartSelect Shield - Prequal Tier 2,N,,,,,0.45,5392,,,N,,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer
+configured in MCL","Auto Upgrade % During Billable Period : Per Order Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer configured in MCL",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Prequal Tier 3,Usage,SmartSelect Shield - Prequal Tier 3,N,,,,,0.65,5393,,,N,,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer
+configured in MCL","Auto Upgrade % During Billable Period : Per Order Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer configured in MCL",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Prequal Tier 4,Usage,SmartSelect Shield - Prequal Tier 4,N,,,,,0.85,5394,,,N,,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer
+configured in MCL","Auto Upgrade % During Billable Period : Per Order Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer configured in MCL",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Prequal Tier 5,Usage,SmartSelect Shield - Prequal Tier 5,N,,,,,1.05,5395,,,N,,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer
+configured in MCL","Auto Upgrade % During Billable Period : Per Order Amount
+90%+ : $0.25
+80% to <90% : $0.45
+70% to <80%: $0.65
+60% to <70%: $0.85
+<60%: $1.05
+
+Auto Upgrade % are calculated per customer configured in MCL",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,SmartSelect Shield - Flex ID,Usage,SmartSelect Shield - Flex ID,N,,,,,0.1,5407,,,N,,Per FlexID Transaction (per individual),Per FlexID Transaction (per individual),,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CIC Reports,Criminal Record Report,Usage,Criminal Record Report,N,,,,,0.5,892,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CIC Reports,Eviction Report,Usage,Eviction Report,N,,,,,0.5,893,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,LexisNexis,LexisNexis Liens and Judgements,Usage,LexisNexis Liens and Judgements,N,,,,,0.25,894,,,N,,Standalone or credit report add-on,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,PitchPoint,PitchPoint BLJ,Usage,PitchPoint BLJ,N,,,,,0.25,895,,,N,,Standalone or credit report add-on,,,
+Shared,Shared,Add On - Credit Verification,Experian,Experian Business Credit Reports,Usage,Experian Business Credit Reports,N,,,,,2,6658,,,N,,"(aggregate)
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50
+
+Supports Business Profile Report, Intelliscore,
+and List of Similars.
+No charge if no record is found","Volume Discount
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50
+
+Supports Business Profile Report, Intelliscore, and List of Similars.
+No charge if no record is found.",,
+Shared,Shared,Add On - Credit Verification,Equifax,"Business Credit Industry
+Report 2.0 (BCIR2)",Usage,"Business Credit Industry
+Report 2.0 (BCIR2)",N,,,,,2,6658,,,N,,"(non-aggregate)
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50
+
+No charge if no record is found","Volume Discount
+< 2,500: $2
+2,500 - 4,999: $1
+>= 5,000: $0.50
+
+No charge if no record is found.",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CreditXpert,Assure,Usage,Assure,N,,,,,0.05,915,,,N,,"Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.","Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CreditXpert,CX Bundle,Usage,CX Bundle,N,,,,,0.45,921,,,N,,"CreditXpert products collectively have a $200
+monthly minimum","Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CreditXpert,Radar,Usage,Radar,N,,,,,0.18,918,,,N,,"Pricing effective 1/1/2021. If this note is still here
+after that date, please reach out for pricing
+clarification/update.
+Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum","Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,CreditXpert,TrendScape,Usage,TrendScape,N,,,,,0.05,919,,,N,,"CreditXpert products collectively have a $200
+monthly minimum.","Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,Equifax,UDN - Equifax,Usage,UDN - Equifax,N,1250,1740,,,0.5,926,,,N,,,Pricing is per individual,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,Experian,UDN - Experian,Usage,UDN - Experian,N,4000,1740,,,0.5,926,,,N,,,Pricing is per individual,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,TransUnion,UDN - TransUnion,Usage,UDN - TransUnion,N,1250,1740,,,0.5,926,,,N,,,Pricing is per individual,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,Credit Attributes,Usage,Credit Attributes,N,,,,,0.2,5344,,,N,,"50% rev-share with CRA
+with minimum of $0.10 per
+individual report and $0.20
+per joint report
+
+Pricing effective 1/1/2021. If this note is still here
+after that date, please reach out for pricing
+clarification/update.",Transaction fee is 50% of CRA retail price with minimum of $0.10 per individual report and $0.20 per joint report.,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,FAMM,Usage,FAMM,N,,,1200,853,,,,,N,,$100 flat fee per month,$100 flat fee per month,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,FAMM Email,Usage,FAMM Email,N,,,,,0.5,5309,,,N,,"Charge per successful FAMM email when using
+the FAMM auto-email feature. CRA's configure if
+""successful"" means the email is sent without
+error, or if the recipient views the disclosure. ",Charge per successful FAMM email,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,MeridianLink,ZipOverride,Usage,ZipOverride,N,1000,5076,,,,,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,LexisNexis,RiskView Score,Usage,RiskView Score,N,,,,,0,3028,,,N,,"We would charge for this, but there is no
+standard price since we haven't signed anyone
+up for it yet.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,ID Analytics,Credit Optics Score,Usage,Credit Optics Score,N,,,,,0,3029,,,N,,"We would charge for this, but there is no
+standard price since we haven't signed anyone
+up for it yet.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Credit Verification,"Equifax, Experian, TransUnion",Raw Credit Data Reissue,Usage,Raw Credit Data Reissue,N,,,,,0.5,3026,,,N,,"Do not proactively offer. If moving forward,
+requires NDA between ML and integrator",,,
+Verification Data Access,Mortgage Credit Link,Add On - Property Verification,ServiceLink,"ServiceLink Flood
+Postback",Usage,"ServiceLink Flood
+Postback",N,,,,,1,857,,,N,,"(aggregate)
+< 2,500: $1
+2,500 - 4,999: $0.75
+>= 5,000: $0.50","Volume Discount
+< 2,500: $1
+2,500 - 4,999: $0.75
+>= 5,000: $0.50",,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,"TaxReturnV
+erifications.
+com",Tax Transcript 3rd Party,Usage,Tax Transcript 3rd Party,N,,,,,0.5,3128,,,N,,"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Inco-Check,Tax Transcript 3rd Party,Usage,Tax Transcript 3rd Party,N,,,,,0.5,3166,,,N,,"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,NCS,Tax Transcript 3rd Party,Usage,Tax Transcript 3rd Party,N,,,,,0.5,3167,,,N,,"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Veri-Tax,Tax Transcript 3rd Party,Usage,Tax Transcript 3rd Party,N,,,,,0.5,3168,,,N,,"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,CRA,Tax Transcript 3rd Party,Usage,Tax Transcript 3rd Party,N,,,,,0.5,889,,,N,,"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,MeridianLink,Tax Transcript MCL,Usage,Tax Transcript MCL,N,,,,,0.69,890,,,N,,"Supports 1040, W2, 1099, 1120, and 1065",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,CRA,Manual VOD,Usage,Manual VOD,N,,,,,1,3286,,,N,,Service Request in MCL. Billed upon completion.,,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - One Time (Monthly Minimum Option),Usage,AccountChek VOA - One Time (Monthly Minimum Option),N,,,,,8,3287,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",Monthly Minimum of $500 for AccountChek offerings,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 30 Day (Monthly Minimum Option),Usage,AccountChek VOA - 30 Day (Monthly Minimum Option),N,,,,,14,3288,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",Monthly Minimum of $500 for AccountChek offerings,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 60 Day (Monthly Minimum Option),Usage,AccountChek VOA - 60 Day (Monthly Minimum Option),N,,,,,14,3289,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",Monthly Minimum of $500 for AccountChek offerings,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 90 Day (Monthly Minimum Option),Usage,AccountChek VOA - 90 Day (Monthly Minimum Option),N,,,,,18,3290,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",Monthly Minimum of $500 for AccountChek offerings,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - One Time (Monthly Fee Option),Usage,AccountChek VOA - One Time (Monthly Fee Option),N,,,,,8,3287,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 30 Day (Monthly Fee Option),Usage,AccountChek VOA - 30 Day (Monthly Fee Option),N,,,,,14,3288,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 60 Day (Monthly Fee Option),Usage,AccountChek VOA - 60 Day (Monthly Fee Option),N,,,,,14,3289,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - 90 Day (Monthly Fee Option),Usage,AccountChek VOA - 90 Day (Monthly Fee Option),N,,,,,18,3290,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - Monthly Fee (Monthly Fee Option),Standard Monthly,AccountChek VOA - Monthly Fee (Monthly Fee Option),N,,,1200,905,,,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",Invoiced at $100/month,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - Direct Relationship One Time,Usage,AccountChek VOA - Direct Relationship One Time,N,,,,,1,3287,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - Direct Relationship 30 Day,Usage,AccountChek VOA - Direct Relationship 30 Day,N,,,,,1,3288,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - Direct Relationship 60 Day,Usage,AccountChek VOA - Direct Relationship 60 Day,N,,,,,1,3289,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,FormFree,AccountChek VOA - Direct Relationship 90 Day,Usage,AccountChek VOA - Direct Relationship 90 Day,N,,,,,1,3290,,,N,,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Finicity,Finicity VOA,Usage,Finicity VOA,N,,,,,0,3296,,,N,,"No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Finicity,Finicity VOIE,Usage,Finicity VOIE,N,,,,,0,?,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Finicity,Finicity Reseller Billing API,Usage,Finicity Reseller Billing API,N,,,,,1,5364,,,N,,"(non-aggregate bundled with manual VOE)
+<= 5,000: $1.00
+5,001 - 10,000: $0.95
+10,001 - 15,000: $0.90
+15,001 - 20,000: $0.85
+> 20,000: $0.80
+
+Pulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.","VOE Products have aggregate volume discount
+<= 5,000: $1.00
+5,001 - 10,000: $0.95
+10,001 - 15,000: $0.90
+15,001 - 20,000: $0.85
+> 20,000: $0.80",,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Experian,Experian Finicity Order Retrieval API,Usage,Experian Finicity Order Retrieval API,N,,,,,1,5364,,,N,,"(non-aggregate bundled with manual VOE)
+<= 5,000: $1.00
+5,001 - 10,000: $0.95
+10,001 - 15,000: $0.90
+15,001 - 20,000: $0.85
+> 20,000: $0.80
+
+Pulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.","VOE Products have aggregate volume discount
+<= 5,000: $1.00
+5,001 - 10,000: $0.95
+10,001 - 15,000: $0.90
+15,001 - 20,000: $0.85
+> 20,000: $0.80",,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,Equifax,The Work Number,Usage,The Work Number,N,,,,,1,923,,,N,,"(non-aggregate
+bundled with
+manual VOE)
+<= 5,000: $1.00
+5,001 - 10,000:
+$0.95
+10,001 - 15,000:
+$0.90
+15,001 - 20,000:
+$0.85
+> 20,000: $0.80
+
+Includes instant and manual volumes. Only billed for completed
+orders.","VOE Products have aggregate volume discount
+<= 5,000: $1.00
+5,001 - 10,000:
+$0.95
+10,001 - 15,000:
+$0.90
+15,001 - 20,000:
+$0.85
+> 20,000: $0.80",,
+Verification Data Access,Mortgage Credit Link,Add On - Employment/Income/Asset Verification,MeridianLink,Manual VOE,Usage,Manual VOE,N,,,,,1,923,,,N,,"(non-aggregate
+bundled with
+manual VOE)
+<= 5,000: $1.00
+5,001 - 10,000:
+$0.95
+10,001 - 15,000:
+$0.90
+15,001 - 20,000:
+$0.85
+> 20,000: $0.80
+
+Only billed for completed orders.","VOE Products have aggregate volume discount
+<= 5,000: $1.00
+5,001 - 10,000:
+$0.95
+10,001 - 15,000:
+$0.90
+15,001 - 20,000:
+$0.85
+> 20,000: $0.80",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,PitchPoint,PitchPoint,Usage,PitchPoint,N,,,,,1,877,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Various,ID Verification (Credit Reports with MeridianLink),Usage,ID Verification (Credit Reports with MeridianLink),N,,,,,0.25,896,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Various,ID Verification (Credit Reports Not with MeridianLink),Usage,ID Verification (Credit Reports Not with MeridianLink),N,,,,,1,896,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Social Security Administration,CBSV,Usage,CBSV,N,4500,5077,,,1,897,,,N,,"(non-aggregate)
+<= 500: $1
+501 - 1000: $0.75
+> 1000: $0.50","Volume Discount
+<= 500: $1
+501 - 1000: $0.75
+> 1000: $0.50",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,PitchPoint,SSA89,Usage,SSA89,N,,,,,1,5417,,,N,,"(non-aggregate)
+<= 500: $1
+501 - 1000: $0.75
+> 1000: $0.50","Volume Discount
+<= 500: $1
+501 - 1000: $0.75
+> 1000: $0.50",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,LexisNexis,Packaged Report - LexisNexis Bridger,Usage,Packaged Report - LexisNexis Bridger,N,,,,,0.25,3282,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,LexisNexis,Packaged Report - LexisNexis InstantID,Usage,Packaged Report - LexisNexis InstantID,N,,,,,0.25,3281,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Equifax,Packaged Report - Equifax Intellireal,Usage,Packaged Report - Equifax Intellireal,N,,,,,0.3,3277,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,LexisNexis,Packaged Report - LexisNexis Property History Search,Usage,Packaged Report - LexisNexis Property History Search,N,,,,,0.15,3272,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,LexisNexis,Packaged Report - LexisNexis NOD/Foreclosure Search,Usage,Packaged Report - LexisNexis NOD/Foreclosure Search,N,,,,,0.15,5302,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Various,Packaged Report - Other,Usage,Packaged Report - Other,N,,,,,0.1,898,,,N,,"If sum of charges per report don't hit the minimum, we bill that
+instead","Subject to $0.50 per report minimum across all products included in package group (I.e. if sum of charges do not hit the minimum, MeridianLink bills the minimum instead) ",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,Various,"Mortgage Participant
+Verification",Usage,"Mortgage Participant
+Verification",N,,,,,0.07,901,,,N,,"(aggregate)
+< 1000: $0.07
+>= 1000: $0.05","Volume Discount
+< 1000: $0.07
+>= 1000: $0.05",,
+Verification Data Access,Mortgage Credit Link,Add On - Fraud Detection,MERS,MERS Report,Usage,MERS Report,N,,,,,0.1,924,,,N,,"Per report (i.e. borrower, co-borrower, and property address are
+separate MERS reports even if on the same file)
+Can be ordered on Prequal, Refresh, Standalone, and in
+Packaged Reports","Per report (e.g. borrower, co-borrower, property address)",,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,Various,Postback Service API,Usage,Postback Service API,N,,,,,0.05,857,,,N,,"Calculated in MCL this represents a % of what the CRA charges their customer Per Transaction
+
+<= $5000: 5% of
+retail price collected
+$5001 - $15000:
+3.5% of retail price
+collected
+> $15000: 2.5% of
+retail price collected","<= $5000: 5% of retail price collected 
+$5001 - $15000: 3.5% of retail price collected 
+> $15000: 2.5% of retail price collected
+$0.05 minimum per transaction",,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,MeridianLink,Faxes,Usage,Faxes,N,,,,,0.1,922,,,N,,"(non-aggregate)
+<= 650: $0.10 per
+fax
+> 650: $0.00","Billed per fax transmission
+Units 1-650: $0.10 per
+fax
+Units 650+: $0.00",,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,MeridianLink,Premium Dashboard Benchmarks,Standard,Premium Dashboard Benchmarks,N,,,1500,4674,,,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,MeridianLink,Web Hosting,Standard,Web Hosting,N,,,4800,860,,,,,N,,"$400 flat fee per
+month",Invoiced at $400/month,,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,MeridianLink,SFTP Server,Standard,SFTP Server,N,,,600,5324,,,,,N,,"$50 flat fee per
+month
+
+Per coordinator account",Invoiced at $50/month per coordinator account,,
+Verification Data Access,Mortgage Credit Link,Add On - Miscellaneous,MeridianLink,CRA Office,Standard,CRA Office,N,1000,?,1000,?,,,,,N,,Initial MCL setup fee includes one office,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,LendingQB - Consumer Credit Reports,Usage,LendingQB - Consumer Credit Reports,N,,,,,0,?,,,N,,"MeridianLink name is in the dropdown
+of credit providers",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,LendingQB - 4506-T,Usage,LendingQB - 4506-T,N,,,,,0,?,,,N,,"Can specify any MCL endpoint on a
+per lender level",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,LendingQB - VOE/I,Usage,LendingQB - VOE/I,N,,,,,0,?,,,N,,"Instant + Manual. Can specify any
+MCL endpoint on a per lender level",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,LendingQB - VOA,Usage,LendingQB - VOA,N,,,,,0,?,,,N,,"Can specify any MCL endpoint on a
+per lender level.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,LoansPQ - Consumer Credit Reports,Usage,LoansPQ - Consumer Credit Reports,N,,,,,0,?,,,N,,Can specify any MCL endpoint,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Byte Software,BytePro - Consumer Credit Reports,Usage,BytePro - Consumer Credit Reports,N,,,,,0,?,,,N,,"Byte wants agreements with each CRA
+separately",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Avista,Avista - Consumer Credit Reports - 1B,Usage,Avista - Consumer Credit Reports - 1B,N,,,,,0.45,866,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Avista,Avista - Consumer Credit Reports - 2B,Usage,Avista - Consumer Credit Reports - 2B,N,,,,,0.7,866,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Avista,Avista - Consumer Credit Reports - 3B,Usage,Avista - Consumer Credit Reports - 3B,N,,,,,0.95,866,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ReverseVision,ReverseVision - Consumer Credit Reports - 1B,Usage,ReverseVision - Consumer Credit Reports - 1B,N,,,,,0.25,864,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ReverseVision,ReverseVision - Consumer Credit Reports - 2B,Usage,ReverseVision - Consumer Credit Reports - 2B,N,,,,,0.35,864,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ReverseVision,ReverseVision - Consumer Credit Reports - 3B,Usage,ReverseVision - Consumer Credit Reports - 3B,N,,,,,0.5,864,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 1BI,Usage,In the Lead - Consumer Credit Reports - 1BI,N,,,,,0.25,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 1BJ,Usage,In the Lead - Consumer Credit Reports - 1BJ,N,,,,,0.5,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 2BI,Usage,In the Lead - Consumer Credit Reports - 2BI,N,,,,,0.5,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 2BJ,Usage,In the Lead - Consumer Credit Reports - 2BJ,N,,,,,1,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 3BI,Usage,In the Lead - Consumer Credit Reports - 3BI,N,,,,,0.75,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,In the Lead,In the Lead - Consumer Credit Reports - 3BJ,Usage,In the Lead - Consumer Credit Reports - 3BJ,N,,,,,1,871,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,PreApp,PreApp - Consumer Credit Reports,Usage,PreApp - Consumer Credit Reports,N,,,,,1,863,,,N,,"Both new and reissue transactions
+(MCL-181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortage Flex,Mortage Flex - Consumer Credit Reports,Usage,Mortage Flex - Consumer Credit Reports,N,,,,,0.4,876,,,N,,"Only transactions for new credit (MCL-
+181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortgage Builder,Mortage Builder - Consumer Credit Reports - 1B,Usage,Mortage Builder - Consumer Credit Reports - 1B,N,,,,,0.33,873,,,N,,"Only transactions for new credit (MCL-
+181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortgage Builder,Mortage Builder - Consumer Credit Reports - 2B,Usage,Mortage Builder - Consumer Credit Reports - 2B,N,,,,,0.66,873,,,N,,"Only transactions for new credit (MCL-
+181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortgage Builder,Mortage Builder - Consumer Credit Reports - 3B,Usage,Mortage Builder - Consumer Credit Reports - 3B,N,,,,,1,873,,,N,,"Only transactions for new credit (MCL-
+181)",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Calyx,Point - Consumer Credit Reports - DirectConnect,Usage,Point - Consumer Credit Reports - DirectConnect,N,,,,,1.15,878,,,N,,"We only bill if ""MeridianLink"" is
+selected as the credit provider in Point.
+If a user selects a CRA's entry, Calyx
+will bill the CRA directly. Both new and
+reissue transactions. For
+DirectConnect only transactions from
+DEMO are included. (MCL-181). For
+WebConnect, unsure if same
+transaction filtering logic is same as
+Point DirectConnect.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Calyx,Point - Consumer Credit Reports - WebConnect,Usage,Point - Consumer Credit Reports - WebConnect,N,,,,,1.73,879,,,N,,"We only bill if ""MeridianLink"" is
+selected as the credit provider in Point.
+If a user selects a CRA's entry, Calyx
+will bill the CRA directly. Both new and
+reissue transactions. For
+DirectConnect only transactions from
+DEMO are included. (MCL-181). For
+WebConnect, unsure if same
+transaction filtering logic is same as
+Point DirectConnect.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MortgageBot,MortgageBot - Consumer Credit Reports - 1B,Usage,MortgageBot - Consumer Credit Reports - 1B,N,,,,,0.5,875,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MortgageBot,MortgageBot - Consumer Credit Reports - 2B,Usage,MortgageBot - Consumer Credit Reports - 2B,N,,,,,0.65,875,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MortgageBot,MortgageBot - Consumer Credit Reports - 3B,Usage,MortgageBot - Consumer Credit Reports - 3B,N,,,,,0.75,875,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Integra Destiny,IntegraDestiny - Consumer Credit Reports - 1B,Usage,IntegraDestiny - Consumer Credit Reports - 1B,N,,,,,0.3,872,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Integra Destiny,IntegraDestiny - Consumer Credit Reports - 2B,Usage,IntegraDestiny - Consumer Credit Reports - 2B,N,,,,,0.4,872,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Integra Destiny,IntegraDestiny - Consumer Credit Reports - 3B,Usage,IntegraDestiny - Consumer Credit Reports - 3B,N,,,,,0.5,872,,,N,,(MCL-181),,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Laser Credit,Laser Credit - Consumer Credit Reports - 1B,Usage,Laser Credit - Consumer Credit Reports - 1B,N,,,,,0.75,862,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Laser Credit,Laser Credit - Consumer Credit Reports - 2B,Usage,Laser Credit - Consumer Credit Reports - 2B,N,,,,,1,862,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Laser Credit,Laser Credit - Consumer Credit Reports - 3B,Usage,Laser Credit - Consumer Credit Reports - 3B,N,,,,,1.25,862,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Wolters Kluwer,ComplianceOne - Consumer Credit Reports,Usage,ComplianceOne - Consumer Credit Reports,N,,,,,1,861,,,N,," $45 flat rate for
+up to 45
+transactions.
+$1 per
+transaction
+afterwards "," $45 flat rate for
+up to 45
+transactions.
+$1 per
+transaction
+afterwards ",,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,OpenClose,OpenClose - Consumer Credit Reports - 1B,Usage,OpenClose - Consumer Credit Reports - 1B,N,,,,,0.25,867,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,OpenClose,OpenClose - Consumer Credit Reports - 2B,Usage,OpenClose - Consumer Credit Reports - 2B,N,,,,,0.5,867,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,OpenClose,OpenClose - Consumer Credit Reports - 3B,Usage,OpenClose - Consumer Credit Reports - 3B,N,,,,,0.75,867,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Ellie Mae,Encompass - Consumer Credit Reports,Usage,Encompass - Consumer Credit Reports,N,,,,,2,888,,,N,,"CRA entry:
+Check with
+provider
+
+See billing details in MCL-1036",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Ellie Mae,Encompass - 4506-T Gateway,Usage,Encompass - 4506-T,N,,,,,2.25,888,,,N,,"CRA entry:
+Check with
+provider
+
+Billing includes new and reissue transactions; only billed if using MeridianLink gateway through TaxReturnVerifications.com",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Harland,Harland - Consumer Credit Reports,Usage,Harland - Consumer Credit Reports,N,,,,,0.5,868,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Loan Ace,LoanAce - Consumer Credit Reports - 1B,Usage,LoanAce - Consumer Credit Reports - 1B,N,,,,,0.25,3137,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Loan Ace,LoanAce - Consumer Credit Reports - 2B,Usage,LoanAce - Consumer Credit Reports - 2B,N,,,,,0.45,3138,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Loan Ace,LoanAce - Consumer Credit Reports - 3B,Usage,LoanAce - Consumer Credit Reports - 3B,N,,,,,0.65,3139,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,eMagic,eMagic - Consumer Credit Reports - 1B,Usage,eMagic - Consumer Credit Reports - 1B,N,,,,,0.35,3141,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,eMagic,eMagic - Consumer Credit Reports - 2B,Usage,eMagic - Consumer Credit Reports - 2B,N,,,,,0.5,3142,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,eMagic,eMagic - Consumer Credit Reports - 3B,Usage,eMagic - Consumer Credit Reports - 3B,N,,,,,0.7,3143,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortage Cadence,Mortage Cadence - Consumer Credit Reports - 1B,Usage,Mortage Cadence - Consumer Credit Reports - 1B,N,,,,,0.2,874,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortage Cadence,Mortage Cadence - Consumer Credit Reports - 2B,Usage,Mortage Cadence - Consumer Credit Reports - 2B,N,,,,,0.35,874,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortage Cadence,Mortage Cadence - Consumer Credit Reports - 3B,Usage,Mortage Cadence - Consumer Credit Reports - 3B,N,,,,,0.5,874,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fannie Mae,Fannie Mae - Consumer Credit Reports,Usage,Fannie Mae - Consumer Credit Reports,N,,,,,1.95,865,,,N,,"Fee becomes $2.20 if invoice is
+overdue
+Includes: Desktop Underwriter,
+Desktop Originator, EarlyCheck?",$2.20 if not current on invoice,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fannie Mae,Fannie Mae - Tax Transcript,Usage,Fannie Mae - Tax Transcript,N,,,,,0,3031,,,N,,"Must use our 4506-T Processing
+system or AUS-TRV for eligibility",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fannie Mae,Fannie Mae - Manual VOE/I,Usage,Fannie Mae - Manual VOE/I,N,,,,,0,3030,,,N,,"CRAs must go through their own
+vetting process with Fannie Mae",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,EMS,EMS - Consumer Credit Reports,Usage,EMS - Consumer Credit Reports,N,,,,,0.42,870,,,N,,"Old interface, do not sign up new
+clients on this.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Freddie Mac,FHLMC Direct - Consumer Credit Reports,Usage,FHLMC Direct - Consumer Credit Reports,N,,,,,2,3038,,,N,,Excludes LQA transactions,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blend,Blend - Consumer Credit Reports - 1B,Usage,Blend - Consumer Credit Reports - 1B,N,,,,,0.5,5276,,,N,,Billing includes new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blend,Blend - Consumer Credit Reports - 2B,Usage,Blend - Consumer Credit Reports - 2B,N,,,,,0.5,3154,,,N,,Billing includes new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blend,Blend - Consumer Credit Reports - 3B,Usage,Blend - Consumer Credit Reports - 3B,N,,,,,0.5,3155,,,N,,Billing includes new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blend,Blend - Consumer Credit Reports - Upgrade,Usage,Blend - Consumer Credit Reports - Upgrade,N,,,,,0.5,3156,,,N,,Billing includes new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,VueCentric,VueCentric - Consumer Credit Reports,Usage,VueCentric - Consumer Credit Reports,N,,,,,0.5,900,,,N,,"This is broken up into 1B, 2B, 3B in
+NetSuite. There is a subtotal item with
+a matching item ID for what MCL
+outputs, though.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",LendingPad - Consumer Credit Reports,Usage,LendingPad - Consumer Credit Reports,N,,,,,1.5,3024,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",LendingPad - VOE/I,Usage,LendingPad - VOE/I,N,,,,,1.5,3760,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",LendingPad - 4506-T,Usage,LendingPad - 4506-T,N,,,,,1.5,3762,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",LendingPad - Flood,Usage,LendingPad - Flood,N,,,,,1.5,3763,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",Lending Pad - VOA,Usage,Lending Pad - VOA,N,,,,,1.5,3764,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",Lending Pad - VOD,Usage,Lending Pad - VOD,N,,,,,1.5,3765,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",Lending Pad - UDN,Usage,Lending Pad - UDN,N,,,,,1.5,3766,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,"WEI Technology, Inc.",LendingPad - IDV,Usage,LendingPad - IDV,N,,,,,1.5,3767,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blue Sage Solutions,Blue Sage - Consumer Credit Reports,Usage,Blue Sage - Consumer Credit Reports,N,,,,,0.5,5351,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blue Sage Solutions,Blue Sage - UDN,Usage,Blue Sage - UDN,N,,,,,0.5,5352,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Blue Sage Solutions,Blue Sage - 4506-T,Usage,Blue Sage - 4506-T,N,,,,,0.5,5357,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,On The Go,On The Go - Consumer Credit Reports - 1B,Usage,On The Go - Consumer Credit Reports - 1B,N,,,,,0.33,3145,,,N,,Billing is for new and reissue transactions,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,On The Go,On The Go - Consumer Credit Reports - 2B,Usage,On The Go - Consumer Credit Reports - 2B,N,,,,,0.66,3146,,,N,,Billing is for new and reissue transactions,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,On The Go,On The Go - Consumer Credit Reports - 3B,Usage,On The Go - Consumer Credit Reports - 3B,N,,,,,1,3147,,,N,,Billing is for new and reissue transactions,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ARMCO,ARMCO - Consumer Credit Reports - 1B,Usage,ARMCO - Consumer Credit Reports - 1B,N,,,,,1.1,5316,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ARMCO,ARMCO - Consumer Credit Reports - 2B,Usage,ARMCO - Consumer Credit Reports - 2B,N,,,,,1.4,5317,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,ARMCO,ARMCO - Consumer Credit Reports - 3B,Usage,ARMCO - Consumer Credit Reports - 3B,N,,,,,1.7,5318,,,N,,Billing is for new transactions only,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,MeridianLink,Customer API Integration,Standard,Customer API Integration,N,1000,5074,,,,,,,N,,"Integration fee for CRA-sponsored API
+integrations",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fannie Mae,Fannie Mae Connect Fee,Standard Monthly,Fannie Mae Connect Fee,N,,,4800,,,,,,N,,Invoiced at $400/month,Invoiced at $400/month,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fannie Mae,Fannie Mae Affiliate Fee,Standard,Fannie Mae Affiliate Fee,N,2000,?,,,,,,,N,,Pass through from Fannie Mae,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Freddie Mac,Freddie Mac LQA Secondary Use - Individual,Usage,Freddie Mac LQA Secondary Use - Individual,N,,,,,-14,3151,,,N,,"Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.
+
+Freddie Mac covers the cost of LQA
+reissues. This includes secondary use.
+So, if a reissue occurs with secondary
+use in a CRA system, we bill Freddie
+Mac for it, and then give the CRA credit
+for the reissue here.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Freddie Mac,Freddie Mac LQA Secondary Use - Joint,Usage,Freddie Mac LQA Secondary Use - Joint,N,,,,,-28,3152,,,N,,"Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.
+
+Freddie Mac covers the cost of LQA
+reissues. This includes secondary use.
+So, if a reissue occurs with secondary
+use in a CRA system, we bill Freddie
+Mac for it, and then give the CRA credit
+for the reissue here.",,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Shape Software,Shape Software - Consumer Credit Reports,Usage,Shape Software - Consumer Credit Reports,N,,,,,0,?,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Mortgage Panda,Mortgage Panda - Consumer Credit Reports,Usage,Mortgage Panda - Consumer Credit Reports,N,,,,,0,?,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Wizni,Lendwize - Consumer Credit Reports,Usage,Lendwize - Consumer Credit Reports,N,,,,,0,?,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,wemlo,wemlo - Consumer Credit Reports,Usage,wemlo - Consumer Credit Reports,N,,,,,0,?,,,N,,,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,PrudentCo,PrudentCo - Consumer Credit Reports,Usage,PrudentCo - Consumer Credit Reports,N,,,,,0,?,,,N,,FrameLogic dba PrudentCo,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fiserv,Mortgage Director (fka PCLender) - 1B,Usage,Mortgage Director (fka PCLender) - 1B,N,,,,,0.25,6438,,,N,,Pricing effective 3/1/2021,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fiserv,Mortgage Director (fka PCLender) - 2B,Usage,Mortgage Director (fka PCLender) - 2B,N,,,,,0.5,6439,,,N,,Pricing effective 3/1/2021,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Fiserv,Mortgage Director (fka PCLender) - 3B,Usage,Mortgage Director (fka PCLender) - 3B,N,,,,,1,6440,,,N,,Pricing effective 3/1/2021,,,
+Verification Data Access,Mortgage Credit Link,Add On - Interface,Creative Thinking,focusagent - Consumer Credit Reports,Usage,focusagent - Consumer Credit Reports,N,,,,,0,?,,,N,,,,,
+Verification Data Access,CreditAPI,Primary Service,MeridianLink,CreditAPI,Standard,CreditAPI,N,2500,1737,,,,,,,N,,,,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Single Bureau Credit Report - individual,Usage,Single Bureau Credit Report - individual,N,,,,,0.25,3228,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Single Bureau Credit Report - joint,Usage,Single Bureau Credit Report - joint,N,,,,,0.25,3229,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Multi-Bureau Credit Report (2 bureaus) - individual,Usage,Multi-Bureau Credit Report (2 bureaus) - individual,N,,,,,1.04,3230,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Multi-Bureau Credit Report (2 bureaus) -  joint,Usage,Multi-Bureau Credit Report (2 bureaus) -  joint,N,,,,,1.04,3231,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Multi-Bureau Credit Report (3 bureaus) - individual,Usage,Multi-Bureau Credit Report (3 bureaus) - individual,N,,,,,1.04,3232,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Multi-Bureau Credit Report (4 bureaus) - individual,Usage,Multi-Bureau Credit Report (4 bureaus) - individual,N,,,,,1.04,3233,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,"Equifax, Experian, TransUnion",Upgrade,Usage,Upgrade,N,,,,,0.79,3234,,,N,,,Transaction counts towards $500 monthly minimum,,
+Verification Data Access,CreditAPI,Add On - Credit Verification,MeridianLink,Credit Attributes,Usage,Credit Attributes,N,,,,,0.75,3755,,,N,,Per individual pricing,"Per individual pricing, Transaction counts towards $500 monthly minimum",,
+Verification Data Access,LDAP,Primary Service,MeridianLink,LDAP Setup,Standard,LDAP Setup,N,3500,1738,,,,,,,N,,Includes LOS & Fannie Mae,Includes LOS and Fannie Mae,,
+Verification Data Access,LDAP,Add On - Fees,MeridianLink,Freddie Mac Setup,Standard,Freddie Mac Setup,N,1000,?,,,,,,,N,,,,,
+Verification Data Access,LDAP,Add On - Fees,MeridianLink,LDAP Technology Fee,Usage,LDAP Technology Fee,N,,,,,3.5,3328,,,N,,"This is $3.50 per Fannie/Freddie reissue. We will also charge $3.50 once for a file if there are no
+Fannie/Freddie reissues, but the lender reissued the file at least once. We pass this along to
+CRA's since we charge them a fee for a Fannie/Freddie reissue in their system. ",Per reissue,,
+Verification Data Access,LDAP,Add On - Fees,MeridianLink,LDAP Admin Fee,Usage,LDAP Admin Fee,N,,,,,2.5,3630,,,N,,"This is $2.50 per file per month if the file is reissued at least once in a month. MeridianLink keeps
+this for administering the LDAP program.",Per file per month,,
+Verification Data Access,LDAP,Add On - Fees,MeridianLink,LDAP Secondary Fee,Usage,LDAP Secondary Fee,N,,,,,12,927,,,N,,"We calculate this per borrower, so a joint file incurs this cost twice. We pass this along to CRA's
+since the bureaus charge them for secondary use. Secondary use billing/reporting is triggered
+whenever a customer reissues a file they wouldn't normally have access to using SREISSUE or
+OREISSUE for the first time. Note that there is a 3 month lookback period for LDAP billing, even
+though in theory the lookback should be for all time. ",Per individual,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - flat fee,Standard,Custom Product or Service - flat fee,N,Quote,6457,,,,,,,N,,,,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - hourly,Hourly,Custom Product or Service - hourly,N,,,,,Quote,6458,,,N,,,,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - monthly,Monthly,Custom Product or Service - monthly,N,,,Quote,6459,,,,,N,,,,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - annual,Standard,Custom Product or Service - annual,N,,,Quote,6562,,,,,N,,,,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - transaction fee,Standard,Custom Product or Service - transaction fee,N,,,,,Quote,6460,,,N,,,,,
+Shared,Shared,Add On,MeridianLink,Custom Product or Service - R&D,Hourly,Custom Product or Service - R&D,N,,,,,Quote,6461,,,N,,,,,

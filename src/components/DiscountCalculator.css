@@ -1,0 +1,41 @@
+.discount-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.discount-type-selector {
+  display: flex;
+  gap: 30px;
+}
+
+.discount-type-selector label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.discount-type-selector input {
+  cursor: pointer;
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-with-unit input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.unit {
+  font-weight: 600;
+  color: #004b8e;
+  font-size: 1.1rem;
+}

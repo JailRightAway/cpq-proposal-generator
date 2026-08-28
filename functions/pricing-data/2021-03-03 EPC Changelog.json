@@ -1,0 +1,392 @@
+[
+  {
+    "Product": "[General]",
+    "Change": "Transitioned to Enhanced Price Card format\nUpdated product names to reflect rebrand",
+    "Note": NaN
+  },
+  {
+    "Product": "[General]",
+    "Change": "Added the following product lines:  MCL, TCI, MLX Consulting",
+    "Note": NaN
+  },
+  {
+    "Product": "XC Module",
+    "Change": "Add options for both annual billing and monthly billing (same annual total)",
+    "Note": NaN
+  },
+  {
+    "Product": "AP Mortgage",
+    "Change": "Transaction fee is for all LendingQB loans that use AP Mortgage. Previous price card said \u201call LendingQB retail loans that use AP Mtg.\u201d.",
+    "Note": NaN
+  },
+  {
+    "Product": "Deluxe Detect",
+    "Change": "Price = $4.06 per transaction. Partner Price 5% increase starting 3/1",
+    "Note": NaN
+  },
+  {
+    "Product": "Deluxe Match Fee",
+    "Change": "Add LPQ/XA add-on. This was previously part of the Notes.  Now it its own line.",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "Price = $7.09 per transaction",
+    "Note": NaN
+  },
+  {
+    "Product": "ID Authentication - Experian CrossCore \u2013 PreciseID for Compliance (aka Prescreen)",
+    "Change": "Add LPQ/XA product",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "Per transaction: $3.00",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "Setup Fee: $2000 (unless this is an add-on subcode to an existing CrossCore PreciseID client, then it is the $700 per subcode setup)",
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - flat fee",
+    "Change": "Add to price card.  ",
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - hourly",
+    "Change": "Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - monthly",
+    "Change": "These are generic shared items in the product catalog.",
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - annual",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - transaction fee",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Custom Product or Service - R&D",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "API Web Services",
+    "Change": "Add shared product.  $500 setup & $5000 annual.",
+    "Note": "This previously existed as an LPQ only product and was removed in May 2020"
+  },
+  {
+    "Product": "Time & Materials (aka Professional Hours)",
+    "Change": "Add to price card.\u00a0 $250 per hour.",
+    "Note": NaN
+  },
+  {
+    "Product": "After Hours Support",
+    "Change": "Change price to $400 per hour (remove minimum # of hours) // Previously After Hours Support was $300/hr (2 hour minimum) for Services, Support, & SIE.  After Hours IT is $400/hr with no minimum. We are simplifying it all $400/hr for all departments. ",
+    "Note": NaN
+  },
+  {
+    "Product": "Expedited Deployment",
+    "Change": "Change pricing to \u201cQuote\u201d.  \nUpdate note to \u201cReserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates.  Requires SVP approval.\"",
+    "Note": NaN
+  },
+  {
+    "Product": "IT Unscheduled Change Request",
+    "Change": "Add to price card.\u00a0 $600/hr",
+    "Note": NaN
+  },
+  {
+    "Product": "Accurate Group \u2013 Settlement Services",
+    "Change": "Add to price card as LPQ addOn. Setup=$2100.\u00a0 Annual=$1575.\u00a0 Note: Utilizes LPQ Synergic Framework",
+    "Note": NaN
+  },
+  {
+    "Product": "First Close \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Lender Close \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "New Vista \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "SourcePoint \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "United One Resources \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Universal Real Estate Services \u2013 Settlement Services",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "American Service Group (ASG) \u2013 Vehicle Insurance",
+    "Change": "Add to price card as LPQ addOn. Setup=$2100.\u00a0 Annual=$1575.\u00a0 Note: Utilizes LPQ Synergic Framework",
+    "Note": NaN
+  },
+  {
+    "Product": "Auto Exam \u2013 Vehicle Insurance",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 Resolve360 \u2013 ID Analytics",
+    "Change": "Remove from price card",
+    "Note": "Since we still don\u2019t have this Agreement in place and there is minimal usage. We're not comfortable with this as a formal offering until we actually have something in place (if we decide to) and also since they are now owned by LexisNexis."
+  },
+  {
+    "Product": "ID Authentication \u2013 Certain ID \u2013 ID Analytics",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Application Portal Mortgage - AccountCheck - One Time",
+    "Change": "Update name from \u201cAccountCheck\u201d to \u201cAccountChek\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "Application Portal Mortgage - AccountCheck \u2013 30 Day Monitoring",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Application Portal Mortgage - AccountCheck \u2013 60 Day Monitoring",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Application Portal Mortgage - AccountCheck \u2013 90 Day Monitoring",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Mortgage Director (fka PCLender) - Fiserv - Consumer Credit Report",
+    "Change": "Add to  MCLprice card",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "1B = $0.25; 2B = $0.50; 3B = $1.00 Note to Sales: effective 3/1/2021",
+    "Note": NaN
+  },
+  {
+    "Product": "Experian Finicity Order Retrieval API (Add On - Employment/Income/Asset Verification)",
+    "Change": "Add MCL addon\n(non-aggregate bundled with manual VOE) <= 5,000: $1.00 5,001 - 10,000: $0.95 10,001 - 15,000: $0.90 15,001 - 20,000: $0.85 > 20,000: $0.80",
+    "Note": NaN
+  },
+  {
+    "Product": "CloseFirst",
+    "Change": "Remove CloseFirst1B, 2B, and 3B from MCL price card",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Custom Scorecard",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Decisioning Optimization",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Enhanced Implementation",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Software Configuration",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Process and Strategy Maintenance",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Process Assessment",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Tune-Up",
+    "Change": "Add to price card",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "$20,350 (one-time fee)",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Admin Pro",
+    "Change": "Add to price card",
+    "Note": NaN
+  },
+  {
+    "Product": NaN,
+    "Change": "$20,000 (annual fee)",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Reveal Pro",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Capture Rate Analysis",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Declined Application Analysis",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "MLX Consulting Disparate Impact",
+    "Change": "Add to price card. Price = \u201cQuote\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "3rd Party Algorithm Using AchievEngine",
+    "Change": "Remove from price card",
+    "Note": NaN
+  },
+  {
+    "Product": "Debit Bureau -- Early Warning Services (EWS)",
+    "Change": "Remove from price card",
+    "Note": "Already marked as inactive"
+  },
+  {
+    "Product": "Qualife \nBizChex ",
+    "Change": "Remove these \"no fee\" LPQ addOns",
+    "Note": "We do not bill these directly, and do not have NetSuite items for them, which is a requirement of the new price card format."
+  },
+  {
+    "Product": "eFunds IDV & IDA",
+    "Change": "\"Check with vendor\" has been added as a note to Sales instead of the transaction fee.  No change to setup or annual fee.",
+    "Note": NaN
+  },
+  {
+    "Product": "LoansPQ - SSO (SSW)\nLendingQB - SSO (SSW)\nLoansPQ - Consumer Credit Reports\nLendingQB - Consumer Credit Reports\nLending QB - 4506-T\nLendingQB - VOE/I\nLendingQB - VOA",
+    "Change": "Remove these \"no fee\" MCL products",
+    "Note": "Finicity VOIE remains because there are special legal terms associated with that item"
+  },
+  {
+    "Product": "ID Authentication \u2013 FIS \u2013 eFunds IDV & IDA",
+    "Change": "Clarifying that transaction fee relates to \u201cper pull\u201d",
+    "Note": NaN
+  },
+  {
+    "Product": "ID Authentication \u2013 Equifax \u2013 eIDCompare with eIDVerifier",
+    "Change": NaN,
+    "Note": "\u00a0"
+  },
+  {
+    "Product": "ID Verification \u2013 Experian \u2013 CrossCore Precise ID",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Authentication \u2013 Experian \u2013 CrossCore Precise ID with OPT and KIQ",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Authentication - Experian \u2013 CrossCore Precise ID for Compliance",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Authentication \u2013 TransUnion IDMV & IDMA",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 LexisNexis Bridger OFAC Watchlist",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 FIS \u2013 eFunds IDV",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 Equifax \u2013 eIDCompare",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 Experian \u2013 ISTWatch OFAC Watchlist",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "ID Verification \u2013 TransUnion \u2013 TransUnion IDMV",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Indirect Lead \u2013 DealerTrack",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Indirect Lead \u2013 RouteOne",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Indirect Lead \u2013 RouteOne eContracting",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Vehicle Insurance \u2013 Black Book",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Vehicle Insurance \u2013 KBB",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Vehicle Insurance \u2013 NADA",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "Vehicle Insurance \u2013 NADA Other",
+    "Change": NaN,
+    "Note": NaN
+  },
+  {
+    "Product": "\u00a0",
+    "Change": NaN,
+    "Note": NaN
+  }
+]

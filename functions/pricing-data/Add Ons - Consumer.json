@@ -1,0 +1,4268 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "(All)",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Annual Fees",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "MeridianLink Consumer/Opening",
+    "Unnamed: 1": "Add On - Address Verification",
+    "Unnamed: 2": "Address Verification Tier 1: 8K+ Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 23500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Address Verification Tier 2: 4K - 7.99K Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 18750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Address Verification Tier 3: 2K - 3.99K Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 14250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Address Verification Tier 4: 1K - 1.99K Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 9500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Address Verification Tier 5: 500 - 999 Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Address Verification Tier 6: 0 - 499 Apps",
+    "Unnamed: 3": "Specified app volume is monthly consumer/opening app commitment",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IST CorrectAddress",
+    "Unnamed: 3": "Applies to both test and production",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Ancillary Service",
+    "Unnamed: 2": "Advanced Decisioning Additional Referral Reasons",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Advanced Decisioning Implementation for Existing Customer",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 23250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Advanced Decisioning Implementation for New Customer",
+    "Unnamed: 3": "Standard Decisioning has no additional fee.",
+    "Unnamed: 4": 23250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Call Center",
+    "Unnamed: 2": "LSI",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Velera (Call Center - TruStage LoanLink)",
+    "Unnamed: 3": "White label offering for Call Center",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Velera (Call Center)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Core Conversion",
+    "Unnamed: 2": "Core Conversion (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 16250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv DNA Fee (pass through from vendor) (Consumer)",
+    "Unnamed: 3": "In addition to ML project fee",
+    "Unnamed: 4": 6750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "JHA to JHA (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Symitar Reconversion (Consumer)",
+    "Unnamed: 3": "Update on Symitar version for additional mappings",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Core Integration",
+    "Unnamed: 2": "Bankway (Metavante) (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CLF Export Core Booking",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": 2900,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 1 (>$5B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 34750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 2 ($2B - $5B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 29000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 3 ($1.25B - $2B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 23250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 4 ($750M - $1.25B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 17500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 5 ($500M - $750M AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 11750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "COCC (Consumer) Tier 6 (<$500M AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 15500,
+    "Unnamed: 5": 10000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Corelation KeyStone (Consumer) ",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CUBase (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cunify (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CUProdigy (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DataSafe (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ESP (Forza) (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra Fushion Phoenix (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS IBS (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS Miser (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Data Center Direct Connection (Consumer)",
+    "Unnamed: 3": "ML directly connects to Fiserv's data center in Cherry Hill for clients who have their core hosted there.",
+    "Unnamed: 4": 7250,
+    "Unnamed: 5": 8000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv DNA (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv DNA Credit Push (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Portico (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Precision (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Premier (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Signature Core (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flex (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Galaxy (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Horizon (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Implementation pass-through fee from Fiserv",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 30000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IPower (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Jack Henry 20/20 (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Jack Henry CoreDirector (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Jack Henry Silverlake (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Jack Henry Symitar (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "New Core Integration (Consumer)",
+    "Unnamed: 3": "Using ML standard schema = full integration; New schema includes Import Customer and View Account and additional features can be built as prof svcs; contact Product Mgmt for project timelines",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "NewSolutions (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Sandbox (Consumer)",
+    "Unnamed: 3": "When customer opportunities for named cores arise, communicate to prospect that we have a strategic partnership for integration\u200b. Provide highlights about Sandbox and their value, as needed\u200b. Emphasize that we have created a programmatic approach to working with Sandbox, including what is described in \"External Notes for Customer\".\u200b",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Send Application Records to Core (Consumer)",
+    "Unnamed: 3": "For Symitar clients, they can have either Loan Records or Loan App Records as a part of their contract. If they want both, we'll need to charge the fee. For Corelation clients, we enable Loan Records by default. If they want to add Loan App Records, we'll need to charge the fee.",
+    "Unnamed: 4": 3900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Spectrum (Summit) (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "UltraData OpenPath (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "XP System (XP2) (Consumer)",
+    "Unnamed: 3": "https://meridianlink365.sharepoint.com/:x:/s/TeamLPQDevsSIE/EVVbYPuz7cRMnXlkV7a-8w8Bwy6SG57uB-mWdKuVe9JM7g?e=l3pbou&isSPOFile=1",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": 10250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Credit Card Systems",
+    "Unnamed: 2": "FDR Vantiv (Credit Card)",
+    "Unnamed: 3": "Batch integration",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS RTDX (Credit Card)",
+    "Unnamed: 3": "Clients are required to utilize RTDX moving forward. FKA Base2000 CC",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv CCM (Credit Card)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fiserv Originate (aka Omaha/Optis/CreditCPS) (Credit Card)",
+    "Unnamed: 3": "Only available for personal CC, not business CC. Also referred to as the Omaha platform. AKA Optis or Omaha CC",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "JH Full Credit Service (Credit Card)",
+    "Unnamed: 3": "Velera (fka PSCU) product white labeled by JH",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TMG (Credit Card)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TSYS (Credit Card)",
+    "Unnamed: 3": "Batch integration",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VantivFI (Credit Card)",
+    "Unnamed: 3": "API integration",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Velera (fka PSCU )(Credit Card)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Visa Advanced ID Solutions (VAIS)(Credit Card)",
+    "Unnamed: 3": "Requires product approval, express written consent from VISA required",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Custom",
+    "Unnamed: 2": "Custom Product - Annual (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Product - Monthly (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Product - Transaction fee (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - Flat Fee (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - Hourly (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Service - R&D (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Custom Score",
+    "Unnamed: 2": "Experian PowerCurve",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 14000,
+    "Unnamed: 5": 7000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fast Start",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Liquid Credit Integration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Point Predictive Integration (Consumer)",
+    "Unnamed: 3": "Integration Includes Auto Pass",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Scienaptic (ML Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Zest Custom Score",
+    "Unnamed: 3": "Only production server deployments allowed, no BETA or DEMO deployments.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Zest Protect (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Debit Bureau",
+    "Unnamed: 2": "FIS ChexSystems (QualiFile Debit Bureau) (Consumer)",
+    "Unnamed: 3": "Service already offered, we are separating Consumer and DecisionLender",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS Global BizChex Systems aka FIS BizChex",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Telecheck- New Customer",
+    "Unnamed: 3": "$0 fee for existing Telecheck Customers",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Disbursement",
+    "Unnamed: 2": "Fiserv DNA Disbursements",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Jack Henry Symitar Disbursement",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Wycom",
+    "Unnamed: 3": "Both Wycom and native DNA check printing solutions are supported.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Archival",
+    "Unnamed: 2": "DocDownload",
+    "Unnamed: 3": "Also often called document imaging; Includes extract of IDV/IDA, loan app summary, and credit reports",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 5500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DocDownload - Training Refresh for Additional Phase",
+    "Unnamed: 3": "NOT FOR REDEPLOYMENT. Can only be sold concurrently with system setup phase. Supplementary training for customer adding new loantype modules to an existing live DocDownload setup.",
+    "Unnamed: 4": 2900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DocDownload Redeploy (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Delivery",
+    "Unnamed: 2": "Faxing",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (1-5 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (21-40 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 14.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (41-60 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 26.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (61-80 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 30.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (6-20 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (81-100 Page Envelope)",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 34
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Prep",
+    "Unnamed: 2": "Additional Custom Document",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 490
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Additional Vendor Deposit Document",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 335
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Additional Vendor Loan Document",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 335
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Client Managed Documents",
+    "Unnamed: 3": "No fee. Can accommodate simple mapping.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CSi",
+    "Unnamed: 3": "Dynamic Docs - Only supports Personal Loan, Vehicle Loan, and Home Equity Loan",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Document Maintenance (additional environment)",
+    "Unnamed: 3": "Per environment. Waived for DEMO & LIVE and temporary waiver for BETA core integration // Most clients originate all their document changes on a \"DEMO\" environment (e.g. DEMO, EPLQA, JHADEMO, etc.)  then have the changes migrate to LIVE environment.  Thus, a standard doc migration workflow would just involve 2 environments: DEMO and LIVE. \n\nFor clients who want us to support additional environments,  please let them know that supporting an additional server complicates the maintenance and migration process and thus will incur an annual maintenance charge. \nExceptions:  If a client is undergoing core integration on BETA and need their docs on BETA temporarily, we will waive the fee since it is assumed once the process is complete, the docs will be removed from their BETA environment and they will revert to the standard DEMO -> LIVE workflow.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Document Mapping (deposits)",
+    "Unnamed: 3": "Up to 15 standard MeridianLink Opening docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Document Mapping (loans)",
+    "Unnamed: 3": "Up to 20 standard MeridianLink Consumer docs and 5 custom forms // Approved vendors for standard forms are CUNA, Conmar, WKFS, Securian, CSi, and OakTree",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Expedited Forms Requests within 1 week (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 265
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Expedited Forms Requests within 2-3 days (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 530
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra DepositPro ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra DepositPro Plus",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra LaserPro (ML Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finastra LaserPro Plus (ML Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Kinective XML (fka IMM XML TotaleAtlas Doc Engine) ",
+    "Unnamed: 3": "does have echoSign",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer Document Mapping Overage",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 320
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Custom Document Mapping Overage",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 320
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Document Mapping Overage",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 320
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Document Upload",
+    "Unnamed: 2": "Credit Mountain (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3025,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 1: 45 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 2: 40 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 3: 35 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 4: 30 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 5: 25 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 6: 20 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 7: 15 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Increase max upload file size Tier 8: 10 MB",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Employment/Income/Asset Verification",
+    "Unnamed: 2": "Equifax The Work Number Select",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Bank Deposit Verification",
+    "Unnamed: 3": "Requires MeasureOne Income & Employment Verification",
+    "Unnamed: 4": 3200,
+    "Unnamed: 5": 1248,
+    "Unnamed: 6": 6.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 1 (500,000+ monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 7.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 2 (250,000 - 499,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 8.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 3 (100,000 - 249,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 8.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 4 (50,000 - 99,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 9.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 5 (25,000 - 49,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 9.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 6 (10,000 - 24,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 10.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 7 (5,000 - 9,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 11.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Education Tier 8 (0 - 4,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": 12.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 1 (500,000+ monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 2 (250,000 - 499,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 3 (100,000 - 249,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 4 (50,000 - 99,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 7.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 5 (25,000 - 49,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 7.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 6 (10,000 - 24,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 7 (5,000 - 9,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeasureOne Income & Employment Tier 8 (0 - 4,999 monthly orders)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid VOI  ",
+    "Unnamed: 3": "Customers must contract with Plaid first, then can sign the addendum with MeridianLink\n\nMust have Plaid Platform Fee",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 6000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - eSign",
+    "Unnamed: 2": "DocuSign Enterprise (Consumer)",
+    "Unnamed: 3": "No fee. ML Agreement with DocuSign states that existing DocuSign clients can NOT be quoted directly by ML. If the client is an existing DocuSign client and requests ML pricing, ML must first get approval from DocuSign before pricing can be presented. If the client or prospect is not an existing DocuSign client, MeridianLink's ISV pricing can be presented but only if they client does not want to connect with DocuSign first for enterprise pricing.\nDocuSign Enterprise is the default relationship even for new logos. Unless specifically requesting MeridianLink pricing, we want customers to engage with DocuSign directly via DocuSign Enterprise since MeridianLink's DocuSign ISV setup is a tactical solution for use in ML Consumer/Opening only with some known limitations",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DocuSign Enterprise SMS Delivery",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00. Not available to DocuSign ISV customers, only DocuSign Enteprise. Requires new DocuSign API (REST).",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.12
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DocuSign ISV",
+    "Unnamed: 3": "ML Agreement with DocuSign states that existing DocuSign clients can NOT be quoted directly by ML. If the client is an existing DocuSign client and requests ML pricing, ML must first get approval from DocuSign before pricing can be presented. If the client or prospect is not an existing DocuSign client, MeridianLink's ISV pricing can be presented but only if they client does not want to connect with DocuSign first for enterprise pricing. Quotes for 100+ transactions should use DocuSign Enterprise.\nDocuSign Enterprise is the default relationship even for new logos. Unless specifically requesting MeridianLink pricing, we want customers to engage with DocuSign directly via DocuSign Enterprise since MeridianLink's DocuSign ISV setup is a tactical solution for use in ML Consumer/Opening only with some known limitations\nQuote per DocuSign ISV addendum tiers. ",
+    "Unnamed: 4": 2300,
+    "Unnamed: 5": 3000,
+    "Unnamed: 6": 4.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Kinective Sign (fka IMM RTS)",
+    "Unnamed: 3": "IMM e-signature offering; fka IMM Ready-To-Sign (RTS), IMM_UDP ",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "OneSpan",
+    "Unnamed: 3": "fka Vasco; fka eSignLive",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Synergy Esign",
+    "Unnamed: 3": "Rebrand of Kinective Sign (IMM RTS) for JHA clients",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Home Banking",
+    "Unnamed: 2": "Alkami QuickApply (Consumer)",
+    "Unnamed: 3": "Pushes apps from Alkami Home Banking directly into MeridianLink Consumer; doesn't go through AP",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Changing Home Banking Vendor",
+    "Unnamed: 3": "One-time cost to change the vendor",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mobile App Push",
+    "Unnamed: 3": "Pushes apps from Access Softek Home Banking directly into MeridianLink Consumer; doesn't go through AP",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 3100,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Hosting",
+    "Unnamed: 2": "Dedicated Hosting",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Dedicated Server Production Updates (Consumer)",
+    "Unnamed: 3": "**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",
+    "Unnamed: 4": 12750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Offsite Server Production Updates (Consumer)",
+    "Unnamed: 3": "**Only applicable to clients already hosting offsite/dedicated. Offsite/Dedicated server clients are allowed 1 production update a year.  However if a client does request for more then 1 update, we will charge a fee of $5000 for each request after the first initial request for that year.",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Server Migration - High Complexity",
+    "Unnamed: 3": "$100,000 rate, please confirm with Services",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Server Migration - Low Complexity",
+    "Unnamed: 3": "$50,000 rate, please confirm with Services",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Server Migration - Medium Complexity",
+    "Unnamed: 3": "$75,000 rate, please confirm with Services",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - ID Authentication",
+    "Unnamed: 2": "Experian CrossCore Setup Fee (Consumer)",
+    "Unnamed: 3": "Setup fee for Initial CrossCore Implementation.  Require to select at least one option (Option 3, Option 6, Option 11).  Each option has its own setup fee in addition to the CrossCore setup fee.",
+    "Unnamed: 4": 7500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore with Precise for ID Screening with KIQ/MFA (Option 3) (Consumer)",
+    "Unnamed: 3": "Additional $805 setup fee per subcode.",
+    "Unnamed: 4": 975,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore with Precise ID for Account Opening with KIQ/MFA (Option 11) (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 975,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS QualiFile IDV & IDA",
+    "Unnamed: 3": "Check with the vendor on the per-transaction cost.",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TransUnion IDMV & IDMA",
+    "Unnamed: 3": "now known as ID Vision suite",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - ID Card Scanners",
+    "Unnamed: 2": "Acuant ID Scanning",
+    "Unnamed: 3": "Only available for Google Chrome (not Internet Explorer), customer must be using Acuant (ScanShell) hardware scanners.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - ID Verification",
+    "Unnamed: 2": "Bridger OFAC Watchlist",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian CrossCore with Precise ID for Account Opening Score Only (Option 6) (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 975,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIS QualiFile IDV",
+    "Unnamed: 3": "Check with the vendor on the per-transaction cost.",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ISTWatch OFAC Watchlist",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TransUnion IDMV",
+    "Unnamed: 3": "with OFAC",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Indirect Lead",
+    "Unnamed: 2": "Automatic USA - Existing Indirect Relationship (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Automatic USA - New Indirect Relationship (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CULA",
+    "Unnamed: 3": "Applicable to lease applications only",
+    "Unnamed: 4": 4600,
+    "Unnamed: 5": 4500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerApp",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack Aggregator (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack Digital Contracting (Consumer)",
+    "Unnamed: 3": "Setup fee not discountable. $5K passthrough fee to DealerTrack included. If customer inquires why setup fee is higher than RO's, state DealerTrack has a fee.",
+    "Unnamed: 4": 11000,
+    "Unnamed: 5": 4100,
+    "Unnamed: 6": 9.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "DealerTrack Digital Contracting Vaulted Transaction (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Innovative Funding Services (IFS)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "NALN - National Auto Loan Network- Existing Customer",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "NALN - National Auto Loan Network- New Customer",
+    "Unnamed: 3": "One time fee applies only if it's a new customer",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "OttoMoto (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne Aggregator (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne eContracting (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10000,
+    "Unnamed: 5": 4100,
+    "Unnamed: 6": 8.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne eContracting Ancillary Document Fee",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne eContracting Authoritative Copy Conversion (ACC)",
+    "Unnamed: 3": "Authoritative Copy Conversion (ACC) $21 plus postage",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 28.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne Electronic Contracting Per Vaulted Transaction",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne TOLEC < 30 Day Turn",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 12750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RouteOne TOLEC > 30 Day Turn, Multi Batch",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Insights",
+    "Unnamed: 2": "Partner Data Connect",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Zest LuLu Strategy",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Merchant Lending",
+    "Unnamed: 2": "LoanStar Technologies (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Merchant Lending",
+    "Unnamed: 3": "For consumer-facing portal, they must buy/use AP",
+    "Unnamed: 4": 6250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Consulting",
+    "Unnamed: 2": "Admin Pro (Consumer)",
+    "Unnamed: 3": "Annual fee is waived in year 1 for ML Entry clients",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 26580,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro additional 25 hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro additional 50 hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 13250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Lite (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 13872,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Admin Pro Plus (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 31800,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "API Pro",
+    "Unnamed: 3": "Requires API Web Services. One time fee includes 20 hours.  Time and materials starts after the sooner of (a) 20 hours or (b) one year.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 7500,
+    "Unnamed: 6": 325
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "API Pro additional 50 hours",
+    "Unnamed: 3": "Requires API Web Services.",
+    "Unnamed: 4": 13000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Bespoke Implementation Fee",
+    "Unnamed: 3": "Please tag in your Program Manager and Consulting for custom quote",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Capture Rate Analysis",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 19080,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cross-Sell Analysis",
+    "Unnamed: 3": "Optimization to support all cross-sells, including debt optimization; ML Mortgage not required. A minimum of 6 months of cross-sell usage is required in order to have sufficient data for this offering.  ",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 1 First Scorecard ($2.5B AUM +)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 53000,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 1, Additional Scorecards ($2.5B AUM +)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 42500,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 2 First Scorecard ($500M - $2.5B AUM)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 42500,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 2, Additional Scorecards ($500M - $2.5B AUM)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 37250,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 3 First Scorecard (Up to $500M AUM)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 32000,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Custom Scorecard Tier 3, Additional Scorecards (Up to $500M AUM)",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 26500,
+    "Unnamed: 5": 12720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Declined Application Analysis",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 19080,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Disparate Impact",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 19080,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Member Scorecard",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Sandbox & Study Hall",
+    "Unnamed: 3": "Annual fee is per User",
+    "Unnamed: 4": 5300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Modern Experience Upgrade \u2013 Admin Pro",
+    "Unnamed: 3": "Modern Experience Upgrade for Admin Pro subscribers.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Process Assessment",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Quick Wins Project",
+    "Unnamed: 3": "Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reveal Pro Tier 1 ($2.5B+ AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 113532,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reveal Pro Tier 2 (<$2.5B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 93492,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reveal Pro Tier 3 (<$1B AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 73464,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reveal Pro Tier 4 (<$500M AUM)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 50088,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tune-Up",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 27000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Insight",
+    "Unnamed: 2": "Data Connect",
+    "Unnamed: 3": "Customer will receive a full sync of up to 5 years worth of structured and normalized data as available in Data Dictionary",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 18750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Data Connect - 1 Additional Year of Data",
+    "Unnamed: 3": "Quote Pricing.  Price is not actually -$1234.00.  Pricing is $1400.00 for each additional year of data. Requires Product and Services approval.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Data Connect & MeridianLink Insight Bundle",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 12750,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Data Connect Additional Data Load",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight",
+    "Unnamed: 3": "**Includes 2 Power Users and 10 Standard Users",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 23250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight - Additional Power User",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1975,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight - Additional Standard User",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for RevealPro Clients",
+    "Unnamed: 3": "**Includes 2 Power Users and 10 Standard Users",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 23250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Portal",
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Each Additional Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 30180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Initial Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 46428,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Each Additional Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 27588,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Initial Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 42420,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Each Additional Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 21180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Initial Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 32556,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Each Additional Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 16296,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Initial Service (Consumer - Portal)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 25140,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Misc",
+    "Unnamed: 2": "Active Directory",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4200,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Add Additional Lender",
+    "Unnamed: 3": "This does not include live clients going through a core conversion where an additional lender is added to Beta for implementation purposes.",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": 3200,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Additional Automated Actions",
+    "Unnamed: 3": "Package includes 50 reports. Additional blocks of 10 reports are available for the annual fee (up to 20 additional reports)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Additional Scheduled Reports",
+    "Unnamed: 3": "Package includes 50 reports. Additional blocks of 10 reports are available for the annual fee (up to 20 additional reports)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AffordIT",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "After Hours Assistance - Expedite Fee (Consumer)",
+    "Unnamed: 3": "In addition to per hour rate.  Applies to Services, Support, SEI, and IT.",
+    "Unnamed: 4": 2500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "After Hours Assistance (Consumer)",
+    "Unnamed: 3": "Applies to Services, Support, SIE, and IT.  No minimum.",
+    "Unnamed: 4": 625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "API Web Services -  Additional API Connection (Consumer)",
+    "Unnamed: 3": "Set up fee for each additional API Web Services connection. ",
+    "Unnamed: 4": 775,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "API Web Services (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 775,
+    "Unnamed: 5": 7500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Auto Financial Group (AFG)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Automail",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1575,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Booking Validation",
+    "Unnamed: 3": "On an exception basis only. Quote pricing.  Price is not actually -$1234.00. ",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Certification Program (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Certification Retake Exam - Multiple-Choice (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 150,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Certification Retake Exam - Practical (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Certification Training Bundle  (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CLF Export Automated Action",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Data Extraction Tool",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Disaster Recovery Testing (Consumer)",
+    "Unnamed: 3": "$495/hr beyond 2 hours",
+    "Unnamed: 4": 950,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Eltropy",
+    "Unnamed: 3": "Member Engagement Tool.  Text Messaging Solution",
+    "Unnamed: 4": 3100,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Expedited Deployment (Consumer)",
+    "Unnamed: 3": "Reserved for projects with external restraints such as sunsetting systems or core conversions with fixed live dates. Quote pricing. Price is not actually -$1234.00. Requires SVP approval.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Informed.IQ (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IT Professioal Services - Expedited Request (Consumer)",
+    "Unnamed: 3": "Work to be performed in less than 10 days",
+    "Unnamed: 4": 2500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IT Professional Services - Phone Support (Consumer)",
+    "Unnamed: 3": "Price is per hour",
+    "Unnamed: 4": 400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IT Unscheduled Change Request (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 950,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer & Opening Admin Training Class Series",
+    "Unnamed: 3": "Price is per account and valid for one year. Classes are offered on a regular monthly schedule",
+    "Unnamed: 4": 2800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer & Opening Admin Training Package",
+    "Unnamed: 3": "Price is per account and valid for one year. Classes are offered on a regular monthly schedule",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer & Opening Custom Training",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer & Opening Sandbox and Study Hall",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2800,
+    "Unnamed: 5": 2800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Post-Live Data Migration (Consumer)",
+    "Unnamed: 3": "Complete migration worksheet and submit a quote request via SVCS-Jira.  We ONLY support forward migrations (Test to Prod).  Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Production Sync ",
+    "Unnamed: 3": "This item supports migration from production to beta/demo. ",
+    "Unnamed: 4": 10750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Re-deployment",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Reschedule Live Date",
+    "Unnamed: 3": "FI is allowed to reschedule once per project. Fee applicable for 2nd reschedule.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Retrain: Administration Setup with SDC",
+    "Unnamed: 3": "This is a 9 week course conducted via webinar.  The 9 week course will cover and show your admins in the system how to setup products, underwriting rules, rates, preferences and customize the look and feel of your online application channel.\nNOTE:  If only attending webinar sessions without an assigned software deployment consultant: No Fees Associated ",
+    "Unnamed: 4": 5750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Retrain: End User Workflow - Onsite Training (Consumer)",
+    "Unnamed: 3": "Per day per MeridianLink Consumer or MeridianLink Opening. Plus travel expenses.",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Retrain: End User Workflow - Remote (Consumer)",
+    "Unnamed: 3": "$3150 if doing MeridianLink Consumer & MeridianLink Opening",
+    "Unnamed: 4": 2500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Saris.ai",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SMS Text Feature",
+    "Unnamed: 3": "Per text; applies to both test and production",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.13
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Time & Materials (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Training (Consumer)",
+    "Unnamed: 3": "Contact Services for quote pricing. Price is not actually -$1234.00.  Hourly rate is $265, but due to custom training solutions quote required.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Disaster Recovery Connection (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Main Connection (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "VPN - Other Connection (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 205,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Web Server Migration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Yellow Hammer",
+    "Unnamed: 3": "For AML/BSA compliance",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Payment/Funding Option",
+    "Unnamed: 2": "ACH Payment Platform Migration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ACH Processing (NACHA)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Credit Card Processing (Authorize.net)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MX Instant Account Verification",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3200,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Payment Processing",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Instant Account Verification",
+    "Unnamed: 3": "Monthly platform fees (pass-through): \n<$1B AUM: $500 \n$1B to $3B: $1,000 \n$3B to $10B: $1,800 \n\nMust have Plaid Platform Fee",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Instant Account Verification $10B+ AUM (Referral to Plaid) (Consumer)",
+    "Unnamed: 3": "clients above $10B AUM must contract with Plaid first, then can sign the addendum with MeridianLink",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 6000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Instant Account Verification Identity Match (ML Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Platform Fee Tier 1: $3B to $10B AUM (Consumer)",
+    "Unnamed: 3": "Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 30720,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Platform Fee Tier 2: $1B to $3B AUM (Consumer)",
+    "Unnamed: 3": "Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 17076,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Plaid Platform Fee Tier 3: <$1B AUM (Consumer)",
+    "Unnamed: 3": "Platform fee for Plaid Instant Account Verification or Plaid VOI. Each option has its own setup fee in addition to the Plaid Platform Fee",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8544,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SWBC Swivel ACH Funding",
+    "Unnamed: 3": "Set up fee used for Credit / Debit card funding And/OR ACH Processing",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SWBC Swivel Debit/Credit Card Funding",
+    "Unnamed: 3": "Set up fee used for Credit Debit card Funding",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Professional Services",
+    "Unnamed: 2": "Professional Services Subscription : Monthly (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Property Data",
+    "Unnamed: 2": "CoreLogic GeoAVM (MeridianLink Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 35.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic Home Value Explorer (HVE) - MeridianLink Consumer",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 28.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic IVAL (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic PASS (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Transaction (Consumer)",
+    "Unnamed: 3": "(aggregate)\n< 2,500: $1\n2,500 - 4,999: $0.75\n>= 5,000: $0.50",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (CoreLogic) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (Lereta) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (ServiceLink) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (CoreLogic) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (Lereta) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (ServiceLink) (Consumer)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PMC (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Settlement Services",
+    "Unnamed: 2": "Accurate Group-  Settlement Services",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Corporate Settlement Solutions- Settlement Services",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Coviance  Settlement Services",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "First American- Settlement Services",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "First Close - Settlement Services",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendOne Settlement Services",
+    "Unnamed: 3": "FKA SWBC",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MTS Group Settlement Services",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "New Vista - Settlement Services",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Select Business Services",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "United One Resources",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Universal Real Estate Services - Settlement Services",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - SwitchKit",
+    "Unnamed: 2": "ClickSWITCH (existing CS client)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 8250,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ClickSWITCH (new CS client)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 35.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle History",
+    "Unnamed: 2": "AutoCheck",
+    "Unnamed: 3": "Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": 11.85
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AutoCheck with Buyback Protection",
+    "Unnamed: 3": "Client buying from Experian directly = setup + annual; Client buying from ML = setup + annual + transaction",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": 15.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Carfax Title Brand Component",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Carfax Vehicle History and/or Vehicle Loss Report",
+    "Unnamed: 3": "Client needs to have direct relationship with client, and transaction fee will be billed directly by Carfax.  Setup fee enables both Vehicle History Report (VHR) and Vehicle Loss Report (VLR).  ",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": 800,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle Insurance",
+    "Unnamed: 2": "Allied Solutions IQQ (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 1275,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "American Services Group (ASG) aka CSO",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Auto Exam ",
+    "Unnamed: 3": "Utilizes MeridianLink Consumer Synergic Framework",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Car Solutions Auto Insurance Integration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "First Innovations",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Frost Visual Gap (ML Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IWS Warranty (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Open Lending - Lenders Protection",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Route 66 (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3025,
+    "Unnamed: 5": 2215,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TruStage QuoteConnect (CUNA)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Vehicle Valuation",
+    "Unnamed: 2": "Black Book (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "J.D. Power",
+    "Unnamed: 3": "FKA NADA",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "J.D. Power Other",
+    "Unnamed: 3": "FKA NADA Other",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Kelly Blue Book",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Primary Service",
+    "Unnamed: 2": "MeridianLink Consumer - Business Module Tier 1 (1000-1999 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 16.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Business Module Tier 2 (500-999 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 21.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Business Module Tier 3 (250-499 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 26.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Business Module Tier 4 (up to 249 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 32.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 01 (30,000+ apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.85
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 02 (25,000-29,999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 03 (20,000-24,999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 04 (15,000-19,999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 05 (10,000-14,999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 06 (8000-9999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 85750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 07 (4000-7999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 75750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 08 (2000-3999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 65750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 09 (1000-1999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 54000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 10 (500-999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 45500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 10.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 11 (250-499 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 35500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 12.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Consumer Module Tier 12 (up to 249 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 28750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 14.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Home Equity Module Tier 1 (1000-1999 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 11.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Home Equity Module Tier 2 (500-999 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 15.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Home Equity Module Tier 3 (250-499 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 20.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Home Equity Module Tier 4 (up to 249 apps)",
+    "Unnamed: 3": "Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 17000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 25.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 01 (30,000+ apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 02 (25,000-29,999  apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 03 (20,000-24,999  apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 04 (15,000-19,999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 05 (10,000-14,999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 06 (8000-9999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 07 (4000-7999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 08 (2000-3999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 09 (1000-1999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 10 (500-999 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 11 (250-499 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Consumer - Indirect Lending Module Tier 12 (up to 249 apps)",
+    "Unnamed: 3": "For customers deploying the Indirect Lending module alongside the Consumer Lending module or alongside an existing MeridianLink Consumer or MeridianLink Opening platform. Global Minimum $985 per month applies if customer makes no commitments on sub-modules.",
+    "Unnamed: 4": 12250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 01 (30,000+ apps)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.85
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 02 (25,000-29,999 apps)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 03 (20,000-24,999 apps)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 04 (15,000-19,999 apps)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 05 (10,000-14,999 apps)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 06 (8000-9999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 60250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 07 (4000-7999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 49500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 08 (2000-3999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 41750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 09 (1000-1999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 34000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 10 (500-999 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 28000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 10.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 11 (250-499 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 23250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 12.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Opening Module Tier 12 (up to 249 apps)",
+    "Unnamed: 3": "** Global Minimum $985 per month applies if customer makes no commitments on sub-modules.  ** if you create an app commitment between levels, you must use the per application fee of the lower level.",
+    "Unnamed: 4": 18750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 14.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 01 (30,000+ apps) ",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 02 (25,000-29,999  apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 03 (20,000-24,999  apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 04 (15,000-19,999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 05 (10,000-14,999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 06 (8000-9999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": 85750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 07 (4000-7999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": 75750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 08 (2000-3999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": 65750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 09 (1000-1999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module",
+    "Unnamed: 4": 54000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 10 (500-999 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.",
+    "Unnamed: 4": 45500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 11 (250-499 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.",
+    "Unnamed: 4": 35500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Standalone MeridianLink Consumer - Indirect Lending Module Tier 12 (up to 249 apps)",
+    "Unnamed: 3": "For new logo customers that are only deploying the Indirect Lending module; do not use for customers adding the Indirect Lending module alongside the Consumer Lending module.",
+    "Unnamed: 4": 28750,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Modern Experience",
+    "Unnamed: 2": "Modern Experience Upgrade \u2013 Client Led",
+    "Unnamed: 3": "Modern Experience Upgrade, client led. Includes 3 Services hours.",
+    "Unnamed: 4": 1325,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Modern Experience Upgrade \u2013 ML Dedicated, Services Led",
+    "Unnamed: 3": "Modern Experience Upgrade for ML dedicated server clients, Services led. Includes 10 Services hours.",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Modern Experience Upgrade \u2013 Services Led",
+    "Unnamed: 3": "Modern Experience Upgrade for ML shared server clients, Services led. Includes 10 Services hours.",
+    "Unnamed: 4": 3800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Data Integration",
+    "Unnamed: 2": "Gestalt Database (Consumer)",
+    "Unnamed: 3": "Refer Gestalt into clients for their database; we receive rev share",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Fraud Protection",
+    "Unnamed: 2": "Digital Identity Trust (DIT)",
+    "Unnamed: 3": "Only available for Opening",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Socure Doc Verification Tier 1 ($5B+ AUM) (Consumer)",
+    "Unnamed: 3": "Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Socure Doc Verification Tier 2 (<$5B AUM) (Consumer)",
+    "Unnamed: 3": "Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Socure ID Verification Tier 1 ($5B+ AUM) (Consumer)",
+    "Unnamed: 3": "Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 8750,
+    "Unnamed: 6": 2.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Socure ID Verification Tier 2 (<$5B AUM) (Consumer)",
+    "Unnamed: 3": "Document Verification must be bundled with the ID Verification piece. They will be charged separately, however.",
+    "Unnamed: 4": 7000,
+    "Unnamed: 5": 4400,
+    "Unnamed: 6": 2.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Socure Portfolio Scrub (Consumer)",
+    "Unnamed: 3": "Contact Services for quote pricing. Price is not actually -$1234.00. Minimum 10,000 records. $5500 setup for first 10,000 records, $0.50 per record over 10,000.",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TransUnion TruValidate Full Bundle (IDV and IDA)",
+    "Unnamed: 3": "Full Bundle and Verification are not mutually exclusive",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.85
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TransUnion TruValidate Verification Only (IDV)- with Full Bundle (IDV and IDA)",
+    "Unnamed: 3": "Full Bundle and Verification are not mutually exclusive. There is only one setup fee which covers both Full Bundle and Verification Only.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TransUnion TruValidate Verification Only (IDV)- without Full Bundle",
+    "Unnamed: 3": "Full Bundle and Verification are not mutually exclusive",
+    "Unnamed: 4": 6500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verafin",
+    "Unnamed: 3": "Must have Modern Experience for ML Opening",
+    "Unnamed: 4": 3000,
+    "Unnamed: 5": 3500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Access",
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Each Additional Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 30180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T1: $10B+ AUM, Initial Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 46428,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Each Additional Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 27588,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T2: $2B-$10B AUM, Initial Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 42420,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Each Additional Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 21180,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T3: $500M-$2B AUM, Initial Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 32556,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Each Additional Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 16296,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Alpharank T4: <$500M AUM, Initial Service (Consumer - Access)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 25140,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (Unlimited monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 46250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (up to 1000 monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 18250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (up to 2000 monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 24250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (up to 4000 monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 30500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (up to 500 monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 12000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access (up to 8000 monthly applications)",
+    "Unnamed: 3": "For existing customers, pricing changes when client re-ups (contract expiration and/or extension); level determined by previous year volume",
+    "Unnamed: 4": 11250,
+    "Unnamed: 5": 36500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Access Tune Up",
+    "Unnamed: 3": "Additional support from Services Team for existing Access customers that require additional support deploying specific features or functionality ",
+    "Unnamed: 4": 4000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Prefill Service via Prove",
+    "Unnamed: 3": "per successful prefill",
+    "Unnamed: 4": 3025,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - POS",
+    "Unnamed: 2": "MeridianLink POS - Automation Package",
+    "Unnamed: 3": "All automation features may not be supported for all core integrations. Core support should be confirmed prior to all sales: https://meridianlink.atlassian.net/wiki/x/HAH7zxE",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink POS - Custom URL",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1575,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink POS - Digital Engagement Package (co-browsing video chat)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink POS - Home Banking SSO (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink POS - Plus Package",
+    "Unnamed: 3": "Includes Site Analytics (Matomo - available for Portal only & Google Tag Manager), Supported Home Banking SSO (contact PM for list), Combo Applications",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Lead Intake",
+    "Unnamed: 2": "Auto Approve",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Auto Lead Generation Bundle",
+    "Unnamed: 3": "Must have Consumer Module",
+    "Unnamed: 4": 3500,
+    "Unnamed: 5": 2500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Autopay",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10750,
+    "Unnamed: 5": 5300,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Caribou",
+    "Unnamed: 3": "refinance leads",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Coviance Point of Sale",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CreditSnap",
+    "Unnamed: 3": "Setup via CLF Automated Action. If client is not set up with CLF Automated Action, client needs to sign an addendum for them.",
+    "Unnamed: 4": 12750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FINOFR Direct Core Reset",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FINOFR Pre-Approval API (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4900,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FirstClose Equity IQ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FIVISION",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 12750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FourStars (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Gravity Lending",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ILendingDirect",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingTree",
+    "Unnamed: 3": "waived for clients we setup with LendingTree",
+    "Unnamed: 4": 4100,
+    "Unnamed: 5": 4000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lumin Digital Banking API (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MarkIII",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3025,
+    "Unnamed: 5": 2215,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Members Mobile",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3025,
+    "Unnamed: 5": 2215,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MoveCU",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Movemint Tier 1: $5B+",
+    "Unnamed: 3": "Also applies to LoanEngine (white label by Harland Clarke)",
+    "Unnamed: 4": 8500,
+    "Unnamed: 5": 20250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Movemint Tier 2: $1B - $5B",
+    "Unnamed: 3": "Also applies to LoanEngine (white label by Harland Clarke)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 15500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Movemint Tier 3: $500M - $1B",
+    "Unnamed: 3": "Also applies to LoanEngine (white label by Harland Clarke)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 9250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Movemint Tier 4: $250M - $500M",
+    "Unnamed: 3": "Also applies to LoanEngine (white label by Harland Clarke)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Movemint Tier 5: $100M - $250M",
+    "Unnamed: 3": "Also applies to LoanEngine (white label by Harland Clarke)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Rate Genius",
+    "Unnamed: 3": "refinance leads; Fee is only applicable if RateGenius apps are sent directly into MeridianLink Consumer, if routed through DealerTrack there is no separate fee",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SavvyMoney",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Union Credit",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 3300,
+    "Unnamed: 5": 2400,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vericast LoanEngine Tier 1: $5B+",
+    "Unnamed: 3": "Vericast is a reseller of TruStage Digital Storefront (fka CuneXus)",
+    "Unnamed: 4": 8500,
+    "Unnamed: 5": 20250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vericast LoanEngine Tier 2: $1B - $5B",
+    "Unnamed: 3": "Vericast is a reseller of TruStage Digital Storefront (fka CuneXus)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 15500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vericast LoanEngine Tier 3: $500M - $1B",
+    "Unnamed: 3": "Vericast is a reseller of TruStage Digital Storefront (fka CuneXus)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 9250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vericast LoanEngine Tier 4: $250M - $500M",
+    "Unnamed: 3": "Vericast is a reseller of TruStage Digital Storefront (fka CuneXus)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vericast LoanEngine Tier 5: $100M - $250M",
+    "Unnamed: 3": "Vericast is a reseller of TruStage Digital Storefront (fka CuneXus)",
+    "Unnamed: 4": 7750,
+    "Unnamed: 5": 6250,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "WithClutch",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 10000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink POS",
+    "Unnamed: 2": "Conductiv",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Customer Service Vendor Change",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Engagement Package - Custom Scripting Enablement",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Engagement Package - Eltropy",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Engagement Package - Glia",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Digital Engagement Package - Interface.ai",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 0,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Equifax InstaTouch (Consumer)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2400,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Digital Risk Score",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 7250,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.4
+  }
+]

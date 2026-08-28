@@ -1,0 +1,1424 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "Add Ons",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Annual Fees",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "TazCloud",
+    "Unnamed: 1": "Add On - Ancillary Service",
+    "Unnamed: 2": "Attachments over 5 MB",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "BackgroundConnect per Transaction",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consent Identity Verification (CIV) - Fail",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.24
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consent Identity Verification (CIV) - Success",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Credit Report",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.14
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CreditConnect per Transaction",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.37
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Form I-9 Verification",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 6: Basic (1 Bot)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 500
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 6: Basic (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 5: Professional (2-5 Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 490
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 5: Professional (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.18
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 4: Professional Plus (6-10 Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 480
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 4: Professional Plus (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 3: Premium (11-20 Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 450
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 3: Premium (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.08
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 2: Enterprise (21-30 Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 430
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 2: Enterprise (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.04
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 1: Enterprise Plus (31-40 Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 390
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Tier 1: Enterprise Plus (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.94
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Custom (41+ Bots)",
+    "Unnamed: 3": "500 decisions per bot",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Synapse Bot Custom (Overage)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Cerebrum Professional Services Hour (Optional)",
+    "Unnamed: 3": "Optional item",
+    "Unnamed: 4": 300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Insights",
+    "Unnamed: 2": "Insights Activation Fee",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 125,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 1:  + 15 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 15000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 10: + 6 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8844,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 11: + 5 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8160,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 12: + 4 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 7476,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 13: + 3 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6792,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 14: + 2 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6108,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 15: + 1 year",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5424,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 2: + 14 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 14316,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 3: + 13 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 13632,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 4: + 12 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 12948,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 5: + 11 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 12264,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 6: + 10 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 11580,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 7: + 9 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10896,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 8: + 8 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10212,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Large Tier 9: + 7 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 9528,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 1: 15 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 12276,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 10: + 6 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6120,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 11:+ 5 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5436,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 12: + 4 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4752,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 13: + 3 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4068,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 14: + 2 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 3384,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 15: + 1 year",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2700,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 2: + 14 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 11592,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 3: + 13 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10908,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 4: + 12 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10224,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 5: + 11 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 9540,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 6: + 10 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8856,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 7: + 9 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8172,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 8: + 8 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 7488,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Medium Tier 9: + 7 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6804,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 1: + 15 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 11616,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 10: + 6 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 5460,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 11: + 5 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4776,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 12: + 4 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4092,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 13: + 3 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 3408,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 14: + 2 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2724,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 15: + 1 year",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 2040,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 2: + 14 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10932,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 3: + 13 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 10248,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 4: + 12 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 9564,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 5: + 11 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8880,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 6: + 10 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 8196,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 7: + 9 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 7512,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 8: + 8 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6828,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Insights Monthly Fee Small Tier 9: + 7 years",
+    "Unnamed: 3": "Billed monthly. Rate shown is annualized rate.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 6144,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TazData Connector",
+    "Unnamed: 3": "Quote Pricing.  Price is not actually -$1234.00.  Pricing is $720.00 for each year of data billed monthly (Max 7 years). ",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": -1234,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Interface",
+    "Unnamed: 2": "Bullhorn Access Fee",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1150,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Bullhorn Searches",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 2900,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Client Implementation on ClearCompany Integration",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Integration with Workday from Mercer using Bronze Package",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 11000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Integration with Workday from Mercer using Silver Package",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 12500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Professional Services",
+    "Unnamed: 2": "25 Professional Services Hours",
+    "Unnamed: 3": "20% discount on the hourly rate",
+    "Unnamed: 4": 6000,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TazWorks Technical Configuration Time & Materials",
+    "Unnamed: 3": "Approval required from TazWorks professional services team",
+    "Unnamed: 4": 300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Vanity URL",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 675,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "1 Professional Services Hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "2 Professional Services Hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 600,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "5 Professional Services Hours",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1500,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "10 Professional Services Hours",
+    "Unnamed: 3": "10% discount on the hourly rate",
+    "Unnamed: 4": 2700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "15 Professional Services Hours",
+    "Unnamed: 3": "15% discount on the hourly rate",
+    "Unnamed: 4": 3800,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - QuickLease Pro",
+    "Unnamed: 2": "QuickLease Pro Per Applicant - Lease Plan",
+    "Unnamed: 3": "Subject to a $1000 monthly minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.73
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "QuickLease Pro Per Applicant - Standard Plan",
+    "Unnamed: 3": "Subject to a $1000 monthly minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.77
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "QuickLease Pro Per Applicant - Upload Plan",
+    "Unnamed: 3": "Subject to a $1000 monthly minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "QuickLease Pro Setup Fee",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1150,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "QuickLease Pro Vanity URL Annual Fee",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 875,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Trade House Data",
+    "Unnamed: 1": "Add On - Ancillary Service",
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 1 (10,000+ Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.49
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 2 (5000-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 3 (1000-4999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.82
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 4 (500-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.98
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 5 (0-499 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Annual Criminal Monitoring Service from DataDivers (1-year, 1 update) Tier 6",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.63
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 1 (10,000+ Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.44
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 2 (5000-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 3 (1000-4999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 4 (500-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.88
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 5 (0-499 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Monthly Criminal Monitoring Service from DataDivers (1-year, 12 updates) Tier 6",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 8.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 1 (10,000+ Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.67
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 2 (5000-9999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 3 (1000-4999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.12
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 4 (500-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.34
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 5 (0-499 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.79
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Semi-Annual Criminal Monitoring Service from DataDivers (1-year, 2 updates) Tier 6",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.24
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 1 (10,000+ Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 2 (5000-9999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 12.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 3 (1000-4999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 15.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 4 (500-999 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 18.9
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 5 (0-499 Monthly Searches)",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 25.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Weekly Criminal Monitoring Service from DataDivers (1-year, 52 updates) Tier 6",
+    "Unnamed: 3": "Applies to THD Global Minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 31.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Add Criminal Monitoring Service (1-year) from DataDivers",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 7.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Colorado State Fee for State-Level Criminal Records Lead Generator",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Colorado State Fee for Statewide Criminal Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 6.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Court Access Fee(s)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Denver County Fee for State-Level Criminal Records Lead Generator",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Denver County Fee for Statewide Criminal Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator Tier 1: 10000+ monthly searches ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.02
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator  Tier 2: 5000-9999 monthly searches ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator Tier 3: 1000-4999 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Alias Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator Tier 4: 500-999 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Alias Lead Generator and doing 500+ searches per month of National-Level Criminal Records Alias Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator Tier 5: 0-499 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Alias Lead Generator and doing 1000+ searches per month of National-Level Criminal Records Alias Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.54
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Alias Lead Generator Tier 6: (no discount)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator Tier 1: 10000+ monthly searches ",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.77
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator Tier 2: 5000-9999 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.02
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator Tier 3: 1000-4999 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator Tier 4: 500-999 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Lead Generator and doing 500+ searches per month of National-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator Tier 5: 0-499 monthly searches",
+    "Unnamed: 3": "Must not be using THD for National-Level Criminal Records Lead Generator and doing 2000+ searches per month of National-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "National-Level Criminal Records Lead Generator: Tier 6 (no discount)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.54
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Rental Records Lead Generator for State-Level Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Rental Records Lead Generator National-Level Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Rental Records Premium Lead Generator National-Level Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.66
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Sex Offender Records Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "State-Level Criminal Records Lead Generator  Tier 1: 500+ monthly searches",
+    "Unnamed: 3": "Must not be using THD for State-Level Criminal Records Lead Generator and doing 500+ searches per month of State-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.02
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "State-Level Criminal Records Lead Generator  Tier 2: 100-499 monthly searches",
+    "Unnamed: 3": "Must not be using THD for State-Level Criminal Records Lead Generator and doing 100+ searches per month of State-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.27
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "State-Level Criminal Records Lead Generator Tier 3: Up to 99 monthly searches",
+    "Unnamed: 3": "Must not be using THD for State-Level Criminal Records Lead Generator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "State-Level Criminal Records Lead Generator  Tier 4 (no discount)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Premium Tier 1 (20,000+ per month)",
+    "Unnamed: 3": "Volume tiers for quotes based on combined person search & person search premium volume",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.57
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Premium Tier 2 (7,500-19,999 per month)",
+    "Unnamed: 3": "Volume tiers for quotes based on combined person search & person search premium volume",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.66
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Premium Tier 3 (5,000-7,499 per month)",
+    "Unnamed: 3": "Volume tiers for quotes based on combined person search & person search premium volume",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.77
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Premium Tier 4 (1,000-4,999 per month)",
+    "Unnamed: 3": "Volume tiers for quotes based on combined person search & person search premium volume",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.87
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Premium Tier 5 (<1,000 per month)",
+    "Unnamed: 3": "Volume tiers for quotes based on combined person search & person search premium volume",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.02
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Tier 1 (20,000+ per month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.21
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Tier 2 (7,500-19,999 per month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Tier 3 (5,000-7,499 per month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.31
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Tier 4 (1,000-4,999 per month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.41
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Trade House Data Person Search Tier 5 (<1,000 per month)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.51
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Global Security Watch List",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.77
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Healthcare Compliance Search (Basic)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Healthcare Compliance Search (Premium)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.56
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Healthcare Compliance Search (Standard)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.54
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "International Canadian Criminal Records Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 22.85
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Statewide Criminal Search",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.78
+  }
+]

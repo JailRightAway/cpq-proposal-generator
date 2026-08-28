@@ -1,0 +1,587 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Product Category,Add Ons,,,,,
+,,,,,,
+,,,,Values,,
+Product Of (Primary Service),Primary Service Category,Internal Product Name,Internal Notes for Sales,One Time Fees,Annual Fees,Transaction Fees
+LDAP,Add On - Fees,Freddie Mac Setup,(blank),1050,,
+,,LDAP Admin Fee,"This is $2.50 per file per month if the file is reissued at least once in a month. MeridianLink keeps
+this for administering the LDAP program.",0,,2.5
+,,LDAP Secondary Use Fee,"We calculate this per borrower, so a joint file incurs this cost twice. We pass this along to CRA's
+since the bureaus charge them for secondary use. Secondary use billing/reporting is triggered
+whenever a customer reissues a file they wouldn't normally have access to using SREISSUE or
+OREISSUE for the first time. Note that there is a 3 month lookback period for LDAP billing, even
+though in theory the lookback should be for all time. ",0,,12
+,,LDAP Technology Fee,"This is $3.50 per Fannie/Freddie reissue. We will also charge $3.50 once for a file if there are no
+Fannie/Freddie reissues, but the lender reissued the file at least once. We pass this along to
+CRA's since we charge them a fee for a Fannie/Freddie reissue in their system. ",0,,3.5
+MeridianLink CreditAPI,Add On - Credit Verification,CreditAPI Credit Attributes,Per individual pricing,0,,0.78
+,,Multi-Bureau Credit Report (2 bureaus) -  joint,(blank),0,,1.04
+,,Multi-Bureau Credit Report (2 bureaus) - individual,(blank),0,,1.04
+,,Multi-Bureau Credit Report (3 bureaus) - individual,(blank),0,,1.04
+,,Multi-Bureau Credit Report (3 bureaus) - joint,(blank),0,,1.04
+,,Single Bureau Credit Report - individual,(blank),0,,0.25
+,,Single Bureau Credit Report - joint,(blank),0,,0.25
+,,Upgrade,(blank),0,,0.79
+Mortgage Credit Link,Add On - Credit Verification,Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 1 (5000+ Reports),"(non-aggregate)
+< 2,500: $2.06
+2,500 - 4,999: $1.03
+>= 5,000: $0.52
+No charge if no record is found",0,,0.52
+,,Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 2 (2500 - 4999 Reports),(blank),0,,1.03
+,,Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 3 (up to 2499 Reports),(blank),0,,2.06
+,,Comparison Report,"(aggregate)
+<= 249: $1.03
+250 - 499: $0.93
+500 - 999: $0.82
+1,000 - 2,499: $0.62
+2,500 - 4,999: $0.41
+5,000 - 9,999: $0.31
+10,000 - 24,999: $0.25
+25,000 - 49,999: $0.21
+>= 50,000: $0.18
+
+Free for support-side users to minimize CRA
+costs related to CreditXpert and Repository
+Updates",0,,1.03
+,,Consumer Credit Reports - Method 2,**Not preferred. Method 2 - $0.26 per infile (calculated in MCL),0,,1.03
+,,Consumer Credit Reports - Method 3,Method 3 - $1.03 per report.,0,,1.03
+,,Consumer Credit Reports - Method 4,Method 4 - $1.03 for hard inquiry and $0.52 for soft inquiry,0,,1.03
+,,Credit Assure,"Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum.",0,,0.07
+,,Credit Optics Score,"We would charge for this, but there is no
+standard price since we haven't signed anyone
+up for it yet.",0,,
+,,Credit Radar,"Pricing is per individual per bureau
+CreditXpert products collectively have a $200
+monthly minimum",0,,0.22
+,,Criminal Record Report,(blank),0,,0.52
+,,CX Bundle,"CreditXpert products collectively have a $200
+monthly minimum",0,,0.61
+,,Eviction Report,(blank),0,,0.52
+,,FAMM,Annual fee billed in monthly installments,0,1236,
+,,FAMM Email,"""Charge per successful FAMM email when using
+the FAMM auto-email feature. CRA's configure if
+""""successful"""" means the email is sent without
+error, or if the recipient views the disclosure. 
+Units 1-5000: $0.26
+Units 5001-10000: $0.21
+Units 10001-20000: $0.15
+Units 20001+: $0.10""",0,,0.26
+,,LexisNexis Liens and Judgements,Standalone or credit report add-on,0,,0.26
+,,MCL Credit Attributes,"50% rev-share with CRA
+with minimum of $0.10 per
+individual report and $0.21
+per joint report",0,,0.21
+,,Mortgage Rating,12 month mortgage rating,0,,0.52
+,,PitchPoint BLJ,Standalone or credit report add-on,0,,0.26
+,,Raw Credit Data Reissue,"Do not proactively offer. If moving forward,
+requires NDA between ML and integrator",0,,0.52
+,,RiskView Score,"We would charge for this, but there is no
+standard price since we haven't signed anyone
+up for it yet.",0,,0
+,,Smart Select AutoUpgrade(Not Including Shield),"Single Bureau Cascade is free. Billed when
+SmartSelect prevents an upgrade.",0,,0.16
+,,SmartSelect Shield - Flex ID,Per FlexID Transaction (per individual),0,,0.11
+,,SmartSelect Shield - Prequal Tier 1,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.26
+80% to <90% : $0.46
+70% to <80%: $0.67
+60% to <70%: $0.88
+<60%: $1.08
+
+Auto Upgrade % are calculated per customer
+configured in MCL",0,,0.26
+,,SmartSelect Shield - Prequal Tier 2,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.26
+80% to <90% : $0.46
+70% to <80%: $0.67
+60% to <70%: $0.88
+<60%: $1.08
+
+Auto Upgrade % are calculated per customer
+configured in MCL",0,,0.46
+,,SmartSelect Shield - Prequal Tier 3,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.26
+80% to <90% : $0.46
+70% to <80%: $0.67
+60% to <70%: $0.88
+<60%: $1.08
+
+Auto Upgrade % are calculated per customer
+configured in MCL",0,,0.67
+,,SmartSelect Shield - Prequal Tier 4,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.26
+80% to <90% : $0.46
+70% to <80%: $0.67
+60% to <70%: $0.88
+<60%: $1.08
+
+Auto Upgrade % are calculated per customer
+configured in MCL",0,,0.88
+,,SmartSelect Shield - Prequal Tier 5,"Auto Upgrade % During
+Billable Period : Per Order
+Amount
+90%+ : $0.26
+80% to <90% : $0.46
+70% to <80%: $0.67
+60% to <70%: $0.88
+<60%: $1.08
+
+Auto Upgrade % are calculated per customer
+configured in MCL",0,,1.08
+,,Targeted Lender Consumer Credit Report T1,Per report; Requires Targeted Lender addendum,0,,0.26
+,,Targeted Lender Consumer Credit Report T2,Per report; Requires Targeted Lender addendum,0,,0.34
+,,Targeted Lender Consumer Credit Report T3,Per report; Requires Targeted Lender addendum,0,,0.42
+,,Targeted Lender Credit Attributes T1,50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum,0,,0.06
+,,Targeted Lender Credit Attributes T2,50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum,0,,0.07
+,,Targeted Lender Credit Attributes T3,50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum,0,,0.08
+,,Targeted Lender LexisNexis Liens and Judgements T1,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.13
+,,Targeted Lender LexisNexis Liens and Judgements T2,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.16
+,,Targeted Lender LexisNexis Liens and Judgements T3,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.19
+,,Targeted Lender PitchPoint BLJ T1,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.13
+,,Targeted Lender PitchPoint BLJ T2,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.16
+,,Targeted Lender PitchPoint BLJ T3,Standalone or credit report add-on; Requires Targeted Lender addendum,0,,0.19
+,,TrendScape,"CreditXpert products collectively have a $200
+monthly minimum.",0,,0.08
+,,UDN - Equifax,(blank),1300,,0.52
+,,UDN - Experian,(blank),4200,,0.52
+,,UDN - TransUnion,(blank),1300,,0.52
+,,ZipOverride,(blank),1050,,
+,,ScoreNavigator Preview,(blank),0,,0.11
+,,ScoreNavigator Bundle,(blank),0,,0.6
+,,"ScoreNavigator Manual Simulator Tier 1 (20,000+ units)",(blank),0,,4.48
+,,"ScoreNavigator Manual Simulator Tier 2 (10,000 - 19,999 units)",(blank),0,,4.79
+,,"ScoreNavigator Manual Simulator Tier 3 (5,000 - 9,999 units)",(blank),0,,5.05
+,,"ScoreNavigator Manual Simulator Tier 4 (1 - 4,999 units)",(blank),0,,5.3
+,,"ScoreNavigator Target & Money Simulator Tier 1 (20,000+ units)",(blank),0,,3.92
+,,"ScoreNavigator Target & Money Simulator Tier 2 (10,000 - 19,999 units)",(blank),0,,4.38
+,,"ScoreNavigator Target & Money Simulator Tier 3 (5,000 - 9,999 units)",(blank),0,,4.53
+,,"ScoreNavigator Target & Money Simulator Tier 4 (1 - 4,999 units)",(blank),0,,4.69
+,,"ScoreNavigator Mortgage Action Plan Tier 1 (20,000+ units)",(blank),0,,4.48
+,,"ScoreNavigator Mortgage Action Plan Tier 2 (10,000 - 19,999 units)",(blank),0,,4.79
+,,"ScoreNavigator Mortgage Action Plan Tier 3 (5,000 - 9,999 units)",(blank),0,,5.05
+,,"ScoreNavigator Mortgage Action Plan Tier 4 (1 - 4,999 units)",(blank),0,,5.3
+,,FICO Score Mortgage Simulator,(blank),0,,12
+,,Elphi - Consumer Credit Reports ,(blank),0,,2
+,Add On - Employment/Income/Asset Verification,AccountChek VOA - 30 Day (Monthly Fee Option),"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,1236,14.45
+,,AccountChek VOA - 60 Day (Monthly Fee Option),"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,1236,14.45
+,,AccountChek VOA - 90 Day (Monthly Fee Option),"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,1236,18.55
+,,AccountChek VOA - Direct Relationship 30 Day,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,,1.03
+,,AccountChek VOA - Direct Relationship 60 Day,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,,1.03
+,,AccountChek VOA - Direct Relationship 90 Day,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,,1.03
+,,AccountChek VOA - Direct Relationship One Time,"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,,1.03
+,,AccountChek VOA - Monthly Fee (Monthly Fee Option),"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,1236,
+,,AccountChek VOA - One Time (Monthly Fee Option),"Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.
+
+Monthly Fee / Monthly Minimum is upon first successful
+AccountChek order.
+
+No charge from ML for Day 1 Certainty as it's provided by the
+vendor.",0,1236,8.25
+,,"Experian Finicity Order Retrieval API Tier 1 (20,000+ Pulls)","(non-aggregate bundled with manual VOE)
+<= 5,000: $1.03
+5,001 - 10,000: $0.98
+10,001 - 15,000: $0.93
+15,001 - 20,000: $0.88
+> 20,000: $0.82
+
+Pulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.",0,,0.82
+,,"Experian Finicity Order Retrieval API Tier 2 (15,000 - 19,999 Pulls)",(blank),0,,0.88
+,,"Experian Finicity Order Retrieval API Tier 3 (10,000 - 14,999 Pulls)",(blank),0,,0.93
+,,Experian Finicity Order Retrieval API Tier 4 (5000 - 9999 Pulls),(blank),0,,0.98
+,,Experian Finicity Order Retrieval API Tier 5 (Up to 4999 Pulls),(blank),0,,1.03
+,,"Finicity Reseller Billing API Tier 1 (20,000+ Pulls)","(non-aggregate bundled with manual VOE)
+<= 5,000: $1.03
+5,001 - 10,000: $0.98
+10,001 - 15,000: $0.93
+15,001 - 20,000: $0.88
+> 20,000: $0.82
+
+Pulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.",0,,0.82
+,,"Finicity Reseller Billing API Tier 2 (15,000 - 19,999 Pulls)",(blank),0,,0.88
+,,"Finicity Reseller Billing API Tier 3 (10,000 - 14,999 Pulls)",(blank),0,,0.93
+,,Finicity Reseller Billing API Tier 4 (5000 - 9999 Pulls),(blank),0,,0.98
+,,Finicity Reseller Billing API Tier 5 (Up to 4999 Pulls),(blank),0,,1.03
+,,Finicity VOIE,(blank),0,,
+,,Manual VOD,Service Request in MCL. Billed upon completion.,0,,1.03
+,,Manual VOE (MeridianLink),"(non-aggregate
+bundled with
+manual VOE)
+<= 5,000: $1.03
+5,001 - 10,000:
+$0.98
+10,001 - 15,000:
+$0.93
+15,001 - 20,000:
+$0.88
+> 20,000: $0.82
+
+Only billed for completed orders.
+Only billed for completed orders.",0,,1.03
+,,Manual VOE (NCS),"(non-aggregate
+bundled with
+manual VOE)
+<= 5,000: $1.03
+5,001 - 10,000:
+$0.98
+10,001 - 15,000:
+$0.93
+15,001 - 20,000:
+$0.88
+> 20,000: $0.82
+
+Only billed for completed orders.
+Only billed for completed orders.",0,,1.03
+,,Tax Transcript 3rd Party (CRA),"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",0,,0.52
+,,Tax Transcript 3rd Party (Inco-Check),"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",0,,0.52
+,,Tax Transcript 3rd Party (NCS),"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",0,,0.52
+,,Tax Transcript 3rd Party (TaxReturnVerifications.com),"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",0,,0.52
+,,Tax Transcript 3rd Party (Veri-Tax),"Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",0,,0.52
+,,Tax Transcript MCL,"Supports 1040, W2, 1099, 1120, and 1065",0,,0.78
+,,"Verification of Employment (MCL), including Experian Verify connectivity Tier 1 (20,000+ Pulls)","(non-aggregate
+bundled with
+manual VOE)
+<= 5,000: $1.03
+5,001 - 10,000:
+$0.98
+10,001 - 15,000:
+$0.93
+15,001 - 20,000:
+$0.88
+> 20,000: $0.82
+
+Includes instant and manual volumes. Only billed for completed
+orders.",0,,0.82
+,,"Verification of Employment (MCL), including Experian Verify connectivity Tier 2 (15,000 - 19,999 Pulls)",(blank),0,,0.88
+,,"Verification of Employment (MCL), including Experian Verify connectivity Tier 3 (10,000 - 14,999 Pulls)",(blank),0,,0.93
+,,"Verification of Employment (MCL), including Experian Verify connectivity Tier 4 (5000 - 9999 Pulls)",(blank),0,,0.98
+,,"Verification of Employment (MCL), including Experian Verify connectivity Tier 5 (up to 4999 Pulls)",(blank),0,,1.03
+,Add On - Fraud Detection,Blend Identity Verification,(blank),0,,0.52
+,,Blue Sage Identity Verification,(blank),0,,0.5
+,,CBSV Tier 1 (1000+ Verifications),"(non-aggregate)
+<= 500: $1.03
+501 - 1000: $0.77
+> 1000: $0.52",4700,,0.52
+,,CBSV Tier 2 (500 - 999 Verifications),(blank),4700,,0.78
+,,CBSV Tier 3 (Up to 499 Verifications),(blank),4700,,1.03
+,,ID Verification (Credit Reports Not with MeridianLink),(blank),0,,1.03
+,,ID Verification (Credit Reports with MeridianLink),(blank),0,,0.26
+,,MERS Report Refresh,"Per report (i.e. borrower, co-borrower, and property address are
+separate MERS reports even if on the same file)
+Can be ordered on Prequal, Refresh, Standalone, and in
+Packaged Reports",0,,0.11
+,,MERS Report Regular,"Per report (i.e. borrower, co-borrower, and property address are
+separate MERS reports even if on the same file)
+Can be ordered on Prequal, Refresh, Standalone, and in
+Packaged Reports",0,,0.11
+,,Mortgage Participant Verification Tier 1 (1000+ Delinquencies),"(aggregate)
+< 1000: $0.07
+>= 1000: $0.06",0,,0.06
+,,Mortgage Participant Verification Tier 2 (up to 999 Delinquencies),(blank),0,,0.08
+,,Packaged Report - Accurint,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - ASC National Registry,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - CoreLogic Home Value Explorer (HVE),"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - Equifax Intellireal IPR,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.31
+,,Packaged Report - Equifax Intellireal Other,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - FEMA Disaster List,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - Freddie Mac,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - LexisNexis Bridger,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.26
+,,Packaged Report - LexisNexis InstantID,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.26
+,,Packaged Report - LexisNexis NOD/Foreclosure Search,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.16
+,,Packaged Report - LexisNexis Property History Search,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.16
+,,Packaged Report - MERS People,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - MERS Property,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,Packaged Report - Other,"If sum of charges per report don't hit the minimum, we bill that
+instead",0,,0.11
+,,PitchPoint,(blank),0,,1.03
+,,SSA89 Tier 1 (1000+ Reports),"(non-aggregate)
+<= 500: $1.03
+501 - 1000: $0.77
+> 1000: $0.52",0,,0.52
+,,SSA89 Tier 2 (500 - 999 Reports),(blank),0,,0.78
+,,SSA89 Tier 3 (Up to 499 Reports),(blank),0,,1.03
+,,ARMCO - SSA89,(blank),0,,0.8
+,Add On - Interface,ARMCO - Consumer Credit Reports - 1B,Billing is for new transactions only,0,,1.1
+,,ARMCO - Consumer Credit Reports - 2B,Billing is for new transactions only,0,,1.4
+,,ARMCO - Consumer Credit Reports - 3B,Billing is for new transactions only,0,,1.7
+,,ARMCO - Tax Transcript,Billing is for new transactions only,0,,0.8
+,,ARMCO - VOE,Billing is for new transactions only,0,,0.8
+,,Avista - Consumer Credit Reports - 1B,"Both new and reissue transactions
+(MCL-181)",0,,0.45
+,,Avista - Consumer Credit Reports - 2B,"Both new and reissue transactions
+(MCL-181)",0,,0.7
+,,Avista - Consumer Credit Reports - 3B,"Both new and reissue transactions
+(MCL-181)",0,,0.95
+,,Beanstalk OpenClose - Consumer Credit Reports - 1B,(blank),0,,0.25
+,,Beanstalk OpenClose - Consumer Credit Reports - 2B,(blank),0,,0.5
+,,Beanstalk OpenClose - Consumer Credit Reports - 3B,(blank),0,,0.75
+,,Blend - Consumer Credit Reports - 1B,Billing includes new transactions only,0,,0.5
+,,Blend - Consumer Credit Reports - 2B,Billing includes new transactions only,0,,0.5
+,,Blend - Consumer Credit Reports - 3B,Billing includes new transactions only,0,,0.5
+,,Blend - Consumer Credit Reports - Upgrade,Billing includes new transactions only,0,,0.5
+,,Blue Sage - 4506-T,Billing is for new transactions only,0,,0.5
+,,Blue Sage - Consumer Credit Reports,Billing is for new transactions only,0,,0.5
+,,Blue Sage - UDN,Billing is for new transactions only,0,,0.5
+,,BytePro - Consumer Credit Reports,"Byte wants agreements with each CRA
+separately",0,,
+,,ComplianceOne - Consumer Credit Reports," $45 flat rate for
+up to 45
+transactions.
+$1 per
+transaction
+afterwards ",0,,1
+,,Customer API Integration,"Integration fee for CRA-sponsored API
+integrations",1050,,
+,,EMS - Consumer Credit Reports - New,"Old interface, do not sign up new
+clients on this.",0,,0.44
+,,EMS - Consumer Credit Reports - Reissue,"Old interface, do not sign up new
+clients on this.",0,,0.44
+,,Encompass - 4506-T Gateway,"CRA entry:
+Check with
+provider
+
+Billing includes new and reissue transactions; only billed if using MeridianLink gateway through TaxReturnVerifications.com",0,,2.32
+,,Encompass - Consumer Credit Reports,"CRA entry:
+Check with
+provider
+
+See billing details in MCL-1036",0,,2.06
+,,Encompass Flood Gateway Integration,Only applicable to CRAs using the MeridianLink entry in the provider dropdown of Encompass (i.e. not a direct relationship between CRA and ICE Mortgage Technology),4200,,2.32
+,,Encompass Partner API Integration,"Applicable to all CRAs who want to use MCL for Encompass Partner API integrations. One fee covers any/all Encompass integrations used by the CRA (VOE, Flood, etc.). CRAs using MeridianLink entry in provider dropdown also need to pay setup and transaction fee for each product integration with Encompass.",0,1050,0
+,,Encompass VOE Gateway Integration,Only applicable to CRAs using the MeridianLink entry in the provider dropdown of Encompass (i.e. not a direct relationship between CRA and ICE Mortgage Technology),4200,,2.32
+,,Fannie Mae - Consumer Credit Reports,"Fee becomes $2.78 if invoice is
+overdue
+Includes: Desktop Underwriter,
+Desktop Originator, EarlyCheck?",0,,2.53
+,,Fannie Mae - Manual VOE/I,"CRAs must go through their own
+vetting process with Fannie Mae",0,,0
+,,Fannie Mae - Tax Transcript,"Must use our 4506-T Processing
+system or AUS-TRV for eligibility",0,,0
+,,Fannie Mae Affiliate Fee,Pass through from Fannie Mae,2075,,
+,,Fannie Mae Connect Fee,Annual fee billed in monthly installments,0,4944,
+,,FHLMC Direct - Consumer Credit Reports - Direct New,Excludes LQA transactions,0,,2.06
+,,FHLMC Direct - Consumer Credit Reports - Direct Reissue,Excludes LQA transactions,0,,2.06
+,,focusagent - Consumer Credit Reports,(blank),0,,0
+,,Freddie Mac LQA Secondary Use - Individual,"Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.
+
+Freddie Mac covers the cost of LQA
+reissues. This includes secondary use.
+So, if a reissue occurs with secondary
+use in a CRA system, we bill Freddie
+Mac for it, and then give the CRA credit
+for the reissue here.",0,,-1234
+,,Freddie Mac LQA Secondary Use - Joint,"Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.
+
+Freddie Mac covers the cost of LQA
+reissues. This includes secondary use.
+So, if a reissue occurs with secondary
+use in a CRA system, we bill Freddie
+Mac for it, and then give the CRA credit
+for the reissue here.",0,,-1234
+,,Harland - Consumer Credit Reports,(blank),0,,0.5
+,,IntegraDestiny - Consumer Credit Reports - 1B,(MCL-181),0,,0.3
+,,IntegraDestiny - Consumer Credit Reports - 2B,(MCL-181),0,,0.4
+,,IntegraDestiny - Consumer Credit Reports - 3B,(MCL-181),0,,0.5
+,,Laser Credit - Consumer Credit Reports - 1B,(blank),0,,0.75
+,,Laser Credit - Consumer Credit Reports - 2B,(blank),0,,1
+,,Laser Credit - Consumer Credit Reports - 3B,(blank),0,,1.25
+,,Lending Pad - UDN,Billing is for new transactions only,0,,1.5
+,,Lending Pad - VOA,Billing is for new transactions only,0,,1.5
+,,Lending Pad - VOD,Billing is for new transactions only,0,,1.5
+,,LendingPad - 4506-T,Billing is for new transactions only,0,,1.5
+,,LendingPad - Consumer Credit Reports,Billing is for new transactions only,0,,1.5
+,,LendingPad - Flood,Billing is for new transactions only,0,,1.5
+,,LendingPad - IDV,Billing is for new transactions only,0,,1.5
+,,LendingPad - VOE,Billing is for new transactions only,0,,1.5
+,,LendingPad - VOI,Billing is for new transactions only,0,,1.5
+,,Lendwize - Consumer Credit Reports,(blank),0,,
+,,Mortage Builder - Consumer Credit Reports - 1B,"Only transactions for new credit (MCL-
+181)",0,,0.33
+,,Mortage Builder - Consumer Credit Reports - 2B,"Only transactions for new credit (MCL-
+181)",0,,0.66
+,,Mortage Builder - Consumer Credit Reports - 3B,"Only transactions for new credit (MCL-
+181)",0,,1
+,,Mortgage Cadence - Consumer Credit Reports - 1B,(blank),0,,0.2
+,,Mortgage Cadence - Consumer Credit Reports - 2B,(blank),0,,0.35
+,,Mortgage Cadence - Consumer Credit Reports - 3B,(blank),0,,0.5
+,,Mortgage Director (fka PCLender) - 1B,Pricing effective 3/1/2021,0,,0.25
+,,Mortgage Director (fka PCLender) - 2B,Pricing effective 3/1/2021,0,,0.5
+,,Mortgage Director (fka PCLender) - 3B,Pricing effective 3/1/2021,0,,1
+,,Mortgage Flex - Consumer Credit Reports - 1B,"Only transactions for new credit (MCL-
+181)",0,,0.4
+,,Mortgage Flex - Consumer Credit Reports - 2B,"Only transactions for new credit (MCL-
+181)",0,,0.4
+,,Mortgage Flex - Consumer Credit Reports - 3B,"Only transactions for new credit (MCL-
+181)",0,,0.4
+,,Mortgage Panda - Consumer Credit Reports,(blank),0,,
+,,MortgageBot - Consumer Credit Reports - 1B,(MCL-181),0,,0.5
+,,MortgageBot - Consumer Credit Reports - 2B,(MCL-181),0,,0.65
+,,MortgageBot - Consumer Credit Reports - 3B,(MCL-181),0,,0.75
+,,Point - Consumer Credit Reports - DirectConnect,"We only bill if ""MeridianLink"" is
+selected as the credit provider in Point.
+If a user selects a CRA's entry, Calyx
+will bill the CRA directly. Both new and
+reissue transactions. For
+DirectConnect only transactions from
+DEMO are included. (MCL-181). For
+WebConnect, unsure if same
+transaction filtering logic is same as
+Point DirectConnect.",0,,1.15
+,,Point - Consumer Credit Reports - WebConnect,"We only bill if ""MeridianLink"" is
+selected as the credit provider in Point.
+If a user selects a CRA's entry, Calyx
+will bill the CRA directly. Both new and
+reissue transactions. For
+DirectConnect only transactions from
+DEMO are included. (MCL-181). For
+WebConnect, unsure if same
+transaction filtering logic is same as
+Point DirectConnect.",0,,1.73
+,,PreApp - Consumer Credit Reports,"Both new and reissue transactions
+(MCL-181)",0,,1
+,,PrudentCo - Consumer Credit Reports,FrameLogic dba PrudentCo,0,,
+,,ReverseVision - Consumer Credit Reports - 1B,"Both new and reissue transactions
+(MCL-181)",0,,0.25
+,,ReverseVision - Consumer Credit Reports - 2B,"Both new and reissue transactions
+(MCL-181)",0,,0.35
+,,ReverseVision - Consumer Credit Reports - 3B,"Both new and reissue transactions
+(MCL-181)",0,,0.5
+,,Shape Software - Consumer Credit Reports,(blank),0,,0
+,,Targeted Lender Fannie Mae T1,"Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",0,,2.32
+,,Targeted Lender Fannie Mae T2,"Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",0,,2.42
+,,Targeted Lender Fannie Mae T3,"Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",0,,2.53
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T1,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.03
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T2,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.24
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T3,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.45
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T1,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.03
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T2,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.24
+,,Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T3,Excludes LQA transactions; Requires Targeted Lender addendum,0,,1.45
+,,wemlo - Consumer Credit Reports,(blank),0,,0
+,,Calyx Integration - VOE,(blank),0,,1
+,,Calyx Integration - VOI,(blank),0,,1
+,,Calyx Integration - VOD,(blank),0,,1
+,,Calyx Integration - VOA,(blank),0,,1
+,,Calyx Integration - 4506C,(blank),0,,1
+,,Calyx Integration - SSA89,(blank),0,,1
+,Add On - Miscellaneous,CRA Office,Initial MCL setup fee includes one office,1050,1050,
+,,Faxes Tier 1 (651+ Faxes),"(non-aggregate)
+<= 650: $0.11 per
+fax
+> 650: $0.00",0,,0.11
+,,Faxes Tier 2 (Up to 650 Faxes),(blank),0,,0.11
+,,Okta Single Sign On,"The setup process requires the CRA to create a product in the Okta Integration Network, configure it to use MCL’s SSO integration with Okta, and get approval from Okta directly to be promoted to production. MCL Support and Engineering will work with the CRA throughout the process.",1050,,
+,,Postback Service API,"Calculated in MCL this represents a % of what the CRA charges their customer Per Transaction
+
+<= $5000: 5% of
+retail price collected
+$5001 - $15000:
+3.5% of retail price
+collected
+> $15000: 2.5% of
+retail price collected",0,,0.06
+,,Premium Dashboard Benchmarks,(blank),0,1550,
+,,SFTP Server,Annual fee billed in monthly installments /Per coordinator account,0,624,
+,,Web Hosting,Annual fee billed in monthly installments,0,4944,
+,Add On - Property Data,CoreLogic GeoAVM (MCL),(blank),0,,2.06
+,,CoreLogic Home Value Explorer (HVE) (MCL) Tier 1 (5000+ Pulls),"(aggregate)
+< 2,500: $2.06
+2,500 - 4,999: $1.03
+>= 5,000: $0.52",0,,0.52
+,,CoreLogic Home Value Explorer (HVE) (MCL) Tier 2 (2500 - 4999 Pulls),(blank),0,,1.03
+,,CoreLogic Home Value Explorer (HVE) (MCL) Tier 3 (Up to 2499 Pulls),(blank),0,,2.06
+,,CoreLogic IVAL (MCL),(blank),0,,2.06
+,,CoreLogic PASS (MCL),(blank),0,,2.06
+,,Flood Transaction (MCL) Tier 1 (5000+ Reports),"(aggregate)
+< 2,500: $1.03
+2,500 - 4,999: $0.77
+>= 5,000: $0.52",0,,0.52
+,,Flood Transaction (MCL) Tier 2 (2500 - 4999 Reports),(blank),0,,0.78
+,,Flood Transaction (MCL) Tier 3 (Up to 2499 Reports),(blank),0,,1.03
+,,Flood Zone Determination - Basic (CoreLogic) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,Flood Zone Determination - Basic (Lereta) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,Flood Zone Determination - Basic (ServiceLink) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,Flood Zone Determination - Life of Loan (CoreLogic) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,Flood Zone Determination - Life of Loan (Lereta) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,Flood Zone Determination - Life of Loan (ServiceLink) (MCL),Quote pricing.  Price is not actually -$1234.00,0,,-1234
+,,PMC (MCL),(blank),0,,2.06
+,Add On - Property Verification,Blend Automated Valuation Model,(blank),0,,0.5
+,,Blend Flood,(blank),0,,0.5
+,,Blue Sage Automated Valuation Model,(blank),0,,0.5
+,,Blue Sage Flood,(blank),0,,0.5
+,,ServiceLink Flood Postback Tier 1 (5000+ Reports),"(aggregate)
+< 2,500: $1.03
+2,500 - 4,999: $0.77
+>= 5,000: $0.52",0,,0.52
+,,ServiceLink Flood Postback Tier 2 (2500 - 4999 Reports),(blank),0,,0.78
+,,ServiceLink Flood Postback Tier 3 (Up to 2499 Reports),(blank),0,,1.03

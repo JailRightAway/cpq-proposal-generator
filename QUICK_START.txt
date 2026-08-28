@@ -1,0 +1,122 @@
+================================================================================
+  MeridianLink CPQ Proposal Generator - QUICK START
+================================================================================
+
+PREREQUISITES:
+  ✓ Node.js v16+ installed (https://nodejs.org/)
+  ✓ Python 3.8+ installed (https://www.python.org/)
+  ✓ ML_PriceCard.xlsm in project folder
+
+================================================================================
+STEP-BY-STEP SETUP (5 MINUTES)
+================================================================================
+
+1. OPEN TERMINAL IN PROJECT FOLDER
+   Windows: Press Win+R, type: cmd
+   Navigate to: C:\Users\JailR\OneDrive - MeridianLink\CPQ Project - 2026
+
+2. INSTALL NODE DEPENDENCIES
+   Command: npm install
+   Wait for completion (2-5 minutes)
+
+3. INSTALL PYTHON PACKAGES
+   Command: pip install python-docx openpyxl
+   Wait for completion (30-60 seconds)
+
+4. CREATE .env FILE
+   Create file: .env
+   Copy this content:
+
+   PORT=5000
+   NODE_ENV=development
+   PYTHON_PATH=python3
+   EXCEL_FILE_PATH=./ML_PriceCard.xlsm
+
+   (Leave Salesforce fields empty for MVP)
+
+5. START THE SERVER
+   Command: npm start
+
+   Expected output:
+   "CPQ Proposal Generator API running on port 5000"
+
+6. OPEN IN BROWSER
+   Go to: http://localhost:5000
+
+   You should see the MeridianLink CPQ app
+
+7. TEST IT
+   • Enter customer name
+   • Add a product
+   • Select tier and year
+   • Apply a discount
+   • Click "Generate Proposal"
+   • A Word document downloads
+
+================================================================================
+COMMANDS TO REMEMBER
+================================================================================
+
+Start server:     npm start
+Stop server:      Ctrl + C
+Dev mode:         npm run dev (auto-reloads on file changes)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Error: "npm: command not found"
+→ Node.js not installed. Download from https://nodejs.org/
+
+Error: "python: command not found"
+→ Python not installed. Download from https://www.python.org/
+
+Error: "port 5000 already in use"
+→ Another app using port 5000. Change PORT=5001 in .env
+
+Error: "Excel file not found"
+→ ML_PriceCard.xlsm missing. Copy to project folder.
+
+Error: "Word generation failed"
+→ Run: pip install --upgrade python-docx openpyxl
+
+================================================================================
+WHAT'S INCLUDED
+================================================================================
+
+✓ Full-stack web app (frontend + backend)
+✓ Product filtering by family/type
+✓ 8-tier pricing model (1-9 units through 10K+)
+✓ Year 1/2/3 tier selection per product
+✓ Discount calculator (% or $ amount)
+✓ MeridianLink-branded Word document generator
+✓ Salesforce integration (scaffolded, optional)
+✓ Contract terms & legal disclaimers included
+
+================================================================================
+NEXT STEPS (AFTER SETUP WORKS)
+================================================================================
+
+1. Add Salesforce credentials to .env (optional)
+2. Customize branding in src/App.css
+3. Update product data in ML_PriceCard.xlsm
+4. Read full documentation in README.md
+
+================================================================================
+FILE LOCATIONS
+================================================================================
+
+Server files:      ./routes, ./services, ./python
+Frontend files:    ./src
+Config file:       ./.env
+Documentation:     ./README.md, ./SETUP_GUIDE.md
+Product data:      ./ML_PriceCard.xlsm
+
+================================================================================
+BROWSER URL
+================================================================================
+
+After npm start, open:
+http://localhost:5000
+
+================================================================================

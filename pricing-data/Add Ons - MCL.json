@@ -1,0 +1,2414 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "Add Ons",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Annual Fees",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "LDAP",
+    "Unnamed: 1": "Add On - Fees",
+    "Unnamed: 2": "Freddie Mac Setup",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1050,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LDAP Admin Fee",
+    "Unnamed: 3": "This is $2.50 per file per month if the file is reissued at least once in a month. MeridianLink keeps\nthis for administering the LDAP program.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LDAP Secondary Use Fee",
+    "Unnamed: 3": "We calculate this per borrower, so a joint file incurs this cost twice. We pass this along to CRA's\nsince the bureaus charge them for secondary use. Secondary use billing/reporting is triggered\nwhenever a customer reissues a file they wouldn't normally have access to using SREISSUE or\nOREISSUE for the first time. Note that there is a 3 month lookback period for LDAP billing, even\nthough in theory the lookback should be for all time. ",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 12
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LDAP Technology Fee",
+    "Unnamed: 3": "This is $3.50 per Fannie/Freddie reissue. We will also charge $3.50 once for a file if there are no\nFannie/Freddie reissues, but the lender reissued the file at least once. We pass this along to\nCRA's since we charge them a fee for a Fannie/Freddie reissue in their system. ",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.5
+  },
+  {
+    "Unnamed: 0": "MeridianLink CreditAPI",
+    "Unnamed: 1": "Add On - Credit Verification",
+    "Unnamed: 2": "CreditAPI Credit Attributes",
+    "Unnamed: 3": "Per individual pricing",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Multi-Bureau Credit Report (2 bureaus) -  joint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.04
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Multi-Bureau Credit Report (2 bureaus) - individual",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.04
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Multi-Bureau Credit Report (3 bureaus) - individual",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.04
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Multi-Bureau Credit Report (3 bureaus) - joint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.04
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Single Bureau Credit Report - individual",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Single Bureau Credit Report - joint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Upgrade",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.79
+  },
+  {
+    "Unnamed: 0": "Mortgage Credit Link",
+    "Unnamed: 1": "Add On - Credit Verification",
+    "Unnamed: 2": "Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 1 (5000+ Reports)",
+    "Unnamed: 3": "(non-aggregate)\n< 2,500: $2.06\n2,500 - 4,999: $1.03\n>= 5,000: $0.52\nNo charge if no record is found",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 2 (2500 - 4999 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Business Credit Industry (MCL) Report 2.0 (BCIR2) Tier 3 (up to 2499 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Comparison Report",
+    "Unnamed: 3": "(aggregate)\n<= 249: $1.03\n250 - 499: $0.93\n500 - 999: $0.82\n1,000 - 2,499: $0.62\n2,500 - 4,999: $0.41\n5,000 - 9,999: $0.31\n10,000 - 24,999: $0.25\n25,000 - 49,999: $0.21\n>= 50,000: $0.18\n\nFree for support-side users to minimize CRA\ncosts related to CreditXpert and Repository\nUpdates",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consumer Credit Reports - Method 2",
+    "Unnamed: 3": "**Not preferred. Method 2 - $0.26 per infile (calculated in MCL)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consumer Credit Reports - Method 3",
+    "Unnamed: 3": "Method 3 - $1.03 per report.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Consumer Credit Reports - Method 4",
+    "Unnamed: 3": "Method 4 - $1.03 for hard inquiry and $0.52 for soft inquiry",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Credit Assure",
+    "Unnamed: 3": "Pricing is per individual per bureau\nCreditXpert products collectively have a $200\nmonthly minimum.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.07
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Credit Optics Score",
+    "Unnamed: 3": "We would charge for this, but there is no\nstandard price since we haven't signed anyone\nup for it yet.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Credit Radar",
+    "Unnamed: 3": "Pricing is per individual per bureau\nCreditXpert products collectively have a $200\nmonthly minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.22
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Criminal Record Report",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CX Bundle",
+    "Unnamed: 3": "CreditXpert products collectively have a $200\nmonthly minimum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.61
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Eviction Report",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FAMM",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FAMM Email",
+    "Unnamed: 3": "\"Charge per successful FAMM email when using\nthe FAMM auto-email feature. CRA's configure if\n\"\"successful\"\" means the email is sent without\nerror, or if the recipient views the disclosure. \nUnits 1-5000: $0.26\nUnits 5001-10000: $0.21\nUnits 10001-20000: $0.15\nUnits 20001+: $0.10\"",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LexisNexis Liens and Judgements",
+    "Unnamed: 3": "Standalone or credit report add-on",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MCL Credit Attributes",
+    "Unnamed: 3": "50% rev-share with CRA\nwith minimum of $0.10 per\nindividual report and $0.21\nper joint report",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.21
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Rating",
+    "Unnamed: 3": "12 month mortgage rating",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PitchPoint BLJ",
+    "Unnamed: 3": "Standalone or credit report add-on",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Raw Credit Data Reissue",
+    "Unnamed: 3": "Do not proactively offer. If moving forward,\nrequires NDA between ML and integrator",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "RiskView Score",
+    "Unnamed: 3": "We would charge for this, but there is no\nstandard price since we haven't signed anyone\nup for it yet.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Smart Select AutoUpgrade(Not Including Shield)",
+    "Unnamed: 3": "Single Bureau Cascade is free. Billed when\nSmartSelect prevents an upgrade.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Flex ID",
+    "Unnamed: 3": "Per FlexID Transaction (per individual)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Prequal Tier 1",
+    "Unnamed: 3": "Auto Upgrade % During\nBillable Period : Per Order\nAmount\n90%+ : $0.26\n80% to <90% : $0.46\n70% to <80%: $0.67\n60% to <70%: $0.88\n<60%: $1.08\n\nAuto Upgrade % are calculated per customer\nconfigured in MCL",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Prequal Tier 2",
+    "Unnamed: 3": "Auto Upgrade % During\nBillable Period : Per Order\nAmount\n90%+ : $0.26\n80% to <90% : $0.46\n70% to <80%: $0.67\n60% to <70%: $0.88\n<60%: $1.08\n\nAuto Upgrade % are calculated per customer\nconfigured in MCL",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.46
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Prequal Tier 3",
+    "Unnamed: 3": "Auto Upgrade % During\nBillable Period : Per Order\nAmount\n90%+ : $0.26\n80% to <90% : $0.46\n70% to <80%: $0.67\n60% to <70%: $0.88\n<60%: $1.08\n\nAuto Upgrade % are calculated per customer\nconfigured in MCL",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.67
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Prequal Tier 4",
+    "Unnamed: 3": "Auto Upgrade % During\nBillable Period : Per Order\nAmount\n90%+ : $0.26\n80% to <90% : $0.46\n70% to <80%: $0.67\n60% to <70%: $0.88\n<60%: $1.08\n\nAuto Upgrade % are calculated per customer\nconfigured in MCL",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.88
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SmartSelect Shield - Prequal Tier 5",
+    "Unnamed: 3": "Auto Upgrade % During\nBillable Period : Per Order\nAmount\n90%+ : $0.26\n80% to <90% : $0.46\n70% to <80%: $0.67\n60% to <70%: $0.88\n<60%: $1.08\n\nAuto Upgrade % are calculated per customer\nconfigured in MCL",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.08
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Consumer Credit Report T1",
+    "Unnamed: 3": "Per report; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Consumer Credit Report T2",
+    "Unnamed: 3": "Per report; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.34
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Consumer Credit Report T3",
+    "Unnamed: 3": "Per report; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.42
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Credit Attributes T1",
+    "Unnamed: 3": "50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Credit Attributes T2",
+    "Unnamed: 3": "50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.07
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Credit Attributes T3",
+    "Unnamed: 3": "50% rev-share with CRA with minimum of $0.06 per individual report and $0.12 per joint report. Requires Targeted Lender Addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.08
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender LexisNexis Liens and Judgements T1",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.13
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender LexisNexis Liens and Judgements T2",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender LexisNexis Liens and Judgements T3",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.19
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender PitchPoint BLJ T1",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.13
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender PitchPoint BLJ T2",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender PitchPoint BLJ T3",
+    "Unnamed: 3": "Standalone or credit report add-on; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.19
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "TrendScape",
+    "Unnamed: 3": "CreditXpert products collectively have a $200\nmonthly minimum.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.08
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "UDN - Equifax",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "UDN - Experian",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4200,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "UDN - TransUnion",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1300,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ZipOverride",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 1050,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Preview",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Bundle",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.6
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Manual Simulator Tier 1 (20,000+ units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.48
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Manual Simulator Tier 2 (10,000 - 19,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.79
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Manual Simulator Tier 3 (5,000 - 9,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Manual Simulator Tier 4 (1 - 4,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Target & Money Simulator Tier 1 (20,000+ units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 3.92
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Target & Money Simulator Tier 2 (10,000 - 19,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.38
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Target & Money Simulator Tier 3 (5,000 - 9,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Target & Money Simulator Tier 4 (1 - 4,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.69
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Mortgage Action Plan Tier 1 (20,000+ units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.48
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Mortgage Action Plan Tier 2 (10,000 - 19,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 4.79
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Mortgage Action Plan Tier 3 (5,000 - 9,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.05
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ScoreNavigator Mortgage Action Plan Tier 4 (1 - 4,999 units)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 5.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FICO Score Mortgage Simulator",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 12
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Elphi - Consumer Credit Reports ",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Employment/Income/Asset Verification",
+    "Unnamed: 2": "AccountChek VOA - 30 Day (Monthly Fee Option)",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": 14.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - 60 Day (Monthly Fee Option)",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": 14.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - 90 Day (Monthly Fee Option)",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": 18.55
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - Direct Relationship 30 Day",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - Direct Relationship 60 Day",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - Direct Relationship 90 Day",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - Direct Relationship One Time",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - Monthly Fee (Monthly Fee Option)",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "AccountChek VOA - One Time (Monthly Fee Option)",
+    "Unnamed: 3": "Pick all products from either Monthly Minimum, Monthly Fee, or Direct Relationship.\n\nMonthly Fee / Monthly Minimum is upon first successful\nAccountChek order.\n\nNo charge from ML for Day 1 Certainty as it's provided by the\nvendor.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1236,
+    "Unnamed: 6": 8.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Finicity Order Retrieval API Tier 1 (20,000+ Pulls)",
+    "Unnamed: 3": "(non-aggregate bundled with manual VOE)\n<= 5,000: $1.03\n5,001 - 10,000: $0.98\n10,001 - 15,000: $0.93\n15,001 - 20,000: $0.88\n> 20,000: $0.82\n\nPulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.82
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Finicity Order Retrieval API Tier 2 (15,000 - 19,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.88
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Finicity Order Retrieval API Tier 3 (10,000 - 14,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.93
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Finicity Order Retrieval API Tier 4 (5000 - 9999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.98
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Experian Finicity Order Retrieval API Tier 5 (Up to 4999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity Reseller Billing API Tier 1 (20,000+ Pulls)",
+    "Unnamed: 3": "(non-aggregate bundled with manual VOE)\n<= 5,000: $1.03\n5,001 - 10,000: $0.98\n10,001 - 15,000: $0.93\n15,001 - 20,000: $0.88\n> 20,000: $0.82\n\nPulls in Experian/Finicity records ordered outside of the MCL system for unified billing inside of MCL.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.82
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity Reseller Billing API Tier 2 (15,000 - 19,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.88
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity Reseller Billing API Tier 3 (10,000 - 14,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.93
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity Reseller Billing API Tier 4 (5000 - 9999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.98
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity Reseller Billing API Tier 5 (Up to 4999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Finicity VOIE",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Manual VOD",
+    "Unnamed: 3": "Service Request in MCL. Billed upon completion.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Manual VOE (MeridianLink)",
+    "Unnamed: 3": "(non-aggregate\nbundled with\nmanual VOE)\n<= 5,000: $1.03\n5,001 - 10,000:\n$0.98\n10,001 - 15,000:\n$0.93\n15,001 - 20,000:\n$0.88\n> 20,000: $0.82\n\nOnly billed for completed orders.\nOnly billed for completed orders.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Manual VOE (NCS)",
+    "Unnamed: 3": "(non-aggregate\nbundled with\nmanual VOE)\n<= 5,000: $1.03\n5,001 - 10,000:\n$0.98\n10,001 - 15,000:\n$0.93\n15,001 - 20,000:\n$0.88\n> 20,000: $0.82\n\nOnly billed for completed orders.\nOnly billed for completed orders.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript 3rd Party (CRA)",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript 3rd Party (Inco-Check)",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript 3rd Party (NCS)",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript 3rd Party (TaxReturnVerifications.com)",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript 3rd Party (Veri-Tax)",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065. Also applies to CRAs who have their own software.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Tax Transcript MCL",
+    "Unnamed: 3": "Supports 1040, W2, 1099, 1120, and 1065",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (MCL), including Experian Verify connectivity Tier 1 (20,000+ Pulls)",
+    "Unnamed: 3": "(non-aggregate\nbundled with\nmanual VOE)\n<= 5,000: $1.03\n5,001 - 10,000:\n$0.98\n10,001 - 15,000:\n$0.93\n15,001 - 20,000:\n$0.88\n> 20,000: $0.82\n\nIncludes instant and manual volumes. Only billed for completed\norders.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.82
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (MCL), including Experian Verify connectivity Tier 2 (15,000 - 19,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.88
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (MCL), including Experian Verify connectivity Tier 3 (10,000 - 14,999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.93
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (MCL), including Experian Verify connectivity Tier 4 (5000 - 9999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.98
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Verification of Employment (MCL), including Experian Verify connectivity Tier 5 (up to 4999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Fraud Detection",
+    "Unnamed: 2": "Blend Identity Verification",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage Identity Verification",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CBSV Tier 1 (1000+ Verifications)",
+    "Unnamed: 3": "(non-aggregate)\n<= 500: $1.03\n501 - 1000: $0.77\n> 1000: $0.52",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CBSV Tier 2 (500 - 999 Verifications)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CBSV Tier 3 (Up to 499 Verifications)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 4700,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ID Verification (Credit Reports Not with MeridianLink)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ID Verification (Credit Reports with MeridianLink)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MERS Report Refresh",
+    "Unnamed: 3": "Per report (i.e. borrower, co-borrower, and property address are\nseparate MERS reports even if on the same file)\nCan be ordered on Prequal, Refresh, Standalone, and in\nPackaged Reports",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MERS Report Regular",
+    "Unnamed: 3": "Per report (i.e. borrower, co-borrower, and property address are\nseparate MERS reports even if on the same file)\nCan be ordered on Prequal, Refresh, Standalone, and in\nPackaged Reports",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Participant Verification Tier 1 (1000+ Delinquencies)",
+    "Unnamed: 3": "(aggregate)\n< 1000: $0.07\n>= 1000: $0.06",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Participant Verification Tier 2 (up to 999 Delinquencies)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.08
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - Accurint",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - ASC National Registry",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - CoreLogic Home Value Explorer (HVE)",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - Equifax Intellireal IPR",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.31
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - Equifax Intellireal Other",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - FEMA Disaster List",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - Freddie Mac",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - LexisNexis Bridger",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - LexisNexis InstantID",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.26
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - LexisNexis NOD/Foreclosure Search",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - LexisNexis Property History Search",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.16
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - MERS People",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - MERS Property",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Packaged Report - Other",
+    "Unnamed: 3": "If sum of charges per report don't hit the minimum, we bill that\ninstead",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PitchPoint",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SSA89 Tier 1 (1000+ Reports)",
+    "Unnamed: 3": "(non-aggregate)\n<= 500: $1.03\n501 - 1000: $0.77\n> 1000: $0.52",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SSA89 Tier 2 (500 - 999 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SSA89 Tier 3 (Up to 499 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ARMCO - SSA89",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Interface",
+    "Unnamed: 2": "ARMCO - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ARMCO - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ARMCO - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ARMCO - Tax Transcript",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ARMCO - VOE",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.8
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Avista - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Avista - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Avista - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.95
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Beanstalk OpenClose - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Beanstalk OpenClose - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Beanstalk OpenClose - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Billing includes new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Billing includes new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Billing includes new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend - Consumer Credit Reports - Upgrade",
+    "Unnamed: 3": "Billing includes new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage - 4506-T",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage - Consumer Credit Reports",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage - UDN",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "BytePro - Consumer Credit Reports",
+    "Unnamed: 3": "Byte wants agreements with each CRA\nseparately",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ComplianceOne - Consumer Credit Reports",
+    "Unnamed: 3": " $45 flat rate for\nup to 45\ntransactions.\n$1 per\ntransaction\nafterwards ",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Customer API Integration",
+    "Unnamed: 3": "Integration fee for CRA-sponsored API\nintegrations",
+    "Unnamed: 4": 1050,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "EMS - Consumer Credit Reports - New",
+    "Unnamed: 3": "Old interface, do not sign up new\nclients on this.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.44
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "EMS - Consumer Credit Reports - Reissue",
+    "Unnamed: 3": "Old interface, do not sign up new\nclients on this.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.44
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Encompass - 4506-T Gateway",
+    "Unnamed: 3": "CRA entry:\nCheck with\nprovider\n\nBilling includes new and reissue transactions; only billed if using MeridianLink gateway through TaxReturnVerifications.com",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Encompass - Consumer Credit Reports",
+    "Unnamed: 3": "CRA entry:\nCheck with\nprovider\n\nSee billing details in MCL-1036",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Encompass Flood Gateway Integration",
+    "Unnamed: 3": "Only applicable to CRAs using the MeridianLink entry in the provider dropdown of Encompass (i.e. not a direct relationship between CRA and ICE Mortgage Technology)",
+    "Unnamed: 4": 4200,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Encompass Partner API Integration",
+    "Unnamed: 3": "Applicable to all CRAs who want to use MCL for Encompass Partner API integrations. One fee covers any/all Encompass integrations used by the CRA (VOE, Flood, etc.). CRAs using MeridianLink entry in provider dropdown also need to pay setup and transaction fee for each product integration with Encompass.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1050,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Encompass VOE Gateway Integration",
+    "Unnamed: 3": "Only applicable to CRAs using the MeridianLink entry in the provider dropdown of Encompass (i.e. not a direct relationship between CRA and ICE Mortgage Technology)",
+    "Unnamed: 4": 4200,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fannie Mae - Consumer Credit Reports",
+    "Unnamed: 3": "Fee becomes $2.78 if invoice is\noverdue\nIncludes: Desktop Underwriter,\nDesktop Originator, EarlyCheck?",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fannie Mae - Manual VOE/I",
+    "Unnamed: 3": "CRAs must go through their own\nvetting process with Fannie Mae",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fannie Mae - Tax Transcript",
+    "Unnamed: 3": "Must use our 4506-T Processing\nsystem or AUS-TRV for eligibility",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fannie Mae Affiliate Fee",
+    "Unnamed: 3": "Pass through from Fannie Mae",
+    "Unnamed: 4": 2075,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Fannie Mae Connect Fee",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4944,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FHLMC Direct - Consumer Credit Reports - Direct New",
+    "Unnamed: 3": "Excludes LQA transactions",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "FHLMC Direct - Consumer Credit Reports - Direct Reissue",
+    "Unnamed: 3": "Excludes LQA transactions",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "focusagent - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Freddie Mac LQA Secondary Use - Individual",
+    "Unnamed: 3": "Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.\n\nFreddie Mac covers the cost of LQA\nreissues. This includes secondary use.\nSo, if a reissue occurs with secondary\nuse in a CRA system, we bill Freddie\nMac for it, and then give the CRA credit\nfor the reissue here.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Freddie Mac LQA Secondary Use - Joint",
+    "Unnamed: 3": "Make sure we get the CRA to sign LQA agreement. Quote Individual and Joint together.\n\nFreddie Mac covers the cost of LQA\nreissues. This includes secondary use.\nSo, if a reissue occurs with secondary\nuse in a CRA system, we bill Freddie\nMac for it, and then give the CRA credit\nfor the reissue here.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Harland - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IntegraDestiny - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.3
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IntegraDestiny - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "IntegraDestiny - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Laser Credit - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Laser Credit - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Laser Credit - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lending Pad - UDN",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lending Pad - VOA",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lending Pad - VOD",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - 4506-T",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - Consumer Credit Reports",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - Flood",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - IDV",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - VOE",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "LendingPad - VOI",
+    "Unnamed: 3": "Billing is for new transactions only",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Lendwize - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortage Builder - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.33
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortage Builder - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.66
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortage Builder - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Cadence - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.2
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Cadence - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Cadence - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Director (fka PCLender) - 1B",
+    "Unnamed: 3": "Pricing effective 3/1/2021",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Director (fka PCLender) - 2B",
+    "Unnamed: 3": "Pricing effective 3/1/2021",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Director (fka PCLender) - 3B",
+    "Unnamed: 3": "Pricing effective 3/1/2021",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Flex - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Flex - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Flex - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Only transactions for new credit (MCL-\n181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.4
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mortgage Panda - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MortgageBot - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MortgageBot - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.65
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MortgageBot - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.75
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Point - Consumer Credit Reports - DirectConnect",
+    "Unnamed: 3": "We only bill if \"MeridianLink\" is\nselected as the credit provider in Point.\nIf a user selects a CRA's entry, Calyx\nwill bill the CRA directly. Both new and\nreissue transactions. For\nDirectConnect only transactions from\nDEMO are included. (MCL-181). For\nWebConnect, unsure if same\ntransaction filtering logic is same as\nPoint DirectConnect.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.15
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Point - Consumer Credit Reports - WebConnect",
+    "Unnamed: 3": "We only bill if \"MeridianLink\" is\nselected as the credit provider in Point.\nIf a user selects a CRA's entry, Calyx\nwill bill the CRA directly. Both new and\nreissue transactions. For\nDirectConnect only transactions from\nDEMO are included. (MCL-181). For\nWebConnect, unsure if same\ntransaction filtering logic is same as\nPoint DirectConnect.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.73
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PreApp - Consumer Credit Reports",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PrudentCo - Consumer Credit Reports",
+    "Unnamed: 3": "FrameLogic dba PrudentCo",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ReverseVision - Consumer Credit Reports - 1B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ReverseVision - Consumer Credit Reports - 2B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.35
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ReverseVision - Consumer Credit Reports - 3B",
+    "Unnamed: 3": "Both new and reissue transactions\n(MCL-181)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Shape Software - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Fannie Mae T1",
+    "Unnamed: 3": "Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.32
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Fannie Mae T2",
+    "Unnamed: 3": "Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.42
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender Fannie Mae T3",
+    "Unnamed: 3": "Fee becomes $2.78 if invoice is overdue. Includes: Desktop Underwriter, Desktop Originator, EarlyCheck. Requires Targeted Lender addendum.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.53
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T1",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T2",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.24
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct New T3",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T1",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T2",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.24
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Targeted Lender FHLMC Direct - Consumer Credit Reports - Direct Reissue T3",
+    "Unnamed: 3": "Excludes LQA transactions; Requires Targeted Lender addendum",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.45
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "wemlo - Consumer Credit Reports",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - VOE",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - VOI",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - VOD",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - VOA",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - 4506C",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Calyx Integration - SSA89",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Miscellaneous",
+    "Unnamed: 2": "CRA Office",
+    "Unnamed: 3": "Initial MCL setup fee includes one office",
+    "Unnamed: 4": 1050,
+    "Unnamed: 5": 1050,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Faxes Tier 1 (651+ Faxes)",
+    "Unnamed: 3": "(non-aggregate)\n<= 650: $0.11 per\nfax\n> 650: $0.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Faxes Tier 2 (Up to 650 Faxes)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.11
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Okta Single Sign On",
+    "Unnamed: 3": "The setup process requires the CRA to create a product in the Okta Integration Network, configure it to use MCL\u2019s SSO integration with Okta, and get approval from Okta directly to be promoted to production. MCL Support and Engineering will work with the CRA throughout the process.",
+    "Unnamed: 4": 1050,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Postback Service API",
+    "Unnamed: 3": "Calculated in MCL this represents a % of what the CRA charges their customer Per Transaction\n\n<= $5000: 5% of\nretail price collected\n$5001 - $15000:\n3.5% of retail price\ncollected\n> $15000: 2.5% of\nretail price collected",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Premium Dashboard Benchmarks",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 1550,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "SFTP Server",
+    "Unnamed: 3": "Annual fee billed in monthly installments /Per coordinator account",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 624,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Web Hosting",
+    "Unnamed: 3": "Annual fee billed in monthly installments",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": 4944,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Property Data",
+    "Unnamed: 2": "CoreLogic GeoAVM (MCL)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic Home Value Explorer (HVE) (MCL) Tier 1 (5000+ Pulls)",
+    "Unnamed: 3": "(aggregate)\n< 2,500: $2.06\n2,500 - 4,999: $1.03\n>= 5,000: $0.52",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic Home Value Explorer (HVE) (MCL) Tier 2 (2500 - 4999 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic Home Value Explorer (HVE) (MCL) Tier 3 (Up to 2499 Pulls)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic IVAL (MCL)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "CoreLogic PASS (MCL)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Transaction (MCL) Tier 1 (5000+ Reports)",
+    "Unnamed: 3": "(aggregate)\n< 2,500: $1.03\n2,500 - 4,999: $0.77\n>= 5,000: $0.52",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Transaction (MCL) Tier 2 (2500 - 4999 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Transaction (MCL) Tier 3 (Up to 2499 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (CoreLogic) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (Lereta) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Basic (ServiceLink) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (CoreLogic) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (Lereta) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Flood Zone Determination - Life of Loan (ServiceLink) (MCL)",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": -1234
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "PMC (MCL)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.06
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Property Verification",
+    "Unnamed: 2": "Blend Automated Valuation Model",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blend Flood",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage Automated Valuation Model",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Blue Sage Flood",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.5
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ServiceLink Flood Postback Tier 1 (5000+ Reports)",
+    "Unnamed: 3": "(aggregate)\n< 2,500: $1.03\n2,500 - 4,999: $0.77\n>= 5,000: $0.52",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.52
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ServiceLink Flood Postback Tier 2 (2500 - 4999 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 0.78
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "ServiceLink Flood Postback Tier 3 (Up to 2499 Reports)",
+    "Unnamed: 3": "(blank)",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 1.03
+  }
+]

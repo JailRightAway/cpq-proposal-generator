@@ -1,0 +1,209 @@
+[
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Category",
+    "Unnamed: 1": "Add Ons",
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": NaN,
+    "Unnamed: 3": NaN,
+    "Unnamed: 4": "Values",
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": "Product Of (Primary Service)",
+    "Unnamed: 1": "Primary Service Category",
+    "Unnamed: 2": "Internal Product Name",
+    "Unnamed: 3": "Internal Notes for Sales",
+    "Unnamed: 4": "One Time Fees",
+    "Unnamed: 5": "Annual Fees",
+    "Unnamed: 6": "Transaction Fees"
+  },
+  {
+    "Unnamed: 0": "MeridianLink Collect",
+    "Unnamed: 1": "Add On - Document Delivery",
+    "Unnamed: 2": "Mailing (1-5 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 1625,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 2.57
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (21-40 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 14.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (41-60 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 26.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (61-80 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 30.7
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (6-20 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 9.25
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "Mailing (81-100 Page Envelope) ML Collect",
+    "Unnamed: 3": "Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": 34
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Consulting",
+    "Unnamed: 2": "MeridianLink Collect Core Data Mapping",
+    "Unnamed: 3": "Quote pricing.  Price is not actually -$1234.00",
+    "Unnamed: 4": -1234,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - MeridianLink Insight",
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 1 (>=$10B AUM",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 9500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 1  (>=$4M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 7500,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 2  (>=$3M & <$4M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 6480,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 3  (<$3M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5880,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 1  (>=$3M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5880,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 2  (>=$2M & <$3M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 3  (<$2M in 60+ Consumer Delinquencies",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 1  (>=$2M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 2  (>=$1M & <$2M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": NaN,
+    "Unnamed: 2": "MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 3  (<$1M in 60+ Consumer Delinquencies)",
+    "Unnamed: 3": "pricing is based on a percentage of what the customer is paying for Collect.",
+    "Unnamed: 4": 5000,
+    "Unnamed: 5": 5000,
+    "Unnamed: 6": NaN
+  },
+  {
+    "Unnamed: 0": NaN,
+    "Unnamed: 1": "Add On - Data Integration",
+    "Unnamed: 2": "(CPI) Collateral Protection Insurance",
+    "Unnamed: 3": "FKA SWBC",
+    "Unnamed: 4": 0,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  }
+]

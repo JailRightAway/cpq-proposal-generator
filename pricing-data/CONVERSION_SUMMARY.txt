@@ -1,0 +1,88 @@
+================================================================================
+ML_PriceCard.xlsm CONVERSION SUMMARY
+================================================================================
+Date: 2026-08-27
+Source File: ML_PriceCard.xlsm
+Output Formats: CSV + JSON
+
+================================================================================
+CONVERSION RESULTS
+================================================================================
+
+✓ 27 CSV files (one per sheet)
+✓ 28 JSON files (27 individual sheets + 1 combined)
+
+================================================================================
+SHEET BREAKDOWN
+================================================================================
+
+QUOTE & PRICING SHEETS:
+  • 1 - Quote Header (40 rows × 4 cols)
+  • 2 - Quote Builder (112 rows × 52 cols) ← Primary pricing sheet
+  • 2 - Quote Builder - Taz (31 rows × 40 cols)
+  • 3 - Quote Presentation (25 rows × 10 cols)
+  • 4 - Quote Entry (72 rows × 35 cols)
+
+ADD-ONS & PRODUCTS:
+  • Add Ons - Consumer (474 rows × 7 cols)
+  • Add Ons - Mortgage (123 rows × 7 cols)
+  • Add Ons - MCL (268 rows × 7 cols)
+  • Add Ons - Collect (23 rows × 7 cols)
+  • Add Ons - DL (141 rows × 7 cols)
+  • Add Ons - TAZ (158 rows × 7 cols)
+
+MASTER DATA:
+  • MasterInventory (1,602 rows × 39 cols) ← Largest dataset
+  • Module Tiers (452 rows × 36 cols)
+  • MasterInventory_Working (515 rows × 27 cols)
+
+OTHER REFERENCE SHEETS:
+  • LPQModuleDiscount (26 rows × 2 cols)
+  • SOWData (10 rows × 3 cols)
+  • MI_RyanTest (479 rows × 27 cols)
+  • Beta Products (42 rows × 32 cols)
+  • Legacy Products (261 rows × 2 cols)
+  • Legacy Products (old) (206 rows × 2 cols)
+  • Recent Changes (7 rows × 4 cols)
+  • Full Changelog (6,410 rows × 4 cols) ← Most detailed history
+  • 2021-03-03 EPC Changelog (78 rows × 3 cols)
+  • MasterInventory_Backup_02162021 (515 rows × 22 cols)
+  • QueryResults (307 rows × 44 cols)
+  • DropDowns (3 rows × 3 cols)
+
+================================================================================
+FILE ORGANIZATION
+================================================================================
+
+Individual Files:
+  {SheetName}.csv → Standard comma-separated values
+  {SheetName}.json → JSON array of objects (one object per row)
+
+Combined File:
+  ML_PriceCard.json → All sheets in one file as: {"SheetName": [...], ...}
+
+================================================================================
+USAGE NOTES
+================================================================================
+
+CSV Files:
+  • Import into Excel, Google Sheets, or any spreadsheet application
+  • Open in any text editor
+  • Use with Python (pandas), R, or data analysis tools
+
+JSON Files:
+  • Each row becomes an object with column headers as keys
+  • NaN values from Excel appear as null in JSON
+  • Perfect for APIs, databases, web applications
+  • Individual files: Import one sheet at a time
+  • Combined file: Access all data programmatically in one load
+
+Example JSON structure:
+  {
+    "Product Family": "Origination - Consumer",
+    "Product Of (Primary Service)": "DecisionLender4",
+    "One Time Fee": 2300.0,
+    ...
+  }
+
+================================================================================

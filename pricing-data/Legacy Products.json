@@ -1,0 +1,1046 @@
+[
+  {
+    "LEGACY Product Name": "Customer Credit Access",
+    "Date Removed": "2019-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed App Portal from setup discount since guided setup is not standard",
+    "Date Removed": "2019-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Home Banking SSO from AddOn to avoid confusion around AP+ vs A la Carte",
+    "Date Removed": "2019-02-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Remove Conmar fee for Standard Adverse Action form",
+    "Date Removed": "2019-02-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Make Ascensus docs a standard forms vendor. Therefore, removed special pricing from price card.",
+    "Date Removed": "2019-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "FIS Systematic core system",
+    "Date Removed": "2019-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "RC01",
+    "Date Removed": "2019-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed CUNA Protection Advisor (IWC), Frost Financial, IQQ, and Lender's Protection as vendors we have a separate charge for",
+    "Date Removed": "2019-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed standard XpressCollect discounts (customer loyalty and ramp-up)",
+    "Date Removed": "2019-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Calcubot",
+    "Date Removed": "2019-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Rate Reset (replaced with Rate Reset programs for PreApproval API and Direct Core Reset)",
+    "Date Removed": "2020-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "LPQ Web Service Licensing (added back March 2021)",
+    "Date Removed": "2020-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Social Media Integration removed from AP Plus package",
+    "Date Removed": "2020-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "SavvyMoney",
+    "Date Removed": "2020-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "XpressCollect and MLX Insight Promotions (expired July 2020)",
+    "Date Removed": "2020-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Experian Precise ID and Precise ID with KIQ (replaced by Experian CrossCore PreciseID versions)",
+    "Date Removed": "2020-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "App Portal \"Lite Implementation\"",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "XA Fast Track module",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax Credit Reports",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Experian Credit Reports",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax Retail Banking",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax Retail Banking with Pre-Screen of 1",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Xpress Sign Pro for iPad",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Deluxe Detect with IDA (vendor sunset)",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Deluxe IDA (vendor sunset)",
+    "Date Removed": "2020-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "In the Lead Consumer Credit Reports",
+    "Date Removed": "2021-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "VueCentric Consumer Credit Reports",
+    "Date Removed": "2021-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Debit Bureau - Early Warning Services (EWS)",
+    "Date Removed": "2021-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "In brand SSO (Active Directory) -- temporary removal to revamp implementation to confirm to latest standards before resuming sales",
+    "Date Removed": "2021-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "LoanAce Consumer Credit Reports",
+    "Date Removed": "2021-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "eMagic Consumer Credit Reports",
+    "Date Removed": "2021-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "On the Go Consumer Credit Reports",
+    "Date Removed": "2021-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "SBA PPP Module",
+    "Date Removed": "2021-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender - Account Opening Module",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "First Close integration",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Black Book Enhanced VIN Matching",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Kelley Blue Book Motorcycle Values",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Reynold and Reynolds Contracts Direct Lending (Finance Companies)",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Reynold and Reynolds Contracts Indirect Lending",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Reynold and Reynolds Contracts Lease Retail",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Reynold and Reynolds Forms",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Wolters Kluwer Contracts Direct Lending (Banks and Credit Unions)",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (deposits) - DecisionLender",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (overage) - DecisionLender4 Opening",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (loans + deposits) - DecisionLender",
+    "Date Removed": "2021-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "National-Level Criminal Records Alias Lead Generator from National Background Data (TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "National-Level Criminal Records Lead Generator from National Background Data (TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "State-Level Criminal Records Lead Generator from National Background Data (TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "National-Level Criminal Records Alias Lead Generator from National Background Data (Not a TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "National-Level Criminal Records Lead Generator from National Background Data (Not a TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "State-Level Criminal Records Lead Generator from National Background Data (Not a TazCloud User)",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Reverse Migrations",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ScanShell 3100D with OCR software",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ScanShell 800 or 2000 with OCR software",
+    "Date Removed": "2021-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Prospecting",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Direct Mail (Postcard, Self Mailer, and Letter)",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Email",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Reward Gift Card",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Reward Cash Back",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Custom Creative Design",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage TEM: Prescreen",
+    "Date Removed": "2021-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender- Experian Precise ID",
+    "Date Removed": "2021-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Deluxe Detect (Vendor sunset)",
+    "Date Removed": "2021-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Deluxe Match Fee (Vendor sunset)",
+    "Date Removed": "2021-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Data Storage- Mortgage (active ML Mortgage Clients)",
+    "Date Removed": "2022-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Process and Strategy Maintenance (ML Consulting)",
+    "Date Removed": "2022-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Consumer Documents (Application Portal v1/v2)",
+    "Date Removed": "2022-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "FiServ Inegrasys",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Paradata Export",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender4 CBD",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender4 BizChex",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender4 Experian Clarity Score",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender4 Archive files - SFTP monthly Folder Delivery",
+    "Date Removed": "2022-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Data Integration & Management Tier 1 (>$1B AUM)",
+    "Date Removed": "2022-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Data Integration & Management Tier 2 (<$1B AUM)",
+    "Date Removed": "2022-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Data Integration & Management Tier 3 (<$250M AUM)",
+    "Date Removed": "2022-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "United One Resources - Settlement Services",
+    "Date Removed": "2022-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "L3APPS Export",
+    "Date Removed": "2022-06-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (loans + deposits)",
+    "Date Removed": "2022-06-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Decisioning as a Service (DaaS)",
+    "Date Removed": "2022-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "VPN Configuration",
+    "Date Removed": "2023-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax eIDverifier ",
+    "Date Removed": "2023-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax eIDCompare",
+    "Date Removed": "2023-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Equifax eIDCompare with eIDVerifier",
+    "Date Removed": "2023-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (deposits) - ML Entry",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (loans) - ML Entry",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Relationship360 All In",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Custom Creative Design",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Direct Mail - Letter",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Direct Mail - Postcard",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Direct Mail - Self Mailer",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Email",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Reward Gift Card",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "AccountChek VOA - 30 Day (Monthly Minimum Option)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "AccountChek VOA - 60 Day (Monthly Minimum Option)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "AccountChek VOA - 90 Day (Monthly Minimum Option)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "AccountChek VOA - One Time (Monthly Minimum Option)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Wayfinder (Consumer)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "What-If Simulator (Consumer)",
+    "Date Removed": "2023-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DealerTrack eContracting Authoritative Copy Conversion (ACC) (Consumer)",
+    "Date Removed": "2023-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Premium Plus Support (Consumer)",
+    "Date Removed": "2023-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Mortgage",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Mortgage - AccountChek (30,60,90 day and one time monitoring)",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Mortgage - Site Analytics",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal - Additional Portal (Mortgage)",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal - Custom URL (Mortgage)",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal - Equifax InstaTouch (Mortgage)",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal - Home Banking SSO (Mortgage)",
+    "Date Removed": "2023-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage Access Full Story Additional User",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage Access Full Story Tier 1 (20,000 sessions/month)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage Access Full Story Tier 2 (10,000 sessions/month)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage Access Full Story Tier 3 (4000 sessions/month)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage Access Full Story Tier 4 (1500 sessions/month)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Card Module Tier 1 (>$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Card Module Tier 2 ($500M-$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Card Module Tier 3 ($250M-$500M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Card Module Tier 4 (<$250M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Account Module Tier 1 (>$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Account Module Tier 2 ($500M-$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Account Module Tier 3 ($250M-$500M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Account Module Tier 4 (<$250M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Additional Data Integration & Management ",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Consumer Lending Module Tier 1 (>$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Consumer Lending Module Tier 2 ($500M-$1B AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Consumer Lending Module Tier 3 ($250M-$500M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Consumer Lending Module Tier 4 (<$250M AUM)",
+    "Date Removed": "2023-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage - Advanced Modeling",
+    "Date Removed": "2023-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Core interface (DecisionLender)",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DataSafe (DecisionLender)",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "HYLS (DecisionLender)",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "AI Extract (DecisionLender)",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Propay (DecisionLender)",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Decisioning Optimization",
+    "Date Removed": "2024-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Verafin - ML Entry Clients",
+    "Date Removed": "2024-02-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Visa Advanced ID Solutions (VAIS)",
+    "Date Removed": "2024-03-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign Enterprise (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 1 (500+ envelopes) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 2 (400-499 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 3 (300-399 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 4 (200-299 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 5 (100-199 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 6 (50-99 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DocuSign ISV Tier 7 (up to 49 envelopes included) (Mortgage)",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Enhanced Implementation Banks",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Enhanced Implementation CU",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Enhanced Implementation Opening",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Enhanced Implementation Small Business",
+    "Date Removed": "2024-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "CCM Credit Card",
+    "Date Removed": "2024-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "CCM Interface with OSI",
+    "Date Removed": "2024-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "CPS",
+    "Date Removed": "2024-09-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Image Transfer",
+    "Date Removed": "2024-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Fintel Connect",
+    "Date Removed": "2024-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage- Tech Enabled Marketing - Gift Cards Letter - P-1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Tech Enabled Marketing - Home Banking -NCR",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage- Tech Enabled Marketing- Email- D1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage- Tech Enabled Marketing- Email- G1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Lite Tier 1 (>$1B AUM)",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Lite Tier 2 ($500M-$1B AUM)",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Lite Tier 3 ($250M-$500M AUM)",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Engage Lite Tier 4 (<$250M AUM)",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Data Services",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Direct Mail - Postcard",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Direct Mail - Self Mailer",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Email",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Marketing - Reward Gift Card",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Tech Enabled Marketing - Email- D-1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Tech Enabled Marketing - Email- G-1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore Tech Enabled Marketing - Gift Cards Letter - P-1",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 1: >25M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 2: 10M-25M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 3: 5M-10M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 4: 2.5M-5M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 5: 1M-2.5M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Total Txn Tier 6: Up to 1M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA New ETL",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 1: >100M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 2: 50-100M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 3: 35-50M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 4: 25-35M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 5: 15-25M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 6: 7.5-15M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 7: 5-7.5M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 8: 2-5M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - MC MPA Active Cards Tier 9: Up to 2M",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Inbound Faxing - Additional Storage",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Application Storage (monthly payment)",
+    "Date Removed": "2025-01-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Loan Program Build/Maintenance",
+    "Date Removed": "2025-02-03 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Mercury Insurance",
+    "Date Removed": "2025-02-03 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "SourcePoint - Settlement Services",
+    "Date Removed": "2025-02-03 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (loans) - DecisionLender",
+    "Date Removed": "2025-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (overage) - DecisionLender4 Consumer",
+    "Date Removed": "2025-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping (overage) - DecisionLender4 Custom",
+    "Date Removed": "2025-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 1",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 2",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 3",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 4",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 5",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 6",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 7",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Access Foundation Tier 8",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Access Premium Tier 1 (Unlimited Monthly Applications)",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Access Premium Tier 2 (8000 Monthly Applications)",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Access Premium Tier 3 (4000 Monthly Applications)",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "DecisionLender Training",
+    "Date Removed": "2025-05-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed 0 dollar annual and transaction for SavvyMoney",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Legacy Portal Shared Codes",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed transaction item from FIS Qualifile IDV",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed DealerTrack (DecisionLender)",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Legacy Experian Codes",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Legacy RouteOne Electronic Contracting Commitment",
+    "Date Removed": "2025-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Legacy eContracting Rule Validation Package Setup and Annual Fee",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Digital Engagement Package - HappyorNot Customer Surveys",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Legacy SKU Codes for 25 Professional Services Hours for TazCloud",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed Consumer JHA Pricing Tiers for Consumer and Portal",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Removed legacy pricing model for ML Collect",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Credit Card Processing (First Data)",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "OpenClose Core Image Booking",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Meridianlink Mortgage Insight Tier 1-15",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "White Glove Optical Document Recognition Service",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "PriceMy Loan Service Packages (Plus, Premium, Standard (OpenClose)",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Mortgage OpenClose",
+    "Date Removed": "2025-08-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Document Mapping Rows Quoting Cleanup (3 legacy rows retired, for 6 new rows)",
+    "Date Removed": "2025-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Additonal Accounting item cleanup CONS-0390",
+    "Date Removed": "2025-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Move Legacy billing product codes for LoanStar (CONS-0208 AND CONS-0046)",
+    "Date Removed": "2025-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Modern Experience Module (New Logo) removed from EPC",
+    "Date Removed": "2025-10-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "PS Hourly Removed Annual items",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "SHARED Codes for Loan Annual Maintenance",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Remove Mortgage Training (MLM Roles Training Package, MLM Time and Materials Training Package,MLM Training Package)",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Business (Business Credit Card, ML Business Tiers)",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Finastra LaserPro and for ML Business",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Finastra LaserPro Plus and for ML Business",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "LoanStar Billing Code SHARED Code Update",
+    "Date Removed": "2025-11-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "OttoMotto Transaction and Monthly Commitment",
+    "Date Removed": "2025-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Entry Consumer and Opening",
+    "Date Removed": "2025-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Entry Core Integration",
+    "Date Removed": "2025-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ML Entry Portal",
+    "Date Removed": "2025-12-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Trade House Data Setup Fee (TazCloud User) : consildated pricing",
+    "Date Removed": "2026-01-02 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MCL Items: CreditXpert Wayfinder, CreditXpert What-If Simulator, and Experian Business Credit Reports",
+    "Date Removed": "2026-01-02 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 1 (96,000+ apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 2 (48,000-95,999 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 3 (24,000-47,999 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 4 (12,000-23,999 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 5 (6000-11,999 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 6 (3000-5999 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink Portal Tier 7 (<3000 apps)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Portal Merchant Lending",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "MeridianLink POS - Additional Portal (Consumer)",
+    "Date Removed": "2026-02-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "ACH Processing (Magic Wrighter)",
+    "Date Removed": "2026-03-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "CONS Billing Codes Replaced: FINOFR Pre-Approval API (Consumer)",
+    "Date Removed": "2026-03-05 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Software Configuration",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - FIS Debit Insights",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - FIS Monthly Volume Triggers",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - FIS Debit Insights New ETL",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Explore - FIS Debit Insights Data Services",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "CreditXpert Global Minimum",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Finicity VOA",
+    "Date Removed": "2026-04-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "FourStars DL Integration Code Update",
+    "Date Removed": "2026-06-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "PriceMyLoan Service Package - Basic (OpenClose)",
+    "Date Removed": "2026-06-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Symitar SymXChange Core Conversion (Consumer)",
+    "Date Removed": "2026-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Jack Henry Symitar (Mortgage)",
+    "Date Removed": "2026-07-01 00:00:00"
+  },
+  {
+    "LEGACY Product Name": "Symitar SymXChange (Consumer)",
+    "Date Removed": "2026-07-01 00:00:00"
+  }
+]

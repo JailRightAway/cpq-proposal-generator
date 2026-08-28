@@ -1,0 +1,11 @@
+Template Name,Template Location,Unnamed: 2
+Generic SOW,https://meridianlink365.sharepoint.com/sites/SalesPricingGuides/Shared%20Documents/General/GENERIC%20SOW%20TEMPLATE%20REDLINE_EPC.docx,
+,,
+,,
+,,
+Data Fields,Data Tag,Data Value
+Case Number,<<CASE>>,
+Customer Name,<<CUSTOMER>>,
+Description of Services,<<DESCRIPTION>>,MeridianLink will configure MeridianLink Consumer/MeridianLink Opening setup for Customer’s MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month)
+Fee,<<FEE>>,4800
+Product Name,<<PRODUCT>>,MeridianLink Mortgage Access Tier 14 (45-59 Closed Loans/Month)

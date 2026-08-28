@@ -1,0 +1,44 @@
+[
+  {
+    "Change": "Beta Tab: ValueCheck (DecisionLender)",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-262",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "SWBC: Collateral Protection Insurance (CPI)",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-203",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "Update Price Method on the EPC for a few existing products",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-272",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "Beta to GA: Route 66",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-300",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "Beta: BidWizer",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-273",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "AlphaRank - New Billing Codes and Access",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-276",
+    "Date": "2026-07-08 00:00:00"
+  },
+  {
+    "Change": "Beta Tab: EIP New Product Codes & EPC Clean Up",
+    "Notes": NaN,
+    "Jira Ticket": "PROD-268",
+    "Date": "2026-07-08 00:00:00"
+  }
+]

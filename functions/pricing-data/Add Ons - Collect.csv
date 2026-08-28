@@ -1,0 +1,24 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+Product Category,Add Ons,,,,,
+,,,,,,
+,,,,Values,,
+Product Of (Primary Service),Primary Service Category,Internal Product Name,Internal Notes for Sales,One Time Fees,Annual Fees,Transaction Fees
+MeridianLink Collect,Add On - Document Delivery,Mailing (1-5 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,1625,,2.57
+,,Mailing (21-40 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,14.25
+,,Mailing (41-60 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,26.25
+,,Mailing (61-80 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,30.7
+,,Mailing (6-20 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,9.25
+,,Mailing (81-100 Page Envelope) ML Collect,Setup is per envelope/document. Quote all fees for FSSI to cover all envelope sizes.,0,,34
+,Add On - MeridianLink Consulting,MeridianLink Collect Core Data Mapping,Quote pricing.  Price is not actually -$1234.00,-1234,,
+,Add On - MeridianLink Insight,MeridianLink Insight for Collect Tier 1 (>=$10B AUM,pricing is based on a percentage of what the customer is paying for Collect.,5000,9500,
+,,MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 1  (>=$4M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,7500,
+,,MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 2  (>=$3M & <$4M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,6480,
+,,MeridianLink Insight for Collect Tier 2 (>=$1B & <$10B AUM) Level 3  (<$3M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5880,
+,,MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 1  (>=$3M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5880,
+,,MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 2  (>=$2M & <$3M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5000,
+,,MeridianLink Insight for Collect Tier 3 (>=$500M & <$1B AUM) Level 3  (<$2M in 60+ Consumer Delinquencies,pricing is based on a percentage of what the customer is paying for Collect.,5000,5000,
+,,MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 1  (>=$2M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5000,
+,,MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 2  (>=$1M & <$2M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5000,
+,,MeridianLink Insight for Collect Tier 4 (<$500M AUM) Level 3  (<$1M in 60+ Consumer Delinquencies),pricing is based on a percentage of what the customer is paying for Collect.,5000,5000,
+,Add On - Data Integration,(CPI) Collateral Protection Insurance,FKA SWBC,0,,

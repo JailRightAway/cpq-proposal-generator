@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeridianLink CPQ - Proposal Generator</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #2a2a2a;
+      line-height: 1.6;
+      color: #e0e0e0;
+      min-height: 100vh;
+      overflow-x: hidden !important;
+      width: 100%;
+    }
+
+    .header {
+      background: white;
+      color: #004b8e;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+      border-bottom: 4px solid #00d4ff;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .header-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      height: 80px;
+      width: auto;
+      animation: fadeIn 0.8s ease-in;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 20px 15px;
+      }
+
+      .logo {
+        height: 60px;
+      }
+
+      .header h1 {
+        font-size: 1.5rem !important;
+      }
+
+      .header p {
+        font-size: 0.85rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 12px 8px;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .header h1 {
+        font-size: 1.1rem !important;
+        margin-bottom: 4px;
+      }
+
+      .header p {
+        font-size: 0.7rem !important;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .header {
+        padding: 10px 6px;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .header h1 {
+        font-size: 1rem !important;
+      }
+
+      .header p {
+        font-size: 0.65rem !important;
+      }
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #004b8e;
+    }
+
+    .header p {
+      font-size: 1rem;
+      opacity: 0.8;
+      font-weight: 400;
+      color: #004b8e;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 12px;
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .container {
+        padding: 8px;
+      }
+    }
+
+    .section {
+      width: 100%;
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .section {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .section:hover {
+      box-shadow: 0 12px 48px rgba(0, 212, 255, 0.15);
+      border-color: #00d4ff;
+      transform: translateY(-2px);
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: #00d4ff;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #004b8e;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section h2 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .section h2 {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+      }
+    }
+
+    #yearlyTiersContainer {
+      width: 100%;
+      display: grid;
+      gap: 15px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+
+    .yearly-tier-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .yearly-tier-row {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .yearly-tier-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      #yearlyTiersContainer {
+        gap: 12px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #00d4ff;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      max-width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #333;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+      transition: all 0.3s ease;
+      -webkit-appearance: none;
+      appearance: none;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 480px) {
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      .form-group label {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 8px 10px;
+        font-size: 16px;
+        min-height: 40px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .form-group label {
+        font-size: 0.65rem;
+        margin-bottom: 3px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 7px 8px;
+        font-size: 14px;
+        min-height: 38px;
+      }
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #00d4ff;
+      box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.2);
+      background-color: #333;
+    }
+
+    .form-group input::placeholder {
+      color: #666;
+    }
+
+    .form-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      animation: fadeIn 0.5s ease 0.1s both;
+      box-sizing: border-box;
+    }
+
+    .form-row:nth-child(1) { animation-delay: 0.1s; }
+    .form-row:nth-child(2) { animation-delay: 0.2s; }
+    .form-row:nth-child(3) { animation-delay: 0.3s; }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 44px;
+      box-sizing: border-box;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 480px) {
+      .btn {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 40px;
+      }
+
+      .btn-secondary {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #004b8e 0%, #0066cc 100%);
+      color: white;
+      border: 2px solid #00d4ff;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0066cc 0%, #0080ff 100%);
+      box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: #004b8e;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .btn-secondary:hover {
+      background-color: #0066cc;
+      box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .button-group {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .button-group .btn {
+        margin: 0;
+      }
+
+      .button-group .btn + .btn {
+        margin-top: 10px;
+      }
+    }
+
+    .btn-danger {
+      background-color: #ff4757;
+      color: white;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+    }
+
+    .btn-danger:hover {
+      background-color: #ff3838;
+      box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+    }
+
+    .status {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      border-left: 4px solid;
+      animation: slideIn 0.4s ease;
+    }
+
+    .status.success {
+      background-color: rgba(76, 175, 80, 0.2);
+      color: #4caf50;
+      border-left-color: #4caf50;
+    }
+
+    .status.error {
+      background-color: rgba(255, 71, 87, 0.2);
+      color: #ff4757;
+      border-left-color: #ff4757;
+    }
+
+    .status.info {
+      background-color: rgba(0, 212, 255, 0.2);
+      color: #00d4ff;
+      border-left-color: #00d4ff;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Ensure all elements stay within viewport */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="email"],
+    select {
+      max-width: 100%;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      box-sizing: border-box;
+      overflow: visible;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #2a2a2a;
+      table-layout: fixed;
+    }
+
+    @media (max-width: 480px) {
+      table {
+        margin: 15px 0;
+      }
+    }
+
+    table thead {
+      background: linear-gradient(135deg, #004b8e 0%, #0066cc 100%);
+      border-bottom: 3px solid #00d4ff;
+    }
+
+    table th {
+      padding: 14px;
+      text-align: left;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      color: #e0e0e0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    table tbody tr {
+      transition: all 0.2s ease;
+    }
+
+    table tbody tr:hover {
+      background-color: #333;
+      box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      table th, table td {
+        padding: 10px;
+        font-size: 0.75rem;
+      }
+
+      table th {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      table {
+        display: block;
+        margin: 0;
+      }
+
+      table thead {
+        display: none;
+      }
+
+      table tbody {
+        display: block;
+      }
+
+      table tr {
+        display: block;
+        background: #2a2a2a;
+        border: 1px solid #333;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      table th, table td {
+        display: block;
+        padding: 8px;
+        border: none;
+        text-align: right;
+        position: relative;
+        padding-left: 45%;
+        word-break: break-word;
+        font-size: 0.75rem;
+      }
+
+      table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 8px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        color: #00d4ff;
+        text-align: left;
+      }
+
+      table button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 375px) {
+      table tr {
+        margin-bottom: 8px;
+      }
+
+      table th, table td {
+        padding: 6px;
+        padding-left: 40%;
+        font-size: 0.65rem;
+      }
+
+      table td:before {
+        left: 6px;
+        font-size: 0.55rem;
+      }
+
+      table input {
+        font-size: 12px !important;
+      }
+    }
+
+    .summary-card {
+      background: linear-gradient(135deg, #004b8e 0%, #0066cc 100%);
+      border: 2px solid #00d4ff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 15px 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+    }
+
+    .summary-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 212, 255, 0.3);
+    }
+
+    .summary-card h4 {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .summary-card .amount {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #00ff88;
+      text-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .summary-card {
+        padding: 20px;
+      }
+
+      .summary-card .amount {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .summary-card {
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      .summary-card h4 {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+      }
+
+      .summary-card .amount {
+        font-size: 1.5rem;
+      }
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #00d4ff;
+    }
+
+    .loading.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .spinner {
+      border: 4px solid #333;
+      border-top: 4px solid #00d4ff;
+      border-right: 4px solid #0066cc;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .error-message {
+      color: #ff4757;
+      font-size: 0.85rem;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background-color: rgba(255, 71, 87, 0.1);
+      border-left: 3px solid #ff4757;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .error-message {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+      }
+
+      .status {
+        font-size: 0.85rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <img src="meridianlink-logo.jpg" alt="MeridianLink" class="logo">
+      <div class="header-text">
+        <h1>CPQ Proposal Generator</h1>
+        <p>Create custom pricing proposals in minutes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="statusMessage" class="status hidden"></div>
+
+    <!-- Customer Information -->
+    <div class="section">
+      <h2>Customer Information</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Company Name *</label>
+          <input type="text" id="customerName" placeholder="Customer company name" required>
+        </div>
+        <div class="form-group">
+          <label>Contact Name *</label>
+          <input type="text" id="contactName" placeholder="Full name" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Selection -->
+    <div class="section">
+      <h2>Products & Services</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Contract Length (Years) *</label>
+          <input type="number" id="contractYears" min="1" max="10" value="3">
+        </div>
+        <div class="form-group">
+          <label>Product Type *</label>
+          <select id="productType" onchange="loadProductModules()">
+            <option value="">Select type...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Product/Module *</label>
+          <select id="productModule" onchange="loadProductOptions()">
+            <option value="">Select product...</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row" id="volumeRow" class="hidden">
+        <div class="form-group">
+          <label>Monthly Volume (# of loans/apps) *</label>
+          <input type="number" id="volumeInput" min="0" placeholder="Enter monthly volume">
+        </div>
+        <div class="form-group">
+          <label>Year 1 Tier</label>
+          <input type="text" id="matchedTier" readonly placeholder="Tier will display here">
+        </div>
+      </div>
+      <!-- Year-by-year tier selectors will be added here dynamically -->
+      <div id="yearlyTiersContainer"></div>
+      <button class="btn btn-secondary" onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- Pricing Table -->
+    <div class="section hidden" id="pricingSection">
+      <h2>Line Items</h2>
+      <div class="table-wrapper">
+        <table id="lineItemsTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Year</th>
+              <th>Volume</th>
+              <th>Implementation Fee</th>
+              <th>Per App Fee</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="lineItemsBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section hidden" id="summarySection">
+      <h2>Proposal Summary</h2>
+      <div class="summary-card">
+        <h4>Estimated Total</h4>
+        <div class="amount" id="totalAmount">$0.00</div>
+      </div>
+      <button class="btn btn-primary" onclick="generateProposal()">Generate Proposal</button>
+    </div>
+  </div>
+
+  <script>
+    let lineItems = [];
+    let productsData = {};
+
+    // Load product types on page load
+    async function loadProducts() {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        productsData = data.data || {};
+
+        const typeSelect = document.getElementById('productType');
+        typeSelect.innerHTML = '<option value="">Select type...</option>';
+
+        Object.keys(productsData).sort().forEach(type => {
+          const option = document.createElement('option');
+          option.value = type;
+          option.textContent = type;
+          typeSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error('Error loading products:', error);
+        showStatus('Error loading products', 'error');
+      }
+    }
+
+    async function loadProductModules() {
+      const type = document.getElementById('productType').value;
+      const moduleSelect = document.getElementById('productModule');
+      const volumeRow = document.getElementById('volumeRow');
+
+      moduleSelect.innerHTML = '<option value="">Select product...</option>';
+      volumeRow.classList.add('hidden');
+
+      if (!type || !productsData[type]) return;
+
+      // Group products by module name
+      const modules = {};
+      productsData[type].forEach(product => {
+        const moduleName = product.moduleName;
+        if (!modules[moduleName]) {
+          modules[moduleName] = [];
+        }
+        modules[moduleName].push(product);
+      });
+
+      Object.keys(modules).sort().forEach(moduleName => {
+        const option = document.createElement('option');
+        option.value = moduleName;
+        option.textContent = moduleName;
+        option.dataset.products = JSON.stringify(modules[moduleName]);
+        moduleSelect.appendChild(option);
+      });
+    }
+
+    async function loadProductOptions() {
+      const moduleSelect = document.getElementById('productModule');
+      const volumeRow = document.getElementById('volumeRow');
+      const volumeInput = document.getElementById('volumeInput');
+      const matchedTier = document.getElementById('matchedTier');
+      const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
+
+      // Store available tiers for this module
+      if (!selectedOption || !selectedOption.dataset.products) {
+        volumeRow.classList.add('hidden');
+        return;
+      }
+
+      const products = JSON.parse(selectedOption.dataset.products);
+
+      if (products.length === 0) {
+        volumeRow.classList.add('hidden');
+        return;
+      }
+
+      // Store tier info on the volume input element for later lookup
+      volumeInput.dataset.tiers = JSON.stringify(products);
+
+      if (products.length === 1) {
+        // Only one tier - no need for volume input
+        volumeRow.classList.add('hidden');
+      } else {
+        // Multiple tiers - show volume input
+        volumeRow.classList.remove('hidden');
+        volumeInput.value = '';
+        matchedTier.value = '';
+
+        // Add event listener for volume changes
+        volumeInput.onchange = updateMatchedTier;
+        volumeInput.oninput = updateMatchedTier;
+      }
+
+      // Clear year volume inputs when product changes (so old tier data isn't used)
+      yearlyTierSelections = {};
+      updateYearlyTierSelectors();
+    }
+
+    function updateMatchedTier() {
+      const volumeInput = document.getElementById('volumeInput');
+      const matchedTier = document.getElementById('matchedTier');
+      const volume = parseInt(volumeInput.value) || 0;
+
+      if (!volumeInput.dataset.tiers) return;
+
+      const tiers = JSON.parse(volumeInput.dataset.tiers);
+      const matched = findTierForVolume(tiers, volume);
+
+      if (matched) {
+        matchedTier.value = matched.tier;
+        // Store the matched product for later use
+        volumeInput.dataset.matchedProduct = JSON.stringify(matched);
+        // Update yearly tier selectors when volume is matched
+        updateYearlyTierSelectors();
+      } else {
+        matchedTier.value = '';
+        volumeInput.dataset.matchedProduct = '';
+      }
+    }
+
+    function findTierForVolume(tiers, volume) {
+      // Sort tiers by tierMin to ensure we check in order
+      const sortedTiers = [...tiers].sort((a, b) => a.tierMin - b.tierMin);
+
+      console.log(`Finding tier for volume ${volume}:`, sortedTiers.map(t => ({ name: t.tier || t.tierName, min: t.tierMin, max: t.tierMax })));
+
+      for (const tier of sortedTiers) {
+        const tierMin = tier.tierMin || 0;
+        const tierMax = tier.tierMax || Infinity;
+
+        if (volume >= tierMin && volume <= tierMax) {
+          console.log(`  → Matched: ${tier.tier || tier.tierName} (${tierMin}-${tierMax})`);
+          return tier;
+        }
+      }
+
+      console.log(`  → No tier found for volume ${volume}`);
+      return null;
+    }
+
+    function addProduct() {
+      const type = document.getElementById('productType').value;
+      const volumeInput = document.getElementById('volumeInput');
+      const volumeRow = document.getElementById('volumeRow');
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+
+      if (!type) {
+        showStatus('Please select a product type', 'error');
+        return;
+      }
+
+      let product;
+
+      if (volumeRow.classList.contains('hidden')) {
+        // No volume selection needed - use first product from module
+        const moduleSelect = document.getElementById('productModule');
+        const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
+        if (!selectedOption.dataset.products) {
+          showStatus('Please select a product', 'error');
+          return;
+        }
+        product = JSON.parse(selectedOption.dataset.products)[0];
+      } else {
+        // Volume-based selection required
+        const volume = parseInt(volumeInput.value);
+        if (isNaN(volume) || !volumeInput.dataset.matchedProduct) {
+          showStatus('Please enter a valid monthly volume', 'error');
+          return;
+        }
+
+        product = JSON.parse(volumeInput.dataset.matchedProduct);
+      }
+
+      // Create a line item for each year with volume entered
+      for (let year = 1; year <= contractYears; year++) {
+        let volume = 0;
+        let yearTierData = null;
+
+        if (year === 1) {
+          // Year 1 uses the main volume input
+          volume = parseInt(volumeInput.value) || 0;
+          yearTierData = volumeInput.dataset.matchedProduct ? JSON.parse(volumeInput.dataset.matchedProduct) : product;
+        } else {
+          // Years 2+ use yearly volume selections
+          const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
+          if (!yearVolumeInput || !yearVolumeInput.value) {
+            continue; // Skip this year if no volume entered
+          }
+          volume = parseInt(yearVolumeInput.value) || 0;
+          // Get tier from yearlyTierSelections
+          yearTierData = yearlyTierSelections[year] ? JSON.parse(yearlyTierSelections[year]) : product;
+        }
+
+        if (volume <= 0) continue;
+
+        // Calculate per-file fee from services
+        let perFileFee = 0;
+        if (yearTierData.services) {
+          for (const [serviceName, servicePrice] of Object.entries(yearTierData.services)) {
+            if (serviceName.toLowerCase().includes('per') &&
+                (serviceName.toLowerCase().includes('file') || serviceName.toLowerCase().includes('app'))) {
+              perFileFee = servicePrice;
+              break;
+            }
+          }
+        }
+
+        // Fallback to direct property if available
+        if (perFileFee === 0 && yearTierData.perFileFee) {
+          perFileFee = yearTierData.perFileFee;
+        }
+
+        let monthlyCommitment = perFileFee * volume;
+
+        const item = {
+          id: `item_${Date.now()}_Y${year}`,
+          ...product,
+          year: year,
+          volume: volume,
+          perFileFee: perFileFee,
+          monthlyCommitment: monthlyCommitment,
+          implementationFee: (year === 1) ? (product.oneTimeFee || 0) : 0,
+          overriddenPerFileFee: null,
+          overriddenImplementationFee: (year === 1) ? null : 0  // Year 2+ has no implementation fee
+        };
+
+        lineItems.push(item);
+      }
+
+      updateUI();
+      volumeInput.value = '';
+      document.getElementById('matchedTier').value = '';
+      for (let year = 2; year <= contractYears; year++) {
+        const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
+        if (yearVolumeInput) yearVolumeInput.value = '';
+        const yearTierDisplay = document.getElementById(`yearTierDisplay_${year}`);
+        if (yearTierDisplay) yearTierDisplay.value = '';
+      }
+      yearlyTierSelections = {};
+      showStatus(`Product added for ${contractYears} year(s)`, 'success');
+    }
+
+    function removeProduct(itemId) {
+      lineItems = lineItems.filter(item => item.id !== itemId);
+      updateUI();
+    }
+
+    function updateUI() {
+      const pricingSection = document.getElementById('pricingSection');
+      const summarySection = document.getElementById('summarySection');
+
+      if (lineItems.length > 0) {
+        pricingSection.classList.remove('hidden');
+        summarySection.classList.remove('hidden');
+        updateTable();
+        updateSummary();
+      } else {
+        pricingSection.classList.add('hidden');
+        summarySection.classList.add('hidden');
+      }
+    }
+
+    // Store yearly tier selections
+    let yearlyTierSelections = {};
+
+    // Initialize event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      const contractYearsInput = document.getElementById('contractYears');
+      contractYearsInput.addEventListener('change', updateYearlyTierSelectors);
+
+      // Initialize on load
+      updateYearlyTierSelectors();
+    });
+
+    function updateYearlyTierSelectors() {
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+      const container = document.getElementById('yearlyTiersContainer');
+      const volumeInput = document.getElementById('volumeInput');
+
+      if (!volumeInput.dataset.tiers) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let tiers;
+      try {
+        if (!volumeInput.dataset.tiers) {
+          console.error('[updateYearlyTierSelectors] volumeInput.dataset.tiers is empty or null!');
+          container.innerHTML = '';
+          return;
+        }
+        tiers = JSON.parse(volumeInput.dataset.tiers);
+        console.log('[updateYearlyTierSelectors] Loaded', tiers.length, 'tiers:', tiers.map(t => ({
+          name: t.tier || t.tierName,
+          min: t.tierMin,
+          max: t.tierMax,
+          perFileFee: t.perFileFee
+        })));
+      } catch (e) {
+        console.error('[updateYearlyTierSelectors] Error parsing tiers:', e);
+        container.innerHTML = '';
+        return;
+      }
+
+      // Create new container for yearly selectors
+      container.innerHTML = '';
+
+      if (contractYears > 1) {
+        for (let year = 2; year <= contractYears; year++) {
+          const row = document.createElement('div');
+          row.className = 'yearly-tier-row';
+
+          // Volume input group
+          const volumeGroup = document.createElement('div');
+          volumeGroup.className = 'form-group';
+
+          const volumeLabel = document.createElement('label');
+          volumeLabel.textContent = `Year ${year} Volume (# of loans/apps)`;
+
+          const input = document.createElement('input');
+          input.type = 'number';
+          input.id = `yearVolume_${year}`;
+          input.min = '0';
+          input.placeholder = 'Enter monthly volume';
+          input.onchange = () => updateYearlyVolume(year, input.value, tiers);
+          input.oninput = () => updateYearlyVolume(year, input.value, tiers);
+
+          volumeGroup.appendChild(volumeLabel);
+          volumeGroup.appendChild(input);
+          row.appendChild(volumeGroup);
+
+          // Tier display group
+          const tierGroup = document.createElement('div');
+          tierGroup.className = 'form-group';
+
+          const tierLabel = document.createElement('label');
+          tierLabel.textContent = `Year ${year} Tier`;
+
+          const matchDisplay = document.createElement('input');
+          matchDisplay.type = 'text';
+          matchDisplay.id = `yearTierDisplay_${year}`;
+          matchDisplay.readOnly = true;
+          matchDisplay.placeholder = 'Tier will display here';
+
+          tierGroup.appendChild(tierLabel);
+          tierGroup.appendChild(matchDisplay);
+          row.appendChild(tierGroup);
+
+          container.appendChild(row);
+        }
+      } else {
+        container.innerHTML = '';
+      }
+    }
+
+    function updateYearlyVolume(year, volume, allTiers) {
+      const volumeValue = parseInt(volume) || 0;
+      const matchDisplay = document.getElementById(`yearTierDisplay_${year}`);
+
+      if (!volumeValue) {
+        delete yearlyTierSelections[year];
+        matchDisplay.value = '';
+        updateSummary();
+        return;
+      }
+
+      // Find matching tier for this volume
+      const matchedTier = findTierForVolume(allTiers, volumeValue);
+      console.log(`Year ${year}, Volume ${volumeValue}: Matched Tier =`, matchedTier);
+
+      if (!matchedTier) {
+        showStatus(`No tier found for volume ${volumeValue}`, 'error');
+        delete yearlyTierSelections[year];
+        matchDisplay.value = '';
+        updateSummary();
+        return;
+      }
+
+      // Validate: tier cannot be lower than previous year
+      if (year > 1 && yearlyTierSelections[year - 1]) {
+        const prevTier = JSON.parse(yearlyTierSelections[year - 1]);
+        if (matchedTier.tierMin < prevTier.tierMin) {
+          const prevTierName = prevTier.tier || prevTier.tierName || 'Unknown';
+          const minVolumeNeeded = prevTier.tierMin;
+          showStatus(`Year ${year} volume must be at least ${minVolumeNeeded} to match ${prevTierName} or higher (cannot go to a lower tier)`, 'error');
+          // Don't clear the input - let the user see what they typed and adjust it
+          matchDisplay.value = '';
+          delete yearlyTierSelections[year];
+          updateSummary();
+          return;
+        }
+      }
+
+      // Store the matched tier
+      yearlyTierSelections[year] = JSON.stringify(matchedTier);
+      matchDisplay.value = matchedTier.tier || matchedTier.tierName || 'Unknown';
+      updateSummary();
+    }
+
+    function updateTable() {
+      const tbody = document.getElementById('lineItemsBody');
+      tbody.innerHTML = '';
+
+      lineItems.forEach(item => {
+        const row = document.createElement('tr');
+        const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+
+        row.innerHTML = `
+          <td data-label="Product">${item.name}</td>
+          <td data-label="Year">Year ${item.year}</td>
+          <td data-label="Volume">${item.volume} apps/mo</td>
+          <td data-label="Implementation Fee"><input type="number" step="0.01" value="${implFee}" onchange="updateItemFee('${item.id}', 'implementation', this.value)" placeholder="Implementation Fee" ${item.year > 1 ? 'disabled' : ''} style="width: 100%;"></td>
+          <td data-label="Per App Fee"><input type="number" step="0.01" value="${perAppFee}" onchange="updateItemFee('${item.id}', 'perApp', this.value)" placeholder="Per App Fee" style="width: 100%;"></td>
+          <td data-label="Action"><button class="btn btn-danger" onclick="removeProduct('${item.id}')" style="width: 100%; margin: 0;">Remove</button></td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      // Add platform fee line item for Mortgage products
+      const hasMortgage = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
+      if (hasMortgage) {
+        const platformFeeRow = document.createElement('tr');
+        platformFeeRow.style.borderTop = '2px solid #00d4ff';
+        platformFeeRow.style.fontWeight = '600';
+
+        const platformFee = window.platformFee || 425;
+        platformFeeRow.innerHTML = `
+          <td data-label="Product">MeridianLink Mortgage Platform Fee (Billed Monthly)</td>
+          <td data-label="Year">—</td>
+          <td data-label="Volume">—</td>
+          <td data-label="Implementation Fee">—</td>
+          <td data-label="Per App Fee"><input type="number" step="0.01" value="${platformFee}" onchange="updatePlatformFee(this.value)" placeholder="Platform Fee" style="width: 100%;"></td>
+          <td data-label="Action">—</td>
+        `;
+        tbody.appendChild(platformFeeRow);
+      }
+    }
+
+    function updatePlatformFee(value) {
+      window.platformFee = parseFloat(value) || 0;
+      updateSummary();
+    }
+
+    function updateItemFee(itemId, feeType, value) {
+      const item = lineItems.find(i => i.id === itemId);
+      if (item) {
+        const feeValue = parseFloat(value) || 0;
+        if (feeType === 'implementation') {
+          item.overriddenImplementationFee = feeValue;
+        } else if (feeType === 'perApp') {
+          item.overriddenPerFileFee = feeValue;
+          // Recalculate monthly commitment
+          item.monthlyCommitment = feeValue * (item.volume || 0);
+        }
+        updateSummary();
+      }
+    }
+
+    function updateItemQuantity(itemId, quantity) {
+      const item = lineItems.find(i => i.id === itemId);
+      if (item) {
+        item.quantity = parseInt(quantity) || 1;
+        updateSummary();
+      }
+    }
+
+    function updateItemTier(itemId, tier) {
+      const item = lineItems.find(i => i.id === itemId);
+      if (item) {
+        item.year1Tier = tier || null;
+      }
+    }
+
+    function updateSummary() {
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+      const platformFee = window.platformFee || 425;
+
+      let year1Setup = 0;
+      let contractTotal = 0;
+      let yearlyBreakdown = {};
+
+      // Get tier for each year
+      for (let year = 1; year <= contractYears; year++) {
+        let yearlyMonthly = 0;
+
+        lineItems.forEach(item => {
+          const implFee = (year === 1) ?
+            (item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee) :
+            0;  // Setup fee only in year 1
+
+          let perFileFee = item.perFileFee;
+
+          // Use yearly tier selection if available
+          if (yearlyTierSelections[year]) {
+            const yearTier = JSON.parse(yearlyTierSelections[year]);
+            perFileFee = yearTier.perFileFee || item.perFileFee;
+          }
+
+          // Apply per-file fee override if it exists (stored on item)
+          if (item.overriddenPerFileFee !== null) {
+            perFileFee = item.overriddenPerFileFee;
+          }
+
+          const monthlyCommitment = perFileFee * (item.volume || 0);
+
+          if (year === 1) {
+            year1Setup += implFee;
+          }
+
+          yearlyMonthly += monthlyCommitment;
+        });
+
+        // Add platform fee for each year
+        yearlyMonthly += platformFee;
+
+        const yearlyTotal = (year === 1) ? (year1Setup + yearlyMonthly * 12) : (yearlyMonthly * 12);
+        yearlyBreakdown[year] = yearlyTotal;
+        contractTotal += yearlyTotal;
+      }
+
+      const label = contractYears > 1
+        ? `${contractYears}-Year Total`
+        : 'Year 1 Total';
+
+      document.getElementById('totalAmount').textContent = `$${contractTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      document.querySelector('.summary-card h4').textContent = label;
+
+      // Store for proposal generation
+      window.yearlyBreakdown = yearlyBreakdown;
+      window.platformFee = platformFee;
+    }
+
+    function updateDiscountInput() {
+      const label = document.getElementById('discountLabel');
+      const type = document.getElementById('discountType').value;
+      label.textContent = type === 'percentage' ? 'Discount Percentage (%)' : 'Discount Amount ($)';
+      document.getElementById('discountValue').addEventListener('change', updateSummary);
+    }
+
+    async function generateProposal() {
+      const customerName = document.getElementById('customerName').value;
+
+      if (!customerName || lineItems.length === 0) {
+        showStatus('Please enter customer name and add products', 'error');
+        return;
+      }
+
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+      const platformFee = window.platformFee || 425;
+
+      // Build yearly tier info
+      const yearlyTiers = {};
+      for (let year = 1; year <= contractYears; year++) {
+        if (yearlyTierSelections[year]) {
+          yearlyTiers[year] = JSON.parse(yearlyTierSelections[year]);
+        }
+      }
+
+      const proposalData = {
+        customerName: customerName,
+        customerContact: document.getElementById('contactName').value,
+        billingAddress: {},
+        lineItems: lineItems.map(item => {
+          const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+          const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+          const monthlyCommitment = perAppFee * (item.volume || 0);
+
+          return {
+            productName: item.name,
+            tier: item.tier || item.year1Tier || 'None',
+            volume: item.volume || null,
+            perFileFee: perAppFee,
+            monthlyCommitment: monthlyCommitment,
+            setupFee: implFee,
+            annualFee: item.annualFee || 0,
+            year: item.year
+          };
+        }),
+        contractTermYears: contractYears,
+        yearlyTiers: yearlyTiers,
+        platformFee: platformFee
+      };
+
+      try {
+        showStatus('Generating proposal...', 'info');
+        console.log('Fetching /api/proposals/generate...');
+        const response = await fetch('/api/proposals/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(proposalData)
+        });
+
+        console.log('Response status:', response.status, response.ok);
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Response error:', errorText);
+          throw new Error(`Server error: ${response.status}`);
+        }
+
+        console.log('Getting blob...');
+        const blob = await response.blob();
+        console.log('Blob size:', blob.size);
+
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.docx`;
+        document.body.appendChild(link);
+        console.log('Triggering download...');
+        link.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(link);
+
+        showStatus('Proposal generated successfully!', 'success');
+      } catch (error) {
+        console.error('Error:', error);
+        showStatus(`Error: ${error.message}`, 'error');
+      }
+    }
+
+    function showStatus(message, type) {
+      const el = document.getElementById('statusMessage');
+      el.textContent = message;
+      el.className = `status ${type}`;
+      el.classList.remove('hidden');
+      if (type === 'success') {
+        setTimeout(() => el.classList.add('hidden'), 5000);
+      }
+    }
+
+    // Initialize
+    loadProducts();
+  </script>
+</body>
+</html>

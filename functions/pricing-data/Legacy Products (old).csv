@@ -1,0 +1,207 @@
+LEGACY Product Name,Date Removed
+Customer Credit Access,2019-01-01
+Removed App Portal from setup discount since guided setup is not standard,2019-01-01
+Removed Home Banking SSO from AddOn to avoid confusion around AP+ vs A la Carte,2019-02-01
+Remove Conmar fee for Standard Adverse Action form,2019-02-01
+"Make Ascensus docs a standard forms vendor. Therefore, removed special pricing from price card.",2019-03-01
+FIS Systematic core system,2019-05-01
+RC01,2019-05-01
+"Removed CUNA Protection Advisor (IWC), Frost Financial, IQQ, and Lender's Protection as vendors we have a separate charge for",2019-08-01
+Removed standard XpressCollect discounts (customer loyalty and ramp-up),2019-08-01
+Calcubot,2019-08-01
+Rate Reset (replaced with Rate Reset programs for PreApproval API and Direct Core Reset),2020-03-01
+LPQ Web Service Licensing (added back March 2021),2020-05-01
+Social Media Integration removed from AP Plus package,2020-08-01
+SavvyMoney,2020-09-01
+XpressCollect and MLX Insight Promotions (expired July 2020),2020-09-01
+Experian Precise ID and Precise ID with KIQ (replaced by Experian CrossCore PreciseID versions),2020-11-01
+"App Portal ""Lite Implementation""",2020-12-01
+XA Fast Track module,2020-12-01
+Equifax Credit Reports,2020-12-01
+Experian Credit Reports,2020-12-01
+Equifax Retail Banking,2020-12-01
+Equifax Retail Banking with Pre-Screen of 1,2020-12-01
+Xpress Sign Pro for iPad,2020-12-01
+Deluxe Detect with IDA (vendor sunset),2020-12-01
+Deluxe IDA (vendor sunset),2020-12-01
+In the Lead Consumer Credit Reports,2021-03-01
+VueCentric Consumer Credit Reports,2021-03-01
+Debit Bureau - Early Warning Services (EWS),2021-03-01
+In brand SSO (Active Directory) -- temporary removal to revamp implementation to confirm to latest standards before resuming sales,2021-03-01
+LoanAce Consumer Credit Reports,2021-04-01
+eMagic Consumer Credit Reports,2021-04-01
+On the Go Consumer Credit Reports,2021-04-01
+SBA PPP Module,2021-05-01
+DecisionLender - Account Opening Module,2021-07-01
+First Close integration,2021-07-01
+Black Book Enhanced VIN Matching,2021-07-01
+Kelley Blue Book Motorcycle Values,2021-07-01
+Reynold and Reynolds Contracts Direct Lending (Finance Companies),2021-07-01
+Reynold and Reynolds Contracts Indirect Lending,2021-07-01
+Reynold and Reynolds Contracts Lease Retail,2021-07-01
+Reynold and Reynolds Forms,2021-07-01
+Wolters Kluwer Contracts Direct Lending (Banks and Credit Unions),2021-07-01
+Document Mapping (deposits) - DecisionLender,2021-07-01
+Document Mapping (overage) - DecisionLender4 Opening,2021-07-01
+Document Mapping (loans + deposits) - DecisionLender,2021-07-01
+National-Level Criminal Records Alias Lead Generator from National Background Data (TazCloud User),2021-08-01
+National-Level Criminal Records Lead Generator from National Background Data (TazCloud User),2021-08-01
+State-Level Criminal Records Lead Generator from National Background Data (TazCloud User),2021-08-01
+National-Level Criminal Records Alias Lead Generator from National Background Data (Not a TazCloud User),2021-08-01
+National-Level Criminal Records Lead Generator from National Background Data (Not a TazCloud User),2021-08-01
+State-Level Criminal Records Lead Generator from National Background Data (Not a TazCloud User),2021-08-01
+Reverse Migrations,2021-08-01
+ScanShell 3100D with OCR software,2021-08-01
+ScanShell 800 or 2000 with OCR software,2021-08-01
+Engage Prospecting,2021-10-01
+"Engage TEM: Direct Mail (Postcard, Self Mailer, and Letter)",2021-10-01
+Engage TEM: Email,2021-10-01
+Engage TEM: Reward Gift Card,2021-10-01
+Engage TEM: Reward Cash Back,2021-10-01
+Engage TEM: Custom Creative Design,2021-10-01
+Engage TEM: Prescreen,2021-10-01
+DecisionLender- Experian Precise ID,2021-12-01
+Deluxe Detect (Vendor sunset),2021-12-01
+Deluxe Match Fee (Vendor sunset),2021-12-01
+Data Storage- Mortgage (active ML Mortgage Clients),2022-01-01
+Process and Strategy Maintenance (ML Consulting),2022-01-01
+Consumer Documents (Application Portal v1/v2),2022-01-01
+FiServ Inegrasys,2022-03-01
+Paradata Export,2022-03-01
+DecisionLender4 CBD,2022-03-01
+DecisionLender4 BizChex,2022-03-01
+DecisionLender4 Experian Clarity Score,2022-03-01
+DecisionLender4 Archive files - SFTP monthly Folder Delivery,2022-03-01
+Engage - Data Integration & Management Tier 1 (>$1B AUM),2022-04-01
+Engage - Data Integration & Management Tier 2 (<$1B AUM),2022-04-01
+Engage - Data Integration & Management Tier 3 (<$250M AUM),2022-04-01
+United One Resources - Settlement Services,2022-04-01
+L3APPS Export,2022-06-01
+Document Mapping (loans + deposits),2022-06-01
+Decisioning as a Service (DaaS),2022-10-01
+VPN Configuration,2023-01-01
+Equifax eIDverifier ,2023-01-01
+Equifax eIDCompare,2023-01-01
+Equifax eIDCompare with eIDVerifier,2023-01-01
+Document Mapping (deposits) - ML Entry,2023-04-01
+Document Mapping (loans) - ML Entry,2023-04-01
+Relationship360 All In,2023-04-01
+Explore Marketing - Custom Creative Design,2023-04-01
+Explore Marketing - Direct Mail - Letter,2023-04-01
+Explore Marketing - Direct Mail - Postcard,2023-04-01
+Explore Marketing - Direct Mail - Self Mailer,2023-04-01
+Explore Marketing - Email,2023-04-01
+Explore Marketing - Reward Gift Card,2023-04-01
+AccountChek VOA - 30 Day (Monthly Minimum Option),2023-04-01
+AccountChek VOA - 60 Day (Monthly Minimum Option),2023-04-01
+AccountChek VOA - 90 Day (Monthly Minimum Option),2023-04-01
+AccountChek VOA - One Time (Monthly Minimum Option),2023-04-01
+Wayfinder (Consumer),2023-04-01
+What-If Simulator (Consumer),2023-04-01
+DealerTrack eContracting Authoritative Copy Conversion (ACC) (Consumer),2023-08-01
+Premium Plus Support (Consumer),2023-08-01
+MeridianLink Portal Mortgage,2023-09-01
+"MeridianLink Portal Mortgage - AccountChek (30,60,90 day and one time monitoring)",2023-09-01
+MeridianLink Portal Mortgage - Site Analytics,2023-09-01
+MeridianLink Portal - Additional Portal (Mortgage),2023-09-01
+MeridianLink Portal - Custom URL (Mortgage),2023-09-01
+MeridianLink Portal - Equifax InstaTouch (Mortgage),2023-09-01
+MeridianLink Portal - Home Banking SSO (Mortgage),2023-09-01
+MeridianLink Mortgage Access Full Story Additional User,2023-10-01
+"MeridianLink Mortgage Access Full Story Tier 1 (20,000 sessions/month)",2023-10-01
+"MeridianLink Mortgage Access Full Story Tier 2 (10,000 sessions/month)",2023-10-01
+MeridianLink Mortgage Access Full Story Tier 3 (4000 sessions/month),2023-10-01
+MeridianLink Mortgage Access Full Story Tier 4 (1500 sessions/month),2023-10-01
+Engage - Card Module Tier 1 (>$1B AUM),2023-10-01
+Engage - Card Module Tier 2 ($500M-$1B AUM),2023-10-01
+Engage - Card Module Tier 3 ($250M-$500M AUM),2023-10-01
+Engage - Card Module Tier 4 (<$250M AUM),2023-10-01
+Engage - Account Module Tier 1 (>$1B AUM),2023-10-01
+Engage - Account Module Tier 2 ($500M-$1B AUM),2023-10-01
+Engage - Account Module Tier 3 ($250M-$500M AUM),2023-10-01
+Engage - Account Module Tier 4 (<$250M AUM),2023-10-01
+Engage - Additional Data Integration & Management ,2023-10-01
+Engage - Consumer Lending Module Tier 1 (>$1B AUM),2023-10-01
+Engage - Consumer Lending Module Tier 2 ($500M-$1B AUM),2023-10-01
+Engage - Consumer Lending Module Tier 3 ($250M-$500M AUM),2023-10-01
+Engage - Consumer Lending Module Tier 4 (<$250M AUM),2023-10-01
+Engage - Advanced Modeling,2023-12-01
+Core interface (DecisionLender),2024-01-01
+DataSafe (DecisionLender),2024-01-01
+HYLS (DecisionLender),2024-01-01
+AI Extract (DecisionLender),2024-01-01
+Propay (DecisionLender),2024-01-01
+Decisioning Optimization,2024-01-01
+Verafin - ML Entry Clients,2024-02-01
+Visa Advanced ID Solutions (VAIS),2024-03-01
+DocuSign Enterprise (Mortgage),2024-08-01
+DocuSign ISV Tier 1 (500+ envelopes) (Mortgage),2024-08-01
+DocuSign ISV Tier 2 (400-499 envelopes included) (Mortgage),2024-08-01
+DocuSign ISV Tier 3 (300-399 envelopes included) (Mortgage),2024-08-01
+DocuSign ISV Tier 4 (200-299 envelopes included) (Mortgage),2024-08-01
+DocuSign ISV Tier 5 (100-199 envelopes included) (Mortgage),2024-08-01
+DocuSign ISV Tier 6 (50-99 envelopes included) (Mortgage),2024-08-01
+DocuSign ISV Tier 7 (up to 49 envelopes included) (Mortgage),2024-08-01
+Enhanced Implementation Banks,2024-08-01
+Enhanced Implementation CU,2024-08-01
+Enhanced Implementation Opening,2024-08-01
+Enhanced Implementation Small Business,2024-08-01
+CCM Credit Card,2024-09-01
+CCM Interface with OSI,2024-09-01
+CPS,2024-09-01
+Image Transfer,2024-10-01
+Fintel Connect,2024-10-01
+Engage- Tech Enabled Marketing - Gift Cards Letter - P-1,2025-01-01
+Engage Tech Enabled Marketing - Home Banking -NCR,2025-01-01
+Engage- Tech Enabled Marketing- Email- D1,2025-01-01
+Engage- Tech Enabled Marketing- Email- G1,2025-01-01
+Engage Lite Tier 1 (>$1B AUM),2025-01-01
+Engage Lite Tier 2 ($500M-$1B AUM),2025-01-01
+Engage Lite Tier 3 ($250M-$500M AUM),2025-01-01
+Engage Lite Tier 4 (<$250M AUM),2025-01-01
+Explore - MC MPA Data Services,2025-01-01
+Explore Marketing - Direct Mail - Postcard,2025-01-01
+Explore Marketing - Direct Mail - Self Mailer,2025-01-01
+Explore Marketing - Email,2025-01-01
+Explore Marketing - Reward Gift Card,2025-01-01
+Explore Tech Enabled Marketing - Email- D-1,2025-01-01
+Explore Tech Enabled Marketing - Email- G-1,2025-01-01
+Explore Tech Enabled Marketing - Gift Cards Letter - P-1,2025-01-01
+Explore - MC MPA Total Txn Tier 1: >25M,2025-01-01
+Explore - MC MPA Total Txn Tier 2: 10M-25M,2025-01-01
+Explore - MC MPA Total Txn Tier 3: 5M-10M,2025-01-01
+Explore - MC MPA Total Txn Tier 4: 2.5M-5M,2025-01-01
+Explore - MC MPA Total Txn Tier 5: 1M-2.5M,2025-01-01
+Explore - MC MPA Total Txn Tier 6: Up to 1M,2025-01-01
+Explore - MC MPA New ETL,2025-01-01
+Explore - MC MPA Active Cards Tier 1: >100M,2025-01-01
+Explore - MC MPA Active Cards Tier 2: 50-100M,2025-01-01
+Explore - MC MPA Active Cards Tier 3: 35-50M,2025-01-01
+Explore - MC MPA Active Cards Tier 4: 25-35M,2025-01-01
+Explore - MC MPA Active Cards Tier 5: 15-25M,2025-01-01
+Explore - MC MPA Active Cards Tier 6: 7.5-15M,2025-01-01
+Explore - MC MPA Active Cards Tier 7: 5-7.5M,2025-01-01
+Explore - MC MPA Active Cards Tier 8: 2-5M,2025-01-01
+Explore - MC MPA Active Cards Tier 9: Up to 2M,2025-01-01
+Inbound Faxing - Additional Storage,2025-01-01
+Application Storage (monthly payment),2025-01-01
+Loan Program Build/Maintenance,2025-02-03
+Mercury Insurance,2025-02-03
+SourcePoint - Settlement Services,2025-02-03
+Document Mapping (loans) - DecisionLender,2025-04-01
+Document Mapping (overage) - DecisionLender4 Consumer,2025-04-01
+Document Mapping (overage) - DecisionLender4 Custom,2025-04-01
+ML Access Foundation Tier 1,2025-05-01
+ML Access Foundation Tier 2,2025-05-01
+ML Access Foundation Tier 3,2025-05-01
+ML Access Foundation Tier 4,2025-05-01
+ML Access Foundation Tier 5,2025-05-01
+ML Access Foundation Tier 6,2025-05-01
+ML Access Foundation Tier 7,2025-05-01
+ML Access Foundation Tier 8,2025-05-01
+MeridianLink Access Premium Tier 1 (Unlimited Monthly Applications),2025-05-01
+MeridianLink Access Premium Tier 2 (8000 Monthly Applications),2025-05-01
+MeridianLink Access Premium Tier 3 (4000 Monthly Applications),2025-05-01
+DecisionLender Training,2025-05-01
+Removed 0 dollar annual and transaction for SavvyMoney,2025-06-01
+Removed Legacy Portal Shared Codes,2025-06-01

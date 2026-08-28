@@ -1,0 +1,18 @@
+.pricing-table-container {
+  overflow-x: auto;
+}
+
+.qty-input,
+.tier-select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.qty-input:focus,
+.tier-select:focus {
+  outline: none;
+  border-color: #004b8e;
+}
