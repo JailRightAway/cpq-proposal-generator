@@ -226,9 +226,7 @@ async function generateProposal(proposalData) {
         children: [
           new ImageRun({
             data: logoBuffer,
-            type: 'jpg',
-            width: { val: 1800, type: 'DXA' },
-            height: { val: 400, type: 'DXA' }
+            type: 'jpg'
           })
         ],
         alignment: AlignmentType.CENTER,
