@@ -114,7 +114,13 @@ function parseProductsFromJson(data) {
           console.log(`[parseProductsFromJson] Detected Direct Consumer Module: ${currentModuleName}`);
         }
 
-        const products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
+        let products;
+        if (currentModuleName.includes('MeridianLink Access')) {
+          console.log(`[parseProductsFromJson] Using parseAccessModule for: ${currentModuleName.substring(0, 50)}`);
+          products = parseAccessModule(currentModuleName, currentModuleHeader, currentServiceLines);
+        } else {
+          products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
+        }
         const type = classifyType(currentModuleName);
         console.log(`[parseProductsFromJson] Module: ${currentModuleName.substring(0, 50)}... → Type: ${type}, Products: ${products.length}`);
         if (products.length > 0 && productsByType[type]) {
@@ -141,7 +147,13 @@ function parseProductsFromJson(data) {
       console.log(`[parseProductsFromJson] Detected Direct Consumer Module (LAST): ${currentModuleName}`);
     }
 
-    const products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
+    let products;
+    if (currentModuleName.includes('MeridianLink Access')) {
+      console.log(`[parseProductsFromJson] Using parseAccessModule for (LAST): ${currentModuleName.substring(0, 50)}`);
+      products = parseAccessModule(currentModuleName, currentModuleHeader, currentServiceLines);
+    } else {
+      products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
+    }
     const type = classifyType(currentModuleName);
     console.log(`[parseProductsFromJson] LAST Module: ${currentModuleName.substring(0, 50)}... → Type: ${type}, Products: ${products.length}`);
     if (products.length > 0 && productsByType[type]) {
