@@ -70,6 +70,8 @@ async function generateProposal(proposalData) {
     year: item.year,
     perFileFee: item.perFileFee,
     perFileFeetype: typeof item.perFileFee,
+    perFileFeeLength: String(item.perFileFee).length,
+    perFileFeeCharCodes: Array.from(String(item.perFileFee)).map(c => c.charCodeAt(0)),
     monthlyCommitment: item.monthlyCommitment
   })), null, 2));
 
@@ -118,7 +120,11 @@ async function generateProposal(proposalData) {
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
       } else {
-        const perFileFeeStr = String(item.perFileFee || '').replace(/^\s+/, '');
+        const perFileFeeStr = String(item.perFileFee || '')
+          .replace(/\n/g, '')
+          .replace(/\r/g, '')
+          .replace(/^\s+/, '')
+          .replace(/\s+$/, '');
         const perFileFee = Number(perFileFeeStr) || 0;
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(perFileFee > 0 ? formatCurrency(perFileFee) : 'N/A', true));
