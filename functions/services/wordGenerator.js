@@ -216,52 +216,31 @@ async function generateProposal(proposalData) {
   let headerParagraphs = [];
   const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
 
-  try {
-    console.log('[wordGenerator] Attempting to load logo from:', logoPath);
-    const logoBuffer = fs.readFileSync(logoPath);
-    console.log('[wordGenerator] Logo loaded successfully, size:', logoBuffer.length);
-    const base64Logo = logoBuffer.toString('base64');
-
-    headerParagraphs.push(
-      new Paragraph({
-        children: [
-          new ImageRun({
-            data: base64Logo,
-            type: 'jpg'
-          })
-        ],
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 200 }
-      })
-    );
-    // Add separator line below logo
-    headerParagraphs.push(
-      new Paragraph({
-        border: {
-          bottom: {
-            color: '000000',
-            space: 1,
-            style: 'single',
-            size: 6
-          }
-        },
-        spacing: { after: 200 }
-      })
-    );
-  } catch (e) {
-    console.error('[wordGenerator] Error loading logo from', logoPath + ':', e.message);
-    // Fallback header text
-    headerParagraphs.push(
-      new Paragraph({
-        text: 'MERIDIANLINK',
-        bold: true,
-        size: 28,
-        color: '004B8E',
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 200 }
-      })
-    );
-  }
+  // Use styled text for header branding
+  headerParagraphs.push(
+    new Paragraph({
+      text: 'MERIDIANLINK',
+      bold: true,
+      size: 28,
+      color: '004B8E',
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 200 }
+    })
+  );
+  // Add separator line below logo
+  headerParagraphs.push(
+    new Paragraph({
+      border: {
+        bottom: {
+          color: '000000',
+          space: 1,
+          style: 'single',
+          size: 6
+        }
+      },
+      spacing: { after: 200 }
+    })
+  );
 
   // Add remaining sections
   sections.push(
