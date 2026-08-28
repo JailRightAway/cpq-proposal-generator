@@ -2,17 +2,29 @@ const { spawn } = require('child_process');
 const path = require('path');
 
 // Try to load helpers from multiple locations (root or functions)
-let getQuarterEndDate;
+let helpers;
 try {
-  ({ getQuarterEndDate } = require('../utils/helpers'));
+  helpers = require('../utils/helpers');
 } catch (e) {
   try {
-    ({ getQuarterEndDate } = require('../../utils/helpers'));
+    helpers = require('../../utils/helpers');
   } catch (e2) {
     console.warn('helpers module not found, using fallback');
-    getQuarterEndDate = () => new Date();
+    helpers = {
+      formatCurrency: (amount) => `$${amount.toFixed(2)}`,
+      getQuarterEndDate: (date = new Date()) => date,
+      getQuarterName: (date = new Date()) => `Q${Math.floor(date.getMonth() / 3) + 1} ${date.getFullYear()}`,
+      formatDate: (date) => date instanceof Date ? date.toLocaleDateString('en-US') : new Date(date).toLocaleDateString('en-US'),
+      calculateDiscount: (base, pct) => base * (pct / 100),
+      calculateSellingPrice: (base, discountAmount, discountPercent) => {
+        const discount = discountPercent ? base * (discountPercent / 100) : (discountAmount || 0);
+        return base - discount;
+      }
+    };
   }
 }
+
+const { getQuarterEndDate } = helpers;
 
 /**
  * Generate a Word document proposal using direct child_process
