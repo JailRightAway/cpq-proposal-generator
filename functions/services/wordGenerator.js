@@ -6,7 +6,8 @@ const path = require('path');
 const TEMPLATE_PATH = path.join(__dirname, '..', 'templates', 'proposal-template.docx');
 
 function formatCurrency(amount) {
-  return `$${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  const numAmount = typeof amount === 'string' ? parseFloat(amount.trim()) : Number(amount) || 0;
+  return `$${numAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 function getDefaultExpirationDate() {
@@ -35,7 +36,7 @@ function createDataCell(text, centered = false) {
     margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
-        text: text,
+        text: String(text).trim(),
         alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT
       })
     ]
@@ -108,8 +109,9 @@ async function generateProposal(proposalData) {
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
       } else {
+        const perFileFee = Number(item.perFileFee) || 0;
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
-        dataCells.push(createDataCell(item.perFileFee > 0 ? formatCurrency(item.perFileFee) : 'N/A', true));
+        dataCells.push(createDataCell(perFileFee > 0 ? formatCurrency(perFileFee) : 'N/A', true));
         dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true));
       }
 
