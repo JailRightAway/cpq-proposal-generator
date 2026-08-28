@@ -1,4 +1,4 @@
-const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun } = require('docx');
+const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer } = require('docx');
 const fs = require('fs');
 const path = require('path');
 
@@ -209,20 +209,20 @@ async function generateProposal(proposalData) {
   );
 
   // Create document matching FUSION template structure
-  // Order: PRICING PROPOSAL → Prepared For/Date → Contract Terms → Primary Services → Annual Investment Summary → Confidentiality Notice
+  // Order: PRICING PROPOSAL → Prepared For/Date → Contract Terms → Primary Services → Annual Investment Summary
   const sections = [];
 
-  // Add logo - always show it
+  // Add logo - load as buffer
   const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
+  let logoBuffer = null;
   if (fs.existsSync(logoPath)) {
     try {
-      const logoBuffer = fs.readFileSync(logoPath);
-      const logoBase64 = logoBuffer.toString('base64');
+      logoBuffer = fs.readFileSync(logoPath);
       sections.push(
         new Paragraph({
           children: [
             new ImageRun({
-              data: logoBase64,
+              data: logoBuffer,
               type: 'jpg',
               width: 1800,
               height: 400
@@ -324,38 +324,44 @@ async function generateProposal(proposalData) {
       width: { size: 100, type: WidthType.PERCENT }
     }),
 
-    new Paragraph({ text: '', spacing: { after: 200 } }),
+    new Paragraph({ text: '', spacing: { after: 200 } })
+  );
 
-    // Disclaimer heading
+  // Create footer with disclaimer
+  const footerParagraphs = [
     new Paragraph({
       text: 'DISCLAIMER:',
-      heading: HeadingLevel.HEADING_3,
-      spacing: { before: 200, after: 100 }
+      bold: true,
+      size: 20,
+      spacing: { before: 200, after: 50 }
     }),
-
-    // Confidentiality Notice
     new Paragraph({
       text: 'This proposal and all materials contained herein are confidential and proprietary to MeridianLink, Inc. This document is intended solely for the use of the recipient and may not be reproduced, distributed, or disclosed to third parties without prior written consent. © 2026 MeridianLink, Inc. All rights reserved.',
       italic: true,
       size: 18,
-      spacing: { before: 0 }
+      spacing: { before: 0, after: 100 }
     })
-  );
+  ];
 
-  // Create document
+  // Create document with footer
   const doc = new Document({
     sections: [{
       properties: {
         page: {
           margins: {
             top: convertInchesToTwip(1),
-            bottom: convertInchesToTwip(1),
+            bottom: convertInchesToTwip(1.5),
             left: convertInchesToTwip(1),
             right: convertInchesToTwip(1)
           }
         }
       },
-      children: sections
+      children: sections,
+      footers: {
+        default: new Footer({
+          children: footerParagraphs
+        })
+      }
     }]
   });
 
