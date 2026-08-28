@@ -199,19 +199,40 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
   }
 
   // Extract tier names and ranges from header row values
-  const tierData = [];
+  // Group by tier name first (multiple columns can have same tier)
+  const tiersByName = {};
   Object.keys(moduleHeader).forEach(columnKey => {
     const tierName = moduleHeader[columnKey];
     if (tierName && typeof tierName === 'string' && tierName.match(/^Tier\s+\d+$/)) {
       const volumeRange = volumeRow[columnKey];
       if (volumeRange) {
-        tierData.push({
+        if (!tiersByName[tierName]) {
+          tiersByName[tierName] = [];
+        }
+        tiersByName[tierName].push({
           columnKey,
           tierName,
           volumeRange: String(volumeRange).trim()
         });
       }
     }
+  });
+
+  // For each tier, pick the column with actual numeric pricing (not ">")
+  const tierData = [];
+  const setupFeeRow = serviceLines.find(line =>
+    String(line['Unnamed: 0'] || '').includes('Setup Fee')
+  );
+
+  Object.entries(tiersByName).forEach(([tierName, columns]) => {
+    // Find the column with numeric pricing in the setup fee row
+    const bestColumn = columns.find(col => {
+      const price = setupFeeRow?.[col.columnKey];
+      const priceStr = String(price || '').trim();
+      return priceStr && priceStr !== '>' && priceStr !== 'NaN' && !isNaN(parseFloat(priceStr));
+    }) || columns[0]; // Fall back to first if none have numeric pricing
+
+    tierData.push(bestColumn);
   });
 
   console.log(`[PricingDataLoader] Access module found ${tierData.length} tiers`);
