@@ -1,6 +1,18 @@
 const { spawn } = require('child_process');
 const path = require('path');
-const { getQuarterEndDate } = require('../utils/helpers');
+
+// Try to load helpers from multiple locations (root or functions)
+let getQuarterEndDate;
+try {
+  ({ getQuarterEndDate } = require('../utils/helpers'));
+} catch (e) {
+  try {
+    ({ getQuarterEndDate } = require('../../utils/helpers'));
+  } catch (e2) {
+    console.warn('helpers module not found, using fallback');
+    getQuarterEndDate = () => new Date();
+  }
+}
 
 /**
  * Generate a Word document proposal using direct child_process

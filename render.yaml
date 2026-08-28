@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cpq-proposal-generator
+    runtime: node
+    buildCommand: cp -r utils functions/ 2>/dev/null || true && npm install && cd functions && npm install
+    startCommand: node functions/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
