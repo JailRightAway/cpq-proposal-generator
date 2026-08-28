@@ -1244,6 +1244,23 @@
           tierGroup.appendChild(matchDisplay);
           row.appendChild(tierGroup);
 
+          // Annual fee display group (only show if the product has annual fees)
+          const annualFeeGroup = document.createElement('div');
+          annualFeeGroup.className = 'form-group';
+
+          const annualFeeLabel = document.createElement('label');
+          annualFeeLabel.textContent = `Year ${year} Annual Fee`;
+
+          const annualFeeDisplay = document.createElement('input');
+          annualFeeDisplay.type = 'text';
+          annualFeeDisplay.id = `yearAnnualFee_${year}`;
+          annualFeeDisplay.readOnly = true;
+          annualFeeDisplay.placeholder = 'Annual fee will display here';
+
+          annualFeeGroup.appendChild(annualFeeLabel);
+          annualFeeGroup.appendChild(annualFeeDisplay);
+          row.appendChild(annualFeeGroup);
+
           container.appendChild(row);
         }
       } else {
@@ -1258,6 +1275,8 @@
       if (!volumeValue) {
         delete yearlyTierSelections[year];
         matchDisplay.value = '';
+        const annualFeeDisplay = document.getElementById(`yearAnnualFee_${year}`);
+        if (annualFeeDisplay) annualFeeDisplay.value = '';
         updateSummary();
         return;
       }
@@ -1270,6 +1289,8 @@
         showStatus(`No tier found for volume ${volumeValue}`, 'error');
         delete yearlyTierSelections[year];
         matchDisplay.value = '';
+        const annualFeeDisplay = document.getElementById(`yearAnnualFee_${year}`);
+        if (annualFeeDisplay) annualFeeDisplay.value = '';
         updateSummary();
         return;
       }
@@ -1283,6 +1304,8 @@
           showStatus(`Year ${year} volume must be at least ${minVolumeNeeded} to match ${prevTierName} or higher (cannot go to a lower tier)`, 'error');
           // Don't clear the input - let the user see what they typed and adjust it
           matchDisplay.value = '';
+          const annualFeeDisplay = document.getElementById(`yearAnnualFee_${year}`);
+          if (annualFeeDisplay) annualFeeDisplay.value = '';
           delete yearlyTierSelections[year];
           updateSummary();
           return;
@@ -1292,6 +1315,17 @@
       // Store the matched tier
       yearlyTierSelections[year] = JSON.stringify(matchedTier);
       matchDisplay.value = matchedTier.tier || matchedTier.tierName || 'Unknown';
+
+      // Display annual fee if available
+      const annualFeeDisplay = document.getElementById(`yearAnnualFee_${year}`);
+      if (annualFeeDisplay) {
+        if (matchedTier.annualFee) {
+          annualFeeDisplay.value = `$${matchedTier.annualFee.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        } else {
+          annualFeeDisplay.value = 'N/A';
+        }
+      }
+
       updateSummary();
     }
 
@@ -1467,45 +1501,43 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
-      // Build line items array - create one entry per product per year
-      let proposalLineItems = [];
-      for (let year = 1; year <= contractYears; year++) {
-        lineItems.forEach(item => {
-          let yearVolume = item.volume;
-          let yearlyTierData = null;
-          let annualFeeForYear = item.annualFee || 0;
+      // Build line items array
+      let proposalLineItems = lineItems.map((item, itemIdx) => {
+        const lineItemsByYear = [];
 
-          // Check if there's a yearly volume override
-          const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
-          if (yearVolumeInput && yearVolumeInput.value) {
-            yearVolume = parseInt(yearVolumeInput.value);
-          }
-
-          // Check if there's a yearly tier selection
-          if (yearlyTierSelections[year]) {
-            yearlyTierData = JSON.parse(yearlyTierSelections[year]);
-            annualFeeForYear = yearlyTierData.annualFee || item.annualFee || 0;
-          }
-
+        for (let year = 1; year <= contractYears; year++) {
           const implFee = (year === 1) ?
             (item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee) :
             0;
 
-          const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
-          const monthlyCommitment = perAppFee * (yearVolume || 0);
+          let perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+          let tierName = item.tier || item.year1Tier || 'None';
+          let annualFeeForYear = item.annualFee || 0;
 
-          proposalLineItems.push({
+          // Check if there's a yearly tier selection
+          if (yearlyTierSelections[year]) {
+            const yearlyTier = JSON.parse(yearlyTierSelections[year]);
+            perAppFee = yearlyTier.perFileFee || perAppFee;
+            tierName = yearlyTier.tierName || tierName;
+            annualFeeForYear = yearlyTier.annualFee || item.annualFee || 0;
+          }
+
+          const monthlyCommitment = perAppFee * (item.volume || 0);
+
+          lineItemsByYear.push({
             productName: item.name,
-            tier: yearlyTierData?.tierName || item.tier || item.year1Tier || 'None',
-            volume: yearVolume || null,
+            tier: tierName,
+            volume: item.volume || null,
             perFileFee: perAppFee,
             monthlyCommitment: monthlyCommitment,
             setupFee: implFee,
             annualFee: annualFeeForYear,
             year: year
           });
-        });
-      }
+        }
+
+        return lineItemsByYear;
+      }).flat();
 
       // Add platform fee as line item for each contract year (Mortgage only)
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
