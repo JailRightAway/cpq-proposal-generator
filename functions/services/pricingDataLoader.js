@@ -350,15 +350,29 @@ function parseModule(moduleName, moduleHeader, serviceLines) {
 function parseVolumeRange(rangeStr) {
   if (!rangeStr) return { min: 0, max: Infinity };
 
-  // Match "(up to X apps)" format
-  const upToMatch = rangeStr.match(/up\s+to\s+([\d,]+)/i);
+  const str = String(rangeStr).trim();
+
+  // Match "Unlimited" or "unlimited"
+  if (/unlimited/i.test(str)) {
+    return { min: 8000, max: Infinity };  // Tier 1 starts at 8000
+  }
+
+  // Match "greater than X" or "X or more"
+  const greaterMatch = str.match(/greater\s+than\s+([\d,]+)/i) || str.match(/^([\d,]+)\s+or\s+more/i);
+  if (greaterMatch) {
+    const min = parseInt(greaterMatch[1].replace(/,/g, ''));
+    return { min, max: Infinity };
+  }
+
+  // Match "(up to X apps)" or "up to X" format
+  const upToMatch = str.match(/up\s+to\s+([\d,]+)/i);
   if (upToMatch) {
     const max = parseInt(upToMatch[1].replace(/,/g, ''));
     return { min: 0, max: max };
   }
 
   // Match "(X-Y apps)" format
-  const rangeMatch = rangeStr.match(/^([\d,]+)-([\d,]+)/);
+  const rangeMatch = str.match(/^([\d,]+)-([\d,]+)/);
   if (rangeMatch) {
     const min = parseInt(rangeMatch[1].replace(/,/g, ''));
     const max = parseInt(rangeMatch[2].replace(/,/g, ''));
@@ -366,7 +380,7 @@ function parseVolumeRange(rangeStr) {
   }
 
   // Match "(X+ apps)" format
-  const plusMatch = rangeStr.match(/^([\d,]+)\+/);
+  const plusMatch = str.match(/^([\d,]+)\+/);
   if (plusMatch) {
     const min = parseInt(plusMatch[1].replace(/,/g, ''));
     return { min, max: Infinity };
