@@ -2,7 +2,7 @@ services:
   - type: web
     name: cpq-proposal-generator
     runtime: node
-    buildCommand: pip install -r requirements.txt && cp -r utils functions/ 2>/dev/null || true && npm install && cd functions && npm install
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: node functions/index.js
     envVars:
       - key: NODE_ENV
