@@ -146,9 +146,146 @@ function parseProductsFromJson(data) {
 }
 
 /**
+ * Special handler for Direct Consumer Module - splits into two product types
+ */
+function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
+  const products = [];
+  const tiers = extractTiersFromHeader(moduleHeader, moduleName, serviceLines);
+
+  if (tiers.length === 0) {
+    console.warn(`[PricingDataLoader] No tiers found for module: ${moduleName}`);
+    return products;
+  }
+
+  console.log(`[PricingDataLoader] Splitting Direct Consumer Module into two products - Found ${tiers.length} tiers`);
+
+  // Create products for "Direct Consumer" using "Direct Consumer Loans Setup Fee"
+  tiers.forEach((tier, tierIdx) => {
+    const product = {
+      id: `prod_${Date.now()}_dc_${tierIdx}`,
+      type: 'Consumer',
+      moduleName: moduleName,
+      name: 'MeridianLink Consumer - Direct Consumer',
+      tier: tier.tierName,
+      tierIndex: tierIdx,
+      tierRange: tier.tierRange,
+      tierMin: tier.tierMin,
+      tierMax: tier.tierMax,
+      columnKey: tier.columnKey,
+      services: {},
+      totalSetupFee: 0,
+      totalAnnualFee: 0
+    };
+
+    // Extract pricing for this tier
+    serviceLines.forEach(serviceLine => {
+      const serviceName = serviceLine['Unnamed: 0'];
+      if (!serviceName) return;
+
+      const serviceNameTrimmed = String(serviceName).trim();
+      const price = serviceLine[tier.columnKey];
+
+      // Only include if it matches Direct Consumer or shared services
+      if (serviceNameTrimmed.includes('Direct Consumer') ||
+          serviceNameTrimmed.includes('Monthly Minimum') ||
+          serviceNameTrimmed.includes('Per Application')) {
+
+        if (typeof price === 'number' && price > 0) {
+          product.services[serviceNameTrimmed] = price;
+
+          if (serviceNameTrimmed.toLowerCase().includes('setup')) {
+            product.totalSetupFee += price;
+          } else {
+            product.totalAnnualFee += price;
+          }
+
+          if (serviceNameTrimmed.toLowerCase().includes('per') &&
+              (serviceNameTrimmed.toLowerCase().includes('app') ||
+               serviceNameTrimmed.toLowerCase().includes('file') ||
+               serviceNameTrimmed.toLowerCase().includes('transaction'))) {
+            product.perFileFee = price;
+          }
+        }
+      }
+    });
+
+    if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
+      product.oneTimeFee = product.totalSetupFee;
+      product.annualFee = product.totalAnnualFee;
+      products.push(product);
+    }
+  });
+
+  // Create products for "ML Opening" using "MeridianLink Opening Setup Fee"
+  tiers.forEach((tier, tierIdx) => {
+    const product = {
+      id: `prod_${Date.now()}_ml_${tierIdx}`,
+      type: 'Consumer',
+      moduleName: moduleName,
+      name: 'ML Opening',
+      tier: tier.tierName,
+      tierIndex: tierIdx,
+      tierRange: tier.tierRange,
+      tierMin: tier.tierMin,
+      tierMax: tier.tierMax,
+      columnKey: tier.columnKey,
+      services: {},
+      totalSetupFee: 0,
+      totalAnnualFee: 0
+    };
+
+    // Extract pricing for this tier
+    serviceLines.forEach(serviceLine => {
+      const serviceName = serviceLine['Unnamed: 0'];
+      if (!serviceName) return;
+
+      const serviceNameTrimmed = String(serviceName).trim();
+      const price = serviceLine[tier.columnKey];
+
+      // Only include if it matches ML Opening or shared services
+      if (serviceNameTrimmed.includes('MeridianLink Opening') ||
+          serviceNameTrimmed.includes('Monthly Minimum') ||
+          serviceNameTrimmed.includes('Per Application')) {
+
+        if (typeof price === 'number' && price > 0) {
+          product.services[serviceNameTrimmed] = price;
+
+          if (serviceNameTrimmed.toLowerCase().includes('setup')) {
+            product.totalSetupFee += price;
+          } else {
+            product.totalAnnualFee += price;
+          }
+
+          if (serviceNameTrimmed.toLowerCase().includes('per') &&
+              (serviceNameTrimmed.toLowerCase().includes('app') ||
+               serviceNameTrimmed.toLowerCase().includes('file') ||
+               serviceNameTrimmed.toLowerCase().includes('transaction'))) {
+            product.perFileFee = price;
+          }
+        }
+      }
+    });
+
+    if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
+      product.oneTimeFee = product.totalSetupFee;
+      product.annualFee = product.totalAnnualFee;
+      products.push(product);
+    }
+  });
+
+  console.log(`[PricingDataLoader] Direct Consumer Module split into ${products.length} products (Direct Consumer + ML Opening)`);
+  return products;
+}
+
+/**
  * Parse a single module into tier-based products
  */
 function parseModule(moduleName, moduleHeader, serviceLines) {
+  // Special case: Split "Direct Consumer Module Volume Plan" into two products
+  if (moduleName.includes('Direct Consumer Module Volume Plan')) {
+    return parseDirectConsumerModule(moduleName, moduleHeader, serviceLines);
+  }
+
   const products = [];
 
   if (!moduleHeader) return products;
