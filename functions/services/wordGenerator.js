@@ -36,8 +36,7 @@ function createDataCell(text, centered = false) {
     children: [
       new Paragraph({
         text: text,
-        alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT,
-        spacing: { line: 240 }
+        alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT
       })
     ]
   });
@@ -145,10 +144,15 @@ async function generateProposal(proposalData) {
       })
     );
 
+    // Create table with column widths
+    const columnCount = isInsight ? 4 : 5;
+    const columnWidth = Math.floor(5000 / columnCount); // 5000 twips per column
+
     primaryServiceSections.push(
       new Table({
         rows: tableRows,
-        width: { size: 100, type: WidthType.PERCENT }
+        width: { size: 100, type: WidthType.PERCENT },
+        columnWidths: Array(columnCount).fill({ size: columnWidth, type: WidthType.DXA })
       })
     );
 
@@ -217,7 +221,7 @@ async function generateProposal(proposalData) {
     new Paragraph({
       text: 'PRICING PROPOSAL',
       bold: true,
-      size: 28,
+      size: 30,
       color: '004B8E',
       alignment: AlignmentType.CENTER,
       spacing: { before: 0, after: 50 }
@@ -285,7 +289,11 @@ async function generateProposal(proposalData) {
 
     new Table({
       rows: summaryRows,
-      width: { size: 100, type: WidthType.PERCENT }
+      width: { size: 100, type: WidthType.PERCENT },
+      columnWidths: [
+        { size: 2500, type: WidthType.DXA },
+        { size: 2500, type: WidthType.DXA }
+      ]
     }),
 
     new Paragraph({ text: '' })
