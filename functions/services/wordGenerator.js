@@ -216,34 +216,35 @@ async function generateProposal(proposalData) {
   let headerParagraphs = [];
   const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
 
-  // Load logo image for header
+  // Try to load logo - prepare media object
+  let logoMediaId = null;
+  let logoData = null;
   try {
-    console.log('[wordGenerator] Loading logo from:', logoPath);
-    const logoBuffer = fs.readFileSync(logoPath);
-    console.log('[wordGenerator] Logo buffer size:', logoBuffer.length);
+    if (fs.existsSync(logoPath)) {
+      logoData = fs.readFileSync(logoPath);
+      logoMediaId = 'meridianlink-logo';
+      console.log('[wordGenerator] Logo file loaded, size:', logoData.length);
+    }
+  } catch (err) {
+    console.error('[wordGenerator] Error reading logo:', err.message);
+  }
 
+  // Add logo to header (with or without image)
+  if (logoData && logoMediaId) {
     headerParagraphs.push(
       new Paragraph({
         children: [
           new ImageRun({
-            data: logoBuffer,
-            type: 'jpeg'
+            data: logoData,
+            type: 'jpeg',
+            altText: 'MeridianLink'
           })
         ],
         alignment: AlignmentType.CENTER,
         spacing: { after: 200 }
       })
     );
-    // Add separator
-    headerParagraphs.push(
-      new Paragraph({
-        border: { bottom: { color: '000000', space: 1, style: 'single', size: 6 } },
-        spacing: { after: 200 }
-      })
-    );
-  } catch (err) {
-    console.error('[wordGenerator] Logo error:', err.message);
-    // Fallback only if absolutely necessary
+  } else {
     headerParagraphs.push(
       new Paragraph({
         text: 'MERIDIANLINK',
@@ -255,6 +256,14 @@ async function generateProposal(proposalData) {
       })
     );
   }
+
+  // Add separator
+  headerParagraphs.push(
+    new Paragraph({
+      border: { bottom: { color: '000000', space: 1, style: 'single', size: 6 } },
+      spacing: { after: 200 }
+    })
+  );
 
   // Add remaining sections
   sections.push(
