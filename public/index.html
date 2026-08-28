@@ -1501,43 +1501,23 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
-      // Build line items array
-      let proposalLineItems = lineItems.map((item, itemIdx) => {
-        const lineItemsByYear = [];
+      // Build line items array - just Year 1 data for the table, annual fees handled in summary
+      let proposalLineItems = lineItems.map(item => {
+        const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+        const monthlyCommitment = perAppFee * (item.volume || 0);
 
-        for (let year = 1; year <= contractYears; year++) {
-          const implFee = (year === 1) ?
-            (item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee) :
-            0;
-
-          let perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
-          let tierName = item.tier || item.year1Tier || 'None';
-          let annualFeeForYear = item.annualFee || 0;
-
-          // Check if there's a yearly tier selection
-          if (yearlyTierSelections[year]) {
-            const yearlyTier = JSON.parse(yearlyTierSelections[year]);
-            perAppFee = yearlyTier.perFileFee || perAppFee;
-            tierName = yearlyTier.tierName || tierName;
-            annualFeeForYear = yearlyTier.annualFee || item.annualFee || 0;
-          }
-
-          const monthlyCommitment = perAppFee * (item.volume || 0);
-
-          lineItemsByYear.push({
-            productName: item.name,
-            tier: tierName,
-            volume: item.volume || null,
-            perFileFee: perAppFee,
-            monthlyCommitment: monthlyCommitment,
-            setupFee: implFee,
-            annualFee: annualFeeForYear,
-            year: year
-          });
-        }
-
-        return lineItemsByYear;
-      }).flat();
+        return {
+          productName: item.name,
+          tier: item.tier || item.year1Tier || 'None',
+          volume: item.volume || null,
+          perFileFee: perAppFee,
+          monthlyCommitment: monthlyCommitment,
+          setupFee: implFee,
+          annualFee: item.annualFee || 0,
+          year: item.year
+        };
+      });
 
       // Add platform fee as line item for each contract year (Mortgage only)
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
