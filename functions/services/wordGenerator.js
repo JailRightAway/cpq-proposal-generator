@@ -220,12 +220,13 @@ async function generateProposal(proposalData) {
     console.log('[wordGenerator] Attempting to load logo from:', logoPath);
     const logoBuffer = fs.readFileSync(logoPath);
     console.log('[wordGenerator] Logo loaded successfully, size:', logoBuffer.length);
+    const base64Logo = logoBuffer.toString('base64');
 
     headerParagraphs.push(
       new Paragraph({
         children: [
           new ImageRun({
-            data: logoBuffer,
+            data: base64Logo,
             type: 'jpg'
           })
         ],
