@@ -99,6 +99,11 @@ function parseProductsFromJson(data) {
     if (isModuleHeader) {
       // Process previous module if exists
       if (currentModuleName && currentServiceLines.length > 0) {
+        // Log if this is the Direct Consumer module
+        if (currentModuleName.includes('Direct Consumer Module Volume Plan')) {
+          console.log(`[parseProductsFromJson] Detected Direct Consumer Module: ${currentModuleName}`);
+        }
+
         const products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
         const type = classifyType(currentModuleName);
         console.log(`[parseProductsFromJson] Module: ${currentModuleName.substring(0, 50)}... → Type: ${type}, Products: ${products.length}`);
@@ -121,6 +126,11 @@ function parseProductsFromJson(data) {
 
   // Process last module
   if (currentModuleName && currentServiceLines.length > 0) {
+    // Log if this is the Direct Consumer module
+    if (currentModuleName.includes('Direct Consumer Module Volume Plan')) {
+      console.log(`[parseProductsFromJson] Detected Direct Consumer Module (LAST): ${currentModuleName}`);
+    }
+
     const products = parseModule(currentModuleName, currentModuleHeader, currentServiceLines);
     const type = classifyType(currentModuleName);
     console.log(`[parseProductsFromJson] LAST Module: ${currentModuleName.substring(0, 50)}... → Type: ${type}, Products: ${products.length}`);
@@ -229,10 +239,15 @@ function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
   // Create products for "ML Opening" using "MeridianLink Opening Setup Fee"
   tiers.forEach((tier, tierIdx) => {
     const product = createProductForSetupType(tierIdx, tier, 'MeridianLink Opening', 'ML Opening');
-    if (product) products.push(product);
+    if (product) {
+      products.push(product);
+    } else {
+      console.warn(`[PricingDataLoader] ML Opening product for tier ${tier.tierName} had no pricing`);
+    }
   });
 
-  console.log(`[PricingDataLoader] Direct Consumer Module split into ${products.length} products (Direct Consumer + ML Opening)`);
+  console.log(`[PricingDataLoader] Direct Consumer Module split into ${products.length} products`);
+  console.log(`[PricingDataLoader] Service lines available:`, serviceLines.map(s => s['Unnamed: 0']).filter(Boolean));
   return products;
 }
 
