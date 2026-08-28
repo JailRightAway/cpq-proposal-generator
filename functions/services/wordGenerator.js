@@ -32,18 +32,11 @@ function createHeaderCell(text) {
 }
 
 function createDataCell(text, centered = false) {
-  // Clean text: remove newlines, extra spaces, trim
-  const cleanText = String(text)
-    .replace(/\n/g, '')
-    .replace(/\r/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-
   return new TableCell({
     margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
-        text: cleanText,
+        text: String(text).trim(),
         alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT
       })
     ]
