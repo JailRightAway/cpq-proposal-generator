@@ -306,12 +306,15 @@ async function generateProposal(proposalData) {
     await tempZip.loadAsync(tempBuffer);
     const tempDocXml = await tempZip.file('word/document.xml').async('string');
 
-    // Extract just the body content from temp
-    const bodyMatch = tempDocXml.match(/<w:body>([\s\S]*?)<\/w:body>/);
-    const newBody = bodyMatch ? bodyMatch[1] : '<w:p><w:pPr></w:pPr></w:p>';
+    // Extract content from temp (excluding section properties to preserve template's header/footer refs)
+    const bodyMatch = tempDocXml.match(/<w:body>([\s\S]*?)<w:sectPr[\s\S]*?<\/w:sectPr>\s*<\/w:body>/);
+    const tempContent = bodyMatch ? bodyMatch[1] : '<w:p><w:pPr></w:pPr></w:p>';
 
-    // Replace body in template, keeping header/footer
-    docXml = docXml.replace(/<w:body>[\s\S]*?<\/w:body>/, `<w:body>${newBody}</w:body>`);
+    // Replace only the content between <w:body> and <w:sectPr>, preserving template's section properties (header/footer refs)
+    docXml = docXml.replace(
+      /<w:body>([\s\S]*?)<w:sectPr/,
+      `<w:body>${tempContent}<w:sectPr`
+    );
 
     // Update the document.xml in the template
     zip.file('word/document.xml', docXml);
