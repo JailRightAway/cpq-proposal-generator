@@ -120,14 +120,10 @@ async function generateProposal(proposalData) {
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
       } else {
-        const perFileFeeStr = String(item.perFileFee || '')
-          .replace(/\n/g, '')
-          .replace(/\r/g, '')
-          .replace(/^\s+/, '')
-          .replace(/\s+$/, '');
-        const perFileFee = Number(perFileFeeStr) || 0;
+        const perFileFee = Number(item.perFileFee) || 0;
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
-        dataCells.push(createDataCell(perFileFee > 0 ? formatCurrency(perFileFee) : 'N/A', true));
+        // Display perFileFee as plain number (no $) to avoid cell wrapping
+        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
         dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true));
       }
 
