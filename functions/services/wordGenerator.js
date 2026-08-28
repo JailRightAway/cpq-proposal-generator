@@ -71,6 +71,15 @@ async function generateProposal(proposalData) {
   const expirationDate = proposalData.expirationDate || getDefaultExpirationDate();
   const yearlyTiers = proposalData.yearlyTiers || {};
 
+  // Debug: log line items to see what we're receiving
+  console.log('[wordGenerator] Line items received:', JSON.stringify(lineItems.map(item => ({
+    productName: item.productName,
+    year: item.year,
+    perFileFee: item.perFileFee,
+    perFileFeetype: typeof item.perFileFee,
+    monthlyCommitment: item.monthlyCommitment
+  })), null, 2));
+
   // Check product types
   const hasMortgage = lineItems.some(item =>
     (item.productName || item.moduleName || '').toLowerCase().includes('mortgage')
