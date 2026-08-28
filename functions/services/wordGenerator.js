@@ -334,7 +334,7 @@ async function generateProposal(proposalData) {
       size: 18,
       spacing: { before: 0 }
     })
-  ];
+  );
 
   // Create document
   const doc = new Document({
