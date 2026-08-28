@@ -235,13 +235,17 @@ function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
   // Create products for "Direct Consumer" using "Direct Consumer Loans Setup Fee"
   tiers.forEach((tier, tierIdx) => {
     const product = createProductForSetupType(tierIdx, tier, 'Direct Consumer', 'MeridianLink Consumer - Direct Consumer');
-    if (product) products.push(product);
+    if (product) {
+      product.moduleName = 'MeridianLink Consumer - Direct Consumer Module Volume Plan';
+      products.push(product);
+    }
   });
 
   // Create products for "ML Opening" using "MeridianLink Opening Setup Fee"
   tiers.forEach((tier, tierIdx) => {
     const product = createProductForSetupType(tierIdx, tier, 'MeridianLink Opening', 'ML Opening');
     if (product) {
+      product.moduleName = 'ML Opening Module';  // Different module name for grouping
       products.push(product);
     } else {
       console.warn(`[PricingDataLoader] ML Opening product for tier ${tier.tierName} had no pricing`);
