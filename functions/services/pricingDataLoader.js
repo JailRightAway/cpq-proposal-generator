@@ -450,11 +450,13 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
  * Classify product type
  */
 function classifyType(moduleName) {
+  // Check compound names first
+  if (moduleName.includes('Mortgage Insight')) return 'Mortgage';
   if (moduleName.includes('Mortgage')) return 'Mortgage';
   if (moduleName.includes('Collect')) return 'Collect';
   if (moduleName.includes('Access')) return 'Access';
-  if (moduleName.includes('Insight')) return 'Insight';
   if (moduleName.includes('Decision Lender')) return 'Decision Lender';
+  if (moduleName.includes('Insight')) return 'Insight';
   if (moduleName.includes('Consumer') || moduleName.includes('Indirect') ||
       moduleName.includes('Business') || moduleName.includes('Home Equity')) return 'Consumer';
   return 'Other';

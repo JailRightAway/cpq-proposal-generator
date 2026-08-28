@@ -38,6 +38,18 @@ function createDataCell(text, centered = false) {
   });
 }
 
+function groupLineItemsByProduct(lineItems) {
+  const grouped = {};
+  lineItems.forEach(item => {
+    const key = item.productName || item.moduleName || 'Unknown';
+    if (!grouped[key]) {
+      grouped[key] = [];
+    }
+    grouped[key].push(item);
+  });
+  return grouped;
+}
+
 async function generateProposal(proposalData) {
   const lineItems = proposalData.lineItems || [];
   const platformFee = proposalData.platformFee || 0;
@@ -50,50 +62,80 @@ async function generateProposal(proposalData) {
     (item.productName || item.moduleName || '').toLowerCase().includes('mortgage')
   );
 
-  // Build Primary Services table rows
-  const primaryServiceRows = [];
+  // Group line items by product
+  const groupedItems = groupLineItemsByProduct(lineItems);
+  const primaryServiceSections = [];
 
-  // Header row
-  primaryServiceRows.push(
-    new TableRow({
-      children: [
-        createHeaderCell('Service / Module'),
-        createHeaderCell('One-Time Fee'),
-        createHeaderCell('Per Transaction'),
-        createHeaderCell('Monthly Minimum')
-      ]
-    })
-  );
+  // Create a separate table for each product
+  Object.entries(groupedItems).forEach(([productName, items]) => {
+    const tableRows = [];
 
-  // Data rows
-  lineItems.forEach((item) => {
-    primaryServiceRows.push(
+    // Header row with Year column
+    tableRows.push(
       new TableRow({
         children: [
-          createDataCell(item.productName || item.moduleName || 'N/A'),
-          createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true),
-          createDataCell(item.perFileFee > 0 ? formatCurrency(item.perFileFee) : 'N/A', true),
-          createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true)
+          createHeaderCell('Year'),
+          createHeaderCell('Service / Module'),
+          createHeaderCell('One-Time Fee'),
+          createHeaderCell('Per Transaction'),
+          createHeaderCell('Monthly Minimum')
         ]
       })
     );
-  });
 
-  // Add platform fee rows for Mortgage products
-  if (hasMortgage && platformFee > 0) {
-    for (let year = 1; year <= contractYears; year++) {
-      primaryServiceRows.push(
+    // Data rows for this product
+    items.forEach((item) => {
+      tableRows.push(
         new TableRow({
           children: [
-            createDataCell(`MeridianLink Mortgage Platform Fee - Year ${year} (Billed Monthly)`),
-            createDataCell('N/A', true),
-            createDataCell('N/A', true),
-            createDataCell(formatCurrency(platformFee), true)
+            createDataCell(String(item.year || 1), true),
+            createDataCell(productName),
+            createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true),
+            createDataCell(item.perFileFee > 0 ? formatCurrency(item.perFileFee) : 'N/A', true),
+            createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true)
           ]
         })
       );
+    });
+
+    // Add platform fee rows for Mortgage products
+    if (hasMortgage && platformFee > 0 && productName.toLowerCase().includes('mortgage')) {
+      for (let year = 1; year <= contractYears; year++) {
+        tableRows.push(
+          new TableRow({
+            children: [
+              createDataCell(String(year), true),
+              createDataCell(`MeridianLink Mortgage Platform Fee - Year ${year} (Billed Monthly)`),
+              createDataCell('N/A', true),
+              createDataCell('N/A', true),
+              createDataCell(formatCurrency(platformFee), true)
+            ]
+          })
+        );
+      }
     }
-  }
+
+    // Add product heading and table
+    primaryServiceSections.push(
+      new Paragraph({
+        text: productName,
+        bold: true,
+        size: 24,
+        spacing: { before: 200, after: 100 }
+      })
+    );
+
+    primaryServiceSections.push(
+      new Table({
+        rows: tableRows,
+        width: { size: 100, type: WidthType.PERCENT }
+      })
+    );
+
+    primaryServiceSections.push(
+      new Paragraph({ text: '', spacing: { after: 100 } })
+    );
+  });
 
   // Build Annual Investment Summary rows
   const summaryRows = [];
@@ -198,11 +240,8 @@ async function generateProposal(proposalData) {
       spacing: { before: 200, after: 100 }
     }),
 
-    // Primary Services table
-    new Table({
-      rows: primaryServiceRows,
-      width: { size: 100, type: WidthType.PERCENT }
-    }),
+    // Primary Services tables (one per product)
+    ...primaryServiceSections,
 
     new Paragraph({ text: '', spacing: { after: 200 } }),
 
