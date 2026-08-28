@@ -102,7 +102,10 @@ function parseProductsFromJson(data) {
     }
 
     if (isModuleHeader) {
-      console.log(`[parseProductsFromJson] Found module header: ${firstCol.substring(0, 60)}`);
+      console.log(`[parseProductsFromJson] Found module header: ${firstCol.substring(0, 80)}`);
+
+      // Log all module names we encounter
+      console.log(`[parseProductsFromJson] FULL MODULE NAME: "${firstCol}"`);
 
       // Process previous module if exists
       if (currentModuleName && currentServiceLines.length > 0) {
@@ -361,10 +364,17 @@ function parseModule(moduleName, moduleHeader, serviceLines) {
     return parseDirectConsumerModule(moduleName, moduleHeader, serviceLines);
   }
 
-  // Special case: Handle "MeridianLink Access - Volume Plan" which uses Consumer tier column names
-  if (moduleName.includes('MeridianLink Access') && moduleName.includes('Volume Plan')) {
-    console.log(`[PricingDataLoader] Detected MeridianLink Access module: ${moduleName}`);
-    return parseAccessModule(moduleName, moduleHeader, serviceLines);
+  // Special case: Handle "MeridianLink Access" (both Mortgage and Consumer versions)
+  // Consumer Access is for tier-based pricing, Mortgage Access is standard
+  if (moduleName.includes('MeridianLink Access')) {
+    // Check if this is Mortgage Access (which has "Mortgage" in the name)
+    const isMortgageAccess = moduleName.includes('Mortgage');
+
+    if (!isMortgageAccess) {
+      console.log(`[PricingDataLoader] Detected Consumer MeridianLink Access module: ${moduleName}`);
+      return parseAccessModule(moduleName, moduleHeader, serviceLines);
+    }
+    // Mortgage Access is handled by standard parsing below
   }
 
   const products = [];
