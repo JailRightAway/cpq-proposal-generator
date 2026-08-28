@@ -175,6 +175,61 @@ async function generateProposal(proposalData) {
     );
   });
 
+  // Add platform fee as separate line item if it exists and there are mortgage products
+  if (hasMortgage && platformFee > 0) {
+    const platformFeeRows = [];
+
+    // Header row
+    platformFeeRows.push(
+      new TableRow({
+        children: [
+          createHeaderCell('Service / Module'),
+          createHeaderCell('Year'),
+          createHeaderCell('One-Time Fee'),
+          createHeaderCell('Per Transaction'),
+          createHeaderCell('Monthly Minimum')
+        ]
+      })
+    );
+
+    // Add platform fee row for each year
+    for (let year = 1; year <= contractYears; year++) {
+      platformFeeRows.push(
+        new TableRow({
+          children: [
+            createDataCell('MeridianLink Mortgage Platform Fee'),
+            createDataCell(String(year), true),
+            createDataCell('N/A', true),
+            createDataCell('N/A', true),
+            createDataCell(formatCurrency(platformFee * 12), true)
+          ]
+        })
+      );
+    }
+
+    primaryServiceSections.push(
+      new Paragraph({
+        text: 'MeridianLink Mortgage Platform Fee',
+        bold: true,
+        size: 22,
+        color: '004B8E',
+        spacing: { before: 50, after: 50 }
+      })
+    );
+
+    primaryServiceSections.push(
+      new Table({
+        rows: platformFeeRows,
+        width: { size: 100, type: WidthType.PERCENT },
+        columnWidths: Array(5).fill(Math.floor(5000 / 5))
+      })
+    );
+
+    primaryServiceSections.push(
+      new Paragraph({ text: '', spacing: { after: 50 } })
+    );
+  }
+
   // Calculate yearly costs for Annual Investment Summary
   let totalSetup = lineItems.reduce((sum, item) => sum + (item.setupFee || item.oneTimePrice || 0), 0);
   let contractTotal = 0;
