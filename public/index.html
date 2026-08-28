@@ -1467,23 +1467,45 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
-      // Build line items array
-      let proposalLineItems = lineItems.map(item => {
-        const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
-        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
-        const monthlyCommitment = perAppFee * (item.volume || 0);
+      // Build line items array - create one entry per product per year
+      let proposalLineItems = [];
+      for (let year = 1; year <= contractYears; year++) {
+        lineItems.forEach(item => {
+          let yearVolume = item.volume;
+          let yearlyTierData = null;
+          let annualFeeForYear = item.annualFee || 0;
 
-        return {
-          productName: item.name,
-          tier: item.tier || item.year1Tier || 'None',
-          volume: item.volume || null,
-          perFileFee: perAppFee,
-          monthlyCommitment: monthlyCommitment,
-          setupFee: implFee,
-          annualFee: item.annualFee || 0,
-          year: item.year
-        };
-      });
+          // Check if there's a yearly volume override
+          const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
+          if (yearVolumeInput && yearVolumeInput.value) {
+            yearVolume = parseInt(yearVolumeInput.value);
+          }
+
+          // Check if there's a yearly tier selection
+          if (yearlyTierSelections[year]) {
+            yearlyTierData = JSON.parse(yearlyTierSelections[year]);
+            annualFeeForYear = yearlyTierData.annualFee || item.annualFee || 0;
+          }
+
+          const implFee = (year === 1) ?
+            (item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee) :
+            0;
+
+          const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+          const monthlyCommitment = perAppFee * (yearVolume || 0);
+
+          proposalLineItems.push({
+            productName: item.name,
+            tier: yearlyTierData?.tierName || item.tier || item.year1Tier || 'None',
+            volume: yearVolume || null,
+            perFileFee: perAppFee,
+            monthlyCommitment: monthlyCommitment,
+            setupFee: implFee,
+            annualFee: annualFeeForYear,
+            year: year
+          });
+        });
+      }
 
       // Add platform fee as line item for each contract year (Mortgage only)
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
