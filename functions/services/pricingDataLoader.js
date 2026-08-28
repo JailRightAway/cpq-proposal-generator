@@ -91,8 +91,10 @@ function parseProductsFromJson(data) {
     const firstCol = String(row['Unnamed: 0']).trim();
 
     // Check if this is a module header (starts with "MeridianLink" or "Decision Lender")
+    // But exclude service lines (Setup Fee, Annual Fee, etc.)
     const isModuleHeader = (firstCol.startsWith('MeridianLink') || firstCol.startsWith('Decision Lender')) &&
-      (firstCol.includes('Module') || firstCol.includes('Plan') || firstCol.includes('Volume'));
+      (firstCol.includes('Module') || firstCol.includes('Plan') || firstCol.includes('Volume') || (firstCol.includes('Insight') && (firstCol.includes('Mortgage') || firstCol.includes('Collect')))) &&
+      !firstCol.includes('Setup Fee') && !firstCol.includes('Annual Fee');
 
     if (isModuleHeader) {
       // Process previous module if exists
@@ -450,13 +452,13 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
  * Classify product type
  */
 function classifyType(moduleName) {
-  // Check compound names first
-  if (moduleName.includes('Mortgage Insight')) return 'Mortgage';
+  // Check Insight FIRST to catch "Insight for X" variants before checking X
+  if (moduleName.includes('Insight')) return 'Insight';
+  // Then check other specific types
+  if (moduleName.includes('Decision Lender')) return 'Decision Lender';
   if (moduleName.includes('Mortgage')) return 'Mortgage';
   if (moduleName.includes('Collect')) return 'Collect';
   if (moduleName.includes('Access')) return 'Access';
-  if (moduleName.includes('Decision Lender')) return 'Decision Lender';
-  if (moduleName.includes('Insight')) return 'Insight';
   if (moduleName.includes('Consumer') || moduleName.includes('Indirect') ||
       moduleName.includes('Business') || moduleName.includes('Home Equity')) return 'Consumer';
   return 'Other';

@@ -1,25 +1,18 @@
 const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip } = require('docx');
 
-const ML_BLUE = { r: 0, g: 73, b: 142 };
-
 function formatCurrency(amount) {
   return `$${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 function createHeaderCell(text) {
   return new TableCell({
-    text: text,
     shading: { fill: '004B8E' },
-    textVAlign: VerticalAlign.center,
     margins: { top: 100, bottom: 100, left: 100, right: 100 },
     children: [
       new Paragraph({
         text: text,
-        run: {
-          bold: true,
-          color: 'FFFFFF',
-          size: 22
-        }
+        bold: true,
+        color: 'FFFFFF'
       })
     ]
   });
@@ -27,7 +20,6 @@ function createHeaderCell(text) {
 
 function createDataCell(text, centered = false) {
   return new TableCell({
-    text: text,
     margins: { top: 100, bottom: 100, left: 100, right: 100 },
     children: [
       new Paragraph({
@@ -56,6 +48,7 @@ async function generateProposal(proposalData) {
   const contractYears = proposalData.contractTermYears || 1;
   const customerName = proposalData.customerName || 'N/A';
   const customerContact = proposalData.customerContact || '';
+  const yearlyTiers = proposalData.yearlyTiers || {};
 
   // Check if any mortgage products
   const hasMortgage = lineItems.some(item =>
@@ -137,7 +130,9 @@ async function generateProposal(proposalData) {
     );
   });
 
-  // Build Annual Investment Summary rows
+  // Calculate yearly costs for Annual Investment Summary
+  let totalSetup = lineItems.reduce((sum, item) => sum + (item.setupFee || item.oneTimePrice || 0), 0);
+  let contractTotal = 0;
   const summaryRows = [];
 
   // Header row
@@ -149,10 +144,6 @@ async function generateProposal(proposalData) {
       ]
     })
   );
-
-  // Calculate yearly costs
-  let totalSetup = lineItems.reduce((sum, item) => sum + (item.setupFee || item.oneTimePrice || 0), 0);
-  let contractTotal = 0;
 
   for (let year = 1; year <= contractYears; year++) {
     let yearMonthly = lineItems.reduce((sum, item) => {
@@ -166,7 +157,7 @@ async function generateProposal(proposalData) {
     const yearTotal = (year === 1 ? totalSetup : 0) + (yearMonthly * 12);
     contractTotal += yearTotal;
 
-    const yearTier = (proposalData.yearlyTiers || {})[year];
+    const yearTier = yearlyTiers[year];
     const tierName = yearTier ? yearTier.tierName : 'Standard';
 
     summaryRows.push(
@@ -189,16 +180,53 @@ async function generateProposal(proposalData) {
     })
   );
 
-  // Create document sections
+  // Create document with structure matching FUSION template
   const sections = [
+    // Contract Terms at TOP
+    new Paragraph({
+      text: 'Contract Terms',
+      heading: HeadingLevel.HEADING_2,
+      spacing: { before: 0, after: 100 }
+    }),
+
+    new Paragraph({
+      children: [
+        new TextRun({ text: 'Initial Term: ', bold: true }),
+        new TextRun({ text: `${contractYears} year${contractYears > 1 ? 's' : ''}` })
+      ],
+      spacing: { after: 100 }
+    }),
+
+    ...(yearlyTiers && contractYears > 1 ? [
+      new Paragraph({
+        children: [
+          new TextRun({ text: 'Tier Schedule: ', bold: true }),
+          new TextRun({
+            text: Array.from({ length: contractYears }, (_, i) => {
+              const tier = yearlyTiers[i + 1];
+              return `Year ${i + 1}: ${tier ? tier.tierName : 'Standard'}`;
+            }).join(' | ')
+          })
+        ],
+        spacing: { after: 100 }
+      })
+    ] : []),
+
+    new Paragraph({
+      children: [
+        new TextRun({ text: 'Renewal: ', bold: true }),
+        new TextRun({ text: 'Automatic renewal terms will be negotiated as contract end approaches' })
+      ],
+      spacing: { after: 200 }
+    }),
+
     // Title
     new Paragraph({
       text: 'PRICING PROPOSAL',
-      heading: HeadingLevel.HEADING_1,
       bold: true,
       size: 32,
       color: '004B8E',
-      spacing: { after: 200 }
+      spacing: { before: 200, after: 100 }
     }),
 
     // Prepared For
@@ -221,7 +249,7 @@ async function generateProposal(proposalData) {
       spacing: { after: 200 }
     }),
 
-    // Executive Summary heading
+    // Executive Summary
     new Paragraph({
       text: 'Executive Summary',
       heading: HeadingLevel.HEADING_2,
@@ -233,26 +261,22 @@ async function generateProposal(proposalData) {
       spacing: { after: 200 }
     }),
 
-    // Primary Services heading
+    // Primary Services
     new Paragraph({
       text: 'Primary Services',
       heading: HeadingLevel.HEADING_2,
       spacing: { before: 200, after: 100 }
     }),
 
-    // Primary Services tables (one per product)
     ...primaryServiceSections,
 
-    new Paragraph({ text: '', spacing: { after: 200 } }),
-
-    // Annual Investment Summary heading
+    // Annual Investment Summary
     new Paragraph({
       text: 'Annual Investment Summary',
       heading: HeadingLevel.HEADING_2,
       spacing: { before: 200, after: 100 }
     }),
 
-    // Summary table
     new Table({
       rows: summaryRows,
       width: { size: 100, type: WidthType.PERCENT }
@@ -260,45 +284,7 @@ async function generateProposal(proposalData) {
 
     new Paragraph({ text: '', spacing: { after: 200 } }),
 
-    // Contract Terms heading
-    new Paragraph({
-      text: 'Contract Terms',
-      heading: HeadingLevel.HEADING_2,
-      spacing: { before: 200, after: 100 }
-    }),
-
-    new Paragraph({
-      children: [
-        new TextRun({ text: 'Initial Term: ', bold: true }),
-        new TextRun({ text: `${contractYears} year${contractYears > 1 ? 's' : ''}` })
-      ],
-      spacing: { after: 100 }
-    }),
-
-    ...(proposalData.yearlyTiers && contractYears > 1 ? [
-      new Paragraph({
-        children: [
-          new TextRun({ text: 'Tier Schedule: ', bold: true }),
-          new TextRun({
-            text: Array.from({ length: contractYears }, (_, i) => {
-              const tier = (proposalData.yearlyTiers || {})[i + 1];
-              return `Year ${i + 1}: ${tier ? tier.tierName : 'Standard'}`;
-            }).join(' | ')
-          })
-        ],
-        spacing: { after: 100 }
-      })
-    ] : []),
-
-    new Paragraph({
-      children: [
-        new TextRun({ text: 'Renewal: ', bold: true }),
-        new TextRun({ text: 'Automatic renewal terms will be negotiated as contract end approaches' })
-      ],
-      spacing: { after: 200 }
-    }),
-
-    // Confidentiality notice
+    // Confidentiality Notice
     new Paragraph({
       text: 'This proposal and all materials contained herein are confidential and proprietary to MeridianLink, Inc. This document is intended solely for the use of the recipient and may not be reproduced, distributed, or disclosed to third parties without prior written consent. © 2026 MeridianLink, Inc. All rights reserved.',
       italic: true,
@@ -324,7 +310,6 @@ async function generateProposal(proposalData) {
     }]
   });
 
-  // Generate buffer
   return await Packer.toBuffer(doc);
 }
 
