@@ -351,6 +351,11 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
       }
     });
 
+    // Debug: log final totals for Tier 1
+    if (tierIdx === 0) {
+      console.log(`[parseAccessModule] Tier 1 - FINAL: totalSetupFee=${product.totalSetupFee}, totalAnnualFee=${product.totalAnnualFee}`);
+    }
+
     // Always add products, even with $0 pricing (so all tiers are available for matching)
     product.oneTimeFee = product.totalSetupFee;
     product.annualFee = product.totalAnnualFee;
