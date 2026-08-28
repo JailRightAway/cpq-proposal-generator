@@ -152,7 +152,7 @@ async function generateProposal(proposalData) {
       new Table({
         rows: tableRows,
         width: { size: 100, type: WidthType.PERCENT },
-        columnWidths: Array(columnCount).fill({ size: columnWidth, type: WidthType.DXA })
+        columnWidths: Array(columnCount).fill(columnWidth)
       })
     );
 
@@ -290,10 +290,7 @@ async function generateProposal(proposalData) {
     new Table({
       rows: summaryRows,
       width: { size: 100, type: WidthType.PERCENT },
-      columnWidths: [
-        { size: 2500, type: WidthType.DXA },
-        { size: 2500, type: WidthType.DXA }
-      ]
+      columnWidths: [2500, 2500]
     }),
 
     new Paragraph({ text: '' })
