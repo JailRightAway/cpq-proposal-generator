@@ -266,6 +266,11 @@ function parseModule(moduleName, moduleHeader, serviceLines) {
     return parseDirectConsumerModule(moduleName, moduleHeader, serviceLines);
   }
 
+  // Special case: Handle "MeridianLink Access - Volume Plan" which uses Consumer tier column names
+  if (moduleName.includes('MeridianLink Access') && moduleName.includes('Volume Plan')) {
+    console.log(`[PricingDataLoader] Detected MeridianLink Access module: ${moduleName}`);
+  }
+
   const products = [];
 
   if (!moduleHeader) return products;
