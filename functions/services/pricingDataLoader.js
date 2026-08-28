@@ -290,7 +290,12 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
       if (!serviceName) return;
 
       const serviceNameTrimmed = String(serviceName).trim();
-      const price = serviceLine[tierInfo.columnKey];
+      let price = serviceLine[tierInfo.columnKey];
+
+      // Convert string prices (with $ and commas) to numbers
+      if (typeof price === 'string') {
+        price = parseFloat(price.replace(/[$,]/g, ''));
+      }
 
       if (typeof price === 'number' && price > 0) {
         product.services[serviceNameTrimmed] = price;
