@@ -233,7 +233,7 @@ async function generateProposal(proposalData) {
   // Build content sections for the proposal body
   const contentSections = [
     new Paragraph({
-      text: 'PRICING PROPOSAL',
+      text: '',
       bold: true,
       size: 30,
       color: '004B8E',
