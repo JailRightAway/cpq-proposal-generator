@@ -232,8 +232,8 @@ async function generateProposal(proposalData) {
           new ImageRun({
             data: logoImage,
             type: logoType,
-            width: { val: 2000, type: WidthType.DXA }, // ~1.4 inches
-            height: { val: 450, type: WidthType.DXA }
+            width: 1800, // EMUs (~1.3 inches)
+            height: 400
           })
         ],
         alignment: AlignmentType.CENTER,
