@@ -118,9 +118,9 @@ async function generateProposal(proposalData) {
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
       } else {
-        const perFileFee = Number(item.perFileFee) || 0;
+        const perFileFee = Number(String(item.perFileFee).trim()) || 0;
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
-        dataCells.push(createDataCell(perFileFee > 0 ? formatCurrency(perFileFee) : 'N/A', true));
+        dataCells.push(createDataCell(perFileFee > 0 ? formatCurrency(perFileFee).trim() : 'N/A', true));
         dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true));
       }
 
