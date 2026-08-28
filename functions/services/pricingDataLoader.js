@@ -309,7 +309,7 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
     products.push(product);
   });
 
-  console.log(`[PricingDataLoader] Access module created ${products.length} products with ranges:`, products.map(p => `${p.tier}: ${p.tierMin}-${p.tierMax === Infinity ? '∞' : p.tierMax}`).join(' | '));
+  console.log(`[PricingDataLoader] Access module created ${products.length} products:`, products.map(p => `${p.tier}(${p.tierMin}-${p.tierMax === Infinity ? '∞' : p.tierMax}) setup=$${p.oneTimeFee} annual=$${p.annualFee}`).join(' | '));
   return products;
 }
 
