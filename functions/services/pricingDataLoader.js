@@ -203,6 +203,68 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
   });
 
   console.log(`[PricingDataLoader] Access module found ${tierData.length} tiers`);
+  console.log(`[PricingDataLoader] Access tier data before range parsing:`, tierData.map(t => `${t.tierName}: "${t.volumeRange}"`).join(' | '));
+
+  // Parse ranges and build tier boundaries
+  // First pass: parse all upper bounds and handle special cases
+  const tiersByBound = []; // Array of {tierName, upperBound, tierNum}
+  tierData.forEach((tier) => {
+    const tierNum = parseInt(tier.tierName.match(/\d+/)[0]);
+    let upperBound = null;
+
+    if (tier.volumeRange === '>' || tier.volumeRange === '>') {
+      // Tier 1 is unlimited, Tier 6 is lowest
+      upperBound = tierNum === 1 ? Infinity : (tierNum === 6 ? 500 : null);
+    } else {
+      const rangeObj = parseVolumeRange(tier.volumeRange);
+      upperBound = rangeObj.max;
+    }
+
+    tiersByBound.push({
+      tierName: tier.tierName,
+      tierNum: tierNum,
+      upperBound: upperBound,
+      columnKey: tier.columnKey,
+      volumeRange: tier.volumeRange
+    });
+  });
+
+  // Sort by upper bound ascending (lowest tier first)
+  tiersByBound.sort((a, b) => {
+    if (a.upperBound === Infinity) return 1;
+    if (b.upperBound === Infinity) return -1;
+    return a.upperBound - b.upperBound;
+  });
+
+  console.log(`[PricingDataLoader] Access tiers sorted by bound:`, tiersByBound.map(t => `${t.tierName}: up to ${t.upperBound === Infinity ? '∞' : t.upperBound}`).join(' | '));
+
+  // Second pass: assign min/max based on sorted order
+  tiersByBound.forEach((tier, idx) => {
+    if (tier.upperBound === Infinity) {
+      // Tier 1: start from 8000
+      tier.min = 8000;
+      tier.max = Infinity;
+    } else if (idx === 0) {
+      // First tier (lowest bound): start from 0
+      tier.min = 0;
+      tier.max = tier.upperBound;
+    } else {
+      // Subsequent tiers: start from previous tier's max + 1
+      tier.min = tiersByBound[idx - 1].upperBound + 1;
+      tier.max = tier.upperBound;
+    }
+  });
+
+  console.log(`[PricingDataLoader] Access tier ranges after boundary calc:`, tiersByBound.map(t => `${t.tierName}: ${t.min}-${t.max === Infinity ? '∞' : t.max}`).join(' | '));
+
+  // Update tierData with the new ranges
+  tierData.forEach(tier => {
+    const boundData = tiersByBound.find(t => t.tierName === tier.tierName);
+    if (boundData) {
+      tier.min = boundData.min;
+      tier.max = boundData.max;
+    }
+  });
 
   // Create products for each tier
   tierData.forEach((tierInfo, tierIdx) => {
@@ -217,13 +279,10 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
       columnKey: tierInfo.columnKey,
       services: {},
       totalSetupFee: 0,
-      totalAnnualFee: 0
+      totalAnnualFee: 0,
+      tierMin: tierInfo.min,
+      tierMax: tierInfo.max
     };
-
-    // Parse volume range
-    const rangeObj = parseVolumeRange(tierInfo.volumeRange);
-    product.tierMin = rangeObj.min;
-    product.tierMax = rangeObj.max;
 
     // Extract pricing from service lines
     serviceLines.forEach(serviceLine => {
