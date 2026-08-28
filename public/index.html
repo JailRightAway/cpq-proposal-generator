@@ -1459,30 +1459,48 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
+      // Build line items array
+      let proposalLineItems = lineItems.map(item => {
+        const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+        const monthlyCommitment = perAppFee * (item.volume || 0);
+
+        return {
+          productName: item.name,
+          tier: item.tier || item.year1Tier || 'None',
+          volume: item.volume || null,
+          perFileFee: perAppFee,
+          monthlyCommitment: monthlyCommitment,
+          setupFee: implFee,
+          annualFee: item.annualFee || 0,
+          year: item.year
+        };
+      });
+
+      // Add platform fee as line item for each contract year
+      if (platformFee > 0) {
+        for (let year = 1; year <= contractYears; year++) {
+          proposalLineItems.push({
+            productName: 'MeridianLink Mortgage Platform Fee',
+            year: year,
+            setupFee: 0,
+            perFileFee: 0,
+            monthlyCommitment: platformFee,
+            annualFee: 0,
+            volume: null,
+            tier: 'N/A'
+          });
+        }
+      }
+
       const proposalData = {
         customerName: customerName,
         customerContact: document.getElementById('contactName').value,
         expirationDate: expirationDate,
         billingAddress: {},
-        lineItems: lineItems.map(item => {
-          const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
-          const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
-          const monthlyCommitment = perAppFee * (item.volume || 0);
-
-          return {
-            productName: item.name,
-            tier: item.tier || item.year1Tier || 'None',
-            volume: item.volume || null,
-            perFileFee: perAppFee,
-            monthlyCommitment: monthlyCommitment,
-            setupFee: implFee,
-            annualFee: item.annualFee || 0,
-            year: item.year
-          };
-        }),
+        lineItems: proposalLineItems,
         contractTermYears: contractYears,
-        yearlyTiers: yearlyTiers,
-        platformFee: platformFee
+        yearlyTiers: yearlyTiers
       };
 
       try {
