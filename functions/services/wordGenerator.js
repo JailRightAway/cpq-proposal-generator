@@ -18,12 +18,13 @@ function getDefaultExpirationDate() {
 function createHeaderCell(text) {
   return new TableCell({
     shading: { fill: '004B8E' },
-    margins: { top: 100, bottom: 100, left: 100, right: 100 },
+    margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
         text: text,
         bold: true,
-        color: 'FFFFFF'
+        color: 'FFFFFF',
+        alignment: AlignmentType.CENTER
       })
     ]
   });
@@ -31,11 +32,12 @@ function createHeaderCell(text) {
 
 function createDataCell(text, centered = false) {
   return new TableCell({
-    margins: { top: 100, bottom: 100, left: 100, right: 100 },
+    margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
         text: text,
-        alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT
+        alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT,
+        spacing: { line: 240 }
       })
     ]
   });
@@ -137,8 +139,9 @@ async function generateProposal(proposalData) {
       new Paragraph({
         text: productName,
         bold: true,
-        size: 24,
-        spacing: { before: 200, after: 100 }
+        size: 22,
+        color: '004B8E',
+        spacing: { before: 50, after: 50 }
       })
     );
 
@@ -150,7 +153,7 @@ async function generateProposal(proposalData) {
     );
 
     primaryServiceSections.push(
-      new Paragraph({ text: '', spacing: { after: 100 } })
+      new Paragraph({ text: '', spacing: { after: 50 } })
     );
   });
 
@@ -214,9 +217,10 @@ async function generateProposal(proposalData) {
     new Paragraph({
       text: 'PRICING PROPOSAL',
       bold: true,
-      size: 32,
+      size: 28,
       color: '004B8E',
-      spacing: { before: 0, after: 100 }
+      alignment: AlignmentType.CENTER,
+      spacing: { before: 0, after: 50 }
     }),
 
     new Paragraph({
@@ -226,7 +230,8 @@ async function generateProposal(proposalData) {
           text: customerContact ? `${customerName} (${customerContact})` : customerName
         })
       ],
-      spacing: { after: 100 }
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 50 }
     }),
 
     new Paragraph({
@@ -234,7 +239,8 @@ async function generateProposal(proposalData) {
         new TextRun({ text: 'Date: ', bold: true }),
         new TextRun({ text: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) })
       ],
-      spacing: { after: 100 }
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 50 }
     }),
 
     new Paragraph({
@@ -242,13 +248,15 @@ async function generateProposal(proposalData) {
         new TextRun({ text: 'Proposal Expiration: ', bold: true }),
         new TextRun({ text: expirationDate })
       ],
-      spacing: { after: 200 }
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 150 }
     }),
 
     new Paragraph({
       text: 'Contract Terms',
       heading: HeadingLevel.HEADING_2,
-      spacing: { before: 200, after: 100 }
+      color: '004B8E',
+      spacing: { before: 100, after: 50 }
     }),
 
     new Paragraph({
@@ -256,13 +264,14 @@ async function generateProposal(proposalData) {
         new TextRun({ text: 'Initial Term: ', bold: true }),
         new TextRun({ text: `${contractYears} year${contractYears > 1 ? 's' : ''}` })
       ],
-      spacing: { after: 200 }
+      spacing: { after: 100 }
     }),
 
     new Paragraph({
       text: 'Primary Services',
       heading: HeadingLevel.HEADING_2,
-      spacing: { before: 200, after: 100 }
+      color: '004B8E',
+      spacing: { before: 100, after: 50 }
     }),
 
     ...primaryServiceSections,
@@ -270,7 +279,8 @@ async function generateProposal(proposalData) {
     new Paragraph({
       text: 'Annual Investment Summary',
       heading: HeadingLevel.HEADING_2,
-      spacing: { before: 200, after: 100 }
+      color: '004B8E',
+      spacing: { before: 100, after: 50 }
     }),
 
     new Table({
@@ -278,7 +288,7 @@ async function generateProposal(proposalData) {
       width: { size: 100, type: WidthType.PERCENT }
     }),
 
-    new Paragraph({ text: '', spacing: { after: 200 } })
+    new Paragraph({ text: '' })
   ];
 
   // Load template and inject content
