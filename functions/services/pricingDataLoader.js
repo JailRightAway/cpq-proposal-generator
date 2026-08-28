@@ -159,13 +159,13 @@ function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
 
   console.log(`[PricingDataLoader] Splitting Direct Consumer Module into two products - Found ${tiers.length} tiers`);
 
-  // Create products for "Direct Consumer" using "Direct Consumer Loans Setup Fee"
-  tiers.forEach((tier, tierIdx) => {
+  // Helper function to create a product with specific setup fee type
+  const createProductForSetupType = (tierIdx, tier, setupFeeType, productName) => {
     const product = {
-      id: `prod_${Date.now()}_dc_${tierIdx}`,
+      id: `prod_${Date.now()}_${setupFeeType}_${tierIdx}`,
       type: 'Consumer',
       moduleName: moduleName,
-      name: 'MeridianLink Consumer - Direct Consumer',
+      name: productName,
       tier: tier.tierName,
       tierIndex: tierIdx,
       tierRange: tier.tierRange,
@@ -185,25 +185,28 @@ function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
       const serviceNameTrimmed = String(serviceName).trim();
       const price = serviceLine[tier.columnKey];
 
-      // Only include if it matches Direct Consumer or shared services
-      if (serviceNameTrimmed.includes('Direct Consumer') ||
-          serviceNameTrimmed.includes('Monthly Minimum') ||
-          serviceNameTrimmed.includes('Per Application')) {
-
-        if (typeof price === 'number' && price > 0) {
-          product.services[serviceNameTrimmed] = price;
-
-          if (serviceNameTrimmed.toLowerCase().includes('setup')) {
+      if (typeof price === 'number') {
+        // Add matching setup fee
+        if (serviceNameTrimmed.includes(setupFeeType)) {
+          if (price > 0) {
+            product.services[serviceNameTrimmed] = price;
             product.totalSetupFee += price;
-          } else {
-            product.totalAnnualFee += price;
           }
+        }
+        // Add shared fees (Monthly Minimum, Per Application)
+        else if (serviceNameTrimmed.includes('Monthly Minimum') ||
+                 serviceNameTrimmed.includes('Per Application')) {
+          if (price > 0) {
+            product.services[serviceNameTrimmed] = price;
+            product.totalAnnualFee += price;
 
-          if (serviceNameTrimmed.toLowerCase().includes('per') &&
-              (serviceNameTrimmed.toLowerCase().includes('app') ||
-               serviceNameTrimmed.toLowerCase().includes('file') ||
-               serviceNameTrimmed.toLowerCase().includes('transaction'))) {
-            product.perFileFee = price;
+            // Extract per-app fee
+            if (serviceNameTrimmed.toLowerCase().includes('per') &&
+                (serviceNameTrimmed.toLowerCase().includes('app') ||
+                 serviceNameTrimmed.toLowerCase().includes('file') ||
+                 serviceNameTrimmed.toLowerCase().includes('transaction'))) {
+              product.perFileFee = price;
+            }
           }
         }
       }
@@ -212,65 +215,21 @@ function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
     if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
       product.oneTimeFee = product.totalSetupFee;
       product.annualFee = product.totalAnnualFee;
-      products.push(product);
+      return product;
     }
+    return null;
+  };
+
+  // Create products for "Direct Consumer" using "Direct Consumer Loans Setup Fee"
+  tiers.forEach((tier, tierIdx) => {
+    const product = createProductForSetupType(tierIdx, tier, 'Direct Consumer', 'MeridianLink Consumer - Direct Consumer');
+    if (product) products.push(product);
   });
 
   // Create products for "ML Opening" using "MeridianLink Opening Setup Fee"
   tiers.forEach((tier, tierIdx) => {
-    const product = {
-      id: `prod_${Date.now()}_ml_${tierIdx}`,
-      type: 'Consumer',
-      moduleName: moduleName,
-      name: 'ML Opening',
-      tier: tier.tierName,
-      tierIndex: tierIdx,
-      tierRange: tier.tierRange,
-      tierMin: tier.tierMin,
-      tierMax: tier.tierMax,
-      columnKey: tier.columnKey,
-      services: {},
-      totalSetupFee: 0,
-      totalAnnualFee: 0
-    };
-
-    // Extract pricing for this tier
-    serviceLines.forEach(serviceLine => {
-      const serviceName = serviceLine['Unnamed: 0'];
-      if (!serviceName) return;
-
-      const serviceNameTrimmed = String(serviceName).trim();
-      const price = serviceLine[tier.columnKey];
-
-      // Only include if it matches ML Opening or shared services
-      if (serviceNameTrimmed.includes('MeridianLink Opening') ||
-          serviceNameTrimmed.includes('Monthly Minimum') ||
-          serviceNameTrimmed.includes('Per Application')) {
-
-        if (typeof price === 'number' && price > 0) {
-          product.services[serviceNameTrimmed] = price;
-
-          if (serviceNameTrimmed.toLowerCase().includes('setup')) {
-            product.totalSetupFee += price;
-          } else {
-            product.totalAnnualFee += price;
-          }
-
-          if (serviceNameTrimmed.toLowerCase().includes('per') &&
-              (serviceNameTrimmed.toLowerCase().includes('app') ||
-               serviceNameTrimmed.toLowerCase().includes('file') ||
-               serviceNameTrimmed.toLowerCase().includes('transaction'))) {
-            product.perFileFee = price;
-          }
-        }
-      }
-    });
-
-    if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
-      product.oneTimeFee = product.totalSetupFee;
-      product.annualFee = product.totalAnnualFee;
-      products.push(product);
-    }
+    const product = createProductForSetupType(tierIdx, tier, 'MeridianLink Opening', 'ML Opening');
+    if (product) products.push(product);
   });
 
   console.log(`[PricingDataLoader] Direct Consumer Module split into ${products.length} products (Direct Consumer + ML Opening)`);
