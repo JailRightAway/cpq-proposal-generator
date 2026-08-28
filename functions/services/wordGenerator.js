@@ -57,28 +57,13 @@ function groupLineItemsByProduct(lineItems) {
 
 async function generateProposal(proposalData) {
   const lineItems = proposalData.lineItems || [];
-  const platformFee = proposalData.platformFee || 0;
   const contractYears = proposalData.contractTermYears || 1;
   const customerName = proposalData.customerName || 'N/A';
   const customerContact = proposalData.customerContact || '';
   const expirationDate = proposalData.expirationDate || getDefaultExpirationDate();
   const yearlyTiers = proposalData.yearlyTiers || {};
 
-  // Debug: log line items to see what we're receiving
-  console.log('[wordGenerator] Line items received:', JSON.stringify(lineItems.map(item => ({
-    productName: item.productName,
-    year: item.year,
-    perFileFee: item.perFileFee,
-    perFileFeetype: typeof item.perFileFee,
-    perFileFeeLength: String(item.perFileFee).length,
-    perFileFeeCharCodes: Array.from(String(item.perFileFee)).map(c => c.charCodeAt(0)),
-    monthlyCommitment: item.monthlyCommitment
-  })), null, 2));
-
   // Check product types
-  const hasMortgage = lineItems.some(item =>
-    (item.productName || item.moduleName || '').toLowerCase().includes('mortgage')
-  );
   const hasInsight = lineItems.some(item =>
     (item.productName || item.moduleName || '').toLowerCase().includes('insight')
   );
@@ -130,23 +115,6 @@ async function generateProposal(proposalData) {
       tableRows.push(new TableRow({ children: dataCells }));
     });
 
-    // Add platform fee rows for Mortgage products (not Insight)
-    if (hasMortgage && platformFee > 0 && productName.toLowerCase().includes('mortgage') && !isInsight) {
-      for (let year = 1; year <= contractYears; year++) {
-        tableRows.push(
-          new TableRow({
-            children: [
-              createDataCell('MeridianLink Mortgage Platform Fee'),
-              createDataCell(String(year), true),
-              createDataCell('N/A', true),
-              createDataCell('N/A', true),
-              createDataCell(formatCurrency(platformFee), true)
-            ]
-          })
-        );
-      }
-    }
-
     // Add product heading and table
     primaryServiceSections.push(
       new Paragraph({
@@ -175,61 +143,6 @@ async function generateProposal(proposalData) {
     );
   });
 
-  // Add platform fee as separate line item if it exists and there are mortgage products
-  if (hasMortgage && platformFee > 0) {
-    const platformFeeRows = [];
-
-    // Header row
-    platformFeeRows.push(
-      new TableRow({
-        children: [
-          createHeaderCell('Service / Module'),
-          createHeaderCell('Year'),
-          createHeaderCell('One-Time Fee'),
-          createHeaderCell('Per Transaction'),
-          createHeaderCell('Monthly Minimum')
-        ]
-      })
-    );
-
-    // Add platform fee row for each year
-    for (let year = 1; year <= contractYears; year++) {
-      platformFeeRows.push(
-        new TableRow({
-          children: [
-            createDataCell('MeridianLink Mortgage Platform Fee'),
-            createDataCell(String(year), true),
-            createDataCell('N/A', true),
-            createDataCell('N/A', true),
-            createDataCell(formatCurrency(platformFee * 12), true)
-          ]
-        })
-      );
-    }
-
-    primaryServiceSections.push(
-      new Paragraph({
-        text: 'MeridianLink Mortgage Platform Fee',
-        bold: true,
-        size: 22,
-        color: '004B8E',
-        spacing: { before: 50, after: 50 }
-      })
-    );
-
-    primaryServiceSections.push(
-      new Table({
-        rows: platformFeeRows,
-        width: { size: 100, type: WidthType.PERCENT },
-        columnWidths: Array(5).fill(Math.floor(5000 / 5))
-      })
-    );
-
-    primaryServiceSections.push(
-      new Paragraph({ text: '', spacing: { after: 50 } })
-    );
-  }
-
   // Calculate yearly costs for Annual Investment Summary
   let totalSetup = lineItems.reduce((sum, item) => sum + (item.setupFee || item.oneTimePrice || 0), 0);
   let contractTotal = 0;
@@ -257,10 +170,6 @@ async function generateProposal(proposalData) {
       }
       return sum;
     }, 0);
-
-    if (!hasInsight && hasMortgage) {
-      yearCost += platformFee * 12;
-    }
 
     const yearTotal = (year === 1 ? totalSetup : 0) + yearCost;
     contractTotal += yearTotal;
