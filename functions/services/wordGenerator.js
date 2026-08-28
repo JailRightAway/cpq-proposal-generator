@@ -1,4 +1,4 @@
-const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer } = require('docx');
+const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer, Header } = require('docx');
 const fs = require('fs');
 const path = require('path');
 
@@ -212,40 +212,56 @@ async function generateProposal(proposalData) {
   // Order: PRICING PROPOSAL → Prepared For/Date → Contract Terms → Primary Services → Annual Investment Summary
   const sections = [];
 
-  // Add logo - load as buffer
+  // Prepare header with logo
+  let headerParagraphs = [];
   const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
-  let logoBuffer = null;
-  if (fs.existsSync(logoPath)) {
-    try {
-      logoBuffer = fs.readFileSync(logoPath);
-      sections.push(
-        new Paragraph({
-          children: [
-            new ImageRun({
-              data: logoBuffer,
-              type: 'jpg',
-              width: 1800,
-              height: 400
-            })
-          ],
-          alignment: AlignmentType.CENTER,
-          spacing: { after: 300 }
-        })
-      );
-    } catch (e) {
-      console.error('[wordGenerator] Error loading logo:', e.message);
-      // Fallback: add styled header text
-      sections.push(
-        new Paragraph({
-          text: 'MERIDIANLINK',
-          bold: true,
-          size: 28,
-          color: '004B8E',
-          alignment: AlignmentType.CENTER,
-          spacing: { after: 300 }
-        })
-      );
-    }
+
+  try {
+    console.log('[wordGenerator] Attempting to load logo from:', logoPath);
+    const logoBuffer = fs.readFileSync(logoPath);
+    console.log('[wordGenerator] Logo loaded successfully, size:', logoBuffer.length);
+
+    headerParagraphs.push(
+      new Paragraph({
+        children: [
+          new ImageRun({
+            data: logoBuffer,
+            type: 'jpg',
+            width: 1800,
+            height: 400
+          })
+        ],
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 200 }
+      })
+    );
+    // Add separator line below logo
+    headerParagraphs.push(
+      new Paragraph({
+        border: {
+          bottom: {
+            color: '000000',
+            space: 1,
+            style: 'single',
+            size: 6
+          }
+        },
+        spacing: { after: 200 }
+      })
+    );
+  } catch (e) {
+    console.error('[wordGenerator] Error loading logo from', logoPath + ':', e.message);
+    // Fallback header text
+    headerParagraphs.push(
+      new Paragraph({
+        text: 'MERIDIANLINK',
+        bold: true,
+        size: 28,
+        color: '004B8E',
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 200 }
+      })
+    );
   }
 
   // Add remaining sections
@@ -343,7 +359,7 @@ async function generateProposal(proposalData) {
     })
   ];
 
-  // Create document with footer
+  // Create document with header and footer
   const doc = new Document({
     sections: [{
       properties: {
@@ -357,6 +373,11 @@ async function generateProposal(proposalData) {
         }
       },
       children: sections,
+      headers: {
+        default: new Header({
+          children: headerParagraphs
+        })
+      },
       footers: {
         default: new Footer({
           children: footerParagraphs
