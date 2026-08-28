@@ -303,14 +303,13 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
       }
     });
 
-    if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
-      product.oneTimeFee = product.totalSetupFee;
-      product.annualFee = product.totalAnnualFee;
-      products.push(product);
-    }
+    // Always add products, even with $0 pricing (so all tiers are available for matching)
+    product.oneTimeFee = product.totalSetupFee;
+    product.annualFee = product.totalAnnualFee;
+    products.push(product);
   });
 
-  console.log(`[PricingDataLoader] Access module created ${products.length} products`);
+  console.log(`[PricingDataLoader] Access module created ${products.length} products with ranges:`, products.map(p => `${p.tier}: ${p.tierMin}-${p.tierMax === Infinity ? '∞' : p.tierMax}`).join(' | '));
   return products;
 }
 
