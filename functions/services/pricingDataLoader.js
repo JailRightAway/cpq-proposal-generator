@@ -96,6 +96,11 @@ function parseProductsFromJson(data) {
       (firstCol.includes('Module') || firstCol.includes('Plan') || firstCol.includes('Volume') || (firstCol.includes('Insight') && (firstCol.includes('Mortgage') || firstCol.includes('Collect')))) &&
       !firstCol.includes('Setup Fee') && !firstCol.includes('Annual Fee');
 
+    // Log Access module detection
+    if (firstCol.includes('MeridianLink Access')) {
+      console.log(`[parseProductsFromJson] Found Access-like row: "${firstCol}" | isModuleHeader=${isModuleHeader}`);
+    }
+
     if (isModuleHeader) {
       console.log(`[parseProductsFromJson] Found module header: ${firstCol.substring(0, 60)}`);
 
