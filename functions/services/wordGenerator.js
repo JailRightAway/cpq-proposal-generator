@@ -1,6 +1,9 @@
-const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer, Header, Media } = require('docx');
+const { Document, Packer, Paragraph, Table, TableRow, TableCell, AlignmentType, TextRun, HeadingLevel, WidthType } = require('docx');
+const JSZip = require('jszip');
 const fs = require('fs');
 const path = require('path');
+
+const TEMPLATE_PATH = path.join(__dirname, '..', 'templates', 'proposal-template.docx');
 
 function formatCurrency(amount) {
   return `$${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
@@ -169,7 +172,6 @@ async function generateProposal(proposalData) {
   for (let year = 1; year <= contractYears; year++) {
     let yearCost = lineItems.reduce((sum, item) => {
       if ((item.year || 1) === year) {
-        // For Insight products, use annualFee; for others use monthlyCommitment
         const isInsightItem = (item.productName || item.moduleName || '').toLowerCase().includes('insight');
         if (isInsightItem) {
           return sum + (item.annualFee || item.annualPrice || 0);
@@ -180,7 +182,6 @@ async function generateProposal(proposalData) {
       return sum;
     }, 0);
 
-    // Add platform fee (annual)
     if (!hasInsight && hasMortgage) {
       yearCost += platformFee * 12;
     }
@@ -208,66 +209,8 @@ async function generateProposal(proposalData) {
     })
   );
 
-  // Create document matching FUSION template structure
-  // Order: PRICING PROPOSAL → Prepared For/Date → Contract Terms → Primary Services → Annual Investment Summary
-  const sections = [];
-
-  // Prepare header with logo
-  let headerParagraphs = [];
-  const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
-
-  // Try to load logo - prepare media object
-  let logoMediaId = null;
-  let logoData = null;
-  try {
-    if (fs.existsSync(logoPath)) {
-      logoData = fs.readFileSync(logoPath);
-      logoMediaId = 'meridianlink-logo';
-      console.log('[wordGenerator] Logo file loaded, size:', logoData.length);
-    }
-  } catch (err) {
-    console.error('[wordGenerator] Error reading logo:', err.message);
-  }
-
-  // Add logo to header (with or without image)
-  if (logoData && logoMediaId) {
-    headerParagraphs.push(
-      new Paragraph({
-        children: [
-          new ImageRun({
-            data: logoData,
-            type: 'jpeg',
-            altText: 'MeridianLink'
-          })
-        ],
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 200 }
-      })
-    );
-  } else {
-    headerParagraphs.push(
-      new Paragraph({
-        text: 'MERIDIANLINK',
-        bold: true,
-        size: 28,
-        color: '004B8E',
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 200 }
-      })
-    );
-  }
-
-  // Add separator
-  headerParagraphs.push(
-    new Paragraph({
-      border: { bottom: { color: '000000', space: 1, style: 'single', size: 6 } },
-      spacing: { after: 200 }
-    })
-  );
-
-  // Add remaining sections
-  sections.push(
-    // Title
+  // Build content sections for the proposal body
+  const contentSections = [
     new Paragraph({
       text: 'PRICING PROPOSAL',
       bold: true,
@@ -276,7 +219,6 @@ async function generateProposal(proposalData) {
       spacing: { before: 0, after: 100 }
     }),
 
-    // Prepared For
     new Paragraph({
       children: [
         new TextRun({ text: 'Prepared For: ', bold: true }),
@@ -287,7 +229,6 @@ async function generateProposal(proposalData) {
       spacing: { after: 100 }
     }),
 
-    // Date
     new Paragraph({
       children: [
         new TextRun({ text: 'Date: ', bold: true }),
@@ -296,7 +237,6 @@ async function generateProposal(proposalData) {
       spacing: { after: 100 }
     }),
 
-    // Expiration Date
     new Paragraph({
       children: [
         new TextRun({ text: 'Proposal Expiration: ', bold: true }),
@@ -305,7 +245,6 @@ async function generateProposal(proposalData) {
       spacing: { after: 200 }
     }),
 
-    // Contract Terms (simplified - only initial term)
     new Paragraph({
       text: 'Contract Terms',
       heading: HeadingLevel.HEADING_2,
@@ -320,7 +259,6 @@ async function generateProposal(proposalData) {
       spacing: { after: 200 }
     }),
 
-    // Primary Services
     new Paragraph({
       text: 'Primary Services',
       heading: HeadingLevel.HEADING_2,
@@ -329,7 +267,6 @@ async function generateProposal(proposalData) {
 
     ...primaryServiceSections,
 
-    // Annual Investment Summary
     new Paragraph({
       text: 'Annual Investment Summary',
       heading: HeadingLevel.HEADING_2,
@@ -342,52 +279,71 @@ async function generateProposal(proposalData) {
     }),
 
     new Paragraph({ text: '', spacing: { after: 200 } })
-  );
-
-  // Create footer with disclaimer
-  const footerParagraphs = [
-    new Paragraph({
-      text: 'DISCLAIMER:',
-      bold: true,
-      size: 20,
-      spacing: { before: 200, after: 50 }
-    }),
-    new Paragraph({
-      text: 'This proposal and all materials contained herein are confidential and proprietary to MeridianLink, Inc. This document is intended solely for the use of the recipient and may not be reproduced, distributed, or disclosed to third parties without prior written consent. © 2026 MeridianLink, Inc. All rights reserved.',
-      italic: true,
-      size: 18,
-      spacing: { before: 0, after: 100 }
-    })
   ];
 
-  // Create document with header and footer
-  const doc = new Document({
-    sections: [{
-      properties: {
-        page: {
-          margins: {
-            top: convertInchesToTwip(1),
-            bottom: convertInchesToTwip(1.5),
-            left: convertInchesToTwip(1),
-            right: convertInchesToTwip(1)
-          }
-        }
-      },
-      children: sections,
-      headers: {
-        default: new Header({
-          children: headerParagraphs
-        })
-      },
-      footers: {
-        default: new Footer({
-          children: footerParagraphs
-        })
-      }
-    }]
-  });
+  // Load template and inject content
+  try {
+    console.log('[wordGenerator] Loading template from:', TEMPLATE_PATH);
+    const templateBuffer = fs.readFileSync(TEMPLATE_PATH);
+    const zip = new JSZip();
+    await zip.loadAsync(templateBuffer);
 
-  return await Packer.toBuffer(doc);
+    // Get document.xml
+    const docXmlFile = zip.file('word/document.xml');
+    if (!docXmlFile) {
+      throw new Error('Template missing word/document.xml');
+    }
+
+    let docXml = await docXmlFile.async('string');
+    console.log('[wordGenerator] Template loaded, modifying content');
+
+    // Convert sections to docx format and inject
+    const tempDoc = new Document({ sections: [{ children: contentSections }] });
+    const tempBuffer = await Packer.toBuffer(tempDoc);
+
+    // Extract the body content from temp document
+    const tempZip = new JSZip();
+    await tempZip.loadAsync(tempBuffer);
+    const tempDocXml = await tempZip.file('word/document.xml').async('string');
+
+    // Extract just the body content from temp
+    const bodyMatch = tempDocXml.match(/<w:body>([\s\S]*?)<\/w:body>/);
+    const newBody = bodyMatch ? bodyMatch[1] : '<w:p><w:pPr></w:pPr></w:p>';
+
+    // Replace body in template, keeping header/footer
+    docXml = docXml.replace(/<w:body>[\s\S]*?<\/w:body>/, `<w:body>${newBody}</w:body>`);
+
+    // Update the document.xml in the template
+    zip.file('word/document.xml', docXml);
+
+    // Generate modified docx
+    const finalBuffer = await zip.generateAsync({ type: 'nodebuffer' });
+    console.log('[wordGenerator] Document generated with template');
+    return finalBuffer;
+
+  } catch (err) {
+    console.error('[wordGenerator] Template error:', err.message);
+    console.log('[wordGenerator] Falling back to creating document from scratch');
+
+    // Fallback: create document without template
+    const doc = new Document({
+      sections: [{
+        properties: {
+          page: {
+            margins: {
+              top: 1440,
+              bottom: 1440,
+              left: 1440,
+              right: 1440
+            }
+          }
+        },
+        children: contentSections
+      }]
+    });
+
+    return await Packer.toBuffer(doc);
+  }
 }
 
 module.exports = { generateProposal };
