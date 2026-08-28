@@ -815,6 +815,12 @@
           <input type="text" id="contactName" placeholder="Full name" required>
         </div>
       </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Proposal Expiration Date</label>
+          <input type="date" id="expirationDate">
+        </div>
+      </div>
     </div>
 
     <!-- Product Selection -->
@@ -1151,6 +1157,12 @@
 
     // Initialize event listeners
     document.addEventListener('DOMContentLoaded', function() {
+      // Set default expiration date to 30 days from now
+      const expirationDateInput = document.getElementById('expirationDate');
+      const defaultDate = new Date();
+      defaultDate.setDate(defaultDate.getDate() + 30);
+      expirationDateInput.valueAsDate = defaultDate;
+
       const contractYearsInput = document.getElementById('contractYears');
       contractYearsInput.addEventListener('change', updateYearlyTierSelectors);
 
@@ -1443,9 +1455,14 @@
         }
       }
 
+      // Format expiration date for display
+      const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
+      const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
+
       const proposalData = {
         customerName: customerName,
         customerContact: document.getElementById('contactName').value,
+        expirationDate: expirationDate,
         billingAddress: {},
         lineItems: lineItems.map(item => {
           const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
