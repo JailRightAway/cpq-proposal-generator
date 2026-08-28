@@ -97,6 +97,8 @@ function parseProductsFromJson(data) {
       !firstCol.includes('Setup Fee') && !firstCol.includes('Annual Fee');
 
     if (isModuleHeader) {
+      console.log(`[parseProductsFromJson] Found module header: ${firstCol.substring(0, 60)}`);
+
       // Process previous module if exists
       if (currentModuleName && currentServiceLines.length > 0) {
         // Log if this is the Direct Consumer module
