@@ -158,6 +158,96 @@ function parseProductsFromJson(data) {
 }
 
 /**
+ * Special handler for MeridianLink Access - extracts tier ranges from volume row
+ */
+function parseAccessModule(moduleName, moduleHeader, serviceLines) {
+  const products = [];
+
+  // Find the "Direct Consumer Module Monthly App Volume" row which has the tier ranges
+  let volumeRow = null;
+  serviceLines.forEach(line => {
+    const serviceName = String(line['Unnamed: 0'] || '').trim();
+    if (serviceName.includes('Direct Consumer Module Monthly App Volume') ||
+        serviceName.includes('Monthly App Volume')) {
+      volumeRow = line;
+    }
+  });
+
+  if (!volumeRow) {
+    console.warn(`[PricingDataLoader] Access module missing volume row: ${moduleName}`);
+    return products;
+  }
+
+  // Extract tier names and ranges from header row values
+  const tierData = [];
+  Object.keys(moduleHeader).forEach(columnKey => {
+    const tierName = moduleHeader[columnKey];
+    if (tierName && typeof tierName === 'string' && tierName.match(/^Tier\s+\d+$/)) {
+      const volumeRange = volumeRow[columnKey];
+      if (volumeRange) {
+        tierData.push({
+          columnKey,
+          tierName,
+          volumeRange: String(volumeRange).trim()
+        });
+      }
+    }
+  });
+
+  console.log(`[PricingDataLoader] Access module found ${tierData.length} tiers`);
+
+  // Create products for each tier
+  tierData.forEach((tierInfo, tierIdx) => {
+    const product = {
+      id: `prod_${Date.now()}_access_${tierIdx}`,
+      type: 'Access',
+      moduleName: moduleName,
+      name: 'MeridianLink Access',
+      tier: tierInfo.tierName,
+      tierIndex: tierIdx,
+      tierRange: tierInfo.volumeRange,
+      columnKey: tierInfo.columnKey,
+      services: {},
+      totalSetupFee: 0,
+      totalAnnualFee: 0
+    };
+
+    // Parse volume range
+    const rangeObj = parseVolumeRange(tierInfo.volumeRange);
+    product.tierMin = rangeObj.min;
+    product.tierMax = rangeObj.max;
+
+    // Extract pricing from service lines
+    serviceLines.forEach(serviceLine => {
+      const serviceName = serviceLine['Unnamed: 0'];
+      if (!serviceName) return;
+
+      const serviceNameTrimmed = String(serviceName).trim();
+      const price = serviceLine[tierInfo.columnKey];
+
+      if (typeof price === 'number' && price > 0) {
+        product.services[serviceNameTrimmed] = price;
+
+        if (serviceNameTrimmed.toLowerCase().includes('setup')) {
+          product.totalSetupFee += price;
+        } else if (!serviceNameTrimmed.includes('Monthly')) {
+          product.totalAnnualFee += price;
+        }
+      }
+    });
+
+    if (product.totalSetupFee > 0 || product.totalAnnualFee > 0) {
+      product.oneTimeFee = product.totalSetupFee;
+      product.annualFee = product.totalAnnualFee;
+      products.push(product);
+    }
+  });
+
+  console.log(`[PricingDataLoader] Access module created ${products.length} products`);
+  return products;
+}
+
+/**
  * Special handler for Direct Consumer Module - splits into two product types
  */
 function parseDirectConsumerModule(moduleName, moduleHeader, serviceLines) {
@@ -269,6 +359,7 @@ function parseModule(moduleName, moduleHeader, serviceLines) {
   // Special case: Handle "MeridianLink Access - Volume Plan" which uses Consumer tier column names
   if (moduleName.includes('MeridianLink Access') && moduleName.includes('Volume Plan')) {
     console.log(`[PricingDataLoader] Detected MeridianLink Access module: ${moduleName}`);
+    return parseAccessModule(moduleName, moduleHeader, serviceLines);
   }
 
   const products = [];
