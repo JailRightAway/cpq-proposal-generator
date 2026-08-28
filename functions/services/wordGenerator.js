@@ -208,38 +208,44 @@ async function generateProposal(proposalData) {
     })
   );
 
-  // Load logo if available
-  let logoImage = null;
-  let logoType = 'jpg';
-  const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
-  if (fs.existsSync(logoPath)) {
-    try {
-      logoImage = fs.readFileSync(logoPath);
-    } catch (e) {
-      console.log('[wordGenerator] Could not load logo:', e.message);
-    }
-  }
-
   // Create document matching FUSION template structure
   // Order: PRICING PROPOSAL → Prepared For/Date → Contract Terms → Primary Services → Annual Investment Summary → Confidentiality Notice
   const sections = [];
 
-  // Add logo to header if available
-  if (logoImage) {
-    sections.push(
-      new Paragraph({
-        children: [
-          new ImageRun({
-            data: logoImage,
-            type: logoType,
-            width: 1800, // EMUs (~1.3 inches)
-            height: 400
-          })
-        ],
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 300 }
-      })
-    );
+  // Add logo - always show it
+  const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
+  if (fs.existsSync(logoPath)) {
+    try {
+      const logoBuffer = fs.readFileSync(logoPath);
+      const logoBase64 = logoBuffer.toString('base64');
+      sections.push(
+        new Paragraph({
+          children: [
+            new ImageRun({
+              data: logoBase64,
+              type: 'jpg',
+              width: 1800,
+              height: 400
+            })
+          ],
+          alignment: AlignmentType.CENTER,
+          spacing: { after: 300 }
+        })
+      );
+    } catch (e) {
+      console.error('[wordGenerator] Error loading logo:', e.message);
+      // Fallback: add styled header text
+      sections.push(
+        new Paragraph({
+          text: 'MERIDIANLINK',
+          bold: true,
+          size: 28,
+          color: '004B8E',
+          alignment: AlignmentType.CENTER,
+          spacing: { after: 300 }
+        })
+      );
+    }
   }
 
   // Add remaining sections
