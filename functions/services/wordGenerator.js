@@ -1,4 +1,4 @@
-const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer, Header } = require('docx');
+const { Document, Packer, Paragraph, Table, TableRow, TableCell, BorderStyle, AlignmentType, TextRun, HeadingLevel, WidthType, VerticalAlign, convertInchesToTwip, ImageRun, Footer, Header, Media } = require('docx');
 const fs = require('fs');
 const path = require('path');
 
@@ -216,31 +216,45 @@ async function generateProposal(proposalData) {
   let headerParagraphs = [];
   const logoPath = path.join(__dirname, '..', '..', 'public', 'meridianlink-logo.jpg');
 
-  // Use styled text for header branding
-  headerParagraphs.push(
-    new Paragraph({
-      text: 'MERIDIANLINK',
-      bold: true,
-      size: 28,
-      color: '004B8E',
-      alignment: AlignmentType.CENTER,
-      spacing: { after: 200 }
-    })
-  );
-  // Add separator line below logo
-  headerParagraphs.push(
-    new Paragraph({
-      border: {
-        bottom: {
-          color: '000000',
-          space: 1,
-          style: 'single',
-          size: 6
-        }
-      },
-      spacing: { after: 200 }
-    })
-  );
+  // Load logo image for header
+  try {
+    console.log('[wordGenerator] Loading logo from:', logoPath);
+    const logoBuffer = fs.readFileSync(logoPath);
+    console.log('[wordGenerator] Logo buffer size:', logoBuffer.length);
+
+    headerParagraphs.push(
+      new Paragraph({
+        children: [
+          new ImageRun({
+            data: logoBuffer,
+            type: 'jpeg'
+          })
+        ],
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 200 }
+      })
+    );
+    // Add separator
+    headerParagraphs.push(
+      new Paragraph({
+        border: { bottom: { color: '000000', space: 1, style: 'single', size: 6 } },
+        spacing: { after: 200 }
+      })
+    );
+  } catch (err) {
+    console.error('[wordGenerator] Logo error:', err.message);
+    // Fallback only if absolutely necessary
+    headerParagraphs.push(
+      new Paragraph({
+        text: 'MERIDIANLINK',
+        bold: true,
+        size: 28,
+        color: '004B8E',
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 200 }
+      })
+    );
+  }
 
   // Add remaining sections
   sections.push(
