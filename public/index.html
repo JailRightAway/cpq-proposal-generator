@@ -1477,8 +1477,9 @@
         };
       });
 
-      // Add platform fee as line item for each contract year
-      if (platformFee > 0) {
+      // Add platform fee as line item for each contract year (Mortgage only)
+      const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
+      if (platformFee > 0 && hasMortgageProduct) {
         for (let year = 1; year <= contractYears; year++) {
           proposalLineItems.push({
             productName: 'MeridianLink Mortgage Platform Fee',

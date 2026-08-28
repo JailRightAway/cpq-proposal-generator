@@ -284,6 +284,11 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
       tierMax: tierInfo.max
     };
 
+    // Debug: log what we're looking for
+    if (tierIdx === 0) {
+      console.log(`[parseAccessModule] Tier 1 - looking in column: ${tierInfo.columnKey}, serviceLines count: ${serviceLines.length}`);
+    }
+
     // Extract pricing from service lines
     serviceLines.forEach(serviceLine => {
       const serviceName = serviceLine['Unnamed: 0'];
@@ -291,6 +296,11 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
 
       const serviceNameTrimmed = String(serviceName).trim();
       let price = serviceLine[tierInfo.columnKey];
+
+      // Debug: log prices for Tier 1
+      if (tierIdx === 0) {
+        console.log(`[parseAccessModule] Tier 1 - "${serviceNameTrimmed}" raw price: ${price} (type: ${typeof price})`);
+      }
 
       // Convert string prices (with $ and commas) to numbers
       if (typeof price === 'string') {
