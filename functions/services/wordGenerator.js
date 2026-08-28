@@ -101,10 +101,14 @@ async function generateProposal(proposalData) {
         createDataCell(String(item.year || 1), true)
       ];
 
-      if (isInsight) {
+      const hasAnnualFee = (item.annualFee || item.annualPrice) > 0;
+
+      if (isInsight || hasAnnualFee) {
+        // For Insight and annual-fee products (like Access), show annual fee instead of monthly
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
       } else {
+        // For volume/transaction-based products, show per-file fee and monthly commitment
         const perFileFee = Number(item.perFileFee) || 0;
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
         // Display perFileFee as plain number (no $) to avoid cell wrapping
@@ -161,12 +165,10 @@ async function generateProposal(proposalData) {
   for (let year = 1; year <= contractYears; year++) {
     let yearCost = lineItems.reduce((sum, item) => {
       if ((item.year || 1) === year) {
-        const isInsightItem = (item.productName || item.moduleName || '').toLowerCase().includes('insight');
-        if (isInsightItem) {
-          return sum + (item.annualFee || item.annualPrice || 0);
-        } else {
-          return sum + (item.monthlyCommitment || item.annualPrice || 0) * 12;
-        }
+        // Add both monthly commitment (if any) and annual fee (if any)
+        const monthlyTotal = (item.monthlyCommitment || 0) * 12;
+        const annualTotal = (item.annualFee || item.annualPrice || 0);
+        return sum + monthlyTotal + annualTotal;
       }
       return sum;
     }, 0);
