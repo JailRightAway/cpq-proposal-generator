@@ -1,43 +1,13 @@
-const { spawn } = require('child_process');
-const path = require('path');
-
-// Try to load helpers from multiple locations (root or functions)
-let helpers;
-try {
-  helpers = require('../utils/helpers');
-} catch (e) {
-  try {
-    helpers = require('../../utils/helpers');
-  } catch (e2) {
-    console.warn('helpers module not found, using fallback');
-    helpers = {
-      formatCurrency: (amount) => `$${amount.toFixed(2)}`,
-      getQuarterEndDate: (date = new Date()) => date,
-      getQuarterName: (date = new Date()) => `Q${Math.floor(date.getMonth() / 3) + 1} ${date.getFullYear()}`,
-      formatDate: (date) => date instanceof Date ? date.toLocaleDateString('en-US') : new Date(date).toLocaleDateString('en-US'),
-      calculateDiscount: (base, pct) => base * (pct / 100),
-      calculateSellingPrice: (base, discountAmount, discountPercent) => {
-        const discount = discountPercent ? base * (discountPercent / 100) : (discountAmount || 0);
-        return base - discount;
-      }
-    };
-  }
-}
-
-const { getQuarterEndDate } = helpers;
+const { generateProposal: generateWord } = require('./wordGenerator');
 
 /**
- * Generate a Word document proposal using direct child_process
+ * Generate a Word document proposal using Node.js docx library
  */
 async function generateProposal(proposalData) {
-  return new Promise((resolve, reject) => {
-    const pythonScriptPath = path.join(__dirname, '../python/word_generator.py');
+  console.log('[ProposalGen] Generating Word document using Node.js...');
 
-    // Calculate quarter end date
-    const today = new Date();
-    const quarterEndDate = getQuarterEndDate(today);
-
-    // Prepare data for Python script
+  try {
+    // Prepare data for Word generator
     const dataToPass = {
       customerName: proposalData.customerName,
       customerContact: proposalData.customerContact || '',
@@ -48,72 +18,18 @@ async function generateProposal(proposalData) {
       discountAmount: proposalData.discountAmount || 0,
       discountPercentage: proposalData.discountPercentage || 0,
       generatedDate: new Date().toISOString().split('T')[0],
-      quarterEndDate: quarterEndDate.toISOString().split('T')[0],
-      contractTermYears: proposalData.contractTermYears || 1
+      contractTermYears: proposalData.contractTermYears || 1,
+      yearlyTiers: proposalData.yearlyTiers || {},
+      platformFee: proposalData.platformFee || 0
     };
 
-    console.log('[ProposalGen] Starting Python script:', pythonScriptPath);
-
-    // Use 'python' (Windows) instead of 'python3'
-    const pythonCmd = process.platform === 'win32' ? 'python' : 'python3';
-    console.log('[ProposalGen] Using Python command:', pythonCmd);
-
-    // Spawn Python process
-    const python = spawn(pythonCmd, [pythonScriptPath, JSON.stringify(dataToPass)]);
-
-    let output = '';
-    let errorOutput = '';
-
-    python.stdout.on('data', (data) => {
-      console.log('[ProposalGen] Python stdout:', data.toString().substring(0, 100));
-      output += data.toString();
-    });
-
-    python.stderr.on('data', (data) => {
-      console.error('[ProposalGen] Python stderr:', data.toString());
-      errorOutput += data.toString();
-    });
-
-    python.on('close', (code) => {
-      console.log('[ProposalGen] Python process exited with code:', code);
-
-      if (code !== 0) {
-        console.error('[ProposalGen] Python error output:', errorOutput);
-        return reject(new Error(`Python script failed: ${errorOutput || 'Unknown error'}`));
-      }
-
-      if (!output) {
-        return reject(new Error('No output from Python script'));
-      }
-
-      try {
-        console.log('[ProposalGen] Parsing output...');
-        const result = JSON.parse(output);
-
-        if (!result.success) {
-          throw new Error(result.error || 'Unknown error');
-        }
-
-        const docBuffer = Buffer.from(result.documentData, 'base64');
-        console.log('[ProposalGen] Document generated, size:', docBuffer.length);
-        resolve(docBuffer);
-      } catch (error) {
-        console.error('[ProposalGen] Error parsing result:', error.message);
-        reject(error);
-      }
-    });
-
-    python.on('error', (err) => {
-      console.error('[ProposalGen] Failed to start Python process:', err.message);
-      reject(new Error(`Failed to start Python: ${err.message}`));
-    });
-
-    // Timeout after 30 seconds
-    setTimeout(() => {
-      python.kill();
-      reject(new Error('Python script timeout after 30 seconds'));
-    }, 30000);
-  });
+    const docBuffer = await generateWord(dataToPass);
+    console.log('[ProposalGen] Document generated, size:', docBuffer.length);
+    return docBuffer;
+  } catch (error) {
+    console.error('[ProposalGen] Error generating document:', error.message);
+    throw error;
+  }
 }
 
 module.exports = {
