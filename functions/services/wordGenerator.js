@@ -63,6 +63,8 @@ async function generateProposal(proposalData) {
   const expirationDate = proposalData.expirationDate || getDefaultExpirationDate();
   const yearlyTiers = proposalData.yearlyTiers || {};
 
+  console.log('[wordGenerator] Received lineItems:', JSON.stringify(lineItems));
+
   // Check product types
   const hasInsight = lineItems.some(item =>
     (item.productName || item.moduleName || '').toLowerCase().includes('insight')
@@ -97,6 +99,8 @@ async function generateProposal(proposalData) {
 
     // Data rows for this product
     items.forEach((item) => {
+      console.log(`[wordGenerator] Product: ${productName}, Year: ${item.year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
+
       const dataCells = [
         createDataCell(productName),
         createDataCell(String(item.year || 1), true)
