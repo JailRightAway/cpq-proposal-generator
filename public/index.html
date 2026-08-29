@@ -963,20 +963,6 @@
           </select>
         </div>
       </div>
-      <div class="form-row" id="volumeRow" class="hidden">
-        <div class="form-group">
-          <label>Monthly Volume (# of loans/apps) *</label>
-          <input type="number" id="volumeInput" min="0" placeholder="Enter monthly volume">
-        </div>
-        <div class="form-group">
-          <label>Year 1 Tier</label>
-          <input type="text" id="matchedTier" readonly placeholder="Tier will display here">
-        </div>
-        <div class="form-group">
-          <label>Year 1 Annual Fee</label>
-          <input type="text" id="year1AnnualFee" readonly placeholder="Annual fee will display here">
-        </div>
-      </div>
       <button class="btn btn-secondary" onclick="addProduct()">Add Product</button>
     </div>
 
@@ -1189,7 +1175,14 @@
     function renderVolumeConfiguration() {
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
       const container = document.getElementById('volumeConfigContainer');
+
+      if (!container) {
+        console.error('[UI] volumeConfigContainer not found');
+        return;
+      }
+
       container.innerHTML = '';
+      console.log(`[UI] Rendering Volume Configuration for ${contractYears} years`);
 
       const grid = document.createElement('div');
       grid.style.display = 'grid';
@@ -2046,15 +2039,14 @@
       renderVolumeConfiguration();
     });
 
+    // DEPRECATED: Volume inputs now handled by renderVolumeConfiguration() in Volume & Tier Configuration section
     function updateYearlyTierSelectors() {
-      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+      // This function is no longer used - volume configuration moved to separate section
       const container = document.getElementById('yearlyTiersContainer');
-      const volumeInput = document.getElementById('volumeInput');
-
-      if (!volumeInput.dataset.tiers) {
+      if (container) {
         container.innerHTML = '';
-        return;
       }
+      return;
 
       let tiers;
       try {
