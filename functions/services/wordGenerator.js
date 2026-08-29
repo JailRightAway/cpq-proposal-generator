@@ -285,7 +285,14 @@ async function generateProposal(proposalData) {
   ];
 
   // Load template and inject content
+  // NOTE: Template has hardcoded values that overlay generated content, so we skip it
+  const skipTemplate = true; // Set to false to use template
+
   try {
+    if (skipTemplate) {
+      throw new Error('Template mode disabled - using generated content only');
+    }
+
     console.log('[wordGenerator] Loading template from:', TEMPLATE_PATH);
     const templateBuffer = fs.readFileSync(TEMPLATE_PATH);
     const zip = new JSZip();
