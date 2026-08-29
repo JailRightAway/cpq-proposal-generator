@@ -853,6 +853,10 @@
           <label>Year 1 Tier</label>
           <input type="text" id="matchedTier" readonly placeholder="Tier will display here">
         </div>
+        <div class="form-group">
+          <label>Year 1 Annual Fee</label>
+          <input type="text" id="year1AnnualFee" readonly placeholder="Annual fee will display here">
+        </div>
       </div>
       <!-- Year-by-year tier selectors will be added here dynamically -->
       <div id="yearlyTiersContainer"></div>
@@ -991,6 +995,7 @@
     function updateMatchedTier() {
       const volumeInput = document.getElementById('volumeInput');
       const matchedTier = document.getElementById('matchedTier');
+      const year1AnnualFee = document.getElementById('year1AnnualFee');
       const volume = parseInt(volumeInput.value) || 0;
 
       if (!volumeInput.dataset.tiers) return;
@@ -1000,12 +1005,21 @@
 
       if (matched) {
         matchedTier.value = matched.tier;
+        // Display annual fee if available
+        if (year1AnnualFee) {
+          if (matched.annualFee) {
+            year1AnnualFee.value = `$${matched.annualFee.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+          } else {
+            year1AnnualFee.value = 'N/A';
+          }
+        }
         // Store the matched product for later use
         volumeInput.dataset.matchedProduct = JSON.stringify(matched);
         // Update yearly tier selectors when volume is matched
         updateYearlyTierSelectors();
       } else {
         matchedTier.value = '';
+        if (year1AnnualFee) year1AnnualFee.value = '';
         volumeInput.dataset.matchedProduct = '';
       }
     }
@@ -1488,6 +1502,9 @@
 
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
       const platformFee = window.platformFee || 425;
+
+      console.log('DEBUG generateProposal: yearlyTierSelections =', yearlyTierSelections);
+      console.log('DEBUG generateProposal: lineItems =', lineItems);
 
       // Build yearly tier info
       const yearlyTiers = {};
