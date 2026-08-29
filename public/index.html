@@ -1214,6 +1214,13 @@
         ]
       };
 
+      // Manual additions from mixed categories (items to pull out and add to specific groups)
+      const manualAdditions = {
+        'Integration & Conversion': [
+          'Mortgage DocDownload'
+        ]
+      };
+
       // First, add smart checkboxes for Insight, Beta, and Access
       const smartSection = document.createElement('div');
       smartSection.className = 'addon-category';
@@ -1260,6 +1267,20 @@
             renderedCategories.add(sourceCategory);
           }
         });
+
+        // Add manual additions for this group
+        if (manualAdditions[groupName]) {
+          manualAdditions[groupName].forEach(addonName => {
+            // Search all categories for this add-on
+            Object.entries(addOnsData).forEach(([category, addOns]) => {
+              const found = addOns.find(a => a.name === addonName);
+              if (found) {
+                consolidatedAddOns.push(found);
+                renderedCategories.add(category); // Mark the source category as rendered
+              }
+            });
+          });
+        }
 
         if (consolidatedAddOns.length > 0) {
           const categoryDiv = document.createElement('div');
