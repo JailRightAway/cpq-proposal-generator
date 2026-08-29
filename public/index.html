@@ -2000,68 +2000,6 @@
         container.innerHTML = '';
       }
     }
-          const row = document.createElement('div');
-          row.className = 'yearly-tier-row';
-
-          // Volume input group
-          const volumeGroup = document.createElement('div');
-          volumeGroup.className = 'form-group';
-
-          const volumeLabel = document.createElement('label');
-          volumeLabel.textContent = `Year ${year} Volume (# of loans/apps)`;
-
-          const input = document.createElement('input');
-          input.type = 'number';
-          input.id = `yearVolume_${year}`;
-          input.min = '0';
-          input.placeholder = 'Enter monthly volume';
-          input.onchange = () => updateYearlyVolume(year, input.value, tiers);
-          input.oninput = () => updateYearlyVolume(year, input.value, tiers);
-
-          volumeGroup.appendChild(volumeLabel);
-          volumeGroup.appendChild(input);
-          row.appendChild(volumeGroup);
-
-          // Tier display group
-          const tierGroup = document.createElement('div');
-          tierGroup.className = 'form-group';
-
-          const tierLabel = document.createElement('label');
-          tierLabel.textContent = `Year ${year} Tier`;
-
-          const matchDisplay = document.createElement('input');
-          matchDisplay.type = 'text';
-          matchDisplay.id = `yearTierDisplay_${year}`;
-          matchDisplay.readOnly = true;
-          matchDisplay.placeholder = 'Tier will display here';
-
-          tierGroup.appendChild(tierLabel);
-          tierGroup.appendChild(matchDisplay);
-          row.appendChild(tierGroup);
-
-          // Annual fee display group (only show if the product has annual fees)
-          const annualFeeGroup = document.createElement('div');
-          annualFeeGroup.className = 'form-group';
-
-          const annualFeeLabel = document.createElement('label');
-          annualFeeLabel.textContent = `Year ${year} Annual Fee`;
-
-          const annualFeeDisplay = document.createElement('input');
-          annualFeeDisplay.type = 'text';
-          annualFeeDisplay.id = `yearAnnualFee_${year}`;
-          annualFeeDisplay.readOnly = true;
-          annualFeeDisplay.placeholder = 'Annual fee will display here';
-
-          annualFeeGroup.appendChild(annualFeeLabel);
-          annualFeeGroup.appendChild(annualFeeDisplay);
-          row.appendChild(annualFeeGroup);
-
-          container.appendChild(row);
-        }
-      } else {
-        container.innerHTML = '';
-      }
-    }
 
     function updateYearlyVolume(year, volume, allTiers) {
       const volumeValue = parseInt(volume) || 0;
