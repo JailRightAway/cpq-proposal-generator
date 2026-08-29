@@ -2000,23 +2000,6 @@
         container.innerHTML = '';
       }
     }
-        console.log('[updateYearlyTierSelectors] Loaded', tiers.length, 'tiers:', tiers.map(t => ({
-          name: t.tier || t.tierName,
-          min: t.tierMin,
-          max: t.tierMax,
-          perFileFee: t.perFileFee
-        })));
-      } catch (e) {
-        console.error('[updateYearlyTierSelectors] Error parsing tiers:', e);
-        container.innerHTML = '';
-        return;
-      }
-
-      // Create new container for yearly selectors
-      container.innerHTML = '';
-
-      if (contractYears > 1) {
-        for (let year = 2; year <= contractYears; year++) {
           const row = document.createElement('div');
           row.className = 'yearly-tier-row';
 
