@@ -2247,21 +2247,19 @@
         };
       });
 
-      // Add platform fee as line item for each contract year (Mortgage only)
+      // Add platform fee as line item for Year 1 only (Mortgage only)
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
       if (platformFee > 0 && hasMortgageProduct) {
-        for (let year = 1; year <= contractYears; year++) {
-          proposalLineItems.push({
-            productName: 'MeridianLink Mortgage Platform Fee',
-            year: year,
-            setupFee: 0,
-            perFileFee: 0,
-            monthlyCommitment: platformFee,
-            annualFee: 0,
-            volume: null,
-            tier: 'N/A'
-          });
-        }
+        proposalLineItems.push({
+          productName: 'MeridianLink Mortgage Platform Fee',
+          year: 1,
+          setupFee: 0,
+          perFileFee: 0,
+          monthlyCommitment: platformFee,
+          annualFee: 0,
+          volume: null,
+          tier: 'N/A'
+        });
       }
 
       // === ADD-ONS PROCESSING ===
@@ -2343,24 +2341,22 @@
               }
             }
           }
-          // Handle DocMagic (special case - uses Mortgage volumes)
+          // Handle DocMagic (special case - uses Mortgage volumes, Year 1 only)
           else if (addonName.includes('DocMagic') || addonName.includes('Document Prep')) {
             console.log('[generateProposal] Processing DocMagic...');
 
-            for (let year = 1; year <= contractYears; year++) {
-              const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
-              const monthlyMinimum = yearVolume * 26.60;
+            const yearVolume = volumeConfig[1] ? parseInt(volumeConfig[1]) : year1Volume;
+            const monthlyMinimum = yearVolume * 26.60;
 
-              proposalLineItems.push({
-                productName: 'DocMagic Document Preparation',
-                setupFee: year === 1 ? (addonSelection.overrides?.oneTime || 0) : 0,
-                annualFee: addonSelection.overrides?.annual || 0,
-                monthlyCommitment: monthlyMinimum,
-                volume: yearVolume,
-                tier: 'N/A',
-                year: year
-              });
-            }
+            proposalLineItems.push({
+              productName: 'Mortgage DocDownload',
+              setupFee: addonSelection.overrides?.oneTime || 0,
+              annualFee: addonSelection.overrides?.annual || 0,
+              monthlyCommitment: monthlyMinimum,
+              volume: yearVolume,
+              tier: 'N/A',
+              year: 1
+            });
           }
           // Handle regular add-ons
           else {
@@ -2371,18 +2367,22 @@
             const volume = addonSelection.volume || 0;
             const monthlyCommitment = transactionFee > 0 ? (transactionFee * volume) : 0;
 
-            // Add for each contract year
-            for (let year = 1; year <= contractYears; year++) {
+            // Check if this should only show Year 1
+            const isYear1Only = ['PriceMyLoan', 'DocDownload'].some(keyword => addonName.toLowerCase().includes(keyword.toLowerCase()));
+            const yearsToAdd = isYear1Only ? [1] : Array.from({length: contractYears}, (_, i) => i + 1);
+
+            // Add for specified years
+            yearsToAdd.forEach(year => {
               proposalLineItems.push({
                 productName: addonName,
                 setupFee: year === 1 ? setupFee : 0,
-                annualFee: annualFee,
-                monthlyCommitment: monthlyCommitment,
+                annualFee: year === 1 ? annualFee : 0,
+                monthlyCommitment: year === 1 ? monthlyCommitment : 0,
                 volume: volume || null,
                 tier: 'N/A',
                 year: year
               });
-            }
+            });
           }
         }
       }

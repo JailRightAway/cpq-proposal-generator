@@ -76,60 +76,66 @@ async function generateProposal(proposalData) {
   const addOnSections = [];
 
   // Identify add-ons (products containing common add-on keywords)
-  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
+  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan', 'Platform Fee'];
 
   const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
+
+  // Helper function to determine if item should only show Year 1
+  const showOnlyYear1 = (productName) => {
+    const year1OnlyKeywords = ['Platform Fee', 'DocDownload', 'PriceMyLoan Implementation', 'PriceMyLoan Service Package'];
+    return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
+  };
 
   // Create a separate table for each product
   Object.entries(groupedItems).forEach(([productName, items]) => {
     const isAddOnProduct = isAddOn(productName);
     const targetSections = isAddOnProduct ? addOnSections : primaryServiceSections;
+
+    // Filter items for year 1-only products
+    const filteredItems = showOnlyYear1(productName) ? items.filter(item => (item.year || 1) === 1) : items;
+
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
-    const hasAnnualFees = items.some(item => (item.annualFee || item.annualPrice) > 0);
+    const hasAnnualFees = filteredItems.some(item => (item.annualFee || item.annualPrice) > 0);
+    const hasTransactionFees = filteredItems.some(item => (item.perFileFee || 0) > 0);
+    const hasMonthlyCommitment = filteredItems.some(item => (item.monthlyCommitment || 0) > 0);
 
-    // Build header row based on product type
+    // Build header row - always show all columns
     const headerCells = [
       createHeaderCell('Service / Module'),
-      createHeaderCell('Year')
+      createHeaderCell('Year'),
+      createHeaderCell('One-Time Fee'),
+      createHeaderCell('Annual Fee')
     ];
 
-    if (isInsight || hasAnnualFees) {
-      headerCells.push(createHeaderCell('One-Time Fee'));
-      headerCells.push(createHeaderCell('Annual Fee'));
-    } else {
-      headerCells.push(createHeaderCell('One-Time Fee'));
+    if (hasTransactionFees) {
       headerCells.push(createHeaderCell('Per Transaction'));
-      headerCells.push(createHeaderCell('Monthly Minimum'));
+    }
+
+    if (hasMonthlyCommitment) {
+      headerCells.push(createHeaderCell('Monthly Commitment'));
     }
 
     tableRows.push(new TableRow({ children: headerCells }));
 
     // Data rows for this product
-    items.forEach((item) => {
+    filteredItems.forEach((item) => {
       console.log(`[wordGenerator] Product: ${productName}, Year: ${item.year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
 
       const dataCells = [
         createDataCell(productName),
-        createDataCell(String(item.year || 1), true)
+        createDataCell(String(item.year || 1), true),
+        createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true),
+        createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true)
       ];
 
-      const hasAnnualFee = (item.annualFee || item.annualPrice) > 0;
-
-      if (isInsight || hasAnnualFee) {
-        // For Insight and annual-fee products (like Access), show annual fee instead of monthly
-        const setupFeeFormatted = formatCurrency(item.setupFee || item.oneTimePrice || 0);
-        const annualFeeFormatted = formatCurrency(item.annualFee || item.annualPrice || 0);
-        console.log(`[wordGenerator] Creating cells - setupFee input: ${item.setupFee}, formatted: ${setupFeeFormatted}, annualFee input: ${item.annualFee}, formatted: ${annualFeeFormatted}`);
-        dataCells.push(createDataCell(setupFeeFormatted, true));
-        dataCells.push(createDataCell(annualFeeFormatted, true));
-      } else {
-        // For volume/transaction-based products, show per-file fee and monthly commitment
+      if (hasTransactionFees) {
         const perFileFee = Number(item.perFileFee) || 0;
-        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
-        // Display perFileFee as plain number (no $) to avoid cell wrapping
         dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
-        dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || item.annualPrice || 0), true));
+      }
+
+      if (hasMonthlyCommitment) {
+        dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true));
       }
 
       tableRows.push(new TableRow({ children: dataCells }));
@@ -146,8 +152,8 @@ async function generateProposal(proposalData) {
       })
     );
 
-    // Create table with column widths
-    const columnCount = isInsight ? 4 : 5;
+    // Create table with dynamic column widths
+    const columnCount = headerCells.length;
     const columnWidth = Math.floor(5000 / columnCount); // 5000 twips per column
 
     targetSections.push(
@@ -161,6 +167,23 @@ async function generateProposal(proposalData) {
     targetSections.push(
       new Paragraph({ text: '', spacing: { after: 50 } })
     );
+
+    // Add disclaimer for PriceMyLoan Service Package
+    if (productName.includes('PriceMyLoan Service Package')) {
+      targetSections.push(
+        new Paragraph({
+          children: [
+            new TextRun({
+              text: 'Note: The hourly rate is only billed when custom products are requested, built, or adjusted.',
+              italic: true,
+              size: 18,
+              color: '666666'
+            })
+          ],
+          spacing: { after: 100 }
+        })
+      );
+    }
   });
 
   // Calculate yearly costs for Annual Investment Summary
