@@ -1193,8 +1193,26 @@
       const hiddenCategories = [
         'Add On - MeridianLink Insight',
         'Add On - MeridianLink Portal', // Alpharank - obsolete
-        'Add On - Misc' // Test Environment (Beta) - we'll handle separately
+        'Add On - Misc', // Test Environment (Beta) - we'll handle separately
+        'Add On - MeridianLink Mortgage Access' // Access tiers - now smart button
       ];
+
+      // Categories to consolidate
+      const consolidatedGroups = {
+        'Integration & Conversion': [
+          'Add On - Core Conversion',
+          'Add On - Core Integration'
+        ],
+        'Data Management': [
+          'Add On - Data Retention',
+          'Add On - OpenClose'
+        ],
+        'Professional Services': [
+          'Add On - MeridianLink Consulting',
+          'Add On - Professional Services',
+          'Add On - SAE Services'
+        ]
+      };
 
       // First, add smart checkboxes for Insight, Beta, and Access
       const smartSection = document.createElement('div');
@@ -1229,10 +1247,40 @@
 
       container.appendChild(smartSection);
 
-      // Then render regular add-ons (excluding hidden categories)
+      // Track which categories have been rendered (for consolidation)
+      const renderedCategories = new Set();
+
+      // Render consolidated groups first
+      Object.entries(consolidatedGroups).forEach(([groupName, sourceCategories]) => {
+        const consolidatedAddOns = [];
+
+        sourceCategories.forEach(sourceCategory => {
+          if (addOnsData[sourceCategory]) {
+            consolidatedAddOns.push(...addOnsData[sourceCategory]);
+            renderedCategories.add(sourceCategory);
+          }
+        });
+
+        if (consolidatedAddOns.length > 0) {
+          const categoryDiv = document.createElement('div');
+          categoryDiv.className = 'addon-category';
+
+          const categoryTitle = document.createElement('h4');
+          categoryTitle.textContent = groupName;
+          categoryDiv.appendChild(categoryTitle);
+
+          consolidatedAddOns.forEach(addon => {
+            categoryDiv.appendChild(createAddOnElement(addon));
+          });
+
+          container.appendChild(categoryDiv);
+        }
+      });
+
+      // Then render remaining regular add-ons (excluding hidden and consolidated categories)
       Object.entries(addOnsData).forEach(([category, addOns]) => {
-        // Skip hidden categories
-        if (hiddenCategories.includes(category)) return;
+        // Skip hidden categories or already consolidated
+        if (hiddenCategories.includes(category) || renderedCategories.has(category)) return;
 
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'addon-category';
@@ -1242,75 +1290,7 @@
         categoryDiv.appendChild(categoryTitle);
 
         addOns.forEach(addon => {
-          const addonDiv = document.createElement('div');
-          addonDiv.className = 'addon-item';
-          addonDiv.id = `addon-${addon.name.replace(/\s+/g, '-')}`;
-
-          // Checkbox + info
-          const label = document.createElement('label');
-          const checkbox = document.createElement('input');
-          checkbox.type = 'checkbox';
-          checkbox.value = addon.name;
-          checkbox.dataset.addonName = addon.name;
-          checkbox.dataset.pricingModel = addon.pricingModel;
-          checkbox.dataset.addonData = JSON.stringify(addon);
-
-          checkbox.onchange = function() {
-            handleAddOnSelection(this);
-          };
-
-          const info = document.createElement('div');
-          info.className = 'addon-info';
-
-          const name = document.createElement('div');
-          name.className = 'addon-name';
-          name.textContent = addon.name;
-
-          const pricing = document.createElement('div');
-          pricing.className = 'addon-pricing';
-          pricing.textContent = formatAddOnPricing(addon);
-
-          info.appendChild(name);
-          info.appendChild(pricing);
-
-          label.appendChild(checkbox);
-          label.appendChild(info);
-          addonDiv.appendChild(label);
-
-          // Volume input for transaction-based add-ons (except DocMagic which auto-uses mortgage volume)
-          if ((addon.pricingModel === 'transaction' || addon.pricingModel === 'one-time+transaction') &&
-              !addon.name.includes('DocMagic')) {
-            const volumeInputDiv = document.createElement('div');
-            volumeInputDiv.className = 'addon-volume-input';
-            volumeInputDiv.style.display = 'none';
-            volumeInputDiv.id = `addon-volume-${addon.name.replace(/\s+/g, '-')}`;
-
-            const label2 = document.createElement('label');
-            label2.textContent = 'Monthly Volume (# of documents):';
-            label2.style.fontSize = '0.8rem';
-            label2.style.marginBottom = '4px';
-
-            const input = document.createElement('input');
-            input.type = 'number';
-            input.min = '0';
-            input.placeholder = 'Enter monthly volume';
-            input.dataset.addonName = addon.name;
-            input.onchange = updateAddOnVolume;
-
-            volumeInputDiv.appendChild(label2);
-            volumeInputDiv.appendChild(input);
-            addonDiv.appendChild(volumeInputDiv);
-          }
-
-          // Notes
-          if (addon.notes) {
-            const notes = document.createElement('div');
-            notes.className = 'addon-notes';
-            notes.textContent = addon.notes;
-            addonDiv.appendChild(notes);
-          }
-
-          categoryDiv.appendChild(addonDiv);
+          categoryDiv.appendChild(createAddOnElement(addon));
         });
 
         container.appendChild(categoryDiv);
@@ -1367,6 +1347,78 @@
       }
 
       console.log(`[UI] Smart add-on "${addonType}" ${checkbox.checked ? 'enabled' : 'disabled'}`);
+    }
+
+    function createAddOnElement(addon) {
+      const addonDiv = document.createElement('div');
+      addonDiv.className = 'addon-item';
+      addonDiv.id = `addon-${addon.name.replace(/\s+/g, '-')}`;
+
+      // Checkbox + info
+      const label = document.createElement('label');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = addon.name;
+      checkbox.dataset.addonName = addon.name;
+      checkbox.dataset.pricingModel = addon.pricingModel;
+      checkbox.dataset.addonData = JSON.stringify(addon);
+
+      checkbox.onchange = function() {
+        handleAddOnSelection(this);
+      };
+
+      const info = document.createElement('div');
+      info.className = 'addon-info';
+
+      const name = document.createElement('div');
+      name.className = 'addon-name';
+      name.textContent = addon.name;
+
+      const pricing = document.createElement('div');
+      pricing.className = 'addon-pricing';
+      pricing.textContent = formatAddOnPricing(addon);
+
+      info.appendChild(name);
+      info.appendChild(pricing);
+
+      label.appendChild(checkbox);
+      label.appendChild(info);
+      addonDiv.appendChild(label);
+
+      // Volume input for transaction-based add-ons (except DocMagic which auto-uses mortgage volume)
+      if ((addon.pricingModel === 'transaction' || addon.pricingModel === 'one-time+transaction') &&
+          !addon.name.includes('DocMagic')) {
+        const volumeInputDiv = document.createElement('div');
+        volumeInputDiv.className = 'addon-volume-input';
+        volumeInputDiv.style.display = 'none';
+        volumeInputDiv.id = `addon-volume-${addon.name.replace(/\s+/g, '-')}`;
+
+        const label2 = document.createElement('label');
+        label2.textContent = 'Monthly Volume (# of documents):';
+        label2.style.fontSize = '0.8rem';
+        label2.style.marginBottom = '4px';
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.min = '0';
+        input.placeholder = 'Enter monthly volume';
+        input.dataset.addonName = addon.name;
+        input.onchange = updateAddOnVolume;
+
+        volumeInputDiv.appendChild(label2);
+        volumeInputDiv.appendChild(input);
+        addonDiv.appendChild(volumeInputDiv);
+      }
+
+      // Notes
+      if (addon.notes) {
+        const notes = document.createElement('div');
+        notes.className = 'addon-notes';
+        notes.textContent = addon.notes;
+        addonDiv.appendChild(notes);
+      }
+
+      return addonDiv;
     }
 
     function formatAddOnPricing(addon) {
