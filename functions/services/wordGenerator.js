@@ -313,12 +313,17 @@ async function generateProposal(proposalData) {
     const bodyMatch = tempDocXml.match(/<w:body>([\s\S]*?)<w:sectPr[\s\S]*?<\/w:sectPr>\s*<\/w:body>/);
     const tempContent = bodyMatch ? bodyMatch[1] : '<w:p><w:pPr></w:pPr></w:p>';
 
-    // Debug: log what values are in the generated content
-    console.log('[wordGenerator] Checking generated content for values...');
-    if (tempContent.includes('11250')) console.log('[wordGenerator] ✓ Found 11250 in content');
-    if (tempContent.includes('12000')) console.log('[wordGenerator] ✓ Found 12000 in content');
-    if (tempContent.includes('1250')) console.log('[wordGenerator] ⚠ Found 1250 in content');
-    if (tempContent.includes('2000')) console.log('[wordGenerator] ⚠ Found 2000 in content');
+    // Debug: log sample of generated content to see how values are encoded
+    console.log('[wordGenerator] Checking generated content...');
+    const contentSample = tempContent.substring(0, 2000);
+    if (contentSample.includes('11') && contentSample.includes('250')) {
+      console.log('[wordGenerator] Found 11...250 in content (may be split across XML)');
+    } else if (contentSample.includes('1250')) {
+      console.log('[wordGenerator] ⚠ Found 1250 in content');
+    }
+    // Show a snippet of actual content for debugging
+    const currencyMatches = tempContent.match(/\$[\d,\.]+/g) || [];
+    console.log('[wordGenerator] Currency values found in content:', currencyMatches.slice(0, 10));
 
     // Replace only the content between <w:body> and <w:sectPr>, preserving template's section properties (header/footer refs)
     docXml = docXml.replace(
