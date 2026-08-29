@@ -1259,28 +1259,22 @@
 
       console.log('[UI] Volume config updated:', volumeConfig);
 
-      // Update tier and annual fee displays for this year
-      if (productData && productData.modules) {
-        const mortgageModule = productData.modules.find(m => m.name && m.name.toLowerCase().includes('mortgage'));
-        if (mortgageModule && mortgageModule.tiers) {
-          // Find matching tier based on volume
-          const matchedTier = mortgageModule.tiers.find(tier =>
-            volume >= (tier.volumeMin || 0) && volume <= (tier.volumeMax || Infinity)
-          );
+      // Update tier and annual fee displays for this year based on yearlyTierSelections
+      if (yearlyTierSelections && yearlyTierSelections[year]) {
+        const tierData = JSON.parse(yearlyTierSelections[year]);
 
-          // Update tier display
-          const tierField = document.getElementById(`yearTier_${year}`);
-          if (tierField) {
-            tierField.value = matchedTier ? matchedTier.name : 'No tier match';
-            tierField.style.color = matchedTier ? '#00ff88' : '#888';
-          }
+        // Update tier display
+        const tierField = document.getElementById(`yearTier_${year}`);
+        if (tierField) {
+          tierField.value = tierData.tierName || 'N/A';
+          tierField.style.color = tierData.tierName ? '#00ff88' : '#888';
+        }
 
-          // Update annual fee display
-          const feeField = document.getElementById(`yearFee_${year}`);
-          if (feeField) {
-            feeField.value = matchedTier ? `$${(matchedTier.annualFee || 0).toLocaleString()}` : 'N/A';
-            feeField.style.color = matchedTier ? '#00ff88' : '#888';
-          }
+        // Update annual fee display
+        const feeField = document.getElementById(`yearFee_${year}`);
+        if (feeField) {
+          feeField.value = tierData.annualFee ? `$${Math.round(tierData.annualFee).toLocaleString()}` : 'N/A';
+          feeField.style.color = tierData.annualFee ? '#00ff88' : '#888';
         }
       }
     }
@@ -2381,10 +2375,10 @@
 
         for (const [addonName, addonSelection] of Object.entries(selectedAddOns)) {
           console.log(`[generateProposal] Processing add-on: ${addonName}`, addonSelection);
+          const addonNameLower = addonName.toLowerCase();
 
           // Handle smart add-ons (Insight, Beta, Access)
           if (addonSelection.smartMatched) {
-            const addonNameLower = addonName.toLowerCase();
             console.log('[generateProposal] Smart add-on detected, type:', addonNameLower);
 
             if (addonNameLower.includes('insight')) {
