@@ -1043,10 +1043,8 @@
     async function loadProductModules() {
       const type = document.getElementById('productType').value;
       const moduleSelect = document.getElementById('productModule');
-      const volumeRow = document.getElementById('volumeRow');
 
       moduleSelect.innerHTML = '<option value="">Select product...</option>';
-      volumeRow.classList.add('hidden');
 
       if (!type || !productsData[type]) {
         loadAddOns(); // Will hide add-ons section if no type selected
@@ -1851,8 +1849,6 @@
 
     function addProduct() {
       const type = document.getElementById('productType').value;
-      const volumeInput = document.getElementById('volumeInput');
-      const volumeRow = document.getElementById('volumeRow');
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
 
       if (!type) {
@@ -1860,49 +1856,38 @@
         return;
       }
 
-      let product;
+      // Check if module is selected
+      const moduleSelect = document.getElementById('productModule');
+      const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
 
-      if (volumeRow.classList.contains('hidden')) {
-        // No volume selection needed - use first product from module
-        const moduleSelect = document.getElementById('productModule');
-        const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
-        if (!selectedOption.dataset.products) {
-          showStatus('Please select a product', 'error');
-          return;
-        }
-        product = JSON.parse(selectedOption.dataset.products)[0];
-      } else {
-        // Volume-based selection required
-        const volume = parseInt(volumeInput.value);
-        if (isNaN(volume) || !volumeInput.dataset.matchedProduct) {
-          showStatus('Please enter a valid monthly volume', 'error');
-          return;
-        }
+      if (!selectedOption.value || !selectedOption.dataset.products) {
+        showStatus('Please select a product/module', 'error');
+        return;
+      }
 
-        product = JSON.parse(volumeInput.dataset.matchedProduct);
+      // Use the first product from the module (volume tier matching happens in Volume & Tier Configuration section)
+      const product = JSON.parse(selectedOption.dataset.products)[0];
+
+      if (!product) {
+        showStatus('No product data available', 'error');
+        return;
+      }
+
+      // Check Year 1 volume is entered
+      const year1Volume = volumeConfig[1];
+      if (!year1Volume || year1Volume === 0) {
+        showStatus('Please enter Year 1 monthly volume in Volume & Tier Configuration', 'error');
+        return;
       }
 
       // Create a line item for each year with volume entered
       for (let year = 1; year <= contractYears; year++) {
-        let volume = 0;
-        let yearTierData = null;
-
-        if (year === 1) {
-          // Year 1 uses the main volume input
-          volume = parseInt(volumeInput.value) || 0;
-          yearTierData = volumeInput.dataset.matchedProduct ? JSON.parse(volumeInput.dataset.matchedProduct) : product;
-        } else {
-          // Years 2+ use yearly volume selections
-          const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
-          if (!yearVolumeInput || !yearVolumeInput.value) {
-            continue; // Skip this year if no volume entered
-          }
-          volume = parseInt(yearVolumeInput.value) || 0;
-          // Get tier from yearlyTierSelections
-          yearTierData = yearlyTierSelections[year] ? JSON.parse(yearlyTierSelections[year]) : product;
-        }
+        const volume = volumeConfig[year] || 0;
 
         if (volume <= 0) continue;
+
+        // Use the product from the selected module
+        let yearTierData = product;
 
         // Calculate per-file fee from services
         let perFileFee = 0;
@@ -1939,14 +1924,6 @@
       }
 
       updateUI();
-      volumeInput.value = '';
-      document.getElementById('matchedTier').value = '';
-      for (let year = 2; year <= contractYears; year++) {
-        const yearVolumeInput = document.getElementById(`yearVolume_${year}`);
-        if (yearVolumeInput) yearVolumeInput.value = '';
-        const yearTierDisplay = document.getElementById(`yearTierDisplay_${year}`);
-        if (yearTierDisplay) yearTierDisplay.value = '';
-      }
       showStatus(`Product added for ${contractYears} year(s)`, 'success');
     }
 
