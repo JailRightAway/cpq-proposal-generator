@@ -73,9 +73,17 @@ async function generateProposal(proposalData) {
   // Group line items by product
   const groupedItems = groupLineItemsByProduct(lineItems);
   const primaryServiceSections = [];
+  const addOnSections = [];
+
+  // Identify add-ons (products containing common add-on keywords)
+  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
+
+  const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
 
   // Create a separate table for each product
   Object.entries(groupedItems).forEach(([productName, items]) => {
+    const isAddOnProduct = isAddOn(productName);
+    const targetSections = isAddOnProduct ? addOnSections : primaryServiceSections;
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
     const hasAnnualFees = items.some(item => (item.annualFee || item.annualPrice) > 0);
@@ -128,7 +136,7 @@ async function generateProposal(proposalData) {
     });
 
     // Add product heading and table
-    primaryServiceSections.push(
+    targetSections.push(
       new Paragraph({
         text: productName,
         bold: true,
@@ -142,7 +150,7 @@ async function generateProposal(proposalData) {
     const columnCount = isInsight ? 4 : 5;
     const columnWidth = Math.floor(5000 / columnCount); // 5000 twips per column
 
-    primaryServiceSections.push(
+    targetSections.push(
       new Table({
         rows: tableRows,
         width: { size: 100, type: WidthType.PERCENT },
@@ -150,7 +158,7 @@ async function generateProposal(proposalData) {
       })
     );
 
-    primaryServiceSections.push(
+    targetSections.push(
       new Paragraph({ text: '', spacing: { after: 50 } })
     );
   });
@@ -267,6 +275,16 @@ async function generateProposal(proposalData) {
     }),
 
     ...primaryServiceSections,
+
+    ...(addOnSections.length > 0 ? [
+      new Paragraph({
+        text: 'Add-Ons',
+        heading: HeadingLevel.HEADING_2,
+        color: '004B8E',
+        spacing: { before: 100, after: 50 }
+      }),
+      ...addOnSections
+    ] : []),
 
     new Paragraph({
       text: 'Annual Investment Summary',

@@ -2194,8 +2194,8 @@
     async function generateProposal() {
       const customerName = document.getElementById('customerName').value;
 
-      if (!customerName || lineItems.length === 0) {
-        showStatus('Please enter customer name and add products', 'error');
+      if (!customerName || (lineItems.length === 0 && Object.keys(selectedAddOns).length === 0)) {
+        showStatus('Please enter customer name and add products or add-ons', 'error');
         return;
       }
 
@@ -2204,6 +2204,8 @@
 
       console.log('DEBUG generateProposal: yearlyTierSelections =', yearlyTierSelections);
       console.log('DEBUG generateProposal: lineItems =', lineItems);
+      console.log('DEBUG generateProposal: selectedAddOns =', selectedAddOns);
+      console.log('DEBUG generateProposal: volumeConfig =', volumeConfig);
 
       // Build yearly tier info
       const yearlyTiers = {};
@@ -2260,6 +2262,137 @@
             tier: 'N/A'
           });
         }
+      }
+
+      // === ADD-ONS PROCESSING ===
+      if (Object.keys(selectedAddOns).length > 0) {
+        console.log('[generateProposal] Processing add-ons...');
+
+        // Get Year 1 Mortgage volume for smart add-on tier matching
+        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+        console.log('[generateProposal] Year 1 volume:', year1Volume);
+
+        for (const [addonName, addonSelection] of Object.entries(selectedAddOns)) {
+          console.log(`[generateProposal] Processing add-on: ${addonName}`, addonSelection);
+
+          // Handle smart add-ons (Insight, Beta, Access)
+          if (addonSelection.smartMatched) {
+            if (addonName.includes('Insight')) {
+              // Insight: Match Year 1 volume, apply to all years
+              const matchedTier = findTierMatch(addOnsData['Add On - MeridianLink Insight'], year1Volume);
+
+              if (matchedTier) {
+                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0;
+                const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+
+                for (let year = 1; year <= contractYears; year++) {
+                  proposalLineItems.push({
+                    productName: `MeridianLink Insight (${matchedTier.tier})`,
+                    tier: matchedTier.tier,
+                    setupFee: year === 1 ? setupFee : 0,
+                    annualFee: annualFee,
+                    year: year,
+                    monthlyCommitment: 0,
+                    volume: null
+                  });
+                }
+              }
+            } else if (addonName.includes('Beta')) {
+              // Beta: Match Year 1 volume, apply to all years
+              const testEnvAddons = addOnsData['Add On - Misc']?.filter(item =>
+                item.name.includes('Test Environment')
+              ) || [];
+              const matchedTier = findTierMatch(testEnvAddons, year1Volume);
+
+              if (matchedTier) {
+                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0;
+                const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+
+                for (let year = 1; year <= contractYears; year++) {
+                  proposalLineItems.push({
+                    productName: `Test Environment / Beta (${matchedTier.tier})`,
+                    tier: matchedTier.tier,
+                    setupFee: year === 1 ? setupFee : 0,
+                    annualFee: annualFee,
+                    year: year,
+                    monthlyCommitment: 0,
+                    volume: null
+                  });
+                }
+              }
+            } else if (addonName.includes('Access')) {
+              // Access: Match each year's volume separately, setup fee only in Year 1
+              for (let year = 1; year <= contractYears; year++) {
+                const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
+                const matchedTier = findTierMatch(addOnsData['Add On - MeridianLink Mortgage Access'], yearVolume);
+
+                if (matchedTier) {
+                  const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
+                  const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+
+                  proposalLineItems.push({
+                    productName: `MeridianLink Mortgage Access (${matchedTier.tier})`,
+                    tier: matchedTier.tier,
+                    setupFee: setupFee,
+                    annualFee: annualFee,
+                    year: year,
+                    monthlyCommitment: 0,
+                    volume: null
+                  });
+                }
+              }
+            }
+          }
+          // Handle DocMagic (special case - uses Mortgage volumes)
+          else if (addonName.includes('DocMagic') || addonName.includes('Document Prep')) {
+            console.log('[generateProposal] Processing DocMagic...');
+
+            for (let year = 1; year <= contractYears; year++) {
+              const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
+              const monthlyMinimum = yearVolume * 26.60;
+
+              proposalLineItems.push({
+                productName: 'DocMagic Document Preparation',
+                setupFee: year === 1 ? (addonSelection.overrides?.oneTime || 0) : 0,
+                annualFee: addonSelection.overrides?.annual || 0,
+                monthlyCommitment: monthlyMinimum,
+                volume: yearVolume,
+                tier: 'N/A',
+                year: year
+              });
+            }
+          }
+          // Handle regular add-ons
+          else {
+            const addonData = addonSelection.addonData || {};
+            const setupFee = addonSelection.overrides?.oneTime !== undefined ? addonSelection.overrides.oneTime : (addonData.oneTimePrice || 0);
+            const annualFee = addonSelection.overrides?.annual !== undefined ? addonSelection.overrides.annual : (addonData.annualPrice || 0);
+            const transactionFee = addonSelection.overrides?.transaction !== undefined ? addonSelection.overrides.transaction : (addonData.transactionFee || 0);
+            const volume = addonSelection.volume || 0;
+            const monthlyCommitment = transactionFee > 0 ? (transactionFee * volume) : 0;
+
+            // Add for each contract year
+            for (let year = 1; year <= contractYears; year++) {
+              proposalLineItems.push({
+                productName: addonName,
+                setupFee: year === 1 ? setupFee : 0,
+                annualFee: annualFee,
+                monthlyCommitment: monthlyCommitment,
+                volume: volume || null,
+                tier: 'N/A',
+                year: year
+              });
+            }
+          }
+        }
+      }
+
+      // Helper function to find tier match by volume
+      function findTierMatch(tiers, volume) {
+        if (!Array.isArray(tiers)) return null;
+        return tiers.find(tier =>
+          volume >= (tier.tierMin || 0) && volume < (tier.tierMax || Infinity)
+        );
       }
 
       const proposalData = {
