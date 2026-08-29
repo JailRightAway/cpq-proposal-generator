@@ -285,8 +285,7 @@ async function generateProposal(proposalData) {
   ];
 
   // Load template and inject content
-  // NOTE: Template has hardcoded values that overlay generated content, so we skip it
-  const skipTemplate = true; // Set to false to use template
+  const skipTemplate = false; // Use updated template
 
   try {
     if (skipTemplate) {
