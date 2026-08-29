@@ -977,9 +977,14 @@
           <input type="text" id="year1AnnualFee" readonly placeholder="Annual fee will display here">
         </div>
       </div>
-      <!-- Year-by-year tier selectors will be added here dynamically -->
-      <div id="yearlyTiersContainer"></div>
       <button class="btn btn-secondary" onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- Volume & Tier Configuration (for add-ons and multi-year pricing) -->
+    <div class="section" id="volumeConfigSection">
+      <h2>Volume & Tier Configuration</h2>
+      <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Set monthly volumes for add-on tier matching and multi-year pricing</p>
+      <div id="volumeConfigContainer"></div>
     </div>
 
     <!-- Add-Ons Selection -->
@@ -1176,6 +1181,136 @@
 
       console.log(`  → No tier found for volume ${volume}`);
       return null;
+    }
+
+    // Volume configuration for each year
+    let volumeConfig = {}; // { year: volume }
+
+    function renderVolumeConfiguration() {
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+      const container = document.getElementById('volumeConfigContainer');
+      container.innerHTML = '';
+
+      const grid = document.createElement('div');
+      grid.style.display = 'grid';
+      grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(250px, 1fr))';
+      grid.style.gap = '20px';
+
+      for (let year = 1; year <= contractYears; year++) {
+        const yearBox = document.createElement('div');
+        yearBox.style.backgroundColor = '#1a1a1a';
+        yearBox.style.border = '1px solid #444';
+        yearBox.style.borderRadius = '8px';
+        yearBox.style.padding = '15px';
+
+        const yearTitle = document.createElement('h4');
+        yearTitle.style.color = '#00d4ff';
+        yearTitle.style.marginTop = '0';
+        yearTitle.style.marginBottom = '15px';
+        yearTitle.textContent = `Year ${year}`;
+        yearBox.appendChild(yearTitle);
+
+        // Volume input
+        const volumeGroup = document.createElement('div');
+        volumeGroup.style.marginBottom = '12px';
+
+        const volumeLabel = document.createElement('label');
+        volumeLabel.style.display = 'block';
+        volumeLabel.style.fontSize = '0.9rem';
+        volumeLabel.style.marginBottom = '6px';
+        volumeLabel.textContent = 'Monthly Volume (# of loans)';
+        volumeGroup.appendChild(volumeLabel);
+
+        const volumeInput = document.createElement('input');
+        volumeInput.type = 'number';
+        volumeInput.id = `yearVolume_${year}`;
+        volumeInput.min = '0';
+        volumeInput.placeholder = 'Enter monthly volume';
+        volumeInput.style.width = '100%';
+        volumeInput.style.padding = '8px';
+        volumeInput.style.backgroundColor = '#222';
+        volumeInput.style.border = '1px solid #444';
+        volumeInput.style.color = '#e0e0e0';
+        volumeInput.style.borderRadius = '4px';
+        volumeInput.style.fontSize = '0.9rem';
+        volumeInput.style.boxSizing = 'border-box';
+        volumeInput.onchange = updateVolumeConfig;
+        volumeGroup.appendChild(volumeInput);
+
+        yearBox.appendChild(volumeGroup);
+
+        // Tier display (readonly)
+        const tierGroup = document.createElement('div');
+        tierGroup.style.marginBottom = '12px';
+
+        const tierLabel = document.createElement('label');
+        tierLabel.style.display = 'block';
+        tierLabel.style.fontSize = '0.9rem';
+        tierLabel.style.marginBottom = '6px';
+        tierLabel.style.color = '#aaa';
+        tierLabel.textContent = 'Matched Tier';
+        tierGroup.appendChild(tierLabel);
+
+        const tierDisplay = document.createElement('input');
+        tierDisplay.type = 'text';
+        tierDisplay.id = `yearTier_${year}`;
+        tierDisplay.readonly = true;
+        tierDisplay.placeholder = 'Tier will display here';
+        tierDisplay.style.width = '100%';
+        tierDisplay.style.padding = '8px';
+        tierDisplay.style.backgroundColor = '#222';
+        tierDisplay.style.border = '1px solid #444';
+        tierDisplay.style.color = '#888';
+        tierDisplay.style.borderRadius = '4px';
+        tierDisplay.style.fontSize = '0.9rem';
+        tierDisplay.style.boxSizing = 'border-box';
+        tierGroup.appendChild(tierDisplay);
+
+        yearBox.appendChild(tierGroup);
+
+        // Annual fee display (readonly)
+        const feeGroup = document.createElement('div');
+
+        const feeLabel = document.createElement('label');
+        feeLabel.style.display = 'block';
+        feeLabel.style.fontSize = '0.9rem';
+        feeLabel.style.marginBottom = '6px';
+        feeLabel.style.color = '#aaa';
+        feeLabel.textContent = 'Annual Fee';
+        feeGroup.appendChild(feeLabel);
+
+        const feeDisplay = document.createElement('input');
+        feeDisplay.type = 'text';
+        feeDisplay.id = `yearFee_${year}`;
+        feeDisplay.readonly = true;
+        feeDisplay.placeholder = 'Annual fee will display here';
+        feeDisplay.style.width = '100%';
+        feeDisplay.style.padding = '8px';
+        feeDisplay.style.backgroundColor = '#222';
+        feeDisplay.style.border = '1px solid #444';
+        feeDisplay.style.color = '#888';
+        feeDisplay.style.borderRadius = '4px';
+        feeDisplay.style.fontSize = '0.9rem';
+        feeDisplay.style.boxSizing = 'border-box';
+        feeGroup.appendChild(feeDisplay);
+
+        yearBox.appendChild(feeGroup);
+
+        grid.appendChild(yearBox);
+      }
+
+      container.appendChild(grid);
+    }
+
+    function updateVolumeConfig(event) {
+      const yearMatch = event.target.id.match(/yearVolume_(\d+)/);
+      if (!yearMatch) return;
+
+      const year = parseInt(yearMatch[1]);
+      const volume = parseInt(event.target.value) || 0;
+      volumeConfig[year] = volume;
+
+      console.log('[UI] Volume config updated:', volumeConfig);
     }
 
     // Add-Ons Management
@@ -1901,10 +2036,14 @@
       expirationDateInput.valueAsDate = defaultDate;
 
       const contractYearsInput = document.getElementById('contractYears');
-      contractYearsInput.addEventListener('change', updateYearlyTierSelectors);
+      contractYearsInput.addEventListener('change', function() {
+        updateYearlyTierSelectors();
+        renderVolumeConfiguration();
+      });
 
       // Initialize on load
       updateYearlyTierSelectors();
+      renderVolumeConfiguration();
     });
 
     function updateYearlyTierSelectors() {
