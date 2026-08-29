@@ -1077,51 +1077,29 @@
 
     async function loadProductOptions() {
       const moduleSelect = document.getElementById('productModule');
-      const volumeRow = document.getElementById('volumeRow');
-      const volumeInput = document.getElementById('volumeInput');
-      const matchedTier = document.getElementById('matchedTier');
       const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
 
-      // Store available tiers for this module
+      // Note: Volume configuration now handled by the separate Volume & Tier Configuration section
+      // This function previously showed/hid volumeRow, but that's deprecated
+
       if (!selectedOption || !selectedOption.dataset.products) {
-        volumeRow.classList.add('hidden');
         return;
       }
 
       const products = JSON.parse(selectedOption.dataset.products);
 
       if (products.length === 0) {
-        volumeRow.classList.add('hidden');
         return;
       }
 
-      // Store tier info on the volume input element for later lookup
-      volumeInput.dataset.tiers = JSON.stringify(products);
-
-      if (products.length === 1) {
-        // Only one tier - no need for volume input
-        volumeRow.classList.add('hidden');
-      } else {
-        // Multiple tiers - show volume input
-        volumeRow.classList.remove('hidden');
-        volumeInput.value = '';
-        matchedTier.value = '';
-
-        // Add event listener for volume changes
-        volumeInput.onchange = updateMatchedTier;
-        volumeInput.oninput = updateMatchedTier;
-      }
-
-      // Clear year volume inputs when product changes (so old tier data isn't used)
+      // Clear year volume inputs when product changes
       yearlyTierSelections = {};
-      updateYearlyTierSelectors();
     }
 
+    // DEPRECATED: Tier matching now handled by Volume & Tier Configuration section
     function updateMatchedTier() {
-      const volumeInput = document.getElementById('volumeInput');
-      const matchedTier = document.getElementById('matchedTier');
-      const year1AnnualFee = document.getElementById('year1AnnualFee');
-      const volume = parseInt(volumeInput.value) || 0;
+      // This function is no longer used - volume tier matching is handled elsewhere
+      return;
 
       if (!volumeInput.dataset.tiers) return;
 
