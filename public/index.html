@@ -1539,13 +1539,22 @@
       const addonName = checkbox.dataset.addonName;
       const addonDiv = checkbox.closest('.addon-item');
       const volumeInputDiv = addonDiv.querySelector('.addon-volume-input');
+      const addonData = JSON.parse(checkbox.dataset.addonData);
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
 
       if (checkbox.checked) {
-        selectedAddOns[addonName] = { selected: true, volume: 0 };
+        selectedAddOns[addonName] = {
+          selected: true,
+          volume: 0,
+          addonData: addonData,
+          overrides: {}
+        };
         addonDiv.classList.add('checked');
         if (volumeInputDiv) {
           volumeInputDiv.style.display = 'block';
         }
+        // Show price override fields
+        showPriceOverrideFields(addonDiv, addonName, addonData, contractYears);
       } else {
         delete selectedAddOns[addonName];
         addonDiv.classList.remove('checked');
@@ -1553,9 +1562,199 @@
           volumeInputDiv.style.display = 'none';
           volumeInputDiv.querySelector('input').value = '';
         }
+        // Hide price override fields
+        hidePriceOverrideFields(addonDiv);
       }
 
       console.log('[UI] Selected add-ons:', Object.keys(selectedAddOns));
+    }
+
+    function showPriceOverrideFields(addonDiv, addonName, addonData, contractYears) {
+      let overrideSection = addonDiv.querySelector('.addon-price-overrides');
+      if (overrideSection) return; // Already exists
+
+      overrideSection = document.createElement('div');
+      overrideSection.className = 'addon-price-overrides';
+      overrideSection.style.marginTop = '8px';
+      overrideSection.style.paddingTop = '8px';
+      overrideSection.style.borderTop = '1px solid #333';
+      overrideSection.style.fontSize = '0.8rem';
+
+      const title = document.createElement('div');
+      title.style.color = '#00d4ff';
+      title.style.marginBottom = '6px';
+      title.style.fontWeight = 'bold';
+      title.textContent = 'Price Overrides (optional)';
+      overrideSection.appendChild(title);
+
+      // One-time fee override
+      if (addonData.oneTimePrice > 0 || addonData.oneTimePrice === 0) {
+        const group = document.createElement('div');
+        group.style.marginBottom = '6px';
+
+        const label = document.createElement('label');
+        label.style.display = 'block';
+        label.style.color = '#aaa';
+        label.style.marginBottom = '2px';
+        label.textContent = `One-Time (default: $${addonData.oneTimePrice.toLocaleString()})`;
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = 'price-override-input';
+        input.dataset.addonName = addonName;
+        input.dataset.feeType = 'oneTime';
+        input.placeholder = addonData.oneTimePrice.toString();
+        input.style.width = '100%';
+        input.style.padding = '4px';
+        input.style.fontSize = '0.8rem';
+        input.style.backgroundColor = '#222';
+        input.style.border = '1px solid #444';
+        input.style.color = '#e0e0e0';
+        input.style.borderRadius = '3px';
+        input.style.boxSizing = 'border-box';
+        input.onchange = updatePriceOverride;
+
+        group.appendChild(label);
+        group.appendChild(input);
+        overrideSection.appendChild(group);
+      }
+
+      // Annual fee override
+      if (addonData.annualPrice > 0 || addonData.annualPrice === 0) {
+        const group = document.createElement('div');
+        group.style.marginBottom = '6px';
+
+        const label = document.createElement('label');
+        label.style.display = 'block';
+        label.style.color = '#aaa';
+        label.style.marginBottom = '2px';
+        label.textContent = `Annual (default: $${addonData.annualPrice.toLocaleString()}/year)`;
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = 'price-override-input';
+        input.dataset.addonName = addonName;
+        input.dataset.feeType = 'annual';
+        input.placeholder = addonData.annualPrice.toString();
+        input.style.width = '100%';
+        input.style.padding = '4px';
+        input.style.fontSize = '0.8rem';
+        input.style.backgroundColor = '#222';
+        input.style.border = '1px solid #444';
+        input.style.color = '#e0e0e0';
+        input.style.borderRadius = '3px';
+        input.style.boxSizing = 'border-box';
+        input.onchange = updatePriceOverride;
+
+        group.appendChild(label);
+        group.appendChild(input);
+        overrideSection.appendChild(group);
+      }
+
+      // Transaction fee override
+      if (addonData.transactionFee > 0 || addonData.transactionFee === 0) {
+        const group = document.createElement('div');
+        group.style.marginBottom = '6px';
+
+        const label = document.createElement('label');
+        label.style.display = 'block';
+        label.style.color = '#aaa';
+        label.style.marginBottom = '2px';
+        label.textContent = `Per Transaction (default: $${addonData.transactionFee.toFixed(2)})`;
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.step = '0.01';
+        input.className = 'price-override-input';
+        input.dataset.addonName = addonName;
+        input.dataset.feeType = 'transaction';
+        input.placeholder = addonData.transactionFee.toString();
+        input.style.width = '100%';
+        input.style.padding = '4px';
+        input.style.fontSize = '0.8rem';
+        input.style.backgroundColor = '#222';
+        input.style.border = '1px solid #444';
+        input.style.color = '#e0e0e0';
+        input.style.borderRadius = '3px';
+        input.style.boxSizing = 'border-box';
+        input.onchange = updatePriceOverride;
+
+        group.appendChild(label);
+        group.appendChild(input);
+        overrideSection.appendChild(group);
+      }
+
+      // Per-year overrides if multi-year contract
+      if (contractYears > 1) {
+        const yearTitle = document.createElement('div');
+        yearTitle.style.color = '#00d4ff';
+        yearTitle.style.marginTop = '8px';
+        yearTitle.style.marginBottom = '6px';
+        yearTitle.style.fontWeight = 'bold';
+        yearTitle.style.fontSize = '0.75rem';
+        yearTitle.textContent = 'Per-Year Annual Overrides';
+        overrideSection.appendChild(yearTitle);
+
+        for (let year = 1; year <= contractYears; year++) {
+          const group = document.createElement('div');
+          group.style.marginBottom = '4px';
+
+          const label = document.createElement('label');
+          label.style.display = 'block';
+          label.style.color = '#aaa';
+          label.style.marginBottom = '2px';
+          label.textContent = `Year ${year} Annual`;
+
+          const input = document.createElement('input');
+          input.type = 'number';
+          input.className = 'price-override-input';
+          input.dataset.addonName = addonName;
+          input.dataset.feeType = `year${year}Annual`;
+          input.placeholder = addonData.annualPrice.toString();
+          input.style.width = '100%';
+          input.style.padding = '3px';
+          input.style.fontSize = '0.75rem';
+          input.style.backgroundColor = '#222';
+          input.style.border = '1px solid #444';
+          input.style.color = '#e0e0e0';
+          input.style.borderRadius = '2px';
+          input.style.boxSizing = 'border-box';
+          input.onchange = updatePriceOverride;
+
+          group.appendChild(label);
+          group.appendChild(input);
+          overrideSection.appendChild(group);
+        }
+      }
+
+      addonDiv.appendChild(overrideSection);
+    }
+
+    function hidePriceOverrideFields(addonDiv) {
+      const overrideSection = addonDiv.querySelector('.addon-price-overrides');
+      if (overrideSection) {
+        overrideSection.remove();
+      }
+    }
+
+    function updatePriceOverride(event) {
+      const addonName = event.target.dataset.addonName;
+      const feeType = event.target.dataset.feeType;
+      const value = event.target.value ? parseFloat(event.target.value) : null;
+
+      if (!selectedAddOns[addonName]) return;
+
+      if (!selectedAddOns[addonName].overrides) {
+        selectedAddOns[addonName].overrides = {};
+      }
+
+      if (value !== null && value >= 0) {
+        selectedAddOns[addonName].overrides[feeType] = value;
+      } else {
+        delete selectedAddOns[addonName].overrides[feeType];
+      }
+
+      console.log(`[UI] ${addonName} override updated:`, selectedAddOns[addonName].overrides);
     }
 
     function updateAddOnVolume(event) {
