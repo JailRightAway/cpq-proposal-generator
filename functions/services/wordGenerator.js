@@ -82,7 +82,7 @@ async function generateProposal(proposalData) {
 
   // Helper function to determine if item should only show Year 1
   const showOnlyYear1 = (productName) => {
-    const year1OnlyKeywords = ['Platform Fee', 'DocDownload', 'PriceMyLoan Implementation', 'PriceMyLoan Service Package'];
+    const year1OnlyKeywords = ['Platform Fee', 'DocDownload', 'PriceMyLoan Implementation', 'PriceMyLoan Service Package', 'Spectrum'];
     return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
   };
 
@@ -96,17 +96,24 @@ async function generateProposal(proposalData) {
 
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
-    const hasAnnualFees = filteredItems.some(item => (item.annualFee || item.annualPrice) > 0);
+    const hasSetupFees = filteredItems.some(item => (item.setupFee || item.oneTimePrice || 0) > 0);
+    const hasAnnualFees = filteredItems.some(item => (item.annualFee || item.annualPrice || 0) > 0);
     const hasTransactionFees = filteredItems.some(item => (item.perFileFee || 0) > 0);
     const hasMonthlyCommitment = filteredItems.some(item => (item.monthlyCommitment || 0) > 0);
 
-    // Build header row - always show all columns
+    // Build header row - only show columns that have data
     const headerCells = [
       createHeaderCell('Service / Module'),
-      createHeaderCell('Year'),
-      createHeaderCell('One-Time Fee'),
-      createHeaderCell('Annual Fee')
+      createHeaderCell('Year')
     ];
+
+    if (hasSetupFees) {
+      headerCells.push(createHeaderCell('One-Time Fee'));
+    }
+
+    if (hasAnnualFees) {
+      headerCells.push(createHeaderCell('Annual Fee'));
+    }
 
     if (hasTransactionFees) {
       headerCells.push(createHeaderCell('Per Transaction'));
@@ -124,10 +131,16 @@ async function generateProposal(proposalData) {
 
       const dataCells = [
         createDataCell(productName),
-        createDataCell(String(item.year || 1), true),
-        createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true),
-        createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true)
+        createDataCell(String(item.year || 1), true)
       ];
+
+      if (hasSetupFees) {
+        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
+      }
+
+      if (hasAnnualFees) {
+        dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
+      }
 
       if (hasTransactionFees) {
         const perFileFee = Number(item.perFileFee) || 0;

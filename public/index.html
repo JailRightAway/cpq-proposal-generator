@@ -1258,6 +1258,31 @@
       volumeConfig[year] = volume;
 
       console.log('[UI] Volume config updated:', volumeConfig);
+
+      // Update tier and annual fee displays for this year
+      if (productData && productData.modules) {
+        const mortgageModule = productData.modules.find(m => m.name && m.name.toLowerCase().includes('mortgage'));
+        if (mortgageModule && mortgageModule.tiers) {
+          // Find matching tier based on volume
+          const matchedTier = mortgageModule.tiers.find(tier =>
+            volume >= (tier.volumeMin || 0) && volume <= (tier.volumeMax || Infinity)
+          );
+
+          // Update tier display
+          const tierField = document.getElementById(`yearTier_${year}`);
+          if (tierField) {
+            tierField.value = matchedTier ? matchedTier.name : 'No tier match';
+            tierField.style.color = matchedTier ? '#00ff88' : '#888';
+          }
+
+          // Update annual fee display
+          const feeField = document.getElementById(`yearFee_${year}`);
+          if (feeField) {
+            feeField.value = matchedTier ? `$${(matchedTier.annualFee || 0).toLocaleString()}` : 'N/A';
+            feeField.style.color = matchedTier ? '#00ff88' : '#888';
+          }
+        }
+      }
     }
 
     // Add-Ons Management
@@ -1511,14 +1536,98 @@
       const addonDiv = checkbox.closest('.addon-item');
 
       if (checkbox.checked) {
-        selectedAddOns[addonType] = { selected: true, smartMatched: true };
+        selectedAddOns[addonType] = { selected: true, smartMatched: true, overrides: {} };
         addonDiv.classList.add('checked');
+        showSmartAddOnOverrides(addonType, addonDiv);
       } else {
         delete selectedAddOns[addonType];
         addonDiv.classList.remove('checked');
+        const overrideDiv = addonDiv.querySelector('.addon-override-fields');
+        if (overrideDiv) overrideDiv.remove();
       }
 
       console.log(`[UI] Smart add-on "${addonType}" ${checkbox.checked ? 'enabled' : 'disabled'}`);
+    }
+
+    function showSmartAddOnOverrides(addonType, addonDiv) {
+      // Remove existing override fields
+      const existingOverrides = addonDiv.querySelector('.addon-override-fields');
+      if (existingOverrides) existingOverrides.remove();
+
+      // Create override fields container
+      const overrideDiv = document.createElement('div');
+      overrideDiv.className = 'addon-override-fields';
+      overrideDiv.style.marginTop = '10px';
+      overrideDiv.style.paddingTop = '10px';
+      overrideDiv.style.borderTop = '1px solid #333';
+
+      const overrideLabel = document.createElement('div');
+      overrideLabel.style.fontSize = '0.75rem';
+      overrideLabel.style.color = '#888';
+      overrideLabel.style.marginBottom = '8px';
+      overrideLabel.textContent = 'Override Pricing (optional):';
+      overrideDiv.appendChild(overrideLabel);
+
+      // One-time fee override
+      const oneTimeDiv = document.createElement('div');
+      oneTimeDiv.style.marginBottom = '6px';
+      const oneTimeLabel = document.createElement('label');
+      oneTimeLabel.style.display = 'block';
+      oneTimeLabel.style.fontSize = '0.7rem';
+      oneTimeLabel.style.marginBottom = '2px';
+      oneTimeLabel.textContent = 'One-Time Fee Override:';
+      const oneTimeInput = document.createElement('input');
+      oneTimeInput.type = 'number';
+      oneTimeInput.placeholder = 'Override amount';
+      oneTimeInput.style.width = '100%';
+      oneTimeInput.style.padding = '4px';
+      oneTimeInput.style.fontSize = '0.75rem';
+      oneTimeInput.style.backgroundColor = '#222';
+      oneTimeInput.style.border = '1px solid #333';
+      oneTimeInput.style.color = '#e0e0e0';
+      oneTimeInput.style.borderRadius = '3px';
+      oneTimeInput.onchange = (e) => updateSmartAddOnOverride(addonType, 'oneTime', e.target.value);
+      oneTimeDiv.appendChild(oneTimeLabel);
+      oneTimeDiv.appendChild(oneTimeInput);
+      overrideDiv.appendChild(oneTimeDiv);
+
+      // Annual fee override
+      const annualDiv = document.createElement('div');
+      annualDiv.style.marginBottom = '6px';
+      const annualLabel = document.createElement('label');
+      annualLabel.style.display = 'block';
+      annualLabel.style.fontSize = '0.7rem';
+      annualLabel.style.marginBottom = '2px';
+      annualLabel.textContent = 'Annual Fee Override:';
+      const annualInput = document.createElement('input');
+      annualInput.type = 'number';
+      annualInput.placeholder = 'Override amount';
+      annualInput.style.width = '100%';
+      annualInput.style.padding = '4px';
+      annualInput.style.fontSize = '0.75rem';
+      annualInput.style.backgroundColor = '#222';
+      annualInput.style.border = '1px solid #333';
+      annualInput.style.color = '#e0e0e0';
+      annualInput.style.borderRadius = '3px';
+      annualInput.onchange = (e) => updateSmartAddOnOverride(addonType, 'annual', e.target.value);
+      annualDiv.appendChild(annualLabel);
+      annualDiv.appendChild(annualInput);
+      overrideDiv.appendChild(annualDiv);
+
+      addonDiv.appendChild(overrideDiv);
+    }
+
+    function updateSmartAddOnOverride(addonType, feeType, value) {
+      if (!selectedAddOns[addonType]) return;
+      if (!selectedAddOns[addonType].overrides) selectedAddOns[addonType].overrides = {};
+
+      if (value !== null && value >= 0) {
+        selectedAddOns[addonType].overrides[feeType] = parseFloat(value);
+      } else {
+        delete selectedAddOns[addonType].overrides[feeType];
+      }
+
+      console.log(`[UI] Smart add-on "${addonType}" override updated:`, selectedAddOns[addonType].overrides);
     }
 
     function createAddOnElement(addon) {
@@ -2275,7 +2384,10 @@
 
           // Handle smart add-ons (Insight, Beta, Access)
           if (addonSelection.smartMatched) {
-            if (addonName.includes('Insight')) {
+            const addonNameLower = addonName.toLowerCase();
+            console.log('[generateProposal] Smart add-on detected, type:', addonNameLower);
+
+            if (addonNameLower.includes('insight')) {
               // Insight: Match Year 1 volume, apply to all years
               const matchedTier = findTierMatch(addOnsData['Add On - MeridianLink Insight'], year1Volume);
 
@@ -2295,7 +2407,7 @@
                   });
                 }
               }
-            } else if (addonName.includes('Beta')) {
+            } else if (addonNameLower.includes('beta')) {
               // Beta: Match Year 1 volume, apply to all years
               const testEnvAddons = addOnsData['Add On - Misc']?.filter(item =>
                 item.name.includes('Test Environment')
@@ -2318,31 +2430,44 @@
                   });
                 }
               }
-            } else if (addonName.includes('Access')) {
+            } else if (addonNameLower.includes('access')) {
               // Access: Match each year's volume separately, setup fee only in Year 1
-              for (let year = 1; year <= contractYears; year++) {
-                const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
-                const matchedTier = findTierMatch(addOnsData['Add On - MeridianLink Mortgage Access'], yearVolume);
+              console.log('[generateProposal] Processing Access - available categories:', Object.keys(addOnsData));
+              const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+              console.log('[generateProposal] Access add-ons data:', accessAddons);
 
-                if (matchedTier) {
-                  const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
-                  const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+              if (!accessAddons || !Array.isArray(accessAddons)) {
+                console.warn('[generateProposal] Access add-ons data not found or not an array');
+              } else {
+                for (let year = 1; year <= contractYears; year++) {
+                  const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
+                  console.log(`[generateProposal] Year ${year}: volume = ${yearVolume}`);
+                  const matchedTier = findTierMatch(accessAddons, yearVolume);
 
-                  proposalLineItems.push({
-                    productName: `MeridianLink Mortgage Access (${matchedTier.tier})`,
-                    tier: matchedTier.tier,
-                    setupFee: setupFee,
-                    annualFee: annualFee,
-                    year: year,
-                    monthlyCommitment: 0,
-                    volume: null
-                  });
+                  console.log(`[generateProposal] Year ${year} matched tier:`, matchedTier);
+
+                  if (matchedTier) {
+                    const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
+                    const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+
+                    proposalLineItems.push({
+                      productName: `MeridianLink Mortgage Access (${matchedTier.tier})`,
+                      tier: matchedTier.tier,
+                      setupFee: setupFee,
+                      annualFee: annualFee,
+                      year: year,
+                      monthlyCommitment: 0,
+                      volume: null
+                    });
+                  } else {
+                    console.warn(`[generateProposal] No Access tier matched for Year ${year} volume ${yearVolume}`);
+                  }
                 }
               }
             }
           }
           // Handle DocMagic (special case - uses Mortgage volumes, Year 1 only)
-          else if (addonName.includes('DocMagic') || addonName.includes('Document Prep')) {
+          else if (addonNameLower.includes('docmagic') || addonNameLower.includes('document prep')) {
             console.log('[generateProposal] Processing DocMagic...');
 
             const yearVolume = volumeConfig[1] ? parseInt(volumeConfig[1]) : year1Volume;
