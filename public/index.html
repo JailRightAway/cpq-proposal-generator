@@ -1501,20 +1501,30 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
-      // Build line items array - just Year 1 data for the table, annual fees handled in summary
+      // Build line items array - use yearly tier selections for Year 2+
       let proposalLineItems = lineItems.map(item => {
         const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
         const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
         const monthlyCommitment = perAppFee * (item.volume || 0);
 
+        // For Year 2+, use yearly tier selection if available
+        let tierName = item.tier || item.year1Tier || 'None';
+        let annualFeeForYear = item.annualFee || 0;
+
+        if (item.year > 1 && yearlyTierSelections[item.year]) {
+          const yearlyTier = JSON.parse(yearlyTierSelections[item.year]);
+          tierName = yearlyTier.tierName || tierName;
+          annualFeeForYear = yearlyTier.annualFee || item.annualFee || 0;
+        }
+
         return {
           productName: item.name,
-          tier: item.tier || item.year1Tier || 'None',
+          tier: tierName,
           volume: item.volume || null,
           perFileFee: perAppFee,
           monthlyCommitment: monthlyCommitment,
           setupFee: implFee,
-          annualFee: item.annualFee || 0,
+          annualFee: annualFeeForYear,
           year: item.year
         };
       });
