@@ -1189,7 +1189,51 @@
       const container = document.getElementById('addOnsContainer');
       container.innerHTML = '';
 
+      // Categories to hide (tiered or obsolete)
+      const hiddenCategories = [
+        'Add On - MeridianLink Insight',
+        'Add On - MeridianLink Portal', // Alpharank - obsolete
+        'Add On - Misc' // Test Environment (Beta) - we'll handle separately
+      ];
+
+      // First, add smart checkboxes for Insight, Beta, and Access
+      const smartSection = document.createElement('div');
+      smartSection.className = 'addon-category';
+      const smartTitle = document.createElement('h4');
+      smartTitle.textContent = 'Tiered Services (Auto-Matched)';
+      smartSection.appendChild(smartTitle);
+
+      // Insight checkbox
+      const insightDiv = createSmartAddOnCheckbox(
+        'Include MeridianLink Insight',
+        'MeridianLink Insight (auto-matched to Year 1 volume)',
+        'insight'
+      );
+      smartSection.appendChild(insightDiv);
+
+      // Beta checkbox
+      const betaDiv = createSmartAddOnCheckbox(
+        'Include Test Environment (Beta)',
+        'MeridianLink Mortgage Test Environment (auto-matched to Year 1 volume)',
+        'beta'
+      );
+      smartSection.appendChild(betaDiv);
+
+      // Access checkbox
+      const accessDiv = createSmartAddOnCheckbox(
+        'Include MeridianLink Mortgage Access',
+        'MeridianLink Mortgage Access (auto-matched to year volumes, setup in Year 1 only)',
+        'access'
+      );
+      smartSection.appendChild(accessDiv);
+
+      container.appendChild(smartSection);
+
+      // Then render regular add-ons (excluding hidden categories)
       Object.entries(addOnsData).forEach(([category, addOns]) => {
+        // Skip hidden categories
+        if (hiddenCategories.includes(category)) return;
+
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'addon-category';
 
@@ -1233,8 +1277,9 @@
           label.appendChild(info);
           addonDiv.appendChild(label);
 
-          // Volume input for transaction-based add-ons
-          if (addon.pricingModel === 'transaction' || addon.pricingModel === 'one-time+transaction') {
+          // Volume input for transaction-based add-ons (except DocMagic which auto-uses mortgage volume)
+          if ((addon.pricingModel === 'transaction' || addon.pricingModel === 'one-time+transaction') &&
+              !addon.name.includes('DocMagic')) {
             const volumeInputDiv = document.createElement('div');
             volumeInputDiv.className = 'addon-volume-input';
             volumeInputDiv.style.display = 'none';
@@ -1270,6 +1315,58 @@
 
         container.appendChild(categoryDiv);
       });
+    }
+
+    function createSmartAddOnCheckbox(displayName, description, addonType) {
+      const div = document.createElement('div');
+      div.className = 'addon-item';
+      div.id = `addon-${addonType}`;
+
+      const label = document.createElement('label');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = addonType;
+      checkbox.dataset.addonType = addonType;
+      checkbox.dataset.smartCheckbox = 'true';
+
+      checkbox.onchange = function() {
+        handleSmartAddOnSelection(this);
+      };
+
+      const info = document.createElement('div');
+      info.className = 'addon-info';
+
+      const name = document.createElement('div');
+      name.className = 'addon-name';
+      name.textContent = displayName;
+
+      const desc = document.createElement('div');
+      desc.className = 'addon-pricing';
+      desc.textContent = description;
+
+      info.appendChild(name);
+      info.appendChild(desc);
+
+      label.appendChild(checkbox);
+      label.appendChild(info);
+      div.appendChild(label);
+
+      return div;
+    }
+
+    function handleSmartAddOnSelection(checkbox) {
+      const addonType = checkbox.dataset.addonType;
+      const addonDiv = checkbox.closest('.addon-item');
+
+      if (checkbox.checked) {
+        selectedAddOns[addonType] = { selected: true, smartMatched: true };
+        addonDiv.classList.add('checked');
+      } else {
+        delete selectedAddOns[addonType];
+        addonDiv.classList.remove('checked');
+      }
+
+      console.log(`[UI] Smart add-on "${addonType}" ${checkbox.checked ? 'enabled' : 'disabled'}`);
     }
 
     function formatAddOnPricing(addon) {
