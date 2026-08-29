@@ -331,11 +331,17 @@ async function generateProposal(proposalData) {
     const currencyMatches = tempContent.match(/\$[\d,\.]+/g) || [];
     console.log('[wordGenerator] Currency values found in content:', currencyMatches.slice(0, 10));
 
-    // Replace only the content between <w:body> and <w:sectPr>, preserving template's section properties (header/footer refs)
+    // Replace all content between <w:body> and </w:body>, then re-add sectPr from template
+    // This ensures our content completely replaces template content
+    const sectionPropsMatch = docXml.match(/<w:sectPr[^>]*>[\s\S]*?<\/w:sectPr>/);
+    const sectionProps = sectionPropsMatch ? sectionPropsMatch[0] : '<w:sectPr/>';
+
     docXml = docXml.replace(
-      /<w:body>([\s\S]*?)<w:sectPr/,
-      `<w:body>${tempContent}<w:sectPr`
+      /<w:body>[\s\S]*?<\/w:body>/,
+      `<w:body>${tempContent}${sectionProps}</w:body>`
     );
+
+    console.log('[wordGenerator] Injected generated content into template');
 
     // Update the document.xml in the template
     zip.file('word/document.xml', docXml);
