@@ -789,23 +789,13 @@
 
     /* Add-Ons Styles */
     #addOnsContainer {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      grid-auto-flow: dense;
-      gap: 15px;
+      column-width: 300px;
+      column-gap: 20px;
     }
 
-    /* Masonry-style layout for add-ons to fill vertical gaps */
-    @supports (columns: 1) {
-      #addOnsContainer {
-        column-count: auto;
-        column-width: 280px;
-        column-gap: 15px;
-      }
-
-      .addon-category {
-        break-inside: avoid;
-      }
+    .addon-category {
+      break-inside: avoid;
+      margin-bottom: 15px;
     }
 
     .addon-category {
