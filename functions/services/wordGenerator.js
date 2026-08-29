@@ -110,8 +110,11 @@ async function generateProposal(proposalData) {
 
       if (isInsight || hasAnnualFee) {
         // For Insight and annual-fee products (like Access), show annual fee instead of monthly
-        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
-        dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
+        const setupFeeFormatted = formatCurrency(item.setupFee || item.oneTimePrice || 0);
+        const annualFeeFormatted = formatCurrency(item.annualFee || item.annualPrice || 0);
+        console.log(`[wordGenerator] Creating cells - setupFee input: ${item.setupFee}, formatted: ${setupFeeFormatted}, annualFee input: ${item.annualFee}, formatted: ${annualFeeFormatted}`);
+        dataCells.push(createDataCell(setupFeeFormatted, true));
+        dataCells.push(createDataCell(annualFeeFormatted, true));
       } else {
         // For volume/transaction-based products, show per-file fee and monthly commitment
         const perFileFee = Number(item.perFileFee) || 0;
@@ -309,6 +312,13 @@ async function generateProposal(proposalData) {
     // Extract content from temp (excluding section properties to preserve template's header/footer refs)
     const bodyMatch = tempDocXml.match(/<w:body>([\s\S]*?)<w:sectPr[\s\S]*?<\/w:sectPr>\s*<\/w:body>/);
     const tempContent = bodyMatch ? bodyMatch[1] : '<w:p><w:pPr></w:pPr></w:p>';
+
+    // Debug: log what values are in the generated content
+    console.log('[wordGenerator] Checking generated content for values...');
+    if (tempContent.includes('11250')) console.log('[wordGenerator] ✓ Found 11250 in content');
+    if (tempContent.includes('12000')) console.log('[wordGenerator] ✓ Found 12000 in content');
+    if (tempContent.includes('1250')) console.log('[wordGenerator] ⚠ Found 1250 in content');
+    if (tempContent.includes('2000')) console.log('[wordGenerator] ⚠ Found 2000 in content');
 
     // Replace only the content between <w:body> and <w:sectPr>, preserving template's section properties (header/footer refs)
     docXml = docXml.replace(
