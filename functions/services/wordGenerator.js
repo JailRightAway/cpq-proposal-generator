@@ -76,6 +76,7 @@ async function generateProposal(proposalData) {
   Object.entries(groupedItems).forEach(([productName, items]) => {
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
+    const hasAnnualFees = items.some(item => (item.annualFee || item.annualPrice) > 0);
 
     // Build header row based on product type
     const headerCells = [
@@ -83,7 +84,7 @@ async function generateProposal(proposalData) {
       createHeaderCell('Year')
     ];
 
-    if (isInsight) {
+    if (isInsight || hasAnnualFees) {
       headerCells.push(createHeaderCell('One-Time Fee'));
       headerCells.push(createHeaderCell('Annual Fee'));
     } else {
