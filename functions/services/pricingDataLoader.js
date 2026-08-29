@@ -817,6 +817,187 @@ function classifyType(moduleName) {
   return 'Other';
 }
 
+/**
+ * Load add-ons (Mortgage, etc.) from JSON
+ */
+async function loadAddOns(addonType = 'Mortgage', forceRefresh = false) {
+  console.log('[AddOnsLoader] loadAddOns called for type:', addonType);
+
+  const ADDON_FILE = path.join(__dirname, '..', 'pricing-data', `Add Ons - ${addonType}.json`);
+
+  try {
+    if (!fs.existsSync(ADDON_FILE)) {
+      throw new Error(`Add-ons file not found at ${ADDON_FILE}`);
+    }
+
+    console.log(`[AddOnsLoader] Reading Add Ons - ${addonType}.json...`);
+    let jsonString = fs.readFileSync(ADDON_FILE, 'utf8');
+
+    // Replace NaN with null
+    jsonString = jsonString.replace(/: NaN/g, ': null');
+
+    const rawData = JSON.parse(jsonString);
+    console.log(`[AddOnsLoader] Parsed ${rawData.length} rows`);
+
+    const addOnsByCategory = parseAddOnsFromJson(rawData);
+    console.log('[AddOnsLoader] parseAddOnsFromJson completed');
+    console.log('[AddOnsLoader] Add-on categories:', Object.keys(addOnsByCategory));
+
+    return addOnsByCategory;
+  } catch (error) {
+    console.error('[AddOnsLoader] Error:', error.message);
+    return {};
+  }
+}
+
+/**
+ * Parse add-ons from JSON array structure
+ * Groups add-ons by category (e.g., "Add On - Core Conversion", "Add On - Document Prep")
+ * Handles rows where category is null by using the previous category (state machine)
+ */
+function parseAddOnsFromJson(data) {
+  console.log('[parseAddOnsFromJson] Starting to parse', data.length, 'rows');
+
+  const addOnsByCategory = {};
+  let headerRowFound = false;
+  let currentCategory = null;  // State machine for when category is null
+
+  for (let i = 0; i < data.length; i++) {
+    const row = data[i];
+
+    // Skip rows with no data or NaN columns
+    if (!row || !row['Unnamed: 2']) continue;
+
+    // Identify header row
+    if (row['Unnamed: 0'] === 'Product Of (Primary Service)' || row['Unnamed: 2'] === 'Internal Product Name') {
+      headerRowFound = true;
+      console.log('[parseAddOnsFromJson] Found header row at index', i);
+      continue;
+    }
+
+    // Skip rows until header is found
+    if (!headerRowFound) continue;
+
+    // Extract fields
+    const productName = String(row['Unnamed: 2']).trim();
+    const categoryValue = row['Unnamed: 1'];
+    const notes = row['Unnamed: 3'] ? String(row['Unnamed: 3']).trim() : '';
+    const oneTimePrice = typeof row['Unnamed: 4'] === 'number' ? row['Unnamed: 4'] : 0;
+    const annualPrice = typeof row['Unnamed: 5'] === 'number' ? row['Unnamed: 5'] : 0;
+    const transactionFee = typeof row['Unnamed: 6'] === 'number' ? row['Unnamed: 6'] : 0;
+
+    // Skip if product name is empty
+    if (!productName) continue;
+
+    // Update current category if this row has a category value
+    if (categoryValue && String(categoryValue).trim() !== '') {
+      currentCategory = String(categoryValue).trim();
+    }
+
+    // Skip if we don't have a category yet
+    if (!currentCategory) continue;
+
+    // Initialize category array if needed
+    if (!addOnsByCategory[currentCategory]) {
+      addOnsByCategory[currentCategory] = [];
+    }
+
+    // Check for custom pricing flags (negative values like -1234 mean custom pricing needed)
+    const customPricing = oneTimePrice < 0 || annualPrice < 0 || transactionFee < 0;
+
+    // Determine pricing model
+    let pricingModel = 'unknown';
+    if (customPricing) {
+      pricingModel = 'custom';
+    } else if (oneTimePrice > 0 && annualPrice > 0) pricingModel = 'one-time+annual';
+    else if (oneTimePrice > 0 && transactionFee > 0) pricingModel = 'one-time+transaction';
+    else if (annualPrice > 0 && transactionFee > 0) pricingModel = 'annual+transaction';
+    else if (oneTimePrice > 0) pricingModel = 'one-time';
+    else if (annualPrice > 0) pricingModel = 'annual';
+    else if (transactionFee > 0) pricingModel = 'transaction';
+
+    // Extract tier info if present (for volume-based add-ons)
+    const tierInfo = extractAddOnTierInfo(productName);
+
+    // Mark which fields need custom input (negative values)
+    const customFields = {
+      oneTime: oneTimePrice < 0,
+      annual: annualPrice < 0,
+      transaction: transactionFee < 0
+    };
+
+    const addOn = {
+      name: productName,
+      category: currentCategory,
+      notes: notes,
+      oneTimePrice: oneTimePrice > 0 ? oneTimePrice : 0,
+      annualPrice: annualPrice > 0 ? annualPrice : 0,
+      transactionFee: transactionFee > 0 ? transactionFee : 0,
+      pricingModel: pricingModel,
+      customFields: customPricing ? customFields : null, // Only include if custom pricing needed
+      requiresCustomInput: customPricing,
+      ...tierInfo // Include tier info if it exists (tier, tierMin, tierMax)
+    };
+
+    addOnsByCategory[currentCategory].push(addOn);
+
+    console.log(`[parseAddOnsFromJson] Added: ${productName} (${pricingModel})`);
+  }
+
+  // Log summary
+  Object.entries(addOnsByCategory).forEach(([category, items]) => {
+    console.log(`[parseAddOnsFromJson] Category "${category}": ${items.length} items`);
+  });
+
+  return addOnsByCategory;
+}
+
+/**
+ * Extract tier information from add-on product names
+ * Examples:
+ *   "MeridianLink Insight For Mortgage Tier 01 (1200+ Closed Loans/Mon)" → {tier: "Tier 01", tierMin: 1200, tierMax: Infinity}
+ *   "MeridianLink Mortgage Access Tier 02 (900-1199 Closed Loans/Month)" → {tier: "Tier 02", tierMin: 900, tierMax: 1199}
+ */
+function extractAddOnTierInfo(productName) {
+  // Match patterns like "Tier 01" or "Tier 1"
+  const tierMatch = productName.match(/Tier\s+(\d+)/i);
+  if (!tierMatch) return {}; // Not a tiered add-on
+
+  const tierNum = tierMatch[1];
+
+  // Try to match range patterns
+  // Pattern 1: "1200+ Closed Loans" → min=1200, max=Infinity
+  const rangeMatch1 = productName.match(/(\d+)\+\s*Closed\s+Loans/i);
+  if (rangeMatch1) {
+    const min = parseInt(rangeMatch1[1]);
+    return {
+      tier: `Tier ${tierNum}`,
+      tierMin: min,
+      tierMax: Infinity
+    };
+  }
+
+  // Pattern 2: "900-1199 Closed Loans" → min=900, max=1199
+  const rangeMatch2 = productName.match(/(\d+)\s*-\s*(\d+)\s*Closed\s+Loans/i);
+  if (rangeMatch2) {
+    const min = parseInt(rangeMatch2[1]);
+    const max = parseInt(rangeMatch2[2]);
+    return {
+      tier: `Tier ${tierNum}`,
+      tierMin: min,
+      tierMax: max
+    };
+  }
+
+  // If no range found, just return the tier name
+  return {
+    tier: `Tier ${tierNum}`,
+    tierMin: null,
+    tierMax: null
+  };
+}
+
 module.exports = {
-  loadProducts
+  loadProducts,
+  loadAddOns
 };

@@ -786,6 +786,100 @@
         padding: 12px;
       }
     }
+
+    /* Add-Ons Styles */
+    .addon-category {
+      background-color: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .addon-category h4 {
+      color: #00d4ff;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+    }
+
+    .addon-item {
+      margin-bottom: 12px;
+      padding: 10px;
+      background-color: #222;
+      border-radius: 4px;
+      border-left: 3px solid #004b8e;
+    }
+
+    .addon-item label {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .addon-item input[type="checkbox"] {
+      margin-right: 10px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .addon-info {
+      flex: 1;
+    }
+
+    .addon-name {
+      font-weight: 500;
+      color: #e0e0e0;
+      font-size: 0.95rem;
+    }
+
+    .addon-pricing {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .addon-notes {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .addon-volume-input {
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 4px;
+    }
+
+    .addon-volume-input input {
+      width: 100%;
+      padding: 6px;
+      background-color: #222;
+      border: 1px solid #444;
+      color: #e0e0e0;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .addon-volume-input input:focus {
+      border-color: #00d4ff;
+      outline: none;
+      box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+    }
+
+    .addon-item.checked {
+      background-color: #1a3a2a;
+      border-left-color: #00ff88;
+    }
+
+    .addon-item.checked .addon-name {
+      color: #00ff88;
+    }
   </style>
 </head>
 <body>
@@ -863,6 +957,14 @@
       <button class="btn btn-secondary" onclick="addProduct()">Add Product</button>
     </div>
 
+    <!-- Add-Ons Selection -->
+    <div class="section hidden" id="addOnsSection">
+      <h2>Add-Ons</h2>
+      <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Select any additional services for your proposal</p>
+      <div id="addOnsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      </div>
+    </div>
+
     <!-- Pricing Table -->
     <div class="section hidden" id="pricingSection">
       <h2>Line Items</h2>
@@ -898,6 +1000,7 @@
   <script>
     let lineItems = [];
     let productsData = {};
+    let selectedAddOns = {};
 
     // Load product types on page load
     async function loadProducts() {
@@ -929,7 +1032,13 @@
       moduleSelect.innerHTML = '<option value="">Select product...</option>';
       volumeRow.classList.add('hidden');
 
-      if (!type || !productsData[type]) return;
+      if (!type || !productsData[type]) {
+        loadAddOns(); // Will hide add-ons section if no type selected
+        return;
+      }
+
+      // Load add-ons for this product type
+      loadAddOns();
 
       // Group products by module name
       const modules = {};
@@ -1042,6 +1151,184 @@
 
       console.log(`  → No tier found for volume ${volume}`);
       return null;
+    }
+
+    // Add-Ons Management
+    let addOnsData = {};
+    let selectedAddOns = {}; // Track selected add-ons: { addonName: { selected: true/false, volume?: value } }
+
+    async function loadAddOns() {
+      const type = document.getElementById('productType').value;
+      const addOnsSection = document.getElementById('addOnsSection');
+      const addOnsContainer = document.getElementById('addOnsContainer');
+
+      // Hide add-ons section if not Mortgage
+      if (type !== 'Mortgage') {
+        addOnsSection.classList.add('hidden');
+        return;
+      }
+
+      try {
+        console.log(`[UI] Loading add-ons for: ${type}`);
+        const response = await fetch(`/api/products/addons/${type}`);
+        const data = await response.json();
+        addOnsData = data.data || {};
+        selectedAddOns = {}; // Reset selections
+
+        console.log(`[UI] Loaded ${Object.keys(addOnsData).length} add-on categories`);
+
+        // Render add-ons UI
+        renderAddOnsUI();
+        addOnsSection.classList.remove('hidden');
+      } catch (error) {
+        console.error('[UI] Error loading add-ons:', error);
+        addOnsSection.classList.add('hidden');
+      }
+    }
+
+    function renderAddOnsUI() {
+      const container = document.getElementById('addOnsContainer');
+      container.innerHTML = '';
+
+      Object.entries(addOnsData).forEach(([category, addOns]) => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'addon-category';
+
+        const categoryTitle = document.createElement('h4');
+        categoryTitle.textContent = category.replace('Add On - ', '');
+        categoryDiv.appendChild(categoryTitle);
+
+        addOns.forEach(addon => {
+          const addonDiv = document.createElement('div');
+          addonDiv.className = 'addon-item';
+          addonDiv.id = `addon-${addon.name.replace(/\s+/g, '-')}`;
+
+          // Checkbox + info
+          const label = document.createElement('label');
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.value = addon.name;
+          checkbox.dataset.addonName = addon.name;
+          checkbox.dataset.pricingModel = addon.pricingModel;
+          checkbox.dataset.addonData = JSON.stringify(addon);
+
+          checkbox.onchange = function() {
+            handleAddOnSelection(this);
+          };
+
+          const info = document.createElement('div');
+          info.className = 'addon-info';
+
+          const name = document.createElement('div');
+          name.className = 'addon-name';
+          name.textContent = addon.name;
+
+          const pricing = document.createElement('div');
+          pricing.className = 'addon-pricing';
+          pricing.textContent = formatAddOnPricing(addon);
+
+          info.appendChild(name);
+          info.appendChild(pricing);
+
+          label.appendChild(checkbox);
+          label.appendChild(info);
+          addonDiv.appendChild(label);
+
+          // Volume input for transaction-based add-ons
+          if (addon.pricingModel === 'transaction' || addon.pricingModel === 'one-time+transaction') {
+            const volumeInputDiv = document.createElement('div');
+            volumeInputDiv.className = 'addon-volume-input';
+            volumeInputDiv.style.display = 'none';
+            volumeInputDiv.id = `addon-volume-${addon.name.replace(/\s+/g, '-')}`;
+
+            const label2 = document.createElement('label');
+            label2.textContent = 'Monthly Volume (# of documents):';
+            label2.style.fontSize = '0.8rem';
+            label2.style.marginBottom = '4px';
+
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.min = '0';
+            input.placeholder = 'Enter monthly volume';
+            input.dataset.addonName = addon.name;
+            input.onchange = updateAddOnVolume;
+
+            volumeInputDiv.appendChild(label2);
+            volumeInputDiv.appendChild(input);
+            addonDiv.appendChild(volumeInputDiv);
+          }
+
+          // Notes
+          if (addon.notes) {
+            const notes = document.createElement('div');
+            notes.className = 'addon-notes';
+            notes.textContent = addon.notes;
+            addonDiv.appendChild(notes);
+          }
+
+          categoryDiv.appendChild(addonDiv);
+        });
+
+        container.appendChild(categoryDiv);
+      });
+    }
+
+    function formatAddOnPricing(addon) {
+      const parts = [];
+
+      if (addon.requiresCustomInput) {
+        parts.push('Custom pricing (requires input)');
+      } else {
+        if (addon.oneTimePrice > 0) {
+          parts.push(`$${addon.oneTimePrice.toLocaleString()} one-time`);
+        }
+        if (addon.annualPrice > 0) {
+          parts.push(`$${addon.annualPrice.toLocaleString()}/year`);
+        }
+        if (addon.transactionFee > 0) {
+          parts.push(`$${addon.transactionFee}/transaction`);
+        }
+      }
+
+      if (addon.tier) {
+        parts.push(`(${addon.tier})`);
+      }
+
+      return parts.length > 0 ? parts.join(' • ') : 'See notes for pricing';
+    }
+
+    function handleAddOnSelection(checkbox) {
+      const addonName = checkbox.dataset.addonName;
+      const addonDiv = checkbox.closest('.addon-item');
+      const volumeInputDiv = addonDiv.querySelector('.addon-volume-input');
+
+      if (checkbox.checked) {
+        selectedAddOns[addonName] = { selected: true, volume: 0 };
+        addonDiv.classList.add('checked');
+        if (volumeInputDiv) {
+          volumeInputDiv.style.display = 'block';
+        }
+      } else {
+        delete selectedAddOns[addonName];
+        addonDiv.classList.remove('checked');
+        if (volumeInputDiv) {
+          volumeInputDiv.style.display = 'none';
+          volumeInputDiv.querySelector('input').value = '';
+        }
+      }
+
+      console.log('[UI] Selected add-ons:', Object.keys(selectedAddOns));
+    }
+
+    function updateAddOnVolume(event) {
+      const addonName = event.target.dataset.addonName;
+      const volume = parseInt(event.target.value) || 0;
+
+      if (selectedAddOns[addonName]) {
+        selectedAddOns[addonName].volume = volume;
+      }
+
+      console.log(`[UI] ${addonName} volume updated to: ${volume}`);
     }
 
     function addProduct() {
