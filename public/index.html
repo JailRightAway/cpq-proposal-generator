@@ -795,6 +795,19 @@
       gap: 15px;
     }
 
+    /* Masonry-style layout for add-ons to fill vertical gaps */
+    @supports (columns: 1) {
+      #addOnsContainer {
+        column-count: auto;
+        column-width: 280px;
+        column-gap: 15px;
+      }
+
+      .addon-category {
+        break-inside: avoid;
+      }
+    }
+
     .addon-category {
       background-color: #1a1a1a;
       border: 1px solid #444;
