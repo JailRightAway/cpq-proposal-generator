@@ -1097,34 +1097,9 @@
     }
 
     // DEPRECATED: Tier matching now handled by Volume & Tier Configuration section
+    // DEPRECATED: Tier matching now handled by Volume & Tier Configuration section
     function updateMatchedTier() {
       // This function is no longer used - volume tier matching is handled elsewhere
-      return;
-
-      if (!volumeInput.dataset.tiers) return;
-
-      const tiers = JSON.parse(volumeInput.dataset.tiers);
-      const matched = findTierForVolume(tiers, volume);
-
-      if (matched) {
-        matchedTier.value = matched.tier;
-        // Display annual fee if available
-        if (year1AnnualFee) {
-          if (matched.annualFee) {
-            year1AnnualFee.value = `$${matched.annualFee.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-          } else {
-            year1AnnualFee.value = 'N/A';
-          }
-        }
-        // Store the matched product for later use
-        volumeInput.dataset.matchedProduct = JSON.stringify(matched);
-        // Update yearly tier selectors when volume is matched
-        updateYearlyTierSelectors();
-      } else {
-        matchedTier.value = '';
-        if (year1AnnualFee) year1AnnualFee.value = '';
-        volumeInput.dataset.matchedProduct = '';
-      }
     }
 
     function findTierForVolume(tiers, volume) {
@@ -2024,16 +1999,7 @@
       if (container) {
         container.innerHTML = '';
       }
-      return;
-
-      let tiers;
-      try {
-        if (!volumeInput.dataset.tiers) {
-          console.error('[updateYearlyTierSelectors] volumeInput.dataset.tiers is empty or null!');
-          container.innerHTML = '';
-          return;
-        }
-        tiers = JSON.parse(volumeInput.dataset.tiers);
+    }
         console.log('[updateYearlyTierSelectors] Loaded', tiers.length, 'tiers:', tiers.map(t => ({
           name: t.tier || t.tierName,
           min: t.tierMin,
