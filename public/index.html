@@ -2442,15 +2442,23 @@
               // Access: Match each year's volume separately, setup fee only in Year 1
               console.log('[generateProposal] Processing Access - available categories:', Object.keys(addOnsData));
               const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
-              console.log('[generateProposal] Access add-ons data:', accessAddons);
+              console.log('[generateProposal] Access add-ons data sample:', accessAddons ? accessAddons.slice(0, 2) : 'none');
 
-              if (!accessAddons || !Array.isArray(accessAddons)) {
-                console.warn('[generateProposal] Access add-ons data not found or not an array');
+              if (!accessAddons || !Array.isArray(accessAddons) || accessAddons.length === 0) {
+                console.warn('[generateProposal] Access add-ons data not found or empty');
               } else {
                 for (let year = 1; year <= contractYears; year++) {
                   const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
                   console.log(`[generateProposal] Year ${year}: volume = ${yearVolume}`);
-                  const matchedTier = findTierMatch(accessAddons, yearVolume);
+
+                  // Find tier with matching volume range
+                  const matchedTier = accessAddons.find(tier => {
+                    const tierMin = tier.tierMin || 0;
+                    const tierMax = tier.tierMax || Infinity;
+                    const matches = yearVolume >= tierMin && yearVolume < tierMax;
+                    console.log(`  Checking tier: ${tier.tier || tier.name}, min: ${tierMin}, max: ${tierMax}, matches: ${matches}`);
+                    return matches;
+                  });
 
                   console.log(`[generateProposal] Year ${year} matched tier:`, matchedTier);
 
@@ -2459,8 +2467,8 @@
                     const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
 
                     proposalLineItems.push({
-                      productName: `MeridianLink Mortgage Access (${matchedTier.tier})`,
-                      tier: matchedTier.tier,
+                      productName: `MeridianLink Mortgage Access (${matchedTier.tier || matchedTier.name})`,
+                      tier: matchedTier.tier || matchedTier.name,
                       setupFee: setupFee,
                       annualFee: annualFee,
                       year: year,

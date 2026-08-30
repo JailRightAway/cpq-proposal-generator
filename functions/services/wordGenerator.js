@@ -71,12 +71,24 @@ async function generateProposal(proposalData) {
   );
 
   // Group line items by product
-  const groupedItems = groupLineItemsByProduct(lineItems);
+  let groupedItems = groupLineItemsByProduct(lineItems);
   const primaryServiceSections = [];
   const addOnSections = [];
 
+  // Merge Platform Fee with Mortgage product
+  const platformFeeKey = Object.keys(groupedItems).find(key => key.toLowerCase().includes('platform fee'));
+  if (platformFeeKey) {
+    const mortgageKey = Object.keys(groupedItems).find(key =>
+      key.toLowerCase().includes('mortgage') && !key.toLowerCase().includes('platform fee') && !key.toLowerCase().includes('access')
+    );
+    if (mortgageKey) {
+      groupedItems[mortgageKey] = [...groupedItems[mortgageKey], ...groupedItems[platformFeeKey]];
+      delete groupedItems[platformFeeKey];
+    }
+  }
+
   // Identify add-ons (products containing common add-on keywords)
-  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
+  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'DocDownload', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
 
   const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
 
@@ -85,7 +97,17 @@ async function generateProposal(proposalData) {
 
   // Helper function to determine if item should only show Year 1
   const showOnlyYear1 = (productName) => {
-    const year1OnlyKeywords = ['Platform Fee', 'DocDownload', 'PriceMyLoan Implementation', 'PriceMyLoan Service Package', 'Spectrum'];
+    const year1OnlyKeywords = [
+      'Platform Fee',
+      'DocDownload',
+      'PriceMyLoan Implementation',
+      'PriceMyLoan Service Package',
+      'Spectrum',
+      'Corelation KeyStone',
+      'Fiserv DNA',
+      'XP System',
+      'Core Conversion'
+    ];
     return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
   };
 
@@ -217,17 +239,16 @@ async function generateProposal(proposalData) {
   if (allAddOnItems.length > 0) {
     const addOnTableRows = [];
 
-    // Determine which columns we need
+    // Determine which columns we need - always show transaction fee for add-ons
     let hasSetupFees = false;
     let hasAnnualFees = false;
-    let hasTransactionFees = false;
     let hasMonthlyCommitment = false;
+    const hasTransactionFees = true; // Always show for add-ons
 
     allAddOnItems.forEach(({ items }) => {
       items.forEach(item => {
         if ((item.setupFee || 0) > 0) hasSetupFees = true;
         if ((item.annualFee || 0) > 0) hasAnnualFees = true;
-        if ((item.perFileFee || 0) > 0) hasTransactionFees = true;
         if ((item.monthlyCommitment || 0) > 0) hasMonthlyCommitment = true;
       });
     });
@@ -240,7 +261,7 @@ async function generateProposal(proposalData) {
 
     if (hasSetupFees) addOnHeaderCells.push(createHeaderCell('One-Time Fee'));
     if (hasAnnualFees) addOnHeaderCells.push(createHeaderCell('Annual Fee'));
-    if (hasTransactionFees) addOnHeaderCells.push(createHeaderCell('Per Transaction'));
+    addOnHeaderCells.push(createHeaderCell('Per Transaction'));
     if (hasMonthlyCommitment) addOnHeaderCells.push(createHeaderCell('Monthly Commitment'));
 
     addOnTableRows.push(new TableRow({ children: addOnHeaderCells }));
@@ -255,10 +276,11 @@ async function generateProposal(proposalData) {
 
         if (hasSetupFees) dataCells.push(createDataCell(formatCurrency(item.setupFee || 0), true));
         if (hasAnnualFees) dataCells.push(createDataCell(formatCurrency(item.annualFee || 0), true));
-        if (hasTransactionFees) {
-          const perFileFee = Number(item.perFileFee) || 0;
-          dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
-        }
+
+        // Always show transaction fee for add-ons
+        const perFileFee = Number(item.perFileFee) || 0;
+        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
+
         if (hasMonthlyCommitment) dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true));
 
         addOnTableRows.push(new TableRow({ children: dataCells }));

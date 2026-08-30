@@ -665,7 +665,8 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
         tierRange: tierRangeStr || tierName,
         tierMin: tierMin,
         tierMax: tierMax,
-        sortKey: tierNum
+        sortKey: tierNum,
+        perFileFee: 0  // Will be populated later from serviceLines
       });
       return;
     }
@@ -685,7 +686,8 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
         tierRange: `${tierName} units`,
         tierMin: volumeRange.min,
         tierMax: volumeRange.max,
-        sortKey: startNum
+        sortKey: startNum,
+        perFileFee: 0  // Will be populated later from serviceLines
       });
       return;
     }
@@ -706,7 +708,8 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
           tierRange: tierRangeStr,
           tierMin: volumeRange.min,
           tierMax: volumeRange.max,
-          sortKey: parseInt(tierNum)
+          sortKey: parseInt(tierNum),
+          perFileFee: 0  // Will be populated later from serviceLines
         });
       }
     }
@@ -778,11 +781,35 @@ function extractTiersFromHeader(headerRow, productType, serviceLines) {
     }
   }
 
+  // Extract per-transaction fees for each tier from serviceLines
+  if (serviceLines && serviceLines.length > 0) {
+    // Find row with per-transaction or per-app fee
+    const transactionFeeRow = serviceLines.find(line => {
+      const name = String(line['Unnamed: 0'] || '').toLowerCase();
+      return (name.includes('per') || name.includes('transaction')) &&
+             (name.includes('application') || name.includes('file') || name.includes('app'));
+    });
+
+    if (transactionFeeRow) {
+      console.log('[extractTiersFromHeader] Extracting per-transaction fees from serviceLines');
+      tierArray.forEach(tier => {
+        if (tier.columnKey && transactionFeeRow[tier.columnKey]) {
+          const fee = transactionFeeRow[tier.columnKey];
+          if (typeof fee === 'number') {
+            tier.perFileFee = fee;
+            console.log(`[extractTiersFromHeader] ${tier.tierName}: perFileFee = ${fee}`);
+          }
+        }
+      });
+    }
+  }
+
   console.log(`[extractTiersFromHeader] Extracted ${tierArray.length} tiers:`, tierArray.map(t => ({
     name: t.tierName,
     range: t.tierRange,
     min: t.tierMin,
-    max: t.tierMax
+    max: t.tierMax,
+    perFileFee: t.perFileFee
   })));
 
   // Sort: Consumer/Collect products by Tier number descending (Tier 12/4 first)
