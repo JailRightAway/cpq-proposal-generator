@@ -75,14 +75,19 @@ async function generateProposal(proposalData) {
   const primaryServiceSections = [];
   const addOnSections = [];
 
-  // Merge Platform Fee with Mortgage product
+  // Merge Platform Fee with Mortgage product but preserve Platform Fee naming
   const platformFeeKey = Object.keys(groupedItems).find(key => key.toLowerCase().includes('platform fee'));
   if (platformFeeKey) {
     const mortgageKey = Object.keys(groupedItems).find(key =>
       key.toLowerCase().includes('mortgage') && !key.toLowerCase().includes('platform fee') && !key.toLowerCase().includes('access')
     );
     if (mortgageKey) {
-      groupedItems[mortgageKey] = [...groupedItems[mortgageKey], ...groupedItems[platformFeeKey]];
+      // Rename platform fee items back to "MeridianLink Mortgage Platform Fee" for display
+      const platformFeeItems = groupedItems[platformFeeKey].map(item => ({
+        ...item,
+        productName: 'MeridianLink Mortgage Platform Fee'
+      }));
+      groupedItems[mortgageKey] = [...groupedItems[mortgageKey], ...platformFeeItems];
       delete groupedItems[platformFeeKey];
     }
   }
@@ -106,7 +111,8 @@ async function generateProposal(proposalData) {
       'Corelation KeyStone',
       'Fiserv DNA',
       'XP System',
-      'Core Conversion'
+      'Core Conversion',
+      'Insight'
     ];
     return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
   };
