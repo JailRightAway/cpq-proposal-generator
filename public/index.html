@@ -2322,28 +2322,42 @@
       const expirationDateInput = document.getElementById('expirationDate').valueAsDate;
       const expirationDate = expirationDateInput ? expirationDateInput.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
-      // Build line items array - use yearly tier selections for Year 2+
+      // Build line items array - use yearly tier selections for Year 2+ with auto-matching
       let proposalLineItems = lineItems.map(item => {
         const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
         const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
         const monthlyCommitment = perAppFee * (item.volume || 0);
 
-        // For Year 2+, use yearly tier selection if available
+        // For Year 2+, use yearly tier selection if available, otherwise use Year 1 tier
         let tierName = item.tier || item.year1Tier || 'None';
         let annualFeeForYear = item.annualFee || 0;
+        let actualPerFileFee = perAppFee;
 
+        // Auto-match tier based on volume for each year if needed
+        const yearVolume = volumeConfig[item.year] || volumeConfig[1] || 0;
         if (item.year > 1 && yearlyTierSelections[item.year]) {
           const yearlyTier = JSON.parse(yearlyTierSelections[item.year]);
           tierName = yearlyTier.tierName || tierName;
           annualFeeForYear = yearlyTier.annualFee || item.annualFee || 0;
+          actualPerFileFee = yearlyTier.perFileFee || perAppFee;
+        } else if (item.year > 1 && item.tiers && yearVolume > 0) {
+          // Auto-match tier based on volume if no explicit tier selection
+          const matchedTier = item.tiers.find(t =>
+            yearVolume >= (t.volumeMin || 0) && yearVolume <= (t.volumeMax || Infinity)
+          );
+          if (matchedTier) {
+            tierName = matchedTier.name || tierName;
+            annualFeeForYear = matchedTier.annualFee || item.annualFee || 0;
+            actualPerFileFee = matchedTier.perFileFee || perAppFee;
+          }
         }
 
         return {
           productName: item.name,
           tier: tierName,
           volume: item.volume || null,
-          perFileFee: perAppFee,
-          monthlyCommitment: monthlyCommitment,
+          perFileFee: actualPerFileFee,
+          monthlyCommitment: actualPerFileFee * (item.volume || 0),
           setupFee: implFee,
           annualFee: annualFeeForYear,
           year: item.year

@@ -76,9 +76,12 @@ async function generateProposal(proposalData) {
   const addOnSections = [];
 
   // Identify add-ons (products containing common add-on keywords)
-  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan', 'Platform Fee'];
+  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
 
   const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
+
+  // Platform Fee stays in primary services
+  const isPlatformFee = (productName) => productName.toLowerCase().includes('platform fee');
 
   // Helper function to determine if item should only show Year 1
   const showOnlyYear1 = (productName) => {
@@ -86,13 +89,24 @@ async function generateProposal(proposalData) {
     return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
   };
 
+  // Separate add-on items for consolidated table
+  let allAddOnItems = [];
+
   // Create a separate table for each product
   Object.entries(groupedItems).forEach(([productName, items]) => {
-    const isAddOnProduct = isAddOn(productName);
-    const targetSections = isAddOnProduct ? addOnSections : primaryServiceSections;
+    const isAddOnProduct = isAddOn(productName) && !isPlatformFee(productName);
+    const isSeparateTable = !isAddOnProduct;
 
     // Filter items for year 1-only products
     const filteredItems = showOnlyYear1(productName) ? items.filter(item => (item.year || 1) === 1) : items;
+
+    if (isAddOnProduct) {
+      // Collect add-on items for consolidated table
+      allAddOnItems.push({ productName, items: filteredItems });
+      return; // Skip individual table creation for add-ons
+    }
+
+    const targetSections = primaryServiceSections;
 
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
@@ -198,6 +212,72 @@ async function generateProposal(proposalData) {
       );
     }
   });
+
+  // Create consolidated add-ons table if there are any add-ons
+  if (allAddOnItems.length > 0) {
+    const addOnTableRows = [];
+
+    // Determine which columns we need
+    let hasSetupFees = false;
+    let hasAnnualFees = false;
+    let hasTransactionFees = false;
+    let hasMonthlyCommitment = false;
+
+    allAddOnItems.forEach(({ items }) => {
+      items.forEach(item => {
+        if ((item.setupFee || 0) > 0) hasSetupFees = true;
+        if ((item.annualFee || 0) > 0) hasAnnualFees = true;
+        if ((item.perFileFee || 0) > 0) hasTransactionFees = true;
+        if ((item.monthlyCommitment || 0) > 0) hasMonthlyCommitment = true;
+      });
+    });
+
+    // Build header row
+    const addOnHeaderCells = [
+      createHeaderCell('Add-On Service'),
+      createHeaderCell('Year')
+    ];
+
+    if (hasSetupFees) addOnHeaderCells.push(createHeaderCell('One-Time Fee'));
+    if (hasAnnualFees) addOnHeaderCells.push(createHeaderCell('Annual Fee'));
+    if (hasTransactionFees) addOnHeaderCells.push(createHeaderCell('Per Transaction'));
+    if (hasMonthlyCommitment) addOnHeaderCells.push(createHeaderCell('Monthly Commitment'));
+
+    addOnTableRows.push(new TableRow({ children: addOnHeaderCells }));
+
+    // Add all add-on items
+    allAddOnItems.forEach(({ productName, items }) => {
+      items.forEach(item => {
+        const dataCells = [
+          createDataCell(productName),
+          createDataCell(String(item.year || 1), true)
+        ];
+
+        if (hasSetupFees) dataCells.push(createDataCell(formatCurrency(item.setupFee || 0), true));
+        if (hasAnnualFees) dataCells.push(createDataCell(formatCurrency(item.annualFee || 0), true));
+        if (hasTransactionFees) {
+          const perFileFee = Number(item.perFileFee) || 0;
+          dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
+        }
+        if (hasMonthlyCommitment) dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true));
+
+        addOnTableRows.push(new TableRow({ children: dataCells }));
+      });
+    });
+
+    // Add consolidated add-ons table to primary sections
+    primaryServiceSections.push(
+      new Table({
+        rows: addOnTableRows,
+        width: { size: 100, type: WidthType.PERCENT },
+        columnWidths: Array(addOnHeaderCells.length).fill(Math.floor(5000 / addOnHeaderCells.length))
+      })
+    );
+
+    primaryServiceSections.push(
+      new Paragraph({ text: '', spacing: { after: 50 } })
+    );
+  }
 
   // Calculate yearly costs for Annual Investment Summary
   let totalSetup = lineItems.reduce((sum, item) => sum + (item.setupFee || item.oneTimePrice || 0), 0);
@@ -311,16 +391,6 @@ async function generateProposal(proposalData) {
     }),
 
     ...primaryServiceSections,
-
-    ...(addOnSections.length > 0 ? [
-      new Paragraph({
-        text: 'Add-Ons',
-        heading: HeadingLevel.HEADING_2,
-        color: '004B8E',
-        spacing: { before: 100, after: 50 }
-      }),
-      ...addOnSections
-    ] : []),
 
     new Paragraph({
       text: 'Annual Investment Summary',
