@@ -75,25 +75,8 @@ async function generateProposal(proposalData) {
   const primaryServiceSections = [];
   const addOnSections = [];
 
-  // Merge Platform Fee with Mortgage product but preserve Platform Fee naming
-  const platformFeeKey = Object.keys(groupedItems).find(key => key.toLowerCase().includes('platform fee'));
-  if (platformFeeKey) {
-    const mortgageKey = Object.keys(groupedItems).find(key =>
-      key.toLowerCase().includes('mortgage') && !key.toLowerCase().includes('platform fee') && !key.toLowerCase().includes('access')
-    );
-    if (mortgageKey) {
-      // Rename platform fee items back to "MeridianLink Mortgage Platform Fee" for display
-      const platformFeeItems = groupedItems[platformFeeKey].map(item => ({
-        ...item,
-        productName: 'MeridianLink Mortgage Platform Fee'
-      }));
-      groupedItems[mortgageKey] = [...groupedItems[mortgageKey], ...platformFeeItems];
-      delete groupedItems[platformFeeKey];
-    }
-  }
-
   // Identify add-ons (products containing common add-on keywords)
-  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'DocDownload', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan'];
+  const addOnKeywords = ['Insight', 'Beta', 'Test Environment', 'Access', 'DocMagic', 'Document Prep', 'DocDownload', 'Data Storage', 'Admin Pro', 'Professional Services', 'Core Conversion', 'KeyStone', 'Fiserv', 'Spectrum', 'XP System', 'Warehouse Extract', 'Baseline', 'Batch Field', 'PriceMyLoan', 'SQL'];
 
   const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
 
@@ -112,7 +95,8 @@ async function generateProposal(proposalData) {
       'Fiserv DNA',
       'XP System',
       'Core Conversion',
-      'Insight'
+      'Insight',
+      'SQL'
     ];
     return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
   };

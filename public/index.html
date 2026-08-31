@@ -1608,6 +1608,29 @@
       annualDiv.appendChild(annualInput);
       overrideDiv.appendChild(annualDiv);
 
+      // Transaction fee override
+      const transactionDiv = document.createElement('div');
+      transactionDiv.style.marginBottom = '6px';
+      const transactionLabel = document.createElement('label');
+      transactionLabel.style.display = 'block';
+      transactionLabel.style.fontSize = '0.7rem';
+      transactionLabel.style.marginBottom = '2px';
+      transactionLabel.textContent = 'Per Transaction Override:';
+      const transactionInput = document.createElement('input');
+      transactionInput.type = 'number';
+      transactionInput.placeholder = 'Override amount';
+      transactionInput.style.width = '100%';
+      transactionInput.style.padding = '4px';
+      transactionInput.style.fontSize = '0.75rem';
+      transactionInput.style.backgroundColor = '#222';
+      transactionInput.style.border = '1px solid #333';
+      transactionInput.style.color = '#e0e0e0';
+      transactionInput.style.borderRadius = '3px';
+      transactionInput.onchange = (e) => updateSmartAddOnOverride(addonType, 'transaction', e.target.value);
+      transactionDiv.appendChild(transactionLabel);
+      transactionDiv.appendChild(transactionInput);
+      overrideDiv.appendChild(transactionDiv);
+
       addonDiv.appendChild(overrideDiv);
     }
 
@@ -1909,6 +1932,50 @@
           group.appendChild(label);
           group.appendChild(input);
           overrideSection.appendChild(group);
+        }
+
+        // Per-year transaction fee overrides if applicable
+        if (addonData.transactionFee > 0) {
+          const transYearTitle = document.createElement('div');
+          transYearTitle.style.color = '#00d4ff';
+          transYearTitle.style.marginTop = '8px';
+          transYearTitle.style.marginBottom = '6px';
+          transYearTitle.style.fontWeight = 'bold';
+          transYearTitle.style.fontSize = '0.75rem';
+          transYearTitle.textContent = 'Per-Year Transaction Overrides';
+          overrideSection.appendChild(transYearTitle);
+
+          for (let year = 1; year <= contractYears; year++) {
+            const group = document.createElement('div');
+            group.style.marginBottom = '4px';
+
+            const label = document.createElement('label');
+            label.style.display = 'block';
+            label.style.color = '#aaa';
+            label.style.marginBottom = '2px';
+            label.textContent = `Year ${year} Per Transaction`;
+
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.step = '0.01';
+            input.className = 'price-override-input';
+            input.dataset.addonName = addonName;
+            input.dataset.feeType = `year${year}Transaction`;
+            input.placeholder = addonData.transactionFee.toString();
+            input.style.width = '100%';
+            input.style.padding = '3px';
+            input.style.fontSize = '0.75rem';
+            input.style.backgroundColor = '#222';
+            input.style.border = '1px solid #444';
+            input.style.color = '#e0e0e0';
+            input.style.borderRadius = '2px';
+            input.style.boxSizing = 'border-box';
+            input.onchange = updatePriceOverride;
+
+            group.appendChild(label);
+            group.appendChild(input);
+            overrideSection.appendChild(group);
+          }
         }
       }
 
@@ -2365,17 +2432,20 @@
       });
 
       // Add platform fee as line item for Year 1 only (Mortgage only)
+      // Add it with the Mortgage product name so it shows in the same table
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
+      const mortgageProductName = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage'))?.name || 'MeridianLink Mortgage';
+
       if (platformFee > 0 && hasMortgageProduct) {
         proposalLineItems.push({
-          productName: 'MeridianLink Mortgage Platform Fee',
+          productName: mortgageProductName,  // Use the actual Mortgage product name
           year: 1,
           setupFee: 0,
           perFileFee: 0,
           monthlyCommitment: platformFee,
           annualFee: 0,
           volume: null,
-          tier: 'N/A'
+          tier: 'MeridianLink Mortgage Platform Fee'  // Put the platform fee label in the tier column
         });
       }
 
@@ -2465,12 +2535,14 @@
                   if (matchedTier) {
                     const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
                     const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+                    const transactionFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || 0;
 
                     proposalLineItems.push({
                       productName: `MeridianLink Mortgage Access (${matchedTier.tier || matchedTier.name})`,
                       tier: matchedTier.tier || matchedTier.name,
                       setupFee: setupFee,
                       annualFee: annualFee,
+                      perFileFee: transactionFee,
                       year: year,
                       monthlyCommitment: 0,
                       volume: null
@@ -2503,10 +2575,9 @@
           else {
             const addonData = addonSelection.addonData || {};
             const setupFee = addonSelection.overrides?.oneTime !== undefined ? addonSelection.overrides.oneTime : (addonData.oneTimePrice || 0);
-            const annualFee = addonSelection.overrides?.annual !== undefined ? addonSelection.overrides.annual : (addonData.annualPrice || 0);
-            const transactionFee = addonSelection.overrides?.transaction !== undefined ? addonSelection.overrides.transaction : (addonData.transactionFee || 0);
+            const baseAnnualFee = addonSelection.overrides?.annual !== undefined ? addonSelection.overrides.annual : (addonData.annualPrice || 0);
+            const baseTransactionFee = addonSelection.overrides?.transaction !== undefined ? addonSelection.overrides.transaction : (addonData.transactionFee || 0);
             const volume = addonSelection.volume || 0;
-            const monthlyCommitment = transactionFee > 0 ? (transactionFee * volume) : 0;
 
             // Check if this should only show Year 1
             const isYear1Only = ['PriceMyLoan', 'DocDownload'].some(keyword => addonName.toLowerCase().includes(keyword.toLowerCase()));
@@ -2514,12 +2585,20 @@
 
             // Add for specified years
             yearsToAdd.forEach(year => {
+              // Check for per-year overrides
+              const yearAnnualOverride = addonSelection.overrides?.[`year${year}Annual`];
+              const yearTransactionOverride = addonSelection.overrides?.[`year${year}Transaction`];
+
+              const annualFeeForYear = year === 1 ? baseAnnualFee : (yearAnnualOverride !== undefined ? yearAnnualOverride : baseAnnualFee);
+              const transactionFeeForYear = yearTransactionOverride !== undefined ? yearTransactionOverride : baseTransactionFee;
+              const monthlyCommitment = transactionFeeForYear > 0 ? (transactionFeeForYear * volume) : 0;
+
               proposalLineItems.push({
                 productName: addonName,
                 setupFee: year === 1 ? setupFee : 0,
-                annualFee: year === 1 ? annualFee : 0,
-                monthlyCommitment: year === 1 ? monthlyCommitment : 0,
-                perFileFee: year === 1 ? transactionFee : 0,  // Include transaction fee for display
+                annualFee: annualFeeForYear,
+                monthlyCommitment: monthlyCommitment,
+                perFileFee: transactionFeeForYear,  // Include per-year transaction fee for display
                 volume: volume || null,
                 tier: 'N/A',
                 year: year
