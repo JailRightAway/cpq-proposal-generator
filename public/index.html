@@ -926,7 +926,23 @@
     }
 
     .checkout-panel.collapsed {
-      transform: translateX(100%);
+      width: 60px;
+    }
+
+    .checkout-panel.collapsed .checkout-content {
+      display: none;
+    }
+
+    .checkout-panel.collapsed .checkout-header {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .checkout-panel.collapsed .checkout-header h3 {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
     }
 
     .checkout-header {
@@ -1152,6 +1168,38 @@
 
     .checkout-items::-webkit-scrollbar-thumb:hover {
       background: #555;
+    }
+
+    /* Fee input styling */
+    .checkout-fee-input {
+      background: #111;
+      border: 1px solid #444;
+      color: #00ff88;
+      padding: 6px 8px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .checkout-fee-input:focus {
+      outline: none;
+      border-color: #00d4ff;
+      box-shadow: 0 0 4px rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-small {
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      background: #004499;
+      border: 1px solid #0066cc;
+      color: #00d4ff;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn-small:hover {
+      background: #005acd;
     }
 
   </style>
@@ -2651,17 +2699,17 @@
     }
 
     function updateUI() {
+      // Hide old sections - checkout panel now replaces them
       const pricingSection = document.getElementById('pricingSection');
       const summarySection = document.getElementById('summarySection');
 
-      if (lineItems.length > 0 || Object.keys(selectedAddOns).length > 0) {
-        pricingSection.classList.remove('hidden');
-        summarySection.classList.remove('hidden');
+      if (pricingSection) pricingSection.classList.add('hidden');
+      if (summarySection) summarySection.classList.add('hidden');
+
+      // Still update table/summary for reference if needed (can be removed later)
+      if (lineItems.length > 0) {
         updateTable();
         updateSummary();
-      } else {
-        pricingSection.classList.add('hidden');
-        summarySection.classList.add('hidden');
       }
 
       // Update checkout panel
@@ -2669,6 +2717,41 @@
     }
 
     // ===== CHECKOUT PANEL FUNCTIONS =====
+    // Checkout panel state for editing
+    let checkoutEditMode = {};
+
+    function toggleCheckoutEditMode(itemKey) {
+      if (!checkoutEditMode[itemKey]) {
+        checkoutEditMode[itemKey] = true;
+      } else {
+        delete checkoutEditMode[itemKey];
+      }
+      updateCheckoutPanel();
+    }
+
+    function updateLineItemFee(itemIndex, feeType, value) {
+      const item = lineItems[itemIndex];
+      const numValue = parseFloat(value) || 0;
+
+      if (feeType === 'monthly') {
+        item.monthlyCommitment = numValue;
+      }
+
+      updateUI();
+      delete checkoutEditMode[`product_${itemIndex}`];
+    }
+
+    function updateAddOnFee(addonName, feeType, value) {
+      if (!selectedAddOns[addonName]) return;
+      if (!selectedAddOns[addonName].overrides) selectedAddOns[addonName].overrides = {};
+
+      const numValue = parseFloat(value) || 0;
+      selectedAddOns[addonName].overrides[feeType] = numValue;
+
+      updateUI();
+      delete checkoutEditMode[`addon_${addonName}`];
+    }
+
     function updateCheckoutPanel() {
       const checkoutItems = document.getElementById('checkoutItems');
       const generateBtn = document.getElementById('checkoutGenerateBtn');
@@ -2688,42 +2771,111 @@
         const monthlyCommitment = item.monthlyCommitment || 0;
         const yearlyAmount = (monthlyCommitment || 0) * 12;
         const year = item.year || 1;
+        const isEditing = checkoutEditMode[`product_${index}`];
+
+        let costHtml = '';
+        if (isEditing) {
+          costHtml = `
+            <div class="checkout-item-costs">
+              <div class="checkout-cost">
+                <div class="checkout-cost-label">Monthly</div>
+                <input type="number" class="checkout-fee-input" value="${monthlyCommitment}"
+                       onchange="updateLineItemFee(${index}, 'monthly', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 70px;">
+              </div>
+            </div>
+            <button class="btn btn-small" onclick="toggleCheckoutEditMode('product_${index}')" style="margin-top: 6px;">Done</button>
+          `;
+        } else {
+          costHtml = `
+            <div class="checkout-item-costs" onclick="toggleCheckoutEditMode('product_${index}')" style="cursor: pointer;">
+              <div class="checkout-cost">
+                <div class="checkout-cost-label">Monthly</div>
+                <div class="checkout-cost-value">$${monthlyCommitment.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
+              </div>
+              <div class="checkout-cost">
+                <div class="checkout-cost-label">Annual</div>
+                <div class="checkout-cost-value">$${yearlyAmount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
+              </div>
+            </div>
+          `;
+        }
 
         html += `
           <div class="checkout-item">
             <div class="checkout-item-details">
               <div class="checkout-item-name">${item.name}</div>
               <div class="checkout-item-meta">Year ${year} • Vol: ${item.volume || 'N/A'}</div>
-              <div class="checkout-item-costs">
-                <div class="checkout-cost">
-                  <div class="checkout-cost-label">Monthly</div>
-                  <div class="checkout-cost-value">$${monthlyCommitment.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
-                </div>
-                <div class="checkout-cost">
-                  <div class="checkout-cost-label">Annual</div>
-                  <div class="checkout-cost-value">$${yearlyAmount.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</div>
-                </div>
-              </div>
+              ${costHtml}
             </div>
             <button class="checkout-item-remove" onclick="removeLineItem(${index})" title="Remove item">×</button>
           </div>
         `;
       });
 
-      // Render add-ons (simplified view)
-      Object.entries(selectedAddOns).forEach(([addonType, addonData]) => {
-        if (addonData.selected) {
-          const displayName = addonType.charAt(0).toUpperCase() + addonType.slice(1);
-          html += `
-            <div class="checkout-item">
-              <div class="checkout-item-details">
-                <div class="checkout-item-name">${displayName}</div>
-                <div class="checkout-item-meta">Add-On • Tiered</div>
+      // Render add-ons (both smart and regular)
+      Object.entries(selectedAddOns).forEach(([addonName, addonData]) => {
+        if (!addonData || !addonData.selected) return;
+
+        // Determine display name
+        let displayName = addonName;
+        if (addonData.smartMatched) {
+          // Smart add-ons: Insight, Beta, Access
+          const typeMap = {
+            'insight': 'MeridianLink Insight',
+            'beta': 'Test Environment (Beta)',
+            'access': 'MeridianLink Access'
+          };
+          displayName = typeMap[addonName.toLowerCase()] || addonName;
+        }
+
+        // Get pricing info if available
+        const overrides = addonData.overrides || {};
+        const oneTime = overrides.oneTime || 0;
+        const annual = overrides.annual || 0;
+        const isEditing = checkoutEditMode[`addon_${addonName}`];
+
+        let costHtml = '';
+        if (isEditing) {
+          costHtml = `
+            <div style="font-size: 0.8rem; margin-top: 6px;">
+              <div style="margin-bottom: 4px;">
+                <label style="display: block; color: #888; font-size: 0.65rem; margin-bottom: 2px;">One-Time</label>
+                <input type="number" class="checkout-fee-input" value="${oneTime}"
+                       onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'oneTime', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
               </div>
-              <button class="checkout-item-remove" onclick="removeAddOn('${addonType}')" title="Remove add-on">×</button>
+              <div style="margin-bottom: 6px;">
+                <label style="display: block; color: #888; font-size: 0.65rem; margin-bottom: 2px;">Annual</label>
+                <input type="number" class="checkout-fee-input" value="${annual}"
+                       onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'annual', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
+              </div>
+              <button class="btn btn-small" onclick="toggleCheckoutEditMode('addon_${addonName}')">Done</button>
+            </div>
+          `;
+        } else {
+          const costLabel = oneTime > 0 ? `$${oneTime.toLocaleString()}` : (annual > 0 ? `$${annual.toLocaleString()}/yr` : '—');
+          costHtml = `
+            <div class="checkout-item-costs" onclick="toggleCheckoutEditMode('addon_${addonName}')" style="cursor: pointer;">
+              <div class="checkout-cost">
+                <div class="checkout-cost-label">Fee</div>
+                <div class="checkout-cost-value">${costLabel}</div>
+              </div>
             </div>
           `;
         }
+
+        html += `
+          <div class="checkout-item">
+            <div class="checkout-item-details">
+              <div class="checkout-item-name">${displayName}</div>
+              <div class="checkout-item-meta">Add-On ${addonData.smartMatched ? '• Auto-Matched' : ''}</div>
+              ${costHtml}
+            </div>
+            <button class="checkout-item-remove" onclick="removeAddOn('${addonName.replace(/'/g, "\\'")}')" title="Remove add-on">×</button>
+          </div>
+        `;
       });
 
       checkoutItems.innerHTML = html;
