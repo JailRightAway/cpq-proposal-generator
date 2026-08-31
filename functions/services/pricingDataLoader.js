@@ -345,7 +345,14 @@ function parseAccessModule(moduleName, moduleHeader, serviceLines) {
 
         if (serviceNameTrimmed.toLowerCase().includes('setup')) {
           product.totalSetupFee += price;
+        } else if (serviceNameTrimmed.toLowerCase().includes('per') &&
+                   (serviceNameTrimmed.toLowerCase().includes('app') ||
+                    serviceNameTrimmed.toLowerCase().includes('file') ||
+                    serviceNameTrimmed.toLowerCase().includes('transaction'))) {
+          // Extract per-transaction fee separately, don't add to annual fees
+          product.perFileFee = price;
         } else if (!serviceNameTrimmed.includes('Monthly')) {
+          // Only add to annual fees if it's not a per-transaction fee
           product.totalAnnualFee += price;
         }
       }

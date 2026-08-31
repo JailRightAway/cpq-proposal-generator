@@ -1270,11 +1270,55 @@
           tierField.style.color = tierData.tierName ? '#00ff88' : '#888';
         }
 
-        // Update annual fee display
+        // Update annual fee display (most Mortgage products don't have annual fees, so show N/A)
         const feeField = document.getElementById(`yearFee_${year}`);
         if (feeField) {
-          feeField.value = tierData.annualFee ? `$${Math.round(tierData.annualFee).toLocaleString()}` : 'N/A';
-          feeField.style.color = tierData.annualFee ? '#00ff88' : '#888';
+          // Only show annual fee if it's a non-zero value (most products don't have annual fees)
+          const hasAnnualFee = tierData.annualFee && tierData.annualFee > 0;
+          feeField.value = hasAnnualFee ? `$${Math.round(tierData.annualFee).toLocaleString()}` : 'N/A';
+          feeField.style.color = hasAnnualFee ? '#00ff88' : '#888';
+        }
+      }
+
+      // Update Access override fields with matched tier values if Access is selected
+      if (selectedAddOns.access && selectedAddOns.access.selected) {
+        updateAccessOverrideDefaults(year);
+      }
+    }
+
+    function updateAccessOverrideDefaults(year) {
+      // Find the Access addon override section
+      const accessDiv = document.getElementById('addon-access');
+      if (!accessDiv) return;
+
+      const overrideSection = accessDiv.querySelector('.addon-override-fields');
+      if (!overrideSection) return;
+
+      // Get the volume for this year
+      const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
+      if (yearVolume <= 0) return;
+
+      // Find matched tier for Access
+      const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+      if (!accessAddons || !Array.isArray(accessAddons)) return;
+
+      const matchedTier = accessAddons.find(tier => {
+        const tierMin = tier.tierMin || 0;
+        const tierMax = tier.tierMax || Infinity;
+        return yearVolume >= tierMin && yearVolume < tierMax;
+      });
+
+      if (!matchedTier) return;
+
+      // Update the per-year transaction override field with the matched tier's value as placeholder
+      const yearTransInput = overrideSection.querySelector(`input[data-addontype="access"][data-feetype="year${year}transaction"]`) ||
+                              overrideSection.querySelector(`input[placeholder*="Year ${year}"]`);
+      if (yearTransInput) {
+        yearTransInput.placeholder = matchedTier.perFileFee ? `$${matchedTier.perFileFee.toFixed(2)}` : '0.00';
+        // Add a small note showing the default
+        const label = yearTransInput.previousElementSibling;
+        if (label && !label.textContent.includes('default:')) {
+          label.textContent = `Year ${year} Per Transaction (default: $${(matchedTier.perFileFee || 0).toFixed(2)})`;
         }
       }
     }
@@ -1772,11 +1816,11 @@
       if (addon.requiresCustomInput) {
         parts.push('Custom pricing (requires input)');
       } else {
-        if (addon.oneTimePrice > 0) {
-          parts.push(`$${addon.oneTimePrice.toLocaleString()} one-time`);
+        if (addon.oneTimeFee > 0) {
+          parts.push(`$${addon.oneTimeFee.toLocaleString()} one-time`);
         }
-        if (addon.annualPrice > 0) {
-          parts.push(`$${addon.annualPrice.toLocaleString()}/year`);
+        if (addon.annualFee > 0) {
+          parts.push(`$${addon.annualFee.toLocaleString()}/year`);
         }
         if (addon.transactionFee > 0) {
           parts.push(`$${addon.transactionFee}/transaction`);
@@ -1843,7 +1887,7 @@
       overrideSection.appendChild(title);
 
       // One-time fee override
-      if (addonData.oneTimePrice > 0 || addonData.oneTimePrice === 0) {
+      if (addonData.oneTimeFee > 0 || addonData.oneTimeFee === 0) {
         const group = document.createElement('div');
         group.style.marginBottom = '6px';
 
@@ -1851,14 +1895,14 @@
         label.style.display = 'block';
         label.style.color = '#aaa';
         label.style.marginBottom = '2px';
-        label.textContent = `One-Time (default: $${addonData.oneTimePrice.toLocaleString()})`;
+        label.textContent = `One-Time (default: $${addonData.oneTimeFee.toLocaleString()})`;
 
         const input = document.createElement('input');
         input.type = 'number';
         input.className = 'price-override-input';
         input.dataset.addonName = addonName;
         input.dataset.feeType = 'oneTime';
-        input.placeholder = addonData.oneTimePrice.toString();
+        input.placeholder = addonData.oneTimeFee.toString();
         input.style.width = '100%';
         input.style.padding = '4px';
         input.style.fontSize = '0.8rem';
@@ -1875,7 +1919,7 @@
       }
 
       // Annual fee override
-      if (addonData.annualPrice > 0 || addonData.annualPrice === 0) {
+      if (addonData.annualFee > 0 || addonData.annualFee === 0) {
         const group = document.createElement('div');
         group.style.marginBottom = '6px';
 
@@ -1883,14 +1927,14 @@
         label.style.display = 'block';
         label.style.color = '#aaa';
         label.style.marginBottom = '2px';
-        label.textContent = `Annual (default: $${addonData.annualPrice.toLocaleString()}/year)`;
+        label.textContent = `Annual (default: $${addonData.annualFee.toLocaleString()}/year)`;
 
         const input = document.createElement('input');
         input.type = 'number';
         input.className = 'price-override-input';
         input.dataset.addonName = addonName;
         input.dataset.feeType = 'annual';
-        input.placeholder = addonData.annualPrice.toString();
+        input.placeholder = addonData.annualFee.toString();
         input.style.width = '100%';
         input.style.padding = '4px';
         input.style.fontSize = '0.8rem';
@@ -1965,7 +2009,7 @@
           input.className = 'price-override-input';
           input.dataset.addonName = addonName;
           input.dataset.feeType = `year${year}Annual`;
-          input.placeholder = addonData.annualPrice.toString();
+          input.placeholder = addonData.annualFee.toString();
           input.style.width = '100%';
           input.style.padding = '3px';
           input.style.fontSize = '0.75rem';
@@ -2268,7 +2312,25 @@
       lineItems.forEach(item => {
         const row = document.createElement('tr');
         const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
-        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+
+        // Calculate per app fee based on matched tier for this year's volume
+        let perAppFee = item.perFileFee;  // Base/default
+        if (item.overriddenPerFileFee !== null) {
+          perAppFee = item.overriddenPerFileFee;  // User override
+        } else if (item.tiers && item.tiers.length > 0) {
+          // Find tier for this year's volume
+          const yearVolume = volumeConfig[item.year] || 0;
+          if (yearVolume > 0) {
+            const matchedTier = item.tiers.find(t => {
+              const tierMin = t.tierMin !== undefined ? t.tierMin : (t.volumeMin !== undefined ? t.volumeMin : 0);
+              const tierMax = t.tierMax !== undefined ? t.tierMax : (t.volumeMax !== undefined ? t.volumeMax : Infinity);
+              return yearVolume >= tierMin && yearVolume < tierMax;
+            });
+            if (matchedTier && matchedTier.perFileFee !== undefined) {
+              perAppFee = matchedTier.perFileFee;
+            }
+          }
+        }
 
         row.innerHTML = `
           <td data-label="Product">${item.name}</td>
@@ -2510,10 +2572,12 @@
       // Add platform fee as line item for Year 1 only (Mortgage only)
       // Add it with the Mortgage product name so it shows in the same table
       const hasMortgageProduct = lineItems.some(item => item.name && item.name.toLowerCase().includes('mortgage'));
-      const mortgageProductName = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage'))?.name || 'MeridianLink Mortgage';
+      // Get the base Mortgage product name (without DocMagic or other suffixes)
+      const mortgageProduct = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage'));
+      const mortgageProductName = mortgageProduct?.name || 'MeridianLink Mortgage';
 
       if (platformFee > 0 && hasMortgageProduct) {
-        // Add Platform Fee as a row in the Mortgage table using the same product name
+        // Add Platform Fee as a row in the Mortgage table using the same product name for grouping
         proposalLineItems.push({
           productName: mortgageProductName,  // Use same Mortgage product name so it groups in the same table
           year: 1,
@@ -2522,7 +2586,7 @@
           monthlyCommitment: platformFee,
           annualFee: 0,
           volume: null,
-          tier: 'Platform Fee'  // Label it as Platform Fee in the tier column
+          tier: 'Platform Fee'  // Label it as Platform Fee in the tier column for clarity
         });
       }
 
@@ -2547,8 +2611,8 @@
               const matchedTier = findTierMatch(addOnsData['Add On - MeridianLink Insight'], year1Volume);
 
               if (matchedTier) {
-                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0;
-                const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
+                const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
 
                 for (let year = 1; year <= contractYears; year++) {
                   proposalLineItems.push({
@@ -2570,8 +2634,8 @@
               const matchedTier = findTierMatch(testEnvAddons, year1Volume);
 
               if (matchedTier) {
-                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0;
-                const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
+                const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
 
                 for (let year = 1; year <= contractYears; year++) {
                   proposalLineItems.push({
@@ -2603,15 +2667,15 @@
                     const tierMin = tier.tierMin || 0;
                     const tierMax = tier.tierMax || Infinity;
                     const matches = yearVolume >= tierMin && yearVolume < tierMax;
-                    console.log(`  Checking tier: ${tier.tier || tier.name}, min: ${tierMin}, max: ${tierMax}, matches: ${matches}, oneTimePrice: ${tier.oneTimePrice}, annualPrice: ${tier.annualPrice}`);
+                    console.log(`  Checking tier: ${tier.tier || tier.name}, min: ${tierMin}, max: ${tierMax}, matches: ${matches}, oneTimeFee: ${tier.oneTimeFee}, annualFee: ${tier.annualFee}`);
                     return matches;
                   });
 
                   console.log(`[generateProposal] Year ${year} matched tier:`, matchedTier);
 
                   if (matchedTier) {
-                    const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
-                    const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
+                    const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0) : 0;
+                    const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
                     // Check for per-year transaction override first, then fall back to general override, then tier default
                     const yearTransOverride = addonSelection.overrides?.[`year${year}Transaction`];
                     const transactionFee = yearTransOverride !== undefined ? yearTransOverride : (addonSelection.overrides?.transaction || matchedTier.perFileFee || 0);
@@ -2655,8 +2719,8 @@
           // Handle regular add-ons
           else {
             const addonData = addonSelection.addonData || {};
-            const setupFee = addonSelection.overrides?.oneTime !== undefined ? addonSelection.overrides.oneTime : (addonData.oneTimePrice || 0);
-            const baseAnnualFee = addonSelection.overrides?.annual !== undefined ? addonSelection.overrides.annual : (addonData.annualPrice || 0);
+            const setupFee = addonSelection.overrides?.oneTime !== undefined ? addonSelection.overrides.oneTime : (addonData.oneTimeFee || 0);
+            const baseAnnualFee = addonSelection.overrides?.annual !== undefined ? addonSelection.overrides.annual : (addonData.annualFee || 0);
             const baseTransactionFee = addonSelection.overrides?.transaction !== undefined ? addonSelection.overrides.transaction : (addonData.transactionFee || 0);
             const volume = addonSelection.volume || 0;
 
