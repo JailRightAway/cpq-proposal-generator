@@ -3287,7 +3287,7 @@
 
                 for (let year = 1; year <= contractYears; year++) {
                   proposalLineItems.push({
-                    productName: `MeridianLink Insight (${matchedTier.tier})`,
+                    productName: `MeridianLink Insight`,
                     tier: matchedTier.tier,
                     setupFee: year === 1 ? setupFee : 0,
                     annualFee: annualFee,
@@ -3300,9 +3300,29 @@
               }
             } else if (addonNameLower.includes('beta')) {
               // Beta: Match Year 1 volume, apply to all years
-              const testEnvAddons = addOnsData['Add On - Misc']?.filter(item =>
-                item.name.includes('Test Environment')
-              ) || [];
+              console.log('[generateProposal] Processing Beta - available categories:', Object.keys(addOnsData));
+
+              let testEnvAddons = [];
+              if (addOnsData['Add On - Misc']) {
+                testEnvAddons = addOnsData['Add On - Misc'].filter(item =>
+                  item.name.includes('Test Environment')
+                ) || [];
+              }
+
+              // If not found in Misc, search all categories
+              if (testEnvAddons.length === 0) {
+                console.log('[generateProposal] Beta not found in Add On - Misc, searching all categories...');
+                for (const [category, items] of Object.entries(addOnsData)) {
+                  const found = items.filter(item => item.name.includes('Test Environment'));
+                  if (found.length > 0) {
+                    console.log(`[generateProposal] Found Test Environment in category: ${category}`);
+                    testEnvAddons = found;
+                    break;
+                  }
+                }
+              }
+
+              console.log('[generateProposal] Test Environment addons found:', testEnvAddons.length);
               const matchedTier = findTierMatch(testEnvAddons, year1Volume);
 
               if (matchedTier) {
@@ -3313,7 +3333,7 @@
 
                 for (let year = 1; year <= contractYears; year++) {
                   proposalLineItems.push({
-                    productName: `Test Environment / Beta (${matchedTier.tier})`,
+                    productName: `Test Environment / Beta`,
                     tier: matchedTier.tier,
                     setupFee: year === 1 ? setupFee : 0,
                     annualFee: annualFee,
@@ -3362,7 +3382,7 @@
                     const monthlyCommitment = transactionFee * yearVolume;
 
                     proposalLineItems.push({
-                      productName: `MeridianLink Mortgage Access (${matchedTier.tier || matchedTier.name})`,
+                      productName: `MeridianLink Mortgage Access`,
                       tier: matchedTier.tier || matchedTier.name,
                       setupFee: setupFee,
                       annualFee: annualFee,
