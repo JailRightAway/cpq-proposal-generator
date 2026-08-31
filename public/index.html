@@ -966,7 +966,6 @@
           </select>
         </div>
       </div>
-      <button class="btn btn-secondary" onclick="addProduct()">Add Product</button>
     </div>
 
     <!-- Volume & Tier Configuration (for add-ons and multi-year pricing) -->
@@ -974,6 +973,7 @@
       <h2>Volume & Tier Configuration</h2>
       <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Set monthly volumes for add-on tier matching and multi-year pricing</p>
       <div id="volumeConfigContainer"></div>
+      <button class="btn btn-secondary" onclick="addProduct()" style="margin-top: 15px;">Add Product</button>
     </div>
 
     <!-- Add-Ons Selection -->
@@ -1608,6 +1608,25 @@
       overrideLabel.textContent = 'Override Pricing (optional):';
       overrideDiv.appendChild(overrideLabel);
 
+      // Get default tier value for Year 1 (for one-time fee)
+      let defaultOneTimeFee = 0;
+      if (addonType.includes('access')) {
+        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+        if (year1Volume > 0) {
+          const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          if (accessAddons && Array.isArray(accessAddons)) {
+            const matchedTier = accessAddons.find(tier => {
+              const tierMin = tier.tierMin || 0;
+              const tierMax = tier.tierMax || Infinity;
+              return year1Volume >= tierMin && year1Volume < tierMax;
+            });
+            if (matchedTier) {
+              defaultOneTimeFee = matchedTier.oneTimeFee || 0;
+            }
+          }
+        }
+      }
+
       // One-time fee override
       const oneTimeDiv = document.createElement('div');
       oneTimeDiv.style.marginBottom = '6px';
@@ -1615,10 +1634,12 @@
       oneTimeLabel.style.display = 'block';
       oneTimeLabel.style.fontSize = '0.7rem';
       oneTimeLabel.style.marginBottom = '2px';
-      oneTimeLabel.textContent = 'One-Time Fee Override:';
+      oneTimeLabel.textContent = `One-Time Fee Override (default: $${defaultOneTimeFee.toFixed(2)}):`;
       const oneTimeInput = document.createElement('input');
       oneTimeInput.type = 'number';
-      oneTimeInput.placeholder = 'Override amount';
+      oneTimeInput.step = '0.01';
+      oneTimeInput.value = defaultOneTimeFee > 0 ? defaultOneTimeFee.toString() : '';
+      oneTimeInput.placeholder = `$${defaultOneTimeFee.toFixed(2)}`;
       oneTimeInput.style.width = '100%';
       oneTimeInput.style.padding = '4px';
       oneTimeInput.style.fontSize = '0.75rem';
@@ -1654,18 +1675,37 @@
       annualDiv.appendChild(annualInput);
       overrideDiv.appendChild(annualDiv);
 
-      // Transaction fee override (general)
+      // Transaction fee override (general - use Year 1 as default)
+      let defaultTransactionFee = 0;
+      if (addonType.includes('access')) {
+        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+        if (year1Volume > 0) {
+          const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          if (accessAddons && Array.isArray(accessAddons)) {
+            const matchedTier = accessAddons.find(tier => {
+              const tierMin = tier.tierMin || 0;
+              const tierMax = tier.tierMax || Infinity;
+              return year1Volume >= tierMin && year1Volume < tierMax;
+            });
+            if (matchedTier) {
+              defaultTransactionFee = matchedTier.perFileFee || 0;
+            }
+          }
+        }
+      }
+
       const transactionDiv = document.createElement('div');
       transactionDiv.style.marginBottom = '6px';
       const transactionLabel = document.createElement('label');
       transactionLabel.style.display = 'block';
       transactionLabel.style.fontSize = '0.7rem';
       transactionLabel.style.marginBottom = '2px';
-      transactionLabel.textContent = 'Per Transaction Override (General):';
+      transactionLabel.textContent = `Per Transaction Override (General - default: $${defaultTransactionFee.toFixed(2)}):`;
       const transactionInput = document.createElement('input');
       transactionInput.type = 'number';
       transactionInput.step = '0.01';
-      transactionInput.placeholder = 'Override amount';
+      transactionInput.value = defaultTransactionFee > 0 ? defaultTransactionFee.toString() : '';
+      transactionInput.placeholder = `$${defaultTransactionFee.toFixed(2)}`;
       transactionInput.style.width = '100%';
       transactionInput.style.padding = '4px';
       transactionInput.style.fontSize = '0.75rem';
@@ -1690,6 +1730,25 @@
         overrideDiv.appendChild(yearTransTitle);
 
         for (let year = 1; year <= contractYears; year++) {
+          // Get default transaction fee for this year
+          let defaultYearTransFee = 0;
+          if (addonType.includes('access')) {
+            const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
+            if (yearVolume > 0) {
+              const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+              if (accessAddons && Array.isArray(accessAddons)) {
+                const matchedTier = accessAddons.find(tier => {
+                  const tierMin = tier.tierMin || 0;
+                  const tierMax = tier.tierMax || Infinity;
+                  return yearVolume >= tierMin && yearVolume < tierMax;
+                });
+                if (matchedTier) {
+                  defaultYearTransFee = matchedTier.perFileFee || 0;
+                }
+              }
+            }
+          }
+
           const group = document.createElement('div');
           group.style.marginBottom = '4px';
 
@@ -1697,7 +1756,7 @@
           label.style.display = 'block';
           label.style.color = '#aaa';
           label.style.marginBottom = '2px';
-          label.textContent = `Year ${year} Per Transaction`;
+          label.textContent = `Year ${year} Per Transaction (default: $${defaultYearTransFee.toFixed(2)})`;
 
           const input = document.createElement('input');
           input.type = 'number';
@@ -1705,7 +1764,8 @@
           input.className = 'price-override-input';
           input.dataset.addonType = addonType;
           input.dataset.feeType = `year${year}Transaction`;
-          input.placeholder = '0.00';
+          input.value = defaultYearTransFee > 0 ? defaultYearTransFee.toString() : '';
+          input.placeholder = `$${defaultYearTransFee.toFixed(2)}`;
           input.style.width = '100%';
           input.style.padding = '3px';
           input.style.fontSize = '0.75rem';
