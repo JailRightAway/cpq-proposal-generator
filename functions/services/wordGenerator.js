@@ -164,8 +164,8 @@ async function generateProposal(proposalData) {
     filteredItems.forEach((item) => {
       console.log(`[wordGenerator] Product: ${productName}, Year: ${item.year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
 
-      // Special handling for Platform Fee - display as "Platform Fee" not the full mortgage product name
-      const displayName = (item.tier === 'Platform Fee') ? 'Platform Fee' : productName;
+      // Special handling for Platform Fee - display as "MeridianLink Mortgage Platform Fee" not the full mortgage product name
+      const displayName = (item.tier === 'Platform Fee') ? 'MeridianLink Mortgage Platform Fee' : productName;
 
       const dataCells = [
         createDataCell(displayName),

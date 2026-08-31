@@ -1296,6 +1296,7 @@
 
       // Get the volume for this year
       const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
+      console.log(`[UI] updateAccessOverrideDefaults for Year ${year}, volume: ${yearVolume}`);
       if (yearVolume <= 0) return;
 
       // Find matched tier for Access
@@ -1305,11 +1306,15 @@
         for (const category in addOnsData) {
           if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
             accessAddons = addOnsData[category];
+            console.log(`[UI] Found Access category: ${category}`);
             break;
           }
         }
       }
-      if (!accessAddons || !Array.isArray(accessAddons)) return;
+      if (!accessAddons || !Array.isArray(accessAddons)) {
+        console.warn(`[UI] No Access add-ons found for year ${year}`);
+        return;
+      }
 
       const matchedTier = accessAddons.find(tier => {
         const tierMin = tier.tierMin || 0;
@@ -1317,18 +1322,32 @@
         return yearVolume >= tierMin && yearVolume < tierMax;
       });
 
-      if (!matchedTier) return;
+      if (!matchedTier) {
+        console.warn(`[UI] No matching tier found for year ${year} volume ${yearVolume}`);
+        return;
+      }
+
+      console.log(`[UI] Year ${year} matched tier:`, matchedTier);
+
+      // Extract transaction fee with multiple field name fallbacks
+      const transactionFee =
+        matchedTier.perFileFee !== undefined ? matchedTier.perFileFee :
+        matchedTier.transactionFee !== undefined ? matchedTier.transactionFee :
+        matchedTier['perFileFee'] !== undefined ? matchedTier['perFileFee'] :
+        matchedTier['transactionFee'] !== undefined ? matchedTier['transactionFee'] :
+        0;
 
       // Update the per-year transaction override field with the matched tier's value
       const yearTransInput = overrideSection.querySelector(`input[placeholder*="Year ${year}"]`);
       if (yearTransInput) {
-        yearTransInput.value = matchedTier.perFileFee ? matchedTier.perFileFee.toString() : '';
-        yearTransInput.placeholder = `$${(matchedTier.perFileFee || 0).toFixed(2)}`;
+        yearTransInput.value = transactionFee > 0 ? transactionFee.toString() : '';
+        yearTransInput.placeholder = `$${transactionFee.toFixed(2)}`;
         // Update the label to show the default
         const label = yearTransInput.previousElementSibling;
         if (label) {
-          label.textContent = `Year ${year} Per Transaction (default: $${(matchedTier.perFileFee || 0).toFixed(2)})`;
+          label.textContent = `Year ${year} Per Transaction (default: $${transactionFee.toFixed(2)})`;
         }
+        console.log(`[UI] Updated Year ${year} transaction field: ${transactionFee}`);
       }
     }
 
@@ -1518,6 +1537,39 @@
         }
       });
 
+      // Debug: Log what categories actually exist in addOnsData
+      console.log('[UI] Available add-on categories:', Object.keys(addOnsData));
+      console.log('[UI] Hidden categories:', hiddenCategories);
+      console.log('[UI] Rendered categories:', Array.from(renderedCategories));
+
+      // Check for source categories that exist but weren't consolidated (fallback rendering)
+      const allSourceCategories = Object.values(consolidatedGroups).flat();
+      const unrenderedSourceCategories = allSourceCategories.filter(cat =>
+        addOnsData[cat] && !renderedCategories.has(cat)
+      );
+      if (unrenderedSourceCategories.length > 0) {
+        console.warn('[UI] Rendering unrendered source categories individually:', unrenderedSourceCategories);
+        unrenderedSourceCategories.forEach(category => {
+          const addOns = addOnsData[category];
+          if (addOns && addOns.length > 0) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.className = 'addon-category';
+            const categoryTitle = document.createElement('h4');
+            categoryTitle.textContent = category.replace('Add On - ', '');
+            categoryDiv.appendChild(categoryTitle);
+
+            addOns.forEach(addon => {
+              if (!hiddenAddOnNames.includes(addon.name)) {
+                categoryDiv.appendChild(createAddOnElement(addon));
+              }
+            });
+
+            container.appendChild(categoryDiv);
+            renderedCategories.add(category); // Mark as rendered so it doesn't appear again
+          }
+        });
+      }
+
       // Then render remaining regular add-ons (excluding hidden and consolidated categories)
       Object.entries(addOnsData).forEach(([category, addOns]) => {
         // Skip hidden categories or already consolidated
@@ -1621,6 +1673,7 @@
       let defaultOneTimeFee = 0;
       if (addonType.includes('access')) {
         const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+        console.log(`[UI] Access Y1 volume: ${year1Volume}`);
         if (year1Volume > 0) {
           // Find Access add-ons in any category
           let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
@@ -1629,18 +1682,31 @@
             for (const category in addOnsData) {
               if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
                 accessAddons = addOnsData[category];
+                console.log(`[UI] Found Access category: ${category}`);
                 break;
               }
             }
           }
           if (accessAddons && Array.isArray(accessAddons)) {
+            console.log(`[UI] Access tiers available: ${accessAddons.length}, first tier:`, accessAddons[0]);
             const matchedTier = accessAddons.find(tier => {
               const tierMin = tier.tierMin || 0;
               const tierMax = tier.tierMax || Infinity;
-              return year1Volume >= tierMin && year1Volume < tierMax;
+              const match = year1Volume >= tierMin && year1Volume < tierMax;
+              console.log(`[UI] Checking tier ${tier.tier || tier.name} (${tierMin}-${tierMax}): ${match}`);
+              return match;
             });
             if (matchedTier) {
-              defaultOneTimeFee = matchedTier.oneTimeFee || 0;
+              console.log(`[UI] Matched tier fields:`, Object.keys(matchedTier));
+              console.log(`[UI] Matched tier data:`, matchedTier);
+              // Try multiple field names for one-time/setup fee
+              defaultOneTimeFee =
+                matchedTier.oneTimeFee !== undefined ? matchedTier.oneTimeFee :
+                matchedTier.setupFee !== undefined ? matchedTier.setupFee :
+                matchedTier['oneTimeFee'] !== undefined ? matchedTier['oneTimeFee'] :
+                matchedTier['setupFee'] !== undefined ? matchedTier['setupFee'] :
+                0;
+              console.log(`[UI] Extracted oneTimeFee: ${defaultOneTimeFee}`);
             }
           }
         }
@@ -1717,7 +1783,14 @@
               return year1Volume >= tierMin && year1Volume < tierMax;
             });
             if (matchedTier) {
-              defaultTransactionFee = matchedTier.perFileFee || 0;
+              // Try multiple field names for transaction/per-file fee
+              defaultTransactionFee =
+                matchedTier.perFileFee !== undefined ? matchedTier.perFileFee :
+                matchedTier.transactionFee !== undefined ? matchedTier.transactionFee :
+                matchedTier['perFileFee'] !== undefined ? matchedTier['perFileFee'] :
+                matchedTier['transactionFee'] !== undefined ? matchedTier['transactionFee'] :
+                0;
+              console.log(`[UI] Access transaction fee for Y1: ${defaultTransactionFee} (from matched tier)`, matchedTier);
             }
           }
         }
@@ -1763,6 +1836,7 @@
           let defaultYearTransFee = 0;
           if (addonType.includes('access')) {
             const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
+            console.log(`[UI] Access Year ${year} volume: ${yearVolume}`);
             if (yearVolume > 0) {
               // Find Access add-ons in any category
               let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
@@ -1782,7 +1856,14 @@
                   return yearVolume >= tierMin && yearVolume < tierMax;
                 });
                 if (matchedTier) {
-                  defaultYearTransFee = matchedTier.perFileFee || 0;
+                  // Try multiple field names for transaction/per-file fee
+                  defaultYearTransFee =
+                    matchedTier.perFileFee !== undefined ? matchedTier.perFileFee :
+                    matchedTier.transactionFee !== undefined ? matchedTier.transactionFee :
+                    matchedTier['perFileFee'] !== undefined ? matchedTier['perFileFee'] :
+                    matchedTier['transactionFee'] !== undefined ? matchedTier['transactionFee'] :
+                    0;
+                  console.log(`[UI] Year ${year} matched tier:`, matchedTier.tier || matchedTier.name, `transactionFee: ${defaultYearTransFee}`);
                 }
               }
             }
