@@ -2402,20 +2402,29 @@
 
         // Auto-match tier based on volume for each year if needed
         const yearVolume = volumeConfig[item.year] || volumeConfig[1] || 0;
+
+        console.log(`[generateProposal] Product: ${item.name}, Year: ${item.year}, Volume: ${yearVolume}, Current perFileFee: ${perAppFee}, Has tiers: ${!!item.tiers}`);
+
         if (item.year > 1 && yearlyTierSelections[item.year]) {
           const yearlyTier = JSON.parse(yearlyTierSelections[item.year]);
           tierName = yearlyTier.tierName || tierName;
           annualFeeForYear = yearlyTier.annualFee || item.annualFee || 0;
           actualPerFileFee = yearlyTier.perFileFee || perAppFee;
-        } else if (item.year > 1 && item.tiers && yearVolume > 0) {
-          // Auto-match tier based on volume if no explicit tier selection
-          const matchedTier = item.tiers.find(t =>
-            yearVolume >= (t.volumeMin || 0) && yearVolume <= (t.volumeMax || Infinity)
-          );
+          console.log(`[generateProposal] Using explicit tier selection: ${tierName}, perFileFee: ${actualPerFileFee}`);
+        } else if (item.tiers && yearVolume > 0) {
+          // Auto-match tier based on volume for ALL years (including Year 1)
+          const matchedTier = item.tiers.find(t => {
+            const matches = yearVolume >= (t.volumeMin || 0) && yearVolume < (t.volumeMax || Infinity);
+            console.log(`[generateProposal]   Checking tier: ${t.name || t.tier}, min: ${t.volumeMin}, max: ${t.volumeMax}, volume: ${yearVolume}, matches: ${matches}`);
+            return matches;
+          });
           if (matchedTier) {
-            tierName = matchedTier.name || tierName;
+            tierName = matchedTier.name || matchedTier.tier || tierName;
             annualFeeForYear = matchedTier.annualFee || item.annualFee || 0;
             actualPerFileFee = matchedTier.perFileFee || perAppFee;
+            console.log(`[generateProposal] Matched tier: ${tierName}, perFileFee: ${actualPerFileFee}`);
+          } else {
+            console.log(`[generateProposal] No tier matched for volume ${yearVolume}`);
           }
         }
 
@@ -2437,15 +2446,16 @@
       const mortgageProductName = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage'))?.name || 'MeridianLink Mortgage';
 
       if (platformFee > 0 && hasMortgageProduct) {
+        // Show Platform Fee as a distinct line item with clear naming
         proposalLineItems.push({
-          productName: mortgageProductName,  // Use the actual Mortgage product name
+          productName: 'MeridianLink Mortgage - Platform Fee',  // Distinct name for platform fee
           year: 1,
           setupFee: 0,
           perFileFee: 0,
           monthlyCommitment: platformFee,
           annualFee: 0,
           volume: null,
-          tier: 'MeridianLink Mortgage Platform Fee'  // Put the platform fee label in the tier column
+          tier: 'N/A'
         });
       }
 
@@ -2526,7 +2536,7 @@
                     const tierMin = tier.tierMin || 0;
                     const tierMax = tier.tierMax || Infinity;
                     const matches = yearVolume >= tierMin && yearVolume < tierMax;
-                    console.log(`  Checking tier: ${tier.tier || tier.name}, min: ${tierMin}, max: ${tierMax}, matches: ${matches}`);
+                    console.log(`  Checking tier: ${tier.tier || tier.name}, min: ${tierMin}, max: ${tierMax}, matches: ${matches}, oneTimePrice: ${tier.oneTimePrice}, annualPrice: ${tier.annualPrice}`);
                     return matches;
                   });
 
@@ -2536,6 +2546,8 @@
                     const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
                     const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
                     const transactionFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || 0;
+
+                    console.log(`[generateProposal] Year ${year} Access: setupFee=${setupFee}, annualFee=${annualFee}, transactionFee=${transactionFee}, tier=${matchedTier.tier || matchedTier.name}`);
 
                     proposalLineItems.push({
                       productName: `MeridianLink Mortgage Access (${matchedTier.tier || matchedTier.name})`,
