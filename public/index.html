@@ -3305,7 +3305,7 @@
               let testEnvAddons = [];
               if (addOnsData['Add On - Misc']) {
                 testEnvAddons = addOnsData['Add On - Misc'].filter(item =>
-                  item.name.includes('Test Environment')
+                  item.name.includes('Test') && item.name.includes('Environment')
                 ) || [];
               }
 
@@ -3313,9 +3313,12 @@
               if (testEnvAddons.length === 0) {
                 console.log('[generateProposal] Beta not found in Add On - Misc, searching all categories...');
                 for (const [category, items] of Object.entries(addOnsData)) {
-                  const found = items.filter(item => item.name.includes('Test Environment'));
+                  const found = items.filter(item =>
+                    (item.name.includes('Test') && item.name.includes('Environment')) ||
+                    item.name.includes('Beta')
+                  );
                   if (found.length > 0) {
-                    console.log(`[generateProposal] Found Test Environment in category: ${category}`);
+                    console.log(`[generateProposal] Found ${found.length} Beta/Test Environment items in category: ${category}`);
                     testEnvAddons = found;
                     break;
                   }
