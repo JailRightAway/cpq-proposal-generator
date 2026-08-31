@@ -96,9 +96,15 @@ async function generateProposal(proposalData) {
       'XP System',
       'Core Conversion',
       'Insight',
-      'SQL'
+      'SQL',
+      'SQL Transmission'
     ];
-    return year1OnlyKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
+    const productLower = productName.toLowerCase();
+    const result = year1OnlyKeywords.some(keyword => productLower.includes(keyword.toLowerCase()));
+    if (result) {
+      console.log(`[wordGenerator] Product "${productName}" identified as Year-1-only`);
+    }
+    return result;
   };
 
   // Separate add-on items for consolidated table
@@ -108,9 +114,12 @@ async function generateProposal(proposalData) {
   Object.entries(groupedItems).forEach(([productName, items]) => {
     const isAddOnProduct = isAddOn(productName) && !isPlatformFee(productName);
     const isSeparateTable = !isAddOnProduct;
+    const isYear1Only = showOnlyYear1(productName);
 
     // Filter items for year 1-only products
-    const filteredItems = showOnlyYear1(productName) ? items.filter(item => (item.year || 1) === 1) : items;
+    const filteredItems = isYear1Only ? items.filter(item => (item.year || 1) === 1) : items;
+
+    console.log(`[wordGenerator] Product: "${productName}", isYear1Only: ${isYear1Only}, original items: ${items.length}, filtered items: ${filteredItems.length}`);
 
     if (isAddOnProduct) {
       // Collect add-on items for consolidated table
