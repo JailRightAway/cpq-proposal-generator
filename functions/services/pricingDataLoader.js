@@ -964,8 +964,8 @@ function parseAddOnsFromJson(data) {
       name: productName,
       category: currentCategory,
       notes: notes,
-      oneTimePrice: oneTimePrice > 0 ? oneTimePrice : 0,
-      annualPrice: annualPrice > 0 ? annualPrice : 0,
+      oneTimeFee: oneTimePrice > 0 ? oneTimePrice : 0,  // Changed from oneTimePrice to oneTimeFee
+      annualFee: annualPrice > 0 ? annualPrice : 0,      // Changed from annualPrice to annualFee
       transactionFee: transactionFee > 0 ? transactionFee : 0,
       pricingModel: pricingModel,
       customFields: customPricing ? customFields : null, // Only include if custom pricing needed

@@ -1299,7 +1299,16 @@
       if (yearVolume <= 0) return;
 
       // Find matched tier for Access
-      const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+      let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+      if (!accessAddons) {
+        // Try to find it by searching all categories
+        for (const category in addOnsData) {
+          if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
+            accessAddons = addOnsData[category];
+            break;
+          }
+        }
+      }
       if (!accessAddons || !Array.isArray(accessAddons)) return;
 
       const matchedTier = accessAddons.find(tier => {
@@ -1310,14 +1319,14 @@
 
       if (!matchedTier) return;
 
-      // Update the per-year transaction override field with the matched tier's value as placeholder
-      const yearTransInput = overrideSection.querySelector(`input[data-addontype="access"][data-feetype="year${year}transaction"]`) ||
-                              overrideSection.querySelector(`input[placeholder*="Year ${year}"]`);
+      // Update the per-year transaction override field with the matched tier's value
+      const yearTransInput = overrideSection.querySelector(`input[placeholder*="Year ${year}"]`);
       if (yearTransInput) {
-        yearTransInput.placeholder = matchedTier.perFileFee ? `$${matchedTier.perFileFee.toFixed(2)}` : '0.00';
-        // Add a small note showing the default
+        yearTransInput.value = matchedTier.perFileFee ? matchedTier.perFileFee.toString() : '';
+        yearTransInput.placeholder = `$${(matchedTier.perFileFee || 0).toFixed(2)}`;
+        // Update the label to show the default
         const label = yearTransInput.previousElementSibling;
-        if (label && !label.textContent.includes('default:')) {
+        if (label) {
           label.textContent = `Year ${year} Per Transaction (default: $${(matchedTier.perFileFee || 0).toFixed(2)})`;
         }
       }
@@ -1613,7 +1622,17 @@
       if (addonType.includes('access')) {
         const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
         if (year1Volume > 0) {
-          const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          // Find Access add-ons in any category
+          let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          if (!accessAddons) {
+            // Try to find it by searching all categories
+            for (const category in addOnsData) {
+              if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
+                accessAddons = addOnsData[category];
+                break;
+              }
+            }
+          }
           if (accessAddons && Array.isArray(accessAddons)) {
             const matchedTier = accessAddons.find(tier => {
               const tierMin = tier.tierMin || 0;
@@ -1680,7 +1699,17 @@
       if (addonType.includes('access')) {
         const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
         if (year1Volume > 0) {
-          const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          // Find Access add-ons in any category
+          let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+          if (!accessAddons) {
+            // Try to find it by searching all categories
+            for (const category in addOnsData) {
+              if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
+                accessAddons = addOnsData[category];
+                break;
+              }
+            }
+          }
           if (accessAddons && Array.isArray(accessAddons)) {
             const matchedTier = accessAddons.find(tier => {
               const tierMin = tier.tierMin || 0;
@@ -1735,7 +1764,17 @@
           if (addonType.includes('access')) {
             const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
             if (yearVolume > 0) {
-              const accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+              // Find Access add-ons in any category
+              let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
+              if (!accessAddons) {
+                // Try to find it by searching all categories
+                for (const category in addOnsData) {
+                  if (category.toLowerCase().includes('access') && category.toLowerCase().includes('mortgage')) {
+                    accessAddons = addOnsData[category];
+                    break;
+                  }
+                }
+              }
               if (accessAddons && Array.isArray(accessAddons)) {
                 const matchedTier = accessAddons.find(tier => {
                   const tierMin = tier.tierMin || 0;
@@ -1947,7 +1986,7 @@
       overrideSection.appendChild(title);
 
       // One-time fee override
-      if (addonData.oneTimeFee > 0 || addonData.oneTimeFee === 0) {
+      if (addonData.oneTimeFee || addonData.oneTimeFee === 0) {
         const group = document.createElement('div');
         group.style.marginBottom = '6px';
 
@@ -1962,7 +2001,8 @@
         input.className = 'price-override-input';
         input.dataset.addonName = addonName;
         input.dataset.feeType = 'oneTime';
-        input.placeholder = addonData.oneTimeFee.toString();
+        input.value = addonData.oneTimeFee > 0 ? addonData.oneTimeFee.toString() : '';
+        input.placeholder = `$${addonData.oneTimeFee.toLocaleString()}`;
         input.style.width = '100%';
         input.style.padding = '4px';
         input.style.fontSize = '0.8rem';
@@ -1979,7 +2019,7 @@
       }
 
       // Annual fee override
-      if (addonData.annualFee > 0 || addonData.annualFee === 0) {
+      if (addonData.annualFee || addonData.annualFee === 0) {
         const group = document.createElement('div');
         group.style.marginBottom = '6px';
 
@@ -1994,7 +2034,8 @@
         input.className = 'price-override-input';
         input.dataset.addonName = addonName;
         input.dataset.feeType = 'annual';
-        input.placeholder = addonData.annualFee.toString();
+        input.value = addonData.annualFee > 0 ? addonData.annualFee.toString() : '';
+        input.placeholder = `$${addonData.annualFee.toLocaleString()}`;
         input.style.width = '100%';
         input.style.padding = '4px';
         input.style.fontSize = '0.8rem';
@@ -2011,7 +2052,7 @@
       }
 
       // Transaction fee override
-      if (addonData.transactionFee > 0 || addonData.transactionFee === 0) {
+      if (addonData.transactionFee || addonData.transactionFee === 0) {
         const group = document.createElement('div');
         group.style.marginBottom = '6px';
 
@@ -2027,7 +2068,8 @@
         input.className = 'price-override-input';
         input.dataset.addonName = addonName;
         input.dataset.feeType = 'transaction';
-        input.placeholder = addonData.transactionFee.toString();
+        input.value = addonData.transactionFee > 0 ? addonData.transactionFee.toString() : '';
+        input.placeholder = `$${addonData.transactionFee.toFixed(2)}`;
         input.style.width = '100%';
         input.style.padding = '4px';
         input.style.fontSize = '0.8rem';
