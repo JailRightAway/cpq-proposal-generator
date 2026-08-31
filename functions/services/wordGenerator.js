@@ -131,8 +131,9 @@ async function generateProposal(proposalData) {
 
     const tableRows = [];
     const isInsight = productName.toLowerCase().includes('insight');
+    const isMortgage = productName.toLowerCase().includes('mortgage');
     const hasSetupFees = filteredItems.some(item => (item.setupFee || item.oneTimePrice || 0) > 0);
-    const hasAnnualFees = filteredItems.some(item => (item.annualFee || item.annualPrice || 0) > 0);
+    const hasAnnualFees = !isMortgage && filteredItems.some(item => (item.annualFee || item.annualPrice || 0) > 0);
     const hasTransactionFees = filteredItems.some(item => (item.perFileFee || 0) > 0);
     const hasMonthlyCommitment = filteredItems.some(item => (item.monthlyCommitment || 0) > 0);
 
