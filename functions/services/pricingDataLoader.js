@@ -1000,10 +1000,21 @@ function extractAddOnTierInfo(productName) {
   const tierNum = tierMatch[1];
 
   // Try to match range patterns
-  // Pattern 1: "1200+ Closed Loans" → min=1200, max=Infinity
-  const rangeMatch1 = productName.match(/(\d+)\+\s*Closed\s+Loans/i);
-  if (rangeMatch1) {
-    const min = parseInt(rangeMatch1[1]);
+  // Pattern 1a: ">1200 Closed Loans" → min=1200, max=Infinity (greater-than format)
+  const rangeMatch1a = productName.match(/>\s*(\d+)\s*Closed\s+Loans/i);
+  if (rangeMatch1a) {
+    const min = parseInt(rangeMatch1a[1]);
+    return {
+      tier: `Tier ${tierNum}`,
+      tierMin: min,
+      tierMax: Infinity
+    };
+  }
+
+  // Pattern 1b: "1200+ Closed Loans" → min=1200, max=Infinity (plus format)
+  const rangeMatch1b = productName.match(/(\d+)\+\s*Closed\s+Loans/i);
+  if (rangeMatch1b) {
+    const min = parseInt(rangeMatch1b[1]);
     return {
       tier: `Tier ${tierNum}`,
       tierMin: min,

@@ -1694,6 +1694,9 @@
         // Render add-ons UI
         renderAddOnsUI();
         addOnsSection.classList.remove('hidden');
+
+        // Update checkout panel immediately when add-ons load
+        updateCheckoutPanel();
       } catch (error) {
         console.error('[UI] Error loading add-ons:', error);
         addOnsSection.classList.add('hidden');
@@ -2733,12 +2736,19 @@
       const item = lineItems[itemIndex];
       const numValue = parseFloat(value) || 0;
 
-      if (feeType === 'monthly') {
+      if (feeType === 'setupFee') {
+        item.setupFee = numValue;
+      } else if (feeType === 'perFileFee') {
+        item.perFileFee = numValue;
+        item.monthlyCommitment = numValue * (item.volume || 0);
+      } else if (feeType === 'annualFee') {
+        item.annualFee = numValue;
+      } else if (feeType === 'monthly') {
         item.monthlyCommitment = numValue;
       }
 
-      updateUI();
-      delete checkoutEditMode[`product_${itemIndex}`];
+      updateSummary();
+      updateCheckoutPanel();
     }
 
     function updateAddOnFee(addonName, feeType, value) {
@@ -2746,10 +2756,16 @@
       if (!selectedAddOns[addonName].overrides) selectedAddOns[addonName].overrides = {};
 
       const numValue = parseFloat(value) || 0;
-      selectedAddOns[addonName].overrides[feeType] = numValue;
 
-      updateUI();
-      delete checkoutEditMode[`addon_${addonName}`];
+      // Handle all fee types including year-specific
+      if (feeType.startsWith('year') && feeType.includes('Transaction')) {
+        selectedAddOns[addonName].overrides[feeType] = numValue;
+      } else {
+        selectedAddOns[addonName].overrides[feeType] = numValue;
+      }
+
+      updateSummary();
+      updateCheckoutPanel();
     }
 
     function updateCheckoutPanel() {
@@ -2771,20 +2787,35 @@
         const monthlyCommitment = item.monthlyCommitment || 0;
         const yearlyAmount = (monthlyCommitment || 0) * 12;
         const year = item.year || 1;
+        const setupFee = item.setupFee || 0;
+        const perFileFee = item.perFileFee || 0;
+        const annualFee = item.annualFee || 0;
         const isEditing = checkoutEditMode[`product_${index}`];
 
         let costHtml = '';
         if (isEditing) {
           costHtml = `
-            <div class="checkout-item-costs">
-              <div class="checkout-cost">
-                <div class="checkout-cost-label">Monthly</div>
-                <input type="number" class="checkout-fee-input" value="${monthlyCommitment}"
-                       onchange="updateLineItemFee(${index}, 'monthly', this.value)"
-                       placeholder="0" min="0" step="0.01" style="width: 70px;">
+            <div style="font-size: 0.75rem; margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">Implementation Fee</label>
+                <input type="number" class="checkout-fee-input" value="${setupFee}"
+                       onchange="updateLineItemFee(${index}, 'setupFee', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
               </div>
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">Per App Fee</label>
+                <input type="number" class="checkout-fee-input" value="${perFileFee}"
+                       onchange="updateLineItemFee(${index}, 'perFileFee', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
+              </div>
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">Annual Fee</label>
+                <input type="number" class="checkout-fee-input" value="${annualFee}"
+                       onchange="updateLineItemFee(${index}, 'annualFee', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
+              </div>
+              <button class="btn btn-small" onclick="toggleCheckoutEditMode('product_${index}')">Done</button>
             </div>
-            <button class="btn btn-small" onclick="toggleCheckoutEditMode('product_${index}')" style="margin-top: 6px;">Done</button>
           `;
         } else {
           costHtml = `
@@ -2836,21 +2867,51 @@
         const isEditing = checkoutEditMode[`addon_${addonName}`];
 
         let costHtml = '';
+        const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+        const isAccessAddon = addonName.toLowerCase().includes('access');
+
         if (isEditing) {
+          let yearFieldsHtml = '';
+
+          // Add year-specific transaction fee overrides for Access
+          if (isAccessAddon) {
+            yearFieldsHtml = '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #333;"><div style="color: #00d4ff; font-size: 0.7rem; font-weight: 600; margin-bottom: 6px;">Per-Year Transaction Fees</div>';
+            for (let y = 1; y <= contractYears; y++) {
+              const yearTransFee = overrides[`year${y}Transaction`] || 0;
+              yearFieldsHtml += `
+                <div style="margin-bottom: 4px;">
+                  <label style="color: #888; font-size: 0.65rem;">Year ${y}</label>
+                  <input type="number" class="checkout-fee-input" value="${yearTransFee}"
+                         onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'year${y}Transaction', this.value)"
+                         placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
+                </div>
+              `;
+            }
+            yearFieldsHtml += '</div>';
+          }
+
+          const perTransFee = overrides.transaction || 0;
           costHtml = `
-            <div style="font-size: 0.8rem; margin-top: 6px;">
-              <div style="margin-bottom: 4px;">
-                <label style="display: block; color: #888; font-size: 0.65rem; margin-bottom: 2px;">One-Time</label>
+            <div style="font-size: 0.75rem; margin-top: 6px; display: flex; flex-direction: column; gap: 4px;">
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">One-Time Fee</label>
                 <input type="number" class="checkout-fee-input" value="${oneTime}"
                        onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'oneTime', this.value)"
                        placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
               </div>
-              <div style="margin-bottom: 6px;">
-                <label style="display: block; color: #888; font-size: 0.65rem; margin-bottom: 2px;">Annual</label>
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">Annual Fee</label>
                 <input type="number" class="checkout-fee-input" value="${annual}"
                        onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'annual', this.value)"
                        placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
               </div>
+              <div>
+                <label style="color: #888; font-size: 0.65rem;">Per Transaction</label>
+                <input type="number" class="checkout-fee-input" value="${perTransFee}"
+                       onchange="updateAddOnFee('${addonName.replace(/'/g, "\\'")}', 'transaction', this.value)"
+                       placeholder="0" min="0" step="0.01" style="width: 100%; box-sizing: border-box;">
+              </div>
+              ${yearFieldsHtml}
               <button class="btn btn-small" onclick="toggleCheckoutEditMode('addon_${addonName}')">Done</button>
             </div>
           `;
