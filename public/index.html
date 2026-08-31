@@ -1548,6 +1548,8 @@
       const existingOverrides = addonDiv.querySelector('.addon-override-fields');
       if (existingOverrides) existingOverrides.remove();
 
+      const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
+
       // Create override fields container
       const overrideDiv = document.createElement('div');
       overrideDiv.className = 'addon-override-fields';
@@ -1608,16 +1610,17 @@
       annualDiv.appendChild(annualInput);
       overrideDiv.appendChild(annualDiv);
 
-      // Transaction fee override
+      // Transaction fee override (general)
       const transactionDiv = document.createElement('div');
       transactionDiv.style.marginBottom = '6px';
       const transactionLabel = document.createElement('label');
       transactionLabel.style.display = 'block';
       transactionLabel.style.fontSize = '0.7rem';
       transactionLabel.style.marginBottom = '2px';
-      transactionLabel.textContent = 'Per Transaction Override:';
+      transactionLabel.textContent = 'Per Transaction Override (General):';
       const transactionInput = document.createElement('input');
       transactionInput.type = 'number';
+      transactionInput.step = '0.01';
       transactionInput.placeholder = 'Override amount';
       transactionInput.style.width = '100%';
       transactionInput.style.padding = '4px';
@@ -1630,6 +1633,50 @@
       transactionDiv.appendChild(transactionLabel);
       transactionDiv.appendChild(transactionInput);
       overrideDiv.appendChild(transactionDiv);
+
+      // Per-year transaction fee overrides if multi-year contract
+      if (contractYears > 1) {
+        const yearTransTitle = document.createElement('div');
+        yearTransTitle.style.color = '#00d4ff';
+        yearTransTitle.style.marginTop = '8px';
+        yearTransTitle.style.marginBottom = '6px';
+        yearTransTitle.style.fontWeight = 'bold';
+        yearTransTitle.style.fontSize = '0.75rem';
+        yearTransTitle.textContent = 'Per-Year Transaction Overrides';
+        overrideDiv.appendChild(yearTransTitle);
+
+        for (let year = 1; year <= contractYears; year++) {
+          const group = document.createElement('div');
+          group.style.marginBottom = '4px';
+
+          const label = document.createElement('label');
+          label.style.display = 'block';
+          label.style.color = '#aaa';
+          label.style.marginBottom = '2px';
+          label.textContent = `Year ${year} Per Transaction`;
+
+          const input = document.createElement('input');
+          input.type = 'number';
+          input.step = '0.01';
+          input.className = 'price-override-input';
+          input.dataset.addonType = addonType;
+          input.dataset.feeType = `year${year}Transaction`;
+          input.placeholder = '0.00';
+          input.style.width = '100%';
+          input.style.padding = '3px';
+          input.style.fontSize = '0.75rem';
+          input.style.backgroundColor = '#222';
+          input.style.border = '1px solid #444';
+          input.style.color = '#e0e0e0';
+          input.style.borderRadius = '2px';
+          input.style.boxSizing = 'border-box';
+          input.onchange = (e) => updateSmartAddOnOverride(addonType, `year${year}Transaction`, e.target.value);
+
+          group.appendChild(label);
+          group.appendChild(input);
+          overrideDiv.appendChild(group);
+        }
+      }
 
       addonDiv.appendChild(overrideDiv);
     }
@@ -2038,8 +2085,9 @@
         return;
       }
 
-      // Use the first product from the module (volume tier matching happens in Volume & Tier Configuration section)
-      const product = JSON.parse(selectedOption.dataset.products)[0];
+      // Get ALL products from the module (these represent all tiers)
+      const allTierProducts = JSON.parse(selectedOption.dataset.products);
+      const product = allTierProducts[0];  // Base product from first tier
 
       if (!product) {
         showStatus('No product data available', 'error');
@@ -2090,7 +2138,8 @@
           monthlyCommitment: monthlyCommitment,
           implementationFee: (year === 1) ? (product.oneTimeFee || 0) : 0,
           overriddenPerFileFee: null,
-          overriddenImplementationFee: (year === 1) ? null : 0  // Year 2+ has no implementation fee
+          overriddenImplementationFee: (year === 1) ? null : 0,  // Year 2+ has no implementation fee
+          tiers: allTierProducts  // Attach all tier variants as tiers array for auto-matching
         };
 
         lineItems.push(item);
@@ -2415,21 +2464,27 @@
           // Auto-match tier based on volume for ALL years (including Year 1)
           console.log(`[generateProposal] Auto-matching tier for volume ${yearVolume}. Available tiers:`);
           item.tiers.forEach((t, idx) => {
-            console.log(`[generateProposal]   [${idx}] ${t.name || t.tier}: range [${t.volumeMin}-${t.volumeMax}], perFileFee: ${t.perFileFee}`);
+            // Support both tierMin/tierMax and volumeMin/volumeMax naming
+            const tierMin = t.tierMin !== undefined ? t.tierMin : (t.volumeMin !== undefined ? t.volumeMin : 0);
+            const tierMax = t.tierMax !== undefined ? t.tierMax : (t.volumeMax !== undefined ? t.volumeMax : Infinity);
+            const tierLabel = t.tier || t.name || t.tierName || `Tier ${idx}`;
+            console.log(`[generateProposal]   [${idx}] ${tierLabel}: range [${tierMin}-${tierMax === Infinity ? '∞' : tierMax}], perFileFee: ${t.perFileFee}`);
           });
 
           const matchedTier = item.tiers.find(t => {
-            const tierMin = t.volumeMin !== undefined ? t.volumeMin : 0;
-            const tierMax = t.volumeMax !== undefined ? t.volumeMax : Infinity;
+            // Support both tierMin/tierMax and volumeMin/volumeMax naming
+            const tierMin = t.tierMin !== undefined ? t.tierMin : (t.volumeMin !== undefined ? t.volumeMin : 0);
+            const tierMax = t.tierMax !== undefined ? t.tierMax : (t.volumeMax !== undefined ? t.volumeMax : Infinity);
             const matches = yearVolume >= tierMin && yearVolume < tierMax;
             if (matches) {
-              console.log(`[generateProposal]   ✓ Matched: ${t.name || t.tier}, perFileFee: ${t.perFileFee}`);
+              const tierLabel = t.tier || t.name || t.tierName || 'Unknown';
+              console.log(`[generateProposal]   ✓ Matched: ${tierLabel}, perFileFee: ${t.perFileFee}`);
             }
             return matches;
           });
 
           if (matchedTier) {
-            tierName = matchedTier.name || matchedTier.tier || tierName;
+            tierName = matchedTier.tier || matchedTier.name || matchedTier.tierName || tierName;
             annualFeeForYear = matchedTier.annualFee || item.annualFee || 0;
             actualPerFileFee = matchedTier.perFileFee !== undefined ? matchedTier.perFileFee : perAppFee;
             console.log(`[generateProposal] → Selected tier: ${tierName}, perFileFee: ${actualPerFileFee}`);
@@ -2557,9 +2612,11 @@
                   if (matchedTier) {
                     const setupFee = year === 1 ? (addonSelection.overrides?.oneTime || matchedTier.oneTimePrice || 0) : 0;
                     const annualFee = addonSelection.overrides?.annual || matchedTier.annualPrice || 0;
-                    const transactionFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || 0;
+                    // Check for per-year transaction override first, then fall back to general override, then tier default
+                    const yearTransOverride = addonSelection.overrides?.[`year${year}Transaction`];
+                    const transactionFee = yearTransOverride !== undefined ? yearTransOverride : (addonSelection.overrides?.transaction || matchedTier.perFileFee || 0);
 
-                    console.log(`[generateProposal] Year ${year} Access: setupFee=${setupFee}, annualFee=${annualFee}, transactionFee=${transactionFee}, tier=${matchedTier.tier || matchedTier.name}`);
+                    console.log(`[generateProposal] Year ${year} Access: setupFee=${setupFee}, annualFee=${annualFee}, transactionFee=${transactionFee} (yearOverride=${yearTransOverride}), tier=${matchedTier.tier || matchedTier.name}`);
 
                     proposalLineItems.push({
                       productName: `MeridianLink Mortgage Access (${matchedTier.tier || matchedTier.name})`,
