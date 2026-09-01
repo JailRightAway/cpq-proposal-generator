@@ -1687,16 +1687,18 @@
             feeField.style.color = hasAnnualFee ? '#00ff88' : '#888';
           }
 
-          // Update one-time fee display and auto-populate field
+          // Update one-time fee display and auto-populate field (only for Year 1)
           const oneTimeFeeField = document.getElementById(`yearOneTimeFee_${year}`);
           if (oneTimeFeeField) {
-            const oneTimeFee = matchedTier.oneTimeFee || matchedTier.setupFee || 0;
+            const oneTimeFee = year === 1 ? (matchedTier.oneTimeFee || matchedTier.setupFee || 0) : 0;
             oneTimeFeeField.value = oneTimeFee > 0 ? oneTimeFee.toString() : '';
             oneTimeFeeField.placeholder = oneTimeFee > 0 ? `$${oneTimeFee.toFixed(2)}` : 'N/A';
             oneTimeFeeField.style.borderColor = oneTimeFee > 0 ? '#00ff88' : '#444';
-            // Auto-populate the override
+            oneTimeFeeField.disabled = year > 1; // Disable for Years 2+
+            // Auto-populate the override (only for Year 1)
             if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
             yearlyPricingOverrides[year].oneTimeFee = oneTimeFee;
+            console.log(`[UI] Year ${year} one-time fee auto-populated to yearlyPricingOverrides:`, oneTimeFee);
           }
 
           // Update per-transaction fee display and auto-populate field
@@ -1709,9 +1711,11 @@
             // Auto-populate the override
             if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
             yearlyPricingOverrides[year].perTransactionFee = perTransFee;
+            console.log(`[UI] Year ${year} per-transaction fee auto-populated to yearlyPricingOverrides:`, perTransFee);
           }
 
           console.log(`[UI] Year ${year} tier matched - one-time: ${matchedTier.oneTimeFee || matchedTier.setupFee || 0}, per-trans: ${matchedTier.perFileFee || matchedTier.transactionFee || 0}`);
+          console.log(`[UI] Year ${year} yearlyPricingOverrides after update:`, yearlyPricingOverrides[year]);
         }
       } else {
         // Clear fields if volume is 0
