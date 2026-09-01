@@ -1440,8 +1440,9 @@
       return null;
     }
 
-    // Volume configuration for each year
+    // Volume and pricing configuration for each year
     let volumeConfig = {}; // { year: volume }
+    let yearlyPricingOverrides = {}; // { year: { oneTimeFee, perTransactionFee } }
 
     function renderVolumeConfiguration() {
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
@@ -1560,6 +1561,68 @@
 
         yearBox.appendChild(feeGroup);
 
+        // One-Time Fee (editable)
+        const oneTimeFeeGroup = document.createElement('div');
+        oneTimeFeeGroup.style.marginBottom = '12px';
+
+        const oneTimeFeeLabel = document.createElement('label');
+        oneTimeFeeLabel.style.display = 'block';
+        oneTimeFeeLabel.style.fontSize = '0.9rem';
+        oneTimeFeeLabel.style.marginBottom = '6px';
+        oneTimeFeeLabel.style.color = '#aaa';
+        oneTimeFeeLabel.textContent = 'One-Time Fee';
+        oneTimeFeeGroup.appendChild(oneTimeFeeLabel);
+
+        const oneTimeFeeInput = document.createElement('input');
+        oneTimeFeeInput.type = 'number';
+        oneTimeFeeInput.id = `yearOneTimeFee_${year}`;
+        oneTimeFeeInput.min = '0';
+        oneTimeFeeInput.step = '0.01';
+        oneTimeFeeInput.placeholder = 'Enter one-time fee';
+        oneTimeFeeInput.style.width = '100%';
+        oneTimeFeeInput.style.padding = '8px';
+        oneTimeFeeInput.style.backgroundColor = '#222';
+        oneTimeFeeInput.style.border = '1px solid #444';
+        oneTimeFeeInput.style.color = '#e0e0e0';
+        oneTimeFeeInput.style.borderRadius = '4px';
+        oneTimeFeeInput.style.fontSize = '0.9rem';
+        oneTimeFeeInput.style.boxSizing = 'border-box';
+        oneTimeFeeInput.onchange = updateYearlyPricingOverride;
+        oneTimeFeeGroup.appendChild(oneTimeFeeInput);
+
+        yearBox.appendChild(oneTimeFeeGroup);
+
+        // Per Transaction Fee (editable)
+        const perTransFeeGroup = document.createElement('div');
+        perTransFeeGroup.style.marginBottom = '12px';
+
+        const perTransFeeLabel = document.createElement('label');
+        perTransFeeLabel.style.display = 'block';
+        perTransFeeLabel.style.fontSize = '0.9rem';
+        perTransFeeLabel.style.marginBottom = '6px';
+        perTransFeeLabel.style.color = '#aaa';
+        perTransFeeLabel.textContent = 'Per Transaction Fee';
+        perTransFeeGroup.appendChild(perTransFeeLabel);
+
+        const perTransFeeInput = document.createElement('input');
+        perTransFeeInput.type = 'number';
+        perTransFeeInput.id = `yearPerTransFee_${year}`;
+        perTransFeeInput.min = '0';
+        perTransFeeInput.step = '0.01';
+        perTransFeeInput.placeholder = 'Enter per transaction fee';
+        perTransFeeInput.style.width = '100%';
+        perTransFeeInput.style.padding = '8px';
+        perTransFeeInput.style.backgroundColor = '#222';
+        perTransFeeInput.style.border = '1px solid #444';
+        perTransFeeInput.style.color = '#e0e0e0';
+        perTransFeeInput.style.borderRadius = '4px';
+        perTransFeeInput.style.fontSize = '0.9rem';
+        perTransFeeInput.style.boxSizing = 'border-box';
+        perTransFeeInput.onchange = updateYearlyPricingOverride;
+        perTransFeeGroup.appendChild(perTransFeeInput);
+
+        yearBox.appendChild(perTransFeeGroup);
+
         grid.appendChild(yearBox);
       }
 
@@ -1601,6 +1664,27 @@
       if (selectedAddOns.access && selectedAddOns.access.selected) {
         updateAccessOverrideDefaults(year);
       }
+    }
+
+    function updateYearlyPricingOverride(event) {
+      const oneTimeFeeMatch = event.target.id.match(/yearOneTimeFee_(\d+)/);
+      const perTransFeeMatch = event.target.id.match(/yearPerTransFee_(\d+)/);
+
+      if (oneTimeFeeMatch) {
+        const year = parseInt(oneTimeFeeMatch[1]);
+        const value = parseFloat(event.target.value) || 0;
+        if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
+        yearlyPricingOverrides[year].oneTimeFee = value;
+        console.log(`[UI] Yearly pricing override updated - Year ${year} one-time fee: ${value}`);
+      } else if (perTransFeeMatch) {
+        const year = parseInt(perTransFeeMatch[1]);
+        const value = parseFloat(event.target.value) || 0;
+        if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
+        yearlyPricingOverrides[year].perTransactionFee = value;
+        console.log(`[UI] Yearly pricing override updated - Year ${year} per-transaction fee: ${value}`);
+      }
+
+      console.log('[UI] All yearly pricing overrides:', yearlyPricingOverrides);
     }
 
     function updateAccessOverrideDefaults(year) {
@@ -1997,10 +2081,73 @@
       overrideLabel.textContent = 'Override Pricing (optional):';
       overrideDiv.appendChild(overrideLabel);
 
-      // Get default tier value for Year 1 (for one-time fee)
+      // Get default tier value for Year 1 (for one-time and annual fees)
       let defaultOneTimeFee = 0;
-      if (addonType.includes('access')) {
-        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+      let defaultAnnualFee = 0;
+      const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+
+      if (addonType.includes('insight')) {
+        console.log(`[UI] Insight Y1 volume: ${year1Volume}`);
+        if (year1Volume > 0) {
+          const insightAddons = addOnsData['Add On - MeridianLink Insight'];
+          if (insightAddons && Array.isArray(insightAddons)) {
+            const matchedTier = insightAddons.find(tier => {
+              const tierMin = tier.tierMin || 0;
+              const tierMax = tier.tierMax || Infinity;
+              return year1Volume >= tierMin && year1Volume < tierMax;
+            });
+            if (matchedTier) {
+              defaultOneTimeFee = matchedTier.oneTimeFee || matchedTier.setupFee || 0;
+              defaultAnnualFee = matchedTier.annualFee || 0;
+              console.log(`[UI] Insight matched tier - oneTimeFee: ${defaultOneTimeFee}, annualFee: ${defaultAnnualFee}`);
+            }
+          }
+        }
+      } else if (addonType.includes('betaresync')) {
+        console.log(`[UI] Beta Resync Y1 volume: ${year1Volume}`);
+        if (year1Volume > 0) {
+          let betaResyncAddons = [];
+          if (addOnsData['Add On - Misc']) {
+            betaResyncAddons = addOnsData['Add On - Misc'].filter(item =>
+              item.name.includes('Test') && item.name.includes('Environment') && item.name.includes('Resync')
+            ) || [];
+          }
+          if (betaResyncAddons.length > 0) {
+            const matchedTier = betaResyncAddons.find(tier => {
+              const tierMin = tier.tierMin || 0;
+              const tierMax = tier.tierMax || Infinity;
+              return year1Volume >= tierMin && year1Volume < tierMax;
+            });
+            if (matchedTier) {
+              defaultOneTimeFee = matchedTier.oneTimeFee || matchedTier.setupFee || 0;
+              defaultAnnualFee = matchedTier.annualFee || 0;
+              console.log(`[UI] Beta Resync matched tier - oneTimeFee: ${defaultOneTimeFee}, annualFee: ${defaultAnnualFee}`);
+            }
+          }
+        }
+      } else if (addonType.includes('beta')) {
+        console.log(`[UI] Beta Y1 volume: ${year1Volume}`);
+        if (year1Volume > 0) {
+          let betaAddons = [];
+          if (addOnsData['Add On - Misc']) {
+            betaAddons = addOnsData['Add On - Misc'].filter(item =>
+              item.name.includes('Test') && item.name.includes('Environment') && !item.name.includes('Resync')
+            ) || [];
+          }
+          if (betaAddons.length > 0) {
+            const matchedTier = betaAddons.find(tier => {
+              const tierMin = tier.tierMin || 0;
+              const tierMax = tier.tierMax || Infinity;
+              return year1Volume >= tierMin && year1Volume < tierMax;
+            });
+            if (matchedTier) {
+              defaultOneTimeFee = matchedTier.oneTimeFee || matchedTier.setupFee || 0;
+              defaultAnnualFee = matchedTier.annualFee || 0;
+              console.log(`[UI] Beta matched tier - oneTimeFee: ${defaultOneTimeFee}, annualFee: ${defaultAnnualFee}`);
+            }
+          }
+        }
+      } else if (addonType.includes('access')) {
         console.log(`[UI] Access Y1 volume: ${year1Volume}`);
         if (year1Volume > 0) {
           // Find Access add-ons in any category
@@ -2034,7 +2181,8 @@
                 matchedTier['oneTimeFee'] !== undefined ? matchedTier['oneTimeFee'] :
                 matchedTier['setupFee'] !== undefined ? matchedTier['setupFee'] :
                 0;
-              console.log(`[UI] Extracted oneTimeFee: ${defaultOneTimeFee}`);
+              defaultAnnualFee = matchedTier.annualFee || 0;
+              console.log(`[UI] Extracted oneTimeFee: ${defaultOneTimeFee}, annualFee: ${defaultAnnualFee}`);
             }
           }
         }
@@ -2072,10 +2220,12 @@
       annualLabel.style.display = 'block';
       annualLabel.style.fontSize = '0.7rem';
       annualLabel.style.marginBottom = '2px';
-      annualLabel.textContent = 'Annual Fee Override:';
+      annualLabel.textContent = `Annual Fee Override (default: $${defaultAnnualFee.toFixed(2)}):`;
       const annualInput = document.createElement('input');
       annualInput.type = 'number';
-      annualInput.placeholder = 'Override amount';
+      annualInput.step = '0.01';
+      annualInput.value = defaultAnnualFee > 0 ? defaultAnnualFee.toString() : '';
+      annualInput.placeholder = `$${defaultAnnualFee.toFixed(2)}`;
       annualInput.style.width = '100%';
       annualInput.style.padding = '4px';
       annualInput.style.fontSize = '0.75rem';
