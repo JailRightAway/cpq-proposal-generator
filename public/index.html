@@ -1517,10 +1517,11 @@
         // Create options for each product variant (tier)
         productVariants.forEach((product, index) => {
           const option = document.createElement('option');
-          // Use tier name if available, otherwise use product name
+          // Use product module name for display, with tier name as fallback
+          const displayName = product.moduleName || product.name || `Product ${index + 1}`;
           const tierName = product.tier || product.tierName || product.name || `Tier ${index + 1}`;
           option.value = tierName;
-          option.textContent = tierName;
+          option.textContent = displayName;
           // Store the product data in the option for later use
           option.dataset.productData = JSON.stringify(product);
           if (selectedProductForConfig === tierName) {
