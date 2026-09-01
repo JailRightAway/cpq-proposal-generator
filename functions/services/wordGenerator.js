@@ -156,11 +156,13 @@ async function generateProposal(proposalData) {
     return groupA.mortgageTypeOrder - groupB.mortgageTypeOrder;
   });
 
-  // Create a separate table for each product
+  // Collect all primary service items (non-add-ons) for consolidated master table
+  const allPrimaryServiceItems = [];
+  const disclaimers = [];
+
   sortedGroupKeys.forEach((groupKey) => {
     const { year, mortgageTypeOrder, mortgageTypeLabel, productName, items } = groupedItems[groupKey];
     const isAddOnProduct = isAddOn(productName) && !isPlatformFee(productName);
-    const isSeparateTable = !isAddOnProduct;
     const isYear1Only = showOnlyYear1(productName);
 
     // Filter items for year 1-only products
@@ -169,114 +171,134 @@ async function generateProposal(proposalData) {
     console.log(`[wordGenerator] Year: ${year}, Type: ${mortgageTypeLabel}, Product: "${productName}", isYear1Only: ${isYear1Only}, original items: ${items.length}, filtered items: ${filteredItems.length}`);
 
     if (isAddOnProduct) {
-      // Collect add-on items for consolidated table
+      // Collect add-on items for consolidated add-ons table
       allAddOnItems.push({ productName, items: filteredItems });
-      return; // Skip individual table creation for add-ons
+      return; // Skip primary service collection for add-ons
     }
 
-    const targetSections = primaryServiceSections;
+    // Collect items for the master primary services table
+    filteredItems.forEach(item => {
+      // Special handling for Platform Fee - display as "MeridianLink Mortgage Platform Fee" not the full mortgage product name
+      const displayName = (item.tier === 'Platform Fee') ? 'MeridianLink Mortgage Platform Fee' : productName;
 
-    const tableRows = [];
-    const isInsight = productName.toLowerCase().includes('insight');
+      allPrimaryServiceItems.push({
+        displayName,
+        year: item.year || 1,
+        mortgageTypeOrder,
+        mortgageTypeLabel,
+        productName,
+        item
+      });
+    });
+
+    // Collect disclaimers for products that need them
+    if (productName.includes('PriceMyLoan Service Package')) {
+      disclaimers.push({
+        text: 'Note: The hourly rate is only billed when custom products are requested, built, or adjusted.',
+        productName
+      });
+    }
+  });
+
+  // Determine which columns are needed for the master table
+  let hasPrimarySetupFees = false;
+  let hasPrimaryAnnualFees = false;
+  let hasPrimaryTransactionFees = false;
+  let hasPrimaryMonthlyCommitment = false;
+
+  allPrimaryServiceItems.forEach(({ item, productName }) => {
     const isMortgage = productName.toLowerCase().includes('mortgage');
-    const hasSetupFees = filteredItems.some(item => (item.setupFee || item.oneTimePrice || 0) > 0);
-    const hasAnnualFees = !isMortgage && filteredItems.some(item => (item.annualFee || item.annualPrice || 0) > 0);
-    const hasTransactionFees = filteredItems.some(item => (item.perFileFee || 0) > 0);
-    const hasMonthlyCommitment = filteredItems.some(item => (item.monthlyCommitment || 0) > 0);
+    if ((item.setupFee || item.oneTimePrice || 0) > 0) hasPrimarySetupFees = true;
+    if (!isMortgage && (item.annualFee || item.annualPrice || 0) > 0) hasPrimaryAnnualFees = true;
+    if ((item.perFileFee || 0) > 0) hasPrimaryTransactionFees = true;
+    if ((item.monthlyCommitment || 0) > 0) hasPrimaryMonthlyCommitment = true;
+  });
 
-    // Build header row - only show columns that have data
-    const headerCells = [
+  // Build master table if there are primary service items
+  if (allPrimaryServiceItems.length > 0) {
+    const masterTableRows = [];
+
+    // Build header row
+    const masterHeaderCells = [
       createHeaderCell('Service / Module'),
       createHeaderCell('Year')
     ];
 
-    if (hasSetupFees) {
-      headerCells.push(createHeaderCell('One-Time Fee'));
+    if (hasPrimarySetupFees) {
+      masterHeaderCells.push(createHeaderCell('One-Time Fee'));
     }
 
-    if (hasAnnualFees) {
-      headerCells.push(createHeaderCell('Annual Fee'));
+    if (hasPrimaryAnnualFees) {
+      masterHeaderCells.push(createHeaderCell('Annual Fee'));
     }
 
-    if (hasTransactionFees) {
-      headerCells.push(createHeaderCell('Per Transaction'));
+    if (hasPrimaryTransactionFees) {
+      masterHeaderCells.push(createHeaderCell('Per Transaction'));
     }
 
-    if (hasMonthlyCommitment) {
-      headerCells.push(createHeaderCell('Monthly Commitment'));
+    if (hasPrimaryMonthlyCommitment) {
+      masterHeaderCells.push(createHeaderCell('Monthly Commitment'));
     }
 
-    tableRows.push(new TableRow({ children: headerCells }));
+    masterTableRows.push(new TableRow({ children: masterHeaderCells }));
 
-    // Data rows for this product
-    filteredItems.forEach((item, rowIndex) => {
-      console.log(`[wordGenerator] Product: ${productName}, Year: ${item.year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
+    // Add all primary service items as rows
+    allPrimaryServiceItems.forEach((rowData, rowIndex) => {
+      const { displayName, year, item, productName } = rowData;
 
-      // Special handling for Platform Fee - display as "MeridianLink Mortgage Platform Fee" not the full mortgage product name
-      const displayName = (item.tier === 'Platform Fee') ? 'MeridianLink Mortgage Platform Fee' : productName;
+      console.log(`[wordGenerator] Master table row: Product: ${productName}, Year: ${year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
 
       // Alternate row shading (every other row, starting with row 1)
       const isShaded = rowIndex % 2 === 1;
 
       const dataCells = [
         createDataCell(displayName, false, isShaded),
-        createDataCell(String(item.year || 1), true, isShaded)
+        createDataCell(String(year), true, isShaded)
       ];
 
-      if (hasSetupFees) {
+      if (hasPrimarySetupFees) {
         dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true, isShaded));
       }
 
-      if (hasAnnualFees) {
+      if (hasPrimaryAnnualFees) {
         dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true, isShaded));
       }
 
-      if (hasTransactionFees) {
+      if (hasPrimaryTransactionFees) {
         const perFileFee = Number(item.perFileFee) || 0;
         dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true, isShaded));
       }
 
-      if (hasMonthlyCommitment) {
+      if (hasPrimaryMonthlyCommitment) {
         dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true, isShaded));
       }
 
-      tableRows.push(new TableRow({ children: dataCells }));
+      masterTableRows.push(new TableRow({ children: dataCells }));
     });
 
-    // Add product heading and table
-    targetSections.push(
-      new Paragraph({
-        text: productName,
-        bold: true,
-        size: 22,
-        color: '004B8E',
-        spacing: { before: 50, after: 50 }
-      })
-    );
-
-    // Create table with dynamic column widths
-    const columnCount = headerCells.length;
+    // Add master table to primary sections
+    const columnCount = masterHeaderCells.length;
     const columnWidth = Math.floor(5000 / columnCount); // 5000 twips per column
 
-    targetSections.push(
+    primaryServiceSections.push(
       new Table({
-        rows: tableRows,
+        rows: masterTableRows,
         width: { size: 100, type: WidthType.PERCENT },
         columnWidths: Array(columnCount).fill(columnWidth)
       })
     );
 
-    targetSections.push(
+    primaryServiceSections.push(
       new Paragraph({ text: '', spacing: { after: 50 } })
     );
 
-    // Add disclaimer for PriceMyLoan Service Package
-    if (productName.includes('PriceMyLoan Service Package')) {
-      targetSections.push(
+    // Add disclaimers if any
+    disclaimers.forEach(disclaimer => {
+      primaryServiceSections.push(
         new Paragraph({
           children: [
             new TextRun({
-              text: 'Note: The hourly rate is only billed when custom products are requested, built, or adjusted.',
+              text: disclaimer.text,
               italic: true,
               size: 18,
               color: '666666'
@@ -285,8 +307,8 @@ async function generateProposal(proposalData) {
           spacing: { after: 100 }
         })
       );
-    }
-  });
+    });
+  }
 
   // Create consolidated add-ons table if there are any add-ons
   if (allAddOnItems.length > 0) {
