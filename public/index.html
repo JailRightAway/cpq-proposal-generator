@@ -1415,8 +1415,13 @@
         return;
       }
 
+      // Reset selected product for configuration when module changes
+      selectedProductForConfig = null;
       // Clear year volume inputs when product changes
       yearlyTierSelections = {};
+
+      // Trigger re-render of volume configuration to show products from new module
+      renderVolumeConfiguration();
     }
 
     // DEPRECATED: Tier matching now handled by Volume & Tier Configuration section
@@ -1486,28 +1491,39 @@
       productSelector.style.boxSizing = 'border-box';
       productSelector.style.cursor = 'pointer';
 
-      // Populate with available products from lineItems
+      // Populate with available products from the currently selected productModule
       const optionPlaceholder = document.createElement('option');
       optionPlaceholder.value = '';
       optionPlaceholder.textContent = 'Select a product to configure...';
       productSelector.appendChild(optionPlaceholder);
 
-      // Get unique product identifiers from lineItems
-      const productKeys = new Set();
-      lineItems.forEach(item => {
-        const productKey = item.productKey || item.name || 'Unknown';
-        productKeys.add(productKey);
-      });
+      // Get products from the currently selected module's dataset
+      const moduleSelect = document.getElementById('productModule');
+      const selectedModuleOption = moduleSelect.options[moduleSelect.selectedIndex];
 
-      if (productKeys.size === 0) {
-        optionPlaceholder.textContent = 'Add a product first';
+      let productVariants = [];
+      if (selectedModuleOption && selectedModuleOption.dataset.products) {
+        try {
+          productVariants = JSON.parse(selectedModuleOption.dataset.products);
+        } catch (e) {
+          console.warn('[UI] Failed to parse products from module:', e);
+        }
+      }
+
+      if (productVariants.length === 0) {
+        optionPlaceholder.textContent = 'Select a product module first';
         productSelector.disabled = true;
       } else {
-        Array.from(productKeys).sort().forEach(productKey => {
+        // Create options for each product variant (tier)
+        productVariants.forEach((product, index) => {
           const option = document.createElement('option');
-          option.value = productKey;
-          option.textContent = productKey;
-          if (selectedProductForConfig === productKey) {
+          // Use tier name if available, otherwise use product name
+          const tierName = product.tier || product.tierName || product.name || `Tier ${index + 1}`;
+          option.value = tierName;
+          option.textContent = tierName;
+          // Store the product data in the option for later use
+          option.dataset.productData = JSON.stringify(product);
+          if (selectedProductForConfig === tierName) {
             option.selected = true;
           }
           productSelector.appendChild(option);
@@ -1524,20 +1540,21 @@
       container.appendChild(selectorWrapper);
 
       // Auto-select first product if none is selected
-      if (!selectedProductForConfig && productKeys.size > 0) {
-        selectedProductForConfig = Array.from(productKeys).sort()[0];
+      if (!selectedProductForConfig && productVariants.length > 0) {
+        const firstTierName = productVariants[0].tier || productVariants[0].tierName || productVariants[0].name || 'Tier 1';
+        selectedProductForConfig = firstTierName;
         productSelector.value = selectedProductForConfig;
       }
 
       // Only show configuration form if a product is selected
-      if (!selectedProductForConfig || productKeys.size === 0) {
+      if (!selectedProductForConfig || productVariants.length === 0) {
         const placeholder = document.createElement('div');
         placeholder.style.color = '#999';
         placeholder.style.fontSize = '0.9rem';
         placeholder.style.padding = '20px';
         placeholder.style.textAlign = 'center';
-        placeholder.textContent = productKeys.size === 0
-          ? 'Add a product to configure its volume and pricing'
+        placeholder.textContent = productVariants.length === 0
+          ? 'Select a product module to configure its volume and pricing'
           : 'Select a product from the dropdown above';
         container.appendChild(placeholder);
         return;
@@ -3018,17 +3035,28 @@
         return;
       }
 
-      // Get ALL products from the module (these represent all tiers)
-      const allTierProducts = JSON.parse(selectedOption.dataset.products);
-      const product = allTierProducts[0];  // Base product from first tier
-
-      if (!product) {
-        showStatus('No product data available', 'error');
+      // Check if a specific product variant is selected for configuration
+      if (!selectedProductForConfig) {
+        showStatus('Please select a product variant to configure from the Volume & Tier Configuration section', 'error');
         return;
       }
 
-      // Use module name as product key for consistent configuration
-      const productKey = selectedOption.value || product.name || 'Unknown Product';
+      // Get ALL products from the module (these represent all tiers)
+      const allTierProducts = JSON.parse(selectedOption.dataset.products);
+
+      // Find the selected product variant by matching the tier/variant name
+      const product = allTierProducts.find(p => {
+        const tierName = p.tier || p.tierName || p.name;
+        return tierName === selectedProductForConfig;
+      });
+
+      if (!product) {
+        showStatus('Selected product variant not found in module', 'error');
+        return;
+      }
+
+      // Use the selected product variant's tier name as the product key for consistent configuration
+      const productKey = selectedProductForConfig;
 
       // Check Year 1 volume is entered for this product
       const year1Volume = volumeConfig[productKey] && volumeConfig[productKey][1];
