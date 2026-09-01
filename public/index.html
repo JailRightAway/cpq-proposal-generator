@@ -1643,12 +1643,18 @@
       const moduleSelect = document.getElementById('productModule');
       const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
 
+      console.log('[UI] updateVolumeConfig - module selected:', selectedOption?.value);
+
       if (!selectedOption || !selectedOption.dataset.products) {
+        console.warn('[UI] No module selected or no products data');
         return;
       }
 
       const products = JSON.parse(selectedOption.dataset.products);
+      console.log('[UI] Products loaded:', products.length, 'First product:', products[0]);
+
       if (products.length === 0) {
+        console.warn('[UI] No products in selected module');
         return;
       }
 
@@ -1657,7 +1663,9 @@
 
       // Update tier and fee displays for this year
       if (volume > 0 && allTiers.length > 0) {
+        console.log(`[UI] Matching volume ${volume} against ${allTiers.length} tiers`);
         const matchedTier = findTierForVolume(allTiers, volume);
+        console.log('[UI] Matched tier result:', matchedTier);
 
         if (matchedTier) {
           // Update tier display
