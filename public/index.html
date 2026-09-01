@@ -1801,6 +1801,14 @@
       );
       smartSection.appendChild(betaDiv);
 
+      // Beta Resync checkbox
+      const betaResyncDiv = createSmartAddOnCheckbox(
+        'Include Test Environment (Beta) Resync',
+        'MeridianLink Mortgage Test Environment Resync from Production (auto-matched to Year 1 volume)',
+        'betaResync'
+      );
+      smartSection.appendChild(betaResyncDiv);
+
       // Access checkbox
       const accessDiv = createSmartAddOnCheckbox(
         'Include MeridianLink Mortgage Access',
@@ -2804,10 +2812,11 @@
         // Determine display name
         let displayName = addonName;
         if (addonData.smartMatched) {
-          // Smart add-ons: Insight, Beta, Access
+          // Smart add-ons: Insight, Beta, Beta Resync, Access
           const typeMap = {
             'insight': 'MeridianLink Insight',
             'beta': 'Test Environment (Beta)',
+            'betaresync': 'Test Environment (Beta) Resync',
             'access': 'MeridianLink Access'
           };
           displayName = typeMap[addonName.toLowerCase()] || addonName;
@@ -3297,55 +3306,128 @@
                   volume: year1Volume
                 });
               }
-            } else if (addonNameLower.includes('beta')) {
-              // Beta: Match Year 1 volume, apply to all years
-              console.log('[generateProposal] Processing Beta - available categories:', Object.keys(addOnsData));
+            } else if (addonNameLower.includes('betaresync')) {
+              // Beta Resync: Match Year 1 volume, apply to Year 1 only
+              try {
+                console.log('[generateProposal] BETA RESYNC PROCESSING START');
+                console.log('[generateProposal] Processing Beta Resync - available categories:', Object.keys(addOnsData));
 
-              let testEnvAddons = [];
-              if (addOnsData['Add On - Misc']) {
-                testEnvAddons = addOnsData['Add On - Misc'].filter(item =>
-                  item.name.includes('Test') && item.name.includes('Environment')
-                ) || [];
-              }
+                let testEnvResyncAddons = [];
+                if (addOnsData['Add On - Misc']) {
+                  testEnvResyncAddons = addOnsData['Add On - Misc'].filter(item =>
+                    item.name.includes('Test') && item.name.includes('Environment') && item.name.includes('Resync')
+                  ) || [];
+                }
 
-              // If not found in Misc, search all categories
-              if (testEnvAddons.length === 0) {
-                console.log('[generateProposal] Beta not found in Add On - Misc, searching all categories...');
-                for (const [category, items] of Object.entries(addOnsData)) {
-                  const found = items.filter(item =>
-                    (item.name.includes('Test') && item.name.includes('Environment')) ||
-                    item.name.includes('Beta')
-                  );
-                  if (found.length > 0) {
-                    console.log(`[generateProposal] Found ${found.length} Beta/Test Environment items in category: ${category}`);
-                    testEnvAddons = found;
-                    break;
+                // If not found in Misc, search all categories
+                if (testEnvResyncAddons.length === 0) {
+                  console.log('[generateProposal] Beta Resync not found in Add On - Misc, searching all categories...');
+                  for (const [category, items] of Object.entries(addOnsData)) {
+                    const found = items.filter(item =>
+                      (item.name.includes('Test') && item.name.includes('Environment') && item.name.includes('Resync'))
+                    );
+                    if (found.length > 0) {
+                      console.log(`[generateProposal] Found ${found.length} Beta Resync items in category: ${category}`);
+                      testEnvResyncAddons = found;
+                      break;
+                    }
                   }
                 }
+
+                console.log('[generateProposal] Test Environment Resync addons found:', testEnvResyncAddons.length);
+                if (testEnvResyncAddons.length > 0) {
+                  console.log('[generateProposal] Sample Beta Resync addon:', JSON.stringify(testEnvResyncAddons[0]));
+                }
+
+                const matchedTier = findTierMatch(testEnvResyncAddons, year1Volume);
+                console.log('[generateProposal] BETA RESYNC FINDTIERMATCH RESULT:', matchedTier);
+
+                if (matchedTier) {
+                  console.log('[generateProposal] Beta Resync matched tier:', JSON.stringify(matchedTier));
+                  const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
+                  const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
+                  console.log('[generateProposal] Beta Resync fees - setupFee:', setupFee, 'annualFee:', annualFee);
+                  const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
+                  const monthlyCommitment = perFileFee * year1Volume;
+
+                  // Beta Resync: Year 1 only
+                  proposalLineItems.push({
+                    productName: `Test Environment / Beta Resync`,
+                    tier: matchedTier.tier,
+                    setupFee: setupFee,
+                    annualFee: annualFee,
+                    perFileFee: perFileFee,
+                    year: 1,
+                    monthlyCommitment: monthlyCommitment,
+                    volume: year1Volume
+                  });
+                } else {
+                  console.log('[generateProposal] BETA RESYNC: matchedTier is null/undefined - no tier matched for volume:', year1Volume);
+                }
+              } catch (betaResyncError) {
+                console.error('[generateProposal] BETA RESYNC PROCESSING ERROR:', betaResyncError);
               }
+            } else if (addonNameLower.includes('beta')) {
+              // Beta: Match Year 1 volume, apply to Year 1 only
+              try {
+                console.log('[generateProposal] BETA PROCESSING START - addonNameLower:', addonNameLower);
+                console.log('[generateProposal] Processing Beta - available categories:', Object.keys(addOnsData));
 
-              console.log('[generateProposal] Test Environment addons found:', testEnvAddons.length);
-              const matchedTier = findTierMatch(testEnvAddons, year1Volume);
+                let testEnvAddons = [];
+                if (addOnsData['Add On - Misc']) {
+                  testEnvAddons = addOnsData['Add On - Misc'].filter(item =>
+                    item.name.includes('Test') && item.name.includes('Environment') && !item.name.includes('Resync')
+                  ) || [];
+                }
 
-              if (matchedTier) {
-                console.log('[generateProposal] Beta matched tier:', matchedTier);
-                const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
-                const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
-                console.log('[generateProposal] Beta fees - setupFee:', setupFee, 'annualFee:', annualFee);
-                const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
-                const monthlyCommitment = perFileFee * year1Volume;
+                // If not found in Misc, search all categories
+                if (testEnvAddons.length === 0) {
+                  console.log('[generateProposal] Beta not found in Add On - Misc, searching all categories...');
+                  for (const [category, items] of Object.entries(addOnsData)) {
+                    const found = items.filter(item =>
+                      ((item.name.includes('Test') && item.name.includes('Environment')) ||
+                      item.name.includes('Beta')) && !item.name.includes('Resync')
+                    );
+                    if (found.length > 0) {
+                      console.log(`[generateProposal] Found ${found.length} Beta/Test Environment items in category: ${category}`);
+                      testEnvAddons = found;
+                      break;
+                    }
+                  }
+                }
 
-                // Beta: Year 1 only
-                proposalLineItems.push({
-                  productName: `Test Environment / Beta`,
-                  tier: matchedTier.tier,
-                  setupFee: setupFee,
-                  annualFee: annualFee,
-                  perFileFee: perFileFee,
-                  year: 1,
-                  monthlyCommitment: monthlyCommitment,
-                  volume: year1Volume
-                });
+                console.log('[generateProposal] Test Environment addons found:', testEnvAddons.length);
+                if (testEnvAddons.length > 0) {
+                  console.log('[generateProposal] Sample Beta addon:', JSON.stringify(testEnvAddons[0]));
+                }
+
+                const matchedTier = findTierMatch(testEnvAddons, year1Volume);
+                console.log('[generateProposal] BETA FINDTIERMATCH RESULT:', matchedTier);
+
+                if (matchedTier) {
+                  console.log('[generateProposal] Beta matched tier:', JSON.stringify(matchedTier));
+                  const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
+                  const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
+                  console.log('[generateProposal] Beta fees - setupFee:', setupFee, 'annualFee:', annualFee, 'matchedTier.annualFee:', matchedTier.annualFee);
+                  const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
+                  const monthlyCommitment = perFileFee * year1Volume;
+
+                  // Beta: Year 1 only
+                  proposalLineItems.push({
+                    productName: `Test Environment / Beta`,
+                    tier: matchedTier.tier,
+                    setupFee: setupFee,
+                    annualFee: annualFee,
+                    perFileFee: perFileFee,
+                    year: 1,
+                    monthlyCommitment: monthlyCommitment,
+                    volume: year1Volume
+                  });
+                } else {
+                  console.log('[generateProposal] BETA: matchedTier is null/undefined - no tier matched for volume:', year1Volume);
+                }
+              } catch (betaError) {
+                console.error('[generateProposal] BETA PROCESSING ERROR:', betaError);
               }
             } else if (addonNameLower.includes('access')) {
               // Access: Match each year's volume separately, setup fee only in Year 1

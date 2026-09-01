@@ -18,7 +18,7 @@ function getDefaultExpirationDate() {
 
 function createHeaderCell(text) {
   return new TableCell({
-    shading: { fill: '004B8E' },
+    shading: { fill: '1999C0' },
     margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
@@ -31,8 +31,8 @@ function createHeaderCell(text) {
   });
 }
 
-function createDataCell(text, centered = false) {
-  return new TableCell({
+function createDataCell(text, centered = false, shaded = false) {
+  const cell = {
     margins: { top: 80, bottom: 80, left: 80, right: 80 },
     children: [
       new Paragraph({
@@ -40,7 +40,14 @@ function createDataCell(text, centered = false) {
         alignment: centered ? AlignmentType.CENTER : AlignmentType.LEFT
       })
     ]
-  });
+  };
+
+  if (shaded) {
+    cell.shading = { fill: '33FFFE', color: 'auto' };
+    cell.children[0].color = '000000';
+  }
+
+  return new TableCell(cell);
 }
 
 function groupLineItemsByProduct(lineItems) {
@@ -162,32 +169,35 @@ async function generateProposal(proposalData) {
     tableRows.push(new TableRow({ children: headerCells }));
 
     // Data rows for this product
-    filteredItems.forEach((item) => {
+    filteredItems.forEach((item, rowIndex) => {
       console.log(`[wordGenerator] Product: ${productName}, Year: ${item.year}, setupFee: ${item.setupFee}, annualFee: ${item.annualFee}`);
 
       // Special handling for Platform Fee - display as "MeridianLink Mortgage Platform Fee" not the full mortgage product name
       const displayName = (item.tier === 'Platform Fee') ? 'MeridianLink Mortgage Platform Fee' : productName;
 
+      // Alternate row shading (every other row, starting with row 1)
+      const isShaded = rowIndex % 2 === 1;
+
       const dataCells = [
-        createDataCell(displayName),
-        createDataCell(String(item.year || 1), true)
+        createDataCell(displayName, false, isShaded),
+        createDataCell(String(item.year || 1), true, isShaded)
       ];
 
       if (hasSetupFees) {
-        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true));
+        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true, isShaded));
       }
 
       if (hasAnnualFees) {
-        dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true));
+        dataCells.push(createDataCell(formatCurrency(item.annualFee || item.annualPrice || 0), true, isShaded));
       }
 
       if (hasTransactionFees) {
         const perFileFee = Number(item.perFileFee) || 0;
-        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
+        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true, isShaded));
       }
 
       if (hasMonthlyCommitment) {
-        dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true));
+        dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true, isShaded));
       }
 
       tableRows.push(new TableRow({ children: dataCells }));
@@ -270,23 +280,28 @@ async function generateProposal(proposalData) {
     addOnTableRows.push(new TableRow({ children: addOnHeaderCells }));
 
     // Add all add-on items
+    let rowIndexAddon = 0;
     allAddOnItems.forEach(({ productName, items }) => {
       items.forEach(item => {
+        // Alternate row shading (every other row, starting with row 1)
+        const isShaded = rowIndexAddon % 2 === 1;
+
         const dataCells = [
-          createDataCell(productName),
-          createDataCell(String(item.year || 1), true)
+          createDataCell(productName, false, isShaded),
+          createDataCell(String(item.year || 1), true, isShaded)
         ];
 
-        if (hasSetupFees) dataCells.push(createDataCell(formatCurrency(item.setupFee || 0), true));
-        if (hasAnnualFees) dataCells.push(createDataCell(formatCurrency(item.annualFee || 0), true));
+        if (hasSetupFees) dataCells.push(createDataCell(formatCurrency(item.setupFee || 0), true, isShaded));
+        if (hasAnnualFees) dataCells.push(createDataCell(formatCurrency(item.annualFee || 0), true, isShaded));
 
         // Always show transaction fee for add-ons
         const perFileFee = Number(item.perFileFee) || 0;
-        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true));
+        dataCells.push(createDataCell(perFileFee > 0 ? perFileFee.toFixed(2) : 'N/A', true, isShaded));
 
-        if (hasMonthlyCommitment) dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true));
+        if (hasMonthlyCommitment) dataCells.push(createDataCell(formatCurrency(item.monthlyCommitment || 0), true, isShaded));
 
         addOnTableRows.push(new TableRow({ children: dataCells }));
+        rowIndexAddon++;
       });
     });
 
@@ -319,6 +334,7 @@ async function generateProposal(proposalData) {
     })
   );
 
+  let summaryRowIndex = 0;
   for (let year = 1; year <= contractYears; year++) {
     let yearCost = lineItems.reduce((sum, item) => {
       if ((item.year || 1) === year) {
@@ -333,17 +349,21 @@ async function generateProposal(proposalData) {
     const yearTotal = (year === 1 ? totalSetup : 0) + yearCost;
     contractTotal += yearTotal;
 
+    // Alternate row shading
+    const isShaded = summaryRowIndex % 2 === 1;
+
     summaryRows.push(
       new TableRow({
         children: [
-          createDataCell(`Year ${year}`),
-          createDataCell(formatCurrency(yearTotal), true)
+          createDataCell(`Year ${year}`, false, isShaded),
+          createDataCell(formatCurrency(yearTotal), true, isShaded)
         ]
       })
     );
+    summaryRowIndex++;
   }
 
-  // Total row
+  // Total row (not shaded - separate visual emphasis)
   summaryRows.push(
     new TableRow({
       children: [
