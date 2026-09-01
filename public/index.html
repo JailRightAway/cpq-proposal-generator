@@ -1253,19 +1253,19 @@
             <option value="">Select type...</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Product/Module *</label>
-          <select id="productModule" onchange="loadProductOptions()">
-            <option value="">Select product...</option>
-          </select>
-        </div>
       </div>
     </div>
 
     <!-- Volume & Tier Configuration (for add-ons and multi-year pricing) -->
     <div class="section" id="volumeConfigSection">
       <h2>Volume & Tier Configuration</h2>
-      <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Set monthly volumes for add-on tier matching and multi-year pricing</p>
+      <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Select a product module, then configure volumes and pricing for each year</p>
+      <div class="form-group">
+        <label>Product/Module *</label>
+        <select id="productModule" onchange="loadProductOptions()">
+          <option value="">Select product...</option>
+        </select>
+      </div>
       <div id="volumeConfigContainer"></div>
       <button class="btn btn-secondary" onclick="addProduct()" style="margin-top: 15px;">Add Product</button>
     </div>
@@ -1402,10 +1402,16 @@
       const moduleSelect = document.getElementById('productModule');
       const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
 
-      // Note: Volume configuration now handled by the separate Volume & Tier Configuration section
-      // This function previously showed/hid volumeRow, but that's deprecated
+      if (!selectedOption || !selectedOption.value) {
+        // Clear the volume configuration if no module is selected
+        const container = document.getElementById('volumeConfigContainer');
+        if (container) {
+          container.innerHTML = '';
+        }
+        return;
+      }
 
-      if (!selectedOption || !selectedOption.dataset.products) {
+      if (!selectedOption.dataset.products) {
         return;
       }
 
@@ -1415,12 +1421,16 @@
         return;
       }
 
-      // Reset selected product for configuration when module changes
-      selectedProductForConfig = null;
-      // Clear year volume inputs when product changes
-      yearlyTierSelections = {};
+      // Reset volume config for this module when it's newly selected
+      // This allows fresh configuration for each module
+      if (!volumeConfig[selectedOption.value]) {
+        volumeConfig[selectedOption.value] = {};
+      }
+      if (!yearlyPricingOverrides[selectedOption.value]) {
+        yearlyPricingOverrides[selectedOption.value] = {};
+      }
 
-      // Trigger re-render of volume configuration to show products from new module
+      // Trigger render of volume configuration for the selected module
       renderVolumeConfiguration();
     }
 
@@ -1454,6 +1464,8 @@
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
       const container = document.getElementById('volumeConfigContainer');
       const productType = document.getElementById('productType').value;
+      const moduleSelect = document.getElementById('productModule');
+      const selectedModuleOption = moduleSelect.options[moduleSelect.selectedIndex];
       const isMortgage = productType.toLowerCase().includes('mortgage');
 
       if (!container) {
@@ -1464,43 +1476,7 @@
       container.innerHTML = '';
       console.log(`[UI] Rendering Volume Configuration for ${contractYears} years (Product: ${productType}, isMortgage: ${isMortgage})`);
 
-      // Add product selector dropdown
-      const selectorWrapper = document.createElement('div');
-      selectorWrapper.style.marginBottom = '20px';
-
-      const selectorLabel = document.createElement('label');
-      selectorLabel.style.display = 'block';
-      selectorLabel.style.fontSize = '0.9rem';
-      selectorLabel.style.marginBottom = '8px';
-      selectorLabel.style.fontWeight = '600';
-      selectorLabel.style.color = '#00d4ff';
-      selectorLabel.style.textTransform = 'uppercase';
-      selectorLabel.textContent = 'Product to Configure';
-      selectorWrapper.appendChild(selectorLabel);
-
-      const productSelector = document.createElement('select');
-      productSelector.id = 'productSelector';
-      productSelector.style.width = '100%';
-      productSelector.style.padding = '12px 14px';
-      productSelector.style.border = '2px solid #333';
-      productSelector.style.borderRadius = '6px';
-      productSelector.style.fontSize = '1rem';
-      productSelector.style.fontFamily = 'inherit';
-      productSelector.style.backgroundColor = '#2a2a2a';
-      productSelector.style.color = '#e0e0e0';
-      productSelector.style.boxSizing = 'border-box';
-      productSelector.style.cursor = 'pointer';
-
-      // Populate with available products from the currently selected productModule
-      const optionPlaceholder = document.createElement('option');
-      optionPlaceholder.value = '';
-      optionPlaceholder.textContent = 'Select a product to configure...';
-      productSelector.appendChild(optionPlaceholder);
-
       // Get products from the currently selected module's dataset
-      const moduleSelect = document.getElementById('productModule');
-      const selectedModuleOption = moduleSelect.options[moduleSelect.selectedIndex];
-
       let productVariants = [];
       if (selectedModuleOption && selectedModuleOption.dataset.products) {
         try {
@@ -1510,53 +1486,18 @@
         }
       }
 
-      if (productVariants.length === 0) {
-        optionPlaceholder.textContent = 'Select a product module first';
-        productSelector.disabled = true;
-      } else {
-        // Create options for each product variant (tier)
-        productVariants.forEach((product, index) => {
-          const option = document.createElement('option');
-          // Use product module name for display, with tier name as fallback
-          const displayName = product.moduleName || product.name || `Product ${index + 1}`;
-          const tierName = product.tier || product.tierName || product.name || `Tier ${index + 1}`;
-          option.value = tierName;
-          option.textContent = displayName;
-          // Store the product data in the option for later use
-          option.dataset.productData = JSON.stringify(product);
-          if (selectedProductForConfig === tierName) {
-            option.selected = true;
-          }
-          productSelector.appendChild(option);
-        });
-        productSelector.disabled = false;
-      }
+      // Use the selected module value as the product key
+      // This represents the module name or the tier variant being configured
+      selectedProductForConfig = selectedModuleOption?.value || null;
 
-      productSelector.onchange = function() {
-        selectedProductForConfig = this.value;
-        renderVolumeConfiguration(); // Re-render to show selected product's config
-      };
-
-      selectorWrapper.appendChild(productSelector);
-      container.appendChild(selectorWrapper);
-
-      // Auto-select first product if none is selected
-      if (!selectedProductForConfig && productVariants.length > 0) {
-        const firstTierName = productVariants[0].tier || productVariants[0].tierName || productVariants[0].name || 'Tier 1';
-        selectedProductForConfig = firstTierName;
-        productSelector.value = selectedProductForConfig;
-      }
-
-      // Only show configuration form if a product is selected
+      // Only show configuration form if a module is selected
       if (!selectedProductForConfig || productVariants.length === 0) {
         const placeholder = document.createElement('div');
         placeholder.style.color = '#999';
         placeholder.style.fontSize = '0.9rem';
         placeholder.style.padding = '20px';
         placeholder.style.textAlign = 'center';
-        placeholder.textContent = productVariants.length === 0
-          ? 'Select a product module to configure its volume and pricing'
-          : 'Select a product from the dropdown above';
+        placeholder.textContent = 'Select a product module to configure its volume and pricing';
         container.appendChild(placeholder);
         return;
       }
@@ -3036,57 +2977,46 @@
         return;
       }
 
-      // Check if a specific product variant is selected for configuration
-      if (!selectedProductForConfig) {
-        showStatus('Please select a product variant to configure from the Volume & Tier Configuration section', 'error');
+      // Get the module name (selectedProductForConfig is set to module value in renderVolumeConfiguration)
+      const moduleKey = selectedProductForConfig;
+
+      if (!moduleKey) {
+        showStatus('Please configure the selected product module in Volume & Tier Configuration', 'error');
+        return;
+      }
+
+      // Check Year 1 volume is entered for this module
+      const year1Volume = volumeConfig[moduleKey] && volumeConfig[moduleKey][1];
+      if (!year1Volume || year1Volume === 0) {
+        showStatus('Please enter Year 1 volume for this product module', 'error');
         return;
       }
 
       // Get ALL products from the module (these represent all tiers)
       const allTierProducts = JSON.parse(selectedOption.dataset.products);
 
-      // Find the selected product variant by matching the tier/variant name
-      const product = allTierProducts.find(p => {
-        const tierName = p.tier || p.tierName || p.name;
-        return tierName === selectedProductForConfig;
-      });
-
-      if (!product) {
-        showStatus('Selected product variant not found in module', 'error');
-        return;
-      }
-
-      // Use the selected product variant's tier name as the product key for consistent configuration
-      const productKey = selectedProductForConfig;
-
-      // Check Year 1 volume is entered for this product
-      const year1Volume = volumeConfig[productKey] && volumeConfig[productKey][1];
-      if (!year1Volume || year1Volume === 0) {
-        showStatus('Please select this product in Volume & Tier Configuration and enter Year 1 volume', 'error');
-        return;
-      }
-
-      // Initialize product config if not already done
-      if (!volumeConfig[productKey]) {
-        volumeConfig[productKey] = {};
-      }
-      if (!yearlyPricingOverrides[productKey]) {
-        yearlyPricingOverrides[productKey] = {};
-      }
-
       // Create a line item for each year with volume entered
       for (let year = 1; year <= contractYears; year++) {
-        const volume = volumeConfig[productKey][year] || 0;
+        const volume = volumeConfig[moduleKey][year] || 0;
 
         if (volume <= 0) continue;
 
-        // Use the product from the selected module
-        let yearTierData = product;
+        // Find the tier that matches this year's volume
+        const matchedTier = findTierForVolume(allTierProducts, volume);
+
+        if (!matchedTier) {
+          showStatus(`No tier found for Year ${year} volume (${volume}). Please adjust volume.`, 'error');
+          return;
+        }
+
+        // Use matched tier's name as the unique key for this tier
+        const tierName = matchedTier.tier || matchedTier.tierName || matchedTier.name || 'Unknown Tier';
+        const productKey = `${moduleKey}__${tierName}`;  // Composite key to avoid conflicts
 
         // Calculate per-file fee from services
         let perFileFee = 0;
-        if (yearTierData.services) {
-          for (const [serviceName, servicePrice] of Object.entries(yearTierData.services)) {
+        if (matchedTier.services) {
+          for (const [serviceName, servicePrice] of Object.entries(matchedTier.services)) {
             if (serviceName.toLowerCase().includes('per') &&
                 (serviceName.toLowerCase().includes('file') || serviceName.toLowerCase().includes('app'))) {
               perFileFee = servicePrice;
@@ -3096,21 +3026,21 @@
         }
 
         // Fallback to direct property if available
-        if (perFileFee === 0 && yearTierData.perFileFee) {
-          perFileFee = yearTierData.perFileFee;
+        if (perFileFee === 0 && matchedTier.perFileFee) {
+          perFileFee = matchedTier.perFileFee;
         }
 
         let monthlyCommitment = perFileFee * volume;
 
         const item = {
           id: `item_${Date.now()}_Y${year}`,
-          ...product,
-          productKey: productKey,  // Store the product key for later lookup
+          ...matchedTier,
+          productKey: productKey,  // Store the composite key for later lookup
           year: year,
           volume: volume,
           perFileFee: perFileFee,
           monthlyCommitment: monthlyCommitment,
-          implementationFee: (year === 1) ? (product.oneTimeFee || 0) : 0,
+          implementationFee: (year === 1) ? (matchedTier.oneTimeFee || 0) : 0,
           overriddenPerFileFee: null,
           overriddenImplementationFee: (year === 1) ? null : 0,  // Year 2+ has no implementation fee
           tiers: allTierProducts  // Attach all tier variants as tiers array for auto-matching
