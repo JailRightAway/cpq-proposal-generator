@@ -3285,18 +3285,17 @@
                 const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
                 const monthlyCommitment = perFileFee * year1Volume;
 
-                for (let year = 1; year <= contractYears; year++) {
-                  proposalLineItems.push({
-                    productName: `MeridianLink Insight`,
-                    tier: matchedTier.tier,
-                    setupFee: year === 1 ? setupFee : 0,
-                    annualFee: annualFee,
-                    perFileFee: perFileFee,
-                    year: year,
-                    monthlyCommitment: monthlyCommitment,
-                    volume: year1Volume
-                  });
-                }
+                // Insight: Year 1 only
+                proposalLineItems.push({
+                  productName: `MeridianLink Insight`,
+                  tier: matchedTier.tier,
+                  setupFee: setupFee,
+                  annualFee: annualFee,
+                  perFileFee: perFileFee,
+                  year: 1,
+                  monthlyCommitment: monthlyCommitment,
+                  volume: year1Volume
+                });
               }
             } else if (addonNameLower.includes('beta')) {
               // Beta: Match Year 1 volume, apply to all years
@@ -3334,18 +3333,17 @@
                 const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
                 const monthlyCommitment = perFileFee * year1Volume;
 
-                for (let year = 1; year <= contractYears; year++) {
-                  proposalLineItems.push({
-                    productName: `Test Environment / Beta`,
-                    tier: matchedTier.tier,
-                    setupFee: year === 1 ? setupFee : 0,
-                    annualFee: annualFee,
-                    perFileFee: perFileFee,
-                    year: year,
-                    monthlyCommitment: monthlyCommitment,
-                    volume: year1Volume
-                  });
-                }
+                // Beta: Year 1 only
+                proposalLineItems.push({
+                  productName: `Test Environment / Beta`,
+                  tier: matchedTier.tier,
+                  setupFee: setupFee,
+                  annualFee: annualFee,
+                  perFileFee: perFileFee,
+                  year: 1,
+                  monthlyCommitment: monthlyCommitment,
+                  volume: year1Volume
+                });
               }
             } else if (addonNameLower.includes('access')) {
               // Access: Match each year's volume separately, setup fee only in Year 1
