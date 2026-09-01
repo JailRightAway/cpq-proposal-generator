@@ -180,13 +180,15 @@ async function generateProposal(proposalData) {
     filteredItems.forEach(item => {
       // Special handling for Platform Fee - display as "MeridianLink Mortgage Platform Fee" not the full mortgage product name
       const displayName = (item.tier === 'Platform Fee') ? 'MeridianLink Mortgage Platform Fee' : productName;
+      const isPlatformFeeItem = item.tier === 'Platform Fee' || productName.toLowerCase().includes('platform fee');
 
       allPrimaryServiceItems.push({
         displayName,
-        year: item.year || 1,
+        year: isPlatformFeeItem ? 0 : (item.year || 1),
         mortgageTypeOrder,
         mortgageTypeLabel,
         productName,
+        isPlatformFee: isPlatformFeeItem,
         item
       });
     });
@@ -198,6 +200,21 @@ async function generateProposal(proposalData) {
         productName
       });
     }
+  });
+
+  // Sort allPrimaryServiceItems: non-Platform Fees by year/mortgageType, then Platform Fees at the end
+  allPrimaryServiceItems.sort((a, b) => {
+    // Platform Fees go last
+    if (a.isPlatformFee !== b.isPlatformFee) {
+      return a.isPlatformFee ? 1 : -1;
+    }
+    // Within non-Platform Fees, sort by year then mortgageTypeOrder
+    if (!a.isPlatformFee) {
+      if (a.year !== b.year) return a.year - b.year;
+      return a.mortgageTypeOrder - b.mortgageTypeOrder;
+    }
+    // Within Platform Fees, maintain original order
+    return 0;
   });
 
   // Determine which columns are needed for the master table
