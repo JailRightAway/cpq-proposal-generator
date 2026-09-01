@@ -1447,6 +1447,8 @@
     function renderVolumeConfiguration() {
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
       const container = document.getElementById('volumeConfigContainer');
+      const productType = document.getElementById('productType').value;
+      const isMortgage = productType.toLowerCase().includes('mortgage');
 
       if (!container) {
         console.error('[UI] volumeConfigContainer not found');
@@ -1454,7 +1456,7 @@
       }
 
       container.innerHTML = '';
-      console.log(`[UI] Rendering Volume Configuration for ${contractYears} years`);
+      console.log(`[UI] Rendering Volume Configuration for ${contractYears} years (Product: ${productType}, isMortgage: ${isMortgage})`);
 
       const grid = document.createElement('div');
       grid.style.display = 'grid';
@@ -1533,33 +1535,35 @@
 
         yearBox.appendChild(tierGroup);
 
-        // Annual fee display (readonly)
-        const feeGroup = document.createElement('div');
+        // Annual fee display (readonly) - only for non-Mortgage products
+        if (!isMortgage) {
+          const feeGroup = document.createElement('div');
 
-        const feeLabel = document.createElement('label');
-        feeLabel.style.display = 'block';
-        feeLabel.style.fontSize = '0.9rem';
-        feeLabel.style.marginBottom = '6px';
-        feeLabel.style.color = '#aaa';
-        feeLabel.textContent = 'Annual Fee';
-        feeGroup.appendChild(feeLabel);
+          const feeLabel = document.createElement('label');
+          feeLabel.style.display = 'block';
+          feeLabel.style.fontSize = '0.9rem';
+          feeLabel.style.marginBottom = '6px';
+          feeLabel.style.color = '#aaa';
+          feeLabel.textContent = 'Annual Fee';
+          feeGroup.appendChild(feeLabel);
 
-        const feeDisplay = document.createElement('input');
-        feeDisplay.type = 'text';
-        feeDisplay.id = `yearFee_${year}`;
-        feeDisplay.readonly = true;
-        feeDisplay.placeholder = 'Annual fee will display here';
-        feeDisplay.style.width = '100%';
-        feeDisplay.style.padding = '8px';
-        feeDisplay.style.backgroundColor = '#222';
-        feeDisplay.style.border = '1px solid #444';
-        feeDisplay.style.color = '#888';
-        feeDisplay.style.borderRadius = '4px';
-        feeDisplay.style.fontSize = '0.9rem';
-        feeDisplay.style.boxSizing = 'border-box';
-        feeGroup.appendChild(feeDisplay);
+          const feeDisplay = document.createElement('input');
+          feeDisplay.type = 'text';
+          feeDisplay.id = `yearFee_${year}`;
+          feeDisplay.readonly = true;
+          feeDisplay.placeholder = 'Annual fee will display here';
+          feeDisplay.style.width = '100%';
+          feeDisplay.style.padding = '8px';
+          feeDisplay.style.backgroundColor = '#222';
+          feeDisplay.style.border = '1px solid #444';
+          feeDisplay.style.color = '#888';
+          feeDisplay.style.borderRadius = '4px';
+          feeDisplay.style.fontSize = '0.9rem';
+          feeDisplay.style.boxSizing = 'border-box';
+          feeGroup.appendChild(feeDisplay);
 
-        yearBox.appendChild(feeGroup);
+          yearBox.appendChild(feeGroup);
+        }
 
         // One-Time Fee (editable)
         const oneTimeFeeGroup = document.createElement('div');
