@@ -3472,6 +3472,12 @@
           console.log(`[generateProposal] No tier auto-matching (no tiers or volume is 0)`);
         }
 
+        // Final override check: apply per-transaction fee override if it exists
+        if (yearlyPricingOverrides[year] && yearlyPricingOverrides[year].perTransactionFee !== undefined && yearlyPricingOverrides[year].perTransactionFee > 0) {
+          actualPerFileFee = yearlyPricingOverrides[year].perTransactionFee;
+          console.log(`[generateProposal] Applied per-transaction override for Year ${year}: ${actualPerFileFee}`);
+        }
+
         return {
           productName: item.name,
           tier: tierName,
