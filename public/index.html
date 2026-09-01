@@ -1639,25 +1639,81 @@
 
       console.log('[UI] Volume config updated:', volumeConfig);
 
-      // Update tier and annual fee displays for this year based on yearlyTierSelections
-      if (yearlyTierSelections && yearlyTierSelections[year]) {
-        const tierData = JSON.parse(yearlyTierSelections[year]);
+      // Get the selected product module for tier matching
+      const moduleSelect = document.getElementById('productModule');
+      const selectedOption = moduleSelect.options[moduleSelect.selectedIndex];
 
-        // Update tier display
+      if (!selectedOption || !selectedOption.dataset.products) {
+        return;
+      }
+
+      const products = JSON.parse(selectedOption.dataset.products);
+      if (products.length === 0) {
+        return;
+      }
+
+      // Get all tiers from the products
+      const allTiers = products;
+
+      // Update tier and fee displays for this year
+      if (volume > 0 && allTiers.length > 0) {
+        const matchedTier = findTierForVolume(allTiers, volume);
+
+        if (matchedTier) {
+          // Update tier display
+          const tierField = document.getElementById(`yearTier_${year}`);
+          if (tierField) {
+            tierField.value = matchedTier.tier || matchedTier.tierName || 'N/A';
+            tierField.style.color = '#00ff88';
+          }
+
+          // Update annual fee display
+          const feeField = document.getElementById(`yearFee_${year}`);
+          if (feeField) {
+            const hasAnnualFee = matchedTier.annualFee && matchedTier.annualFee > 0;
+            feeField.value = hasAnnualFee ? `$${Math.round(matchedTier.annualFee).toLocaleString()}` : 'N/A';
+            feeField.style.color = hasAnnualFee ? '#00ff88' : '#888';
+          }
+
+          // Update one-time fee display and auto-populate field
+          const oneTimeFeeField = document.getElementById(`yearOneTimeFee_${year}`);
+          if (oneTimeFeeField) {
+            const oneTimeFee = matchedTier.oneTimeFee || matchedTier.setupFee || 0;
+            oneTimeFeeField.value = oneTimeFee > 0 ? oneTimeFee.toString() : '';
+            oneTimeFeeField.placeholder = oneTimeFee > 0 ? `$${oneTimeFee.toFixed(2)}` : 'N/A';
+            oneTimeFeeField.style.borderColor = oneTimeFee > 0 ? '#00ff88' : '#444';
+            // Auto-populate the override
+            if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
+            yearlyPricingOverrides[year].oneTimeFee = oneTimeFee;
+          }
+
+          // Update per-transaction fee display and auto-populate field
+          const perTransFeeField = document.getElementById(`yearPerTransFee_${year}`);
+          if (perTransFeeField) {
+            const perTransFee = matchedTier.perFileFee || matchedTier.transactionFee || 0;
+            perTransFeeField.value = perTransFee > 0 ? perTransFee.toString() : '';
+            perTransFeeField.placeholder = perTransFee > 0 ? `$${perTransFee.toFixed(2)}` : 'N/A';
+            perTransFeeField.style.borderColor = perTransFee > 0 ? '#00ff88' : '#444';
+            // Auto-populate the override
+            if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
+            yearlyPricingOverrides[year].perTransactionFee = perTransFee;
+          }
+
+          console.log(`[UI] Year ${year} tier matched - one-time: ${matchedTier.oneTimeFee || matchedTier.setupFee || 0}, per-trans: ${matchedTier.perFileFee || matchedTier.transactionFee || 0}`);
+        }
+      } else {
+        // Clear fields if volume is 0
         const tierField = document.getElementById(`yearTier_${year}`);
-        if (tierField) {
-          tierField.value = tierData.tierName || 'N/A';
-          tierField.style.color = tierData.tierName ? '#00ff88' : '#888';
-        }
+        if (tierField) tierField.value = '';
 
-        // Update annual fee display (most Mortgage products don't have annual fees, so show N/A)
         const feeField = document.getElementById(`yearFee_${year}`);
-        if (feeField) {
-          // Only show annual fee if it's a non-zero value (most products don't have annual fees)
-          const hasAnnualFee = tierData.annualFee && tierData.annualFee > 0;
-          feeField.value = hasAnnualFee ? `$${Math.round(tierData.annualFee).toLocaleString()}` : 'N/A';
-          feeField.style.color = hasAnnualFee ? '#00ff88' : '#888';
-        }
+        if (feeField) feeField.value = '';
+
+        const oneTimeFeeField = document.getElementById(`yearOneTimeFee_${year}`);
+        if (oneTimeFeeField) oneTimeFeeField.value = '';
+
+        const perTransFeeField = document.getElementById(`yearPerTransFee_${year}`);
+        if (perTransFeeField) perTransFeeField.value = '';
       }
 
       // Update Access override fields with matched tier values if Access is selected
