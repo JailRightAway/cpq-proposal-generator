@@ -3328,8 +3328,10 @@
               const matchedTier = findTierMatch(testEnvAddons, year1Volume);
 
               if (matchedTier) {
+                console.log('[generateProposal] Beta matched tier:', matchedTier);
                 const setupFee = addonSelection.overrides?.oneTime || matchedTier.oneTimeFee || 0;
                 const annualFee = addonSelection.overrides?.annual || matchedTier.annualFee || 0;
+                console.log('[generateProposal] Beta fees - setupFee:', setupFee, 'annualFee:', annualFee);
                 const perFileFee = addonSelection.overrides?.transaction || matchedTier.perFileFee || matchedTier.transactionFee || 0;
                 const monthlyCommitment = perFileFee * year1Volume;
 
