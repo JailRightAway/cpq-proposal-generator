@@ -51,14 +51,42 @@ function createDataCell(text, centered = false, shaded = false) {
 }
 
 function groupLineItemsByProduct(lineItems) {
+  // Group by (year, mortgageType, productName) to support year-first ordering
   const grouped = {};
+
   lineItems.forEach(item => {
-    const key = item.productName || item.moduleName || 'Unknown';
-    if (!grouped[key]) {
-      grouped[key] = [];
+    // Determine mortgage type for ordering
+    const productName = item.productName || item.moduleName || 'Unknown';
+    let mortgageTypeOrder = 2; // default for non-mortgage products
+    let mortgageTypeLabel = 'Other';
+
+    if (productName.includes('Platform Fee') || item.tier === 'Platform Fee') {
+      mortgageTypeOrder = 999; // Platform Fee goes last
+      mortgageTypeLabel = 'Platform Fee';
+    } else if (productName.includes('First Lien')) {
+      mortgageTypeOrder = 0;
+      mortgageTypeLabel = 'First Lien';
+    } else if (productName.includes('Subordinate Lien')) {
+      mortgageTypeOrder = 1;
+      mortgageTypeLabel = 'Subordinate Lien';
     }
-    grouped[key].push(item);
+
+    // Create a composite key that preserves year-first ordering
+    const year = item.year || 1;
+    const groupKey = `${year}_${mortgageTypeOrder}_${productName}`;
+
+    if (!grouped[groupKey]) {
+      grouped[groupKey] = {
+        year: year,
+        mortgageTypeOrder: mortgageTypeOrder,
+        mortgageTypeLabel: mortgageTypeLabel,
+        productName: productName,
+        items: []
+      };
+    }
+    grouped[groupKey].items.push(item);
   });
+
   return grouped;
 }
 
@@ -88,7 +116,7 @@ async function generateProposal(proposalData) {
   const isAddOn = (productName) => addOnKeywords.some(keyword => productName.toLowerCase().includes(keyword.toLowerCase()));
 
   // Platform Fee stays in primary services
-  const isPlatformFee = (productName) => productName.toLowerCase().includes('platform fee');
+  const isPlatformFee = (productName) => productName.toLowerCase().includes('platform fee') || productName.includes('Platform Fee');
 
   // Helper function to determine if item should only show Year 1
   const showOnlyYear1 = (productName) => {
@@ -117,8 +145,20 @@ async function generateProposal(proposalData) {
   // Separate add-on items for consolidated table
   let allAddOnItems = [];
 
+  // Sort the grouped items by (year, mortgageTypeOrder) to maintain ordering
+  const sortedGroupKeys = Object.keys(groupedItems).sort((keyA, keyB) => {
+    const groupA = groupedItems[keyA];
+    const groupB = groupedItems[keyB];
+
+    const yearDiff = groupA.year - groupB.year;
+    if (yearDiff !== 0) return yearDiff;
+
+    return groupA.mortgageTypeOrder - groupB.mortgageTypeOrder;
+  });
+
   // Create a separate table for each product
-  Object.entries(groupedItems).forEach(([productName, items]) => {
+  sortedGroupKeys.forEach((groupKey) => {
+    const { year, mortgageTypeOrder, mortgageTypeLabel, productName, items } = groupedItems[groupKey];
     const isAddOnProduct = isAddOn(productName) && !isPlatformFee(productName);
     const isSeparateTable = !isAddOnProduct;
     const isYear1Only = showOnlyYear1(productName);
@@ -126,7 +166,7 @@ async function generateProposal(proposalData) {
     // Filter items for year 1-only products
     const filteredItems = isYear1Only ? items.filter(item => (item.year || 1) === 1) : items;
 
-    console.log(`[wordGenerator] Product: "${productName}", isYear1Only: ${isYear1Only}, original items: ${items.length}, filtered items: ${filteredItems.length}`);
+    console.log(`[wordGenerator] Year: ${year}, Type: ${mortgageTypeLabel}, Product: "${productName}", isYear1Only: ${isYear1Only}, original items: ${items.length}, filtered items: ${filteredItems.length}`);
 
     if (isAddOnProduct) {
       // Collect add-on items for consolidated table

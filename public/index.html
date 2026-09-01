@@ -3959,6 +3959,33 @@
         );
       }
 
+      // Sort line items by year first, then by mortgage type (First Lien -> Subordinate Lien -> Others -> Platform Fee)
+      proposalLineItems.sort((a, b) => {
+        // Sort by year first
+        const yearDiff = (a.year || 1) - (b.year || 1);
+        if (yearDiff !== 0) return yearDiff;
+
+        // Within same year, sort by mortgage type
+        const getMortgageTypeOrder = (item) => {
+          const productName = item.productName || '';
+          // Platform Fee always goes last (even after Subordinate Lien products)
+          if (productName.includes('Platform Fee') || item.tier === 'Platform Fee') return 999;
+          // First Lien products
+          if (productName.includes('First Lien')) return 0;
+          // Subordinate Lien products
+          if (productName.includes('Subordinate Lien')) return 1;
+          // Other products (add-ons, etc.)
+          return 2;
+        };
+
+        const typeA = getMortgageTypeOrder(a);
+        const typeB = getMortgageTypeOrder(b);
+        if (typeA !== typeB) return typeA - typeB;
+
+        // Within same year and type, sort by product name for consistency
+        return (a.productName || '').localeCompare(b.productName || '');
+      });
+
       const proposalData = {
         customerName: customerName,
         customerContact: document.getElementById('contactName').value,
