@@ -93,7 +93,7 @@ function parseProductsFromJson(data) {
     // Check if this is a module header (starts with "MeridianLink" or "Decision Lender")
     // But exclude service lines (Setup Fee, Annual Fee, etc.)
     const isModuleHeader = (firstCol.startsWith('MeridianLink') || firstCol.startsWith('Decision Lender')) &&
-      (firstCol.includes('Module') || firstCol.includes('Plan') || firstCol.includes('Volume') || (firstCol.includes('Insight') && (firstCol.includes('Mortgage') || firstCol.includes('Collect')))) &&
+      (firstCol.includes('Module') || firstCol.includes('Plan') || firstCol.includes('Volume') || firstCol.includes('Subordinate Lien') || (firstCol.includes('Insight') && (firstCol.includes('Mortgage') || firstCol.includes('Collect')))) &&
       !firstCol.includes('Setup Fee') && !firstCol.includes('Annual Fee');
 
     // Log Access module detection

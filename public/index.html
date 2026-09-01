@@ -1338,6 +1338,11 @@
     let productsData = {};
     let selectedAddOns = {};
 
+    // Per-product volume and pricing configuration
+    let volumeConfig = {}; // { productKey: { year: volume, ... }, ... }
+    let yearlyPricingOverrides = {}; // { productKey: { year: { oneTimeFee, perTransactionFee }, ... }, ... }
+    let selectedProductForConfig = null; // Currently selected product for configuration
+
     // Load product types on page load
     async function loadProducts() {
       try {
@@ -1440,10 +1445,6 @@
       return null;
     }
 
-    // Volume and pricing configuration for each year
-    let volumeConfig = {}; // { year: volume }
-    let yearlyPricingOverrides = {}; // { year: { oneTimeFee, perTransactionFee } }
-
     function renderVolumeConfiguration() {
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
       const container = document.getElementById('volumeConfigContainer');
@@ -1457,6 +1458,98 @@
 
       container.innerHTML = '';
       console.log(`[UI] Rendering Volume Configuration for ${contractYears} years (Product: ${productType}, isMortgage: ${isMortgage})`);
+
+      // Add product selector dropdown
+      const selectorWrapper = document.createElement('div');
+      selectorWrapper.style.marginBottom = '20px';
+
+      const selectorLabel = document.createElement('label');
+      selectorLabel.style.display = 'block';
+      selectorLabel.style.fontSize = '0.9rem';
+      selectorLabel.style.marginBottom = '8px';
+      selectorLabel.style.fontWeight = '600';
+      selectorLabel.style.color = '#00d4ff';
+      selectorLabel.style.textTransform = 'uppercase';
+      selectorLabel.textContent = 'Product to Configure';
+      selectorWrapper.appendChild(selectorLabel);
+
+      const productSelector = document.createElement('select');
+      productSelector.id = 'productSelector';
+      productSelector.style.width = '100%';
+      productSelector.style.padding = '12px 14px';
+      productSelector.style.border = '2px solid #333';
+      productSelector.style.borderRadius = '6px';
+      productSelector.style.fontSize = '1rem';
+      productSelector.style.fontFamily = 'inherit';
+      productSelector.style.backgroundColor = '#2a2a2a';
+      productSelector.style.color = '#e0e0e0';
+      productSelector.style.boxSizing = 'border-box';
+      productSelector.style.cursor = 'pointer';
+
+      // Populate with available products from lineItems
+      const optionPlaceholder = document.createElement('option');
+      optionPlaceholder.value = '';
+      optionPlaceholder.textContent = 'Select a product to configure...';
+      productSelector.appendChild(optionPlaceholder);
+
+      // Get unique product identifiers from lineItems
+      const productKeys = new Set();
+      lineItems.forEach(item => {
+        const productKey = item.productKey || item.name || 'Unknown';
+        productKeys.add(productKey);
+      });
+
+      if (productKeys.size === 0) {
+        optionPlaceholder.textContent = 'Add a product first';
+        productSelector.disabled = true;
+      } else {
+        Array.from(productKeys).sort().forEach(productKey => {
+          const option = document.createElement('option');
+          option.value = productKey;
+          option.textContent = productKey;
+          if (selectedProductForConfig === productKey) {
+            option.selected = true;
+          }
+          productSelector.appendChild(option);
+        });
+        productSelector.disabled = false;
+      }
+
+      productSelector.onchange = function() {
+        selectedProductForConfig = this.value;
+        renderVolumeConfiguration(); // Re-render to show selected product's config
+      };
+
+      selectorWrapper.appendChild(productSelector);
+      container.appendChild(selectorWrapper);
+
+      // Auto-select first product if none is selected
+      if (!selectedProductForConfig && productKeys.size > 0) {
+        selectedProductForConfig = Array.from(productKeys).sort()[0];
+        productSelector.value = selectedProductForConfig;
+      }
+
+      // Only show configuration form if a product is selected
+      if (!selectedProductForConfig || productKeys.size === 0) {
+        const placeholder = document.createElement('div');
+        placeholder.style.color = '#999';
+        placeholder.style.fontSize = '0.9rem';
+        placeholder.style.padding = '20px';
+        placeholder.style.textAlign = 'center';
+        placeholder.textContent = productKeys.size === 0
+          ? 'Add a product to configure its volume and pricing'
+          : 'Select a product from the dropdown above';
+        container.appendChild(placeholder);
+        return;
+      }
+
+      // Ensure the selected product has config storage
+      if (!volumeConfig[selectedProductForConfig]) {
+        volumeConfig[selectedProductForConfig] = {};
+      }
+      if (!yearlyPricingOverrides[selectedProductForConfig]) {
+        yearlyPricingOverrides[selectedProductForConfig] = {};
+      }
 
       const grid = document.createElement('div');
       grid.style.display = 'grid';
@@ -1501,6 +1594,11 @@
         volumeInput.style.borderRadius = '4px';
         volumeInput.style.fontSize = '0.9rem';
         volumeInput.style.boxSizing = 'border-box';
+        // Pre-populate with saved value for this product
+        const savedVolume = volumeConfig[selectedProductForConfig] && volumeConfig[selectedProductForConfig][year];
+        if (savedVolume) {
+          volumeInput.value = savedVolume;
+        }
         volumeInput.onchange = updateVolumeConfig;
         volumeGroup.appendChild(volumeInput);
 
@@ -1591,6 +1689,11 @@
         oneTimeFeeInput.style.borderRadius = '4px';
         oneTimeFeeInput.style.fontSize = '0.9rem';
         oneTimeFeeInput.style.boxSizing = 'border-box';
+        // Pre-populate with saved value for this product
+        const savedOneTimeFee = yearlyPricingOverrides[selectedProductForConfig] && yearlyPricingOverrides[selectedProductForConfig][year] && yearlyPricingOverrides[selectedProductForConfig][year].oneTimeFee;
+        if (savedOneTimeFee) {
+          oneTimeFeeInput.value = savedOneTimeFee;
+        }
         oneTimeFeeInput.onchange = updateYearlyPricingOverride;
         oneTimeFeeGroup.appendChild(oneTimeFeeInput);
 
@@ -1622,6 +1725,11 @@
         perTransFeeInput.style.borderRadius = '4px';
         perTransFeeInput.style.fontSize = '0.9rem';
         perTransFeeInput.style.boxSizing = 'border-box';
+        // Pre-populate with saved value for this product
+        const savedPerTransFee = yearlyPricingOverrides[selectedProductForConfig] && yearlyPricingOverrides[selectedProductForConfig][year] && yearlyPricingOverrides[selectedProductForConfig][year].perTransactionFee;
+        if (savedPerTransFee) {
+          perTransFeeInput.value = savedPerTransFee;
+        }
         perTransFeeInput.onchange = updateYearlyPricingOverride;
         perTransFeeGroup.appendChild(perTransFeeInput);
 
@@ -1637,11 +1745,21 @@
       const yearMatch = event.target.id.match(/yearVolume_(\d+)/);
       if (!yearMatch) return;
 
+      if (!selectedProductForConfig) {
+        console.warn('[UI] No product selected for configuration');
+        return;
+      }
+
       const year = parseInt(yearMatch[1]);
       const volume = parseInt(event.target.value) || 0;
-      volumeConfig[year] = volume;
 
-      console.log('[UI] Volume config updated:', volumeConfig);
+      // Store per-product
+      if (!volumeConfig[selectedProductForConfig]) {
+        volumeConfig[selectedProductForConfig] = {};
+      }
+      volumeConfig[selectedProductForConfig][year] = volume;
+
+      console.log('[UI] Volume config updated for product', selectedProductForConfig, ':', volumeConfig[selectedProductForConfig]);
 
       // Get the selected product module for tier matching
       const moduleSelect = document.getElementById('productModule');
@@ -1695,9 +1813,10 @@
             oneTimeFeeField.placeholder = oneTimeFee > 0 ? `$${oneTimeFee.toFixed(2)}` : 'N/A';
             oneTimeFeeField.style.borderColor = oneTimeFee > 0 ? '#00ff88' : '#444';
             oneTimeFeeField.disabled = year > 1; // Disable for Years 2+
-            // Auto-populate the override (only for Year 1)
-            if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
-            yearlyPricingOverrides[year].oneTimeFee = oneTimeFee;
+            // Auto-populate the override (per-product)
+            if (!yearlyPricingOverrides[selectedProductForConfig]) yearlyPricingOverrides[selectedProductForConfig] = {};
+            if (!yearlyPricingOverrides[selectedProductForConfig][year]) yearlyPricingOverrides[selectedProductForConfig][year] = {};
+            yearlyPricingOverrides[selectedProductForConfig][year].oneTimeFee = oneTimeFee;
             console.log(`[UI] Year ${year} one-time fee auto-populated to yearlyPricingOverrides:`, oneTimeFee);
           }
 
@@ -1708,14 +1827,15 @@
             perTransFeeField.value = perTransFee > 0 ? perTransFee.toString() : '';
             perTransFeeField.placeholder = perTransFee > 0 ? `$${perTransFee.toFixed(2)}` : 'N/A';
             perTransFeeField.style.borderColor = perTransFee > 0 ? '#00ff88' : '#444';
-            // Auto-populate the override
-            if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
-            yearlyPricingOverrides[year].perTransactionFee = perTransFee;
+            // Auto-populate the override (per-product)
+            if (!yearlyPricingOverrides[selectedProductForConfig]) yearlyPricingOverrides[selectedProductForConfig] = {};
+            if (!yearlyPricingOverrides[selectedProductForConfig][year]) yearlyPricingOverrides[selectedProductForConfig][year] = {};
+            yearlyPricingOverrides[selectedProductForConfig][year].perTransactionFee = perTransFee;
             console.log(`[UI] Year ${year} per-transaction fee auto-populated to yearlyPricingOverrides:`, perTransFee);
           }
 
           console.log(`[UI] Year ${year} tier matched - one-time: ${matchedTier.oneTimeFee || matchedTier.setupFee || 0}, per-trans: ${matchedTier.perFileFee || matchedTier.transactionFee || 0}`);
-          console.log(`[UI] Year ${year} yearlyPricingOverrides after update:`, yearlyPricingOverrides[year]);
+          console.log(`[UI] Year ${year} yearlyPricingOverrides after update:`, yearlyPricingOverrides[selectedProductForConfig][year]);
         }
       } else {
         // Clear fields if volume is 0
@@ -1739,21 +1859,28 @@
     }
 
     function updateYearlyPricingOverride(event) {
+      if (!selectedProductForConfig) {
+        console.warn('[UI] No product selected for configuration');
+        return;
+      }
+
       const oneTimeFeeMatch = event.target.id.match(/yearOneTimeFee_(\d+)/);
       const perTransFeeMatch = event.target.id.match(/yearPerTransFee_(\d+)/);
 
       if (oneTimeFeeMatch) {
         const year = parseInt(oneTimeFeeMatch[1]);
         const value = parseFloat(event.target.value) || 0;
-        if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
-        yearlyPricingOverrides[year].oneTimeFee = value;
-        console.log(`[UI] Yearly pricing override updated - Year ${year} one-time fee: ${value}`);
+        if (!yearlyPricingOverrides[selectedProductForConfig]) yearlyPricingOverrides[selectedProductForConfig] = {};
+        if (!yearlyPricingOverrides[selectedProductForConfig][year]) yearlyPricingOverrides[selectedProductForConfig][year] = {};
+        yearlyPricingOverrides[selectedProductForConfig][year].oneTimeFee = value;
+        console.log(`[UI] Yearly pricing override updated - Product: ${selectedProductForConfig}, Year ${year} one-time fee: ${value}`);
       } else if (perTransFeeMatch) {
         const year = parseInt(perTransFeeMatch[1]);
         const value = parseFloat(event.target.value) || 0;
-        if (!yearlyPricingOverrides[year]) yearlyPricingOverrides[year] = {};
-        yearlyPricingOverrides[year].perTransactionFee = value;
-        console.log(`[UI] Yearly pricing override updated - Year ${year} per-transaction fee: ${value}`);
+        if (!yearlyPricingOverrides[selectedProductForConfig]) yearlyPricingOverrides[selectedProductForConfig] = {};
+        if (!yearlyPricingOverrides[selectedProductForConfig][year]) yearlyPricingOverrides[selectedProductForConfig][year] = {};
+        yearlyPricingOverrides[selectedProductForConfig][year].perTransactionFee = value;
+        console.log(`[UI] Yearly pricing override updated - Product: ${selectedProductForConfig}, Year ${year} per-transaction fee: ${value}`);
       }
 
       console.log('[UI] All yearly pricing overrides:', yearlyPricingOverrides);
@@ -1767,9 +1894,12 @@
       const overrideSection = accessDiv.querySelector('.addon-override-fields');
       if (!overrideSection) return;
 
-      // Get the volume for this year
-      const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
-      console.log(`[UI] updateAccessOverrideDefaults for Year ${year}, volume: ${yearVolume}`);
+      // Get the volume for this year (use selected product's config)
+      let yearVolume = 0;
+      if (selectedProductForConfig && volumeConfig[selectedProductForConfig]) {
+        yearVolume = volumeConfig[selectedProductForConfig][year] ? parseInt(volumeConfig[selectedProductForConfig][year]) : 0;
+      }
+      console.log(`[UI] updateAccessOverrideDefaults for Year ${year}, Product: ${selectedProductForConfig}, volume: ${yearVolume}`);
       if (yearVolume <= 0) return;
 
       // Find matched tier for Access
@@ -2156,7 +2286,20 @@
       // Get default tier value for Year 1 (for one-time and annual fees)
       let defaultOneTimeFee = 0;
       let defaultAnnualFee = 0;
-      const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+      // Get Year 1 volume from the currently selected product, or from any available product
+      let year1Volume = 0;
+      if (selectedProductForConfig && volumeConfig[selectedProductForConfig]) {
+        year1Volume = volumeConfig[selectedProductForConfig][1] ? parseInt(volumeConfig[selectedProductForConfig][1]) : 0;
+      }
+      if (year1Volume === 0) {
+        // Fallback to first available Year 1 volume
+        for (const [productKey, yearConfig] of Object.entries(volumeConfig)) {
+          if (yearConfig[1]) {
+            year1Volume = parseInt(yearConfig[1]);
+            break;
+          }
+        }
+      }
 
       if (addonType.includes('insight')) {
         console.log(`[UI] Insight Y1 volume: ${year1Volume}`);
@@ -2313,7 +2456,7 @@
       // Transaction fee override (general - use Year 1 as default)
       let defaultTransactionFee = 0;
       if (addonType.includes('access')) {
-        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
+        // Use year1Volume which was already calculated above
         if (year1Volume > 0) {
           // Find Access add-ons in any category
           let accessAddons = addOnsData['Add On - MeridianLink Mortgage Access'];
@@ -2385,7 +2528,20 @@
           // Get default transaction fee for this year
           let defaultYearTransFee = 0;
           if (addonType.includes('access')) {
-            const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : 0;
+            // Get volume from selected product config
+            let yearVolume = 0;
+            if (selectedProductForConfig && volumeConfig[selectedProductForConfig]) {
+              yearVolume = volumeConfig[selectedProductForConfig][year] ? parseInt(volumeConfig[selectedProductForConfig][year]) : 0;
+            }
+            if (yearVolume === 0) {
+              // Fallback to first available volume for this year
+              for (const [productKey, yearConfig] of Object.entries(volumeConfig)) {
+                if (yearConfig[year]) {
+                  yearVolume = parseInt(yearConfig[year]);
+                  break;
+                }
+              }
+            }
             console.log(`[UI] Access Year ${year} volume: ${yearVolume}`);
             if (yearVolume > 0) {
               // Find Access add-ons in any category
@@ -2871,16 +3027,27 @@
         return;
       }
 
-      // Check Year 1 volume is entered
-      const year1Volume = volumeConfig[1];
+      // Use module name as product key for consistent configuration
+      const productKey = selectedOption.value || product.name || 'Unknown Product';
+
+      // Check Year 1 volume is entered for this product
+      const year1Volume = volumeConfig[productKey] && volumeConfig[productKey][1];
       if (!year1Volume || year1Volume === 0) {
-        showStatus('Please enter Year 1 monthly volume in Volume & Tier Configuration', 'error');
+        showStatus('Please select this product in Volume & Tier Configuration and enter Year 1 volume', 'error');
         return;
+      }
+
+      // Initialize product config if not already done
+      if (!volumeConfig[productKey]) {
+        volumeConfig[productKey] = {};
+      }
+      if (!yearlyPricingOverrides[productKey]) {
+        yearlyPricingOverrides[productKey] = {};
       }
 
       // Create a line item for each year with volume entered
       for (let year = 1; year <= contractYears; year++) {
-        const volume = volumeConfig[year] || 0;
+        const volume = volumeConfig[productKey][year] || 0;
 
         if (volume <= 0) continue;
 
@@ -2909,6 +3076,7 @@
         const item = {
           id: `item_${Date.now()}_Y${year}`,
           ...product,
+          productKey: productKey,  // Store the product key for later lookup
           year: year,
           volume: volume,
           perFileFee: perFileFee,
@@ -2927,7 +3095,27 @@
     }
 
     function removeProduct(itemId) {
+      // Find the product key before removing
+      const itemToRemove = lineItems.find(item => item.id === itemId);
+      const productKeyToRemove = itemToRemove?.productKey;
+
+      // Remove from line items
       lineItems = lineItems.filter(item => item.id !== itemId);
+
+      // If no more items with this product key, clean up its config
+      if (productKeyToRemove) {
+        const hasMoreOfThisProduct = lineItems.some(item => item.productKey === productKeyToRemove);
+        if (!hasMoreOfThisProduct) {
+          delete volumeConfig[productKeyToRemove];
+          delete yearlyPricingOverrides[productKeyToRemove];
+          // If this was the selected product, clear selection
+          if (selectedProductForConfig === productKeyToRemove) {
+            selectedProductForConfig = null;
+          }
+          console.log(`[UI] Cleaned up config for removed product: ${productKeyToRemove}`);
+        }
+      }
+
       updateUI();
     }
 
@@ -3212,14 +3400,15 @@
       lineItems.forEach(item => {
         const row = document.createElement('tr');
         const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+        const productKey = item.productKey || item.name || 'Unknown';
 
         // Calculate per app fee based on matched tier for this year's volume
         let perAppFee = item.perFileFee;  // Base/default
         if (item.overriddenPerFileFee !== null) {
           perAppFee = item.overriddenPerFileFee;  // User override
         } else if (item.tiers && item.tiers.length > 0) {
-          // Find tier for this year's volume
-          const yearVolume = volumeConfig[item.year] || 0;
+          // Find tier for this year's volume (use product-specific config)
+          const yearVolume = (volumeConfig[productKey] && volumeConfig[productKey][item.year]) || 0;
           if (yearVolume > 0) {
             const matchedTier = item.tiers.find(t => {
               const tierMin = t.tierMin !== undefined ? t.tierMin : (t.volumeMin !== undefined ? t.volumeMin : 0);
@@ -3404,18 +3593,19 @@
       // Build line items array - use yearly tier selections for Year 2+ with auto-matching
       let proposalLineItems = lineItems.map(item => {
         const year = item.year || 1;
+        const productKey = item.productKey || item.name || 'Unknown';
 
-        // Check for yearly pricing overrides first
+        // Check for yearly pricing overrides first (use product-specific overrides)
         let implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
         let perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
 
-        // Apply yearly pricing overrides if they exist
-        if (yearlyPricingOverrides[year]) {
-          if (yearlyPricingOverrides[year].oneTimeFee !== undefined && yearlyPricingOverrides[year].oneTimeFee > 0) {
-            implFee = yearlyPricingOverrides[year].oneTimeFee;
+        // Apply yearly pricing overrides if they exist (look up by productKey)
+        if (yearlyPricingOverrides[productKey] && yearlyPricingOverrides[productKey][year]) {
+          if (yearlyPricingOverrides[productKey][year].oneTimeFee !== undefined && yearlyPricingOverrides[productKey][year].oneTimeFee > 0) {
+            implFee = yearlyPricingOverrides[productKey][year].oneTimeFee;
           }
-          if (yearlyPricingOverrides[year].perTransactionFee !== undefined && yearlyPricingOverrides[year].perTransactionFee > 0) {
-            perAppFee = yearlyPricingOverrides[year].perTransactionFee;
+          if (yearlyPricingOverrides[productKey][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKey][year].perTransactionFee > 0) {
+            perAppFee = yearlyPricingOverrides[productKey][year].perTransactionFee;
           }
         }
 
@@ -3426,10 +3616,10 @@
         let annualFeeForYear = item.annualFee || 0;
         let actualPerFileFee = perAppFee;
 
-        // Auto-match tier based on volume for each year if needed
-        const yearVolume = volumeConfig[item.year] || volumeConfig[1] || 0;
+        // Auto-match tier based on volume for each year if needed (use product-specific volume)
+        const yearVolume = (volumeConfig[productKey] && volumeConfig[productKey][year]) || (volumeConfig[productKey] && volumeConfig[productKey][1]) || 0;
 
-        console.log(`[generateProposal] Product: ${item.name}, Year: ${item.year}, Volume: ${yearVolume}, Current tier: ${tierName}, Current perFileFee: ${perAppFee}, Has tiers: ${!!item.tiers}, Num tiers: ${item.tiers ? item.tiers.length : 0}`);
+        console.log(`[generateProposal] Product: ${item.name}, Key: ${productKey}, Year: ${item.year}, Volume: ${yearVolume}, Current tier: ${tierName}, Current perFileFee: ${perAppFee}, Has tiers: ${!!item.tiers}, Num tiers: ${item.tiers ? item.tiers.length : 0}`);
 
         if (item.year > 1 && yearlyTierSelections[item.year]) {
           const yearlyTier = JSON.parse(yearlyTierSelections[item.year]);
@@ -3472,10 +3662,10 @@
           console.log(`[generateProposal] No tier auto-matching (no tiers or volume is 0)`);
         }
 
-        // Final override check: apply per-transaction fee override if it exists
-        if (yearlyPricingOverrides[year] && yearlyPricingOverrides[year].perTransactionFee !== undefined && yearlyPricingOverrides[year].perTransactionFee > 0) {
-          actualPerFileFee = yearlyPricingOverrides[year].perTransactionFee;
-          console.log(`[generateProposal] Applied per-transaction override for Year ${year}: ${actualPerFileFee}`);
+        // Final override check: apply per-transaction fee override if it exists (use product-specific overrides)
+        if (yearlyPricingOverrides[productKey] && yearlyPricingOverrides[productKey][year] && yearlyPricingOverrides[productKey][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKey][year].perTransactionFee > 0) {
+          actualPerFileFee = yearlyPricingOverrides[productKey][year].perTransactionFee;
+          console.log(`[generateProposal] Applied per-transaction override for Product: ${productKey}, Year ${year}: ${actualPerFileFee}`);
         }
 
         return {
@@ -3516,8 +3706,24 @@
         console.log('[generateProposal] Processing add-ons...');
 
         // Get Year 1 Mortgage volume for smart add-on tier matching
-        const year1Volume = volumeConfig[1] ? parseInt(volumeConfig[1]) : 0;
-        console.log('[generateProposal] Year 1 volume:', year1Volume);
+        // Use the first Mortgage product's Year 1 volume
+        let year1Volume = 0;
+        const mortgageLineItem = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage') && item.year === 1);
+        if (mortgageLineItem) {
+          const mortgageProductKey = mortgageLineItem.productKey || mortgageLineItem.name;
+          year1Volume = (volumeConfig[mortgageProductKey] && volumeConfig[mortgageProductKey][1]) ? parseInt(volumeConfig[mortgageProductKey][1]) : 0;
+          console.log(`[generateProposal] Using Mortgage product Year 1 volume from key "${mortgageProductKey}": ${year1Volume}`);
+        } else {
+          // Fallback: try to find any Year 1 volume in any product
+          for (const [productKey, yearConfig] of Object.entries(volumeConfig)) {
+            if (yearConfig[1]) {
+              year1Volume = parseInt(yearConfig[1]);
+              console.log(`[generateProposal] No Mortgage product found, using first available Year 1 volume from "${productKey}": ${year1Volume}`);
+              break;
+            }
+          }
+        }
+        console.log('[generateProposal] Year 1 volume for smart add-ons:', year1Volume);
 
         for (const [addonName, addonSelection] of Object.entries(selectedAddOns)) {
           console.log(`[generateProposal] Processing add-on: ${addonName}`, addonSelection);
@@ -3681,8 +3887,14 @@
               if (!accessAddons || !Array.isArray(accessAddons) || accessAddons.length === 0) {
                 console.warn('[generateProposal] Access add-ons data not found or empty');
               } else {
+                // Use the Mortgage product's volume config
+                const mortgageProductKey = mortgageLineItem ? (mortgageLineItem.productKey || mortgageLineItem.name) : null;
+
                 for (let year = 1; year <= contractYears; year++) {
-                  const yearVolume = volumeConfig[year] ? parseInt(volumeConfig[year]) : year1Volume;
+                  let yearVolume = year1Volume;
+                  if (mortgageProductKey && volumeConfig[mortgageProductKey] && volumeConfig[mortgageProductKey][year]) {
+                    yearVolume = parseInt(volumeConfig[mortgageProductKey][year]);
+                  }
                   console.log(`[generateProposal] Year ${year}: volume = ${yearVolume}`);
 
                   // Find tier with matching volume range
@@ -3706,7 +3918,7 @@
                     console.log(`[generateProposal] Year ${year} Access: setupFee=${setupFee}, annualFee=${annualFee}, transactionFee=${transactionFee} (yearOverride=${yearTransOverride}), tier=${matchedTier.tier || matchedTier.name}`);
 
                     // Calculate monthly commitment based on volume and transaction fee
-                    const yearVolume = volumeConfig[year] || 0;
+                    // yearVolume is already set above in the loop
                     const monthlyCommitment = transactionFee * yearVolume;
 
                     proposalLineItems.push({
