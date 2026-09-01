@@ -3383,6 +3383,7 @@
       console.log('DEBUG generateProposal: lineItems =', lineItems);
       console.log('DEBUG generateProposal: selectedAddOns =', selectedAddOns);
       console.log('DEBUG generateProposal: volumeConfig =', volumeConfig);
+      console.log('DEBUG generateProposal: yearlyPricingOverrides =', yearlyPricingOverrides);
 
       // Build yearly tier info
       const yearlyTiers = {};
@@ -3398,8 +3399,22 @@
 
       // Build line items array - use yearly tier selections for Year 2+ with auto-matching
       let proposalLineItems = lineItems.map(item => {
-        const implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
-        const perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+        const year = item.year || 1;
+
+        // Check for yearly pricing overrides first
+        let implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
+        let perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
+
+        // Apply yearly pricing overrides if they exist
+        if (yearlyPricingOverrides[year]) {
+          if (yearlyPricingOverrides[year].oneTimeFee !== undefined && yearlyPricingOverrides[year].oneTimeFee > 0) {
+            implFee = yearlyPricingOverrides[year].oneTimeFee;
+          }
+          if (yearlyPricingOverrides[year].perTransactionFee !== undefined && yearlyPricingOverrides[year].perTransactionFee > 0) {
+            perAppFee = yearlyPricingOverrides[year].perTransactionFee;
+          }
+        }
+
         const monthlyCommitment = perAppFee * (item.volume || 0);
 
         // For Year 2+, use yearly tier selection if available, otherwise use Year 1 tier
