@@ -532,6 +532,57 @@
       padding-left: 28px;
     }
 
+    /* Compact Ramp Checkbox Styles */
+    .ramp-checkbox-compact {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .checkbox-label-compact {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .checkbox-label-compact input[type="checkbox"] {
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      accent-color: #00d4ff;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .checkbox-label-compact input[type="checkbox"]:checked {
+      accent-color: #00d4ff;
+    }
+
+    .checkbox-text-compact {
+      color: #aaa;
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 1.2;
+    }
+
+    .checkbox-hint-compact {
+      color: #666;
+      font-size: 0.75rem;
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+      line-height: 1.3;
+      font-style: italic;
+    }
+
     .status {
       padding: 15px;
       border-radius: 8px;
@@ -1289,21 +1340,10 @@
           <input type="number" id="contractYears" min="1" max="10" value="3">
         </div>
         <div class="form-group">
-          <label>Ramp</label>
-          <label for="pricingRampCheckbox" class="checkbox-label">
-            <input type="checkbox" id="pricingRampCheckbox" checked onchange="handlePricingRampToggle()">
-          </label>
-        </div>
-        <div class="form-group">
           <label>Product Type *</label>
           <select id="productType" onchange="loadProductModules()">
             <option value="">Select type...</option>
           </select>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <p class="checkbox-hint">When enabled, Year 2 and 3 volumes and fees can vary. When disabled, they'll match Year 1.</p>
         </div>
       </div>
     </div>
@@ -1312,6 +1352,13 @@
     <div class="section" id="volumeConfigSection">
       <h2>Volume & Tier Configuration</h2>
       <p style="color: #999; font-size: 0.9rem; margin-bottom: 20px;">Select a product module, then configure volumes and pricing for each year</p>
+      <div class="ramp-checkbox-compact">
+        <label for="pricingRampCheckbox" class="checkbox-label-compact">
+          <input type="checkbox" id="pricingRampCheckbox" checked onchange="handlePricingRampToggle()">
+          <span class="checkbox-text-compact">Allow Multi-Year Ramp</span>
+        </label>
+        <p class="checkbox-hint-compact">When enabled, Year 2+ volumes and fees can vary. When disabled, they'll match Year 1.</p>
+      </div>
       <div class="form-group">
         <label>Product/Module *</label>
         <select id="productModule" onchange="loadProductOptions()">
