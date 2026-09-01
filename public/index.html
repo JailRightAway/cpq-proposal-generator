@@ -1237,6 +1237,45 @@
       background: #005acd;
     }
 
+    /* Ramp Checkbox and Visual Indicator */
+    .ramp-control-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .ramp-indicator-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .ramp-indicator-badge.active {
+      background-color: rgba(0, 255, 136, 0.2);
+      color: #00ff88;
+      border: 1px solid #00ff88;
+    }
+
+    .ramp-indicator-badge.inactive {
+      background-color: rgba(136, 136, 136, 0.2);
+      color: #888;
+      border: 1px solid #888;
+    }
+
+    .ramp-indicator-icon {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body>
@@ -1283,6 +1322,19 @@
           <input type="number" id="contractYears" min="1" max="10" value="3">
         </div>
         <div class="form-group">
+          <label>Ramp</label>
+          <div class="ramp-control-wrapper">
+            <label for="pricingRampCheckbox" class="checkbox-label">
+              <input type="checkbox" id="pricingRampCheckbox" checked onchange="handlePricingRampToggle()">
+              <span class="checkbox-text">Enable</span>
+            </label>
+            <div class="ramp-indicator-badge active" id="rampIndicator">
+              <span class="ramp-indicator-icon">✓</span>
+              <span>Active</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
           <label>Product Type *</label>
           <select id="productType" onchange="loadProductModules()">
             <option value="">Select type...</option>
@@ -1290,11 +1342,7 @@
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group checkbox-group">
-          <label for="pricingRampCheckbox" class="checkbox-label">
-            <input type="checkbox" id="pricingRampCheckbox" checked onchange="handlePricingRampToggle()">
-            <span class="checkbox-text">Ramp</span>
-          </label>
+        <div class="form-group">
           <p class="checkbox-hint">When enabled, Year 2 and 3 volumes and fees can vary. When disabled, they'll match Year 1.</p>
         </div>
       </div>
@@ -1916,9 +1964,23 @@
 
     function handlePricingRampToggle() {
       const checkbox = document.getElementById('pricingRampCheckbox');
+      const indicator = document.getElementById('rampIndicator');
       const contractYears = parseInt(document.getElementById('contractYears').value) || 1;
 
       console.log('[UI] Pricing ramp toggle:', checkbox.checked ? 'ENABLED (multi-year ramp)' : 'DISABLED (flat pricing)');
+
+      // Update visual indicator badge
+      if (indicator) {
+        if (checkbox.checked) {
+          indicator.classList.remove('inactive');
+          indicator.classList.add('active');
+          indicator.innerHTML = '<span class="ramp-indicator-icon">✓</span><span>Active</span>';
+        } else {
+          indicator.classList.remove('active');
+          indicator.classList.add('inactive');
+          indicator.innerHTML = '<span class="ramp-indicator-icon">✗</span><span>Inactive</span>';
+        }
+      }
 
       // Get Year 1 volume value for copying to other years when disabled
       const year1VolumeInput = document.getElementById('yearVolume_1');
