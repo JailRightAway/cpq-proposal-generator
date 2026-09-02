@@ -58,6 +58,8 @@ function calculateTotals(lineItems) {
 function generatePDFBuffer(proposalData) {
   return new Promise((resolve, reject) => {
     try {
+      console.log('PDF Generation: Starting with proposal data for customer:', proposalData.customerName);
+
       const doc = new PDFDocument({
         size: 'A4',
         margin: 40,
@@ -66,10 +68,18 @@ function generatePDFBuffer(proposalData) {
 
       // Collect PDF as buffer
       const chunks = [];
-      doc.on('data', (chunk) => chunks.push(chunk));
+      doc.on('data', (chunk) => {
+        chunks.push(chunk);
+        console.log('PDF chunk received. Size:', chunk.length);
+      });
       doc.on('end', () => {
         const buffer = Buffer.concat(chunks);
+        console.log('PDF generation complete. Final buffer size:', buffer.length);
         resolve(buffer);
+      });
+      doc.on('error', (err) => {
+        console.error('PDF document error event:', err);
+        reject(err);
       });
 
       // Title
@@ -185,8 +195,10 @@ function generatePDFBuffer(proposalData) {
       doc.text(`Generated: ${generatedDate}`, { align: 'center', color: '#999999' });
 
       // Finalize PDF
+      console.log('PDF Generation: Calling doc.end()');
       doc.end();
     } catch (error) {
+      console.error('PDF Generation: Caught error during PDF creation:', error);
       reject(error);
     }
   });

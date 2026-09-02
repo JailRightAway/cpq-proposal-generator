@@ -6,6 +6,10 @@ const { generatePDFBuffer } = require('../services/pdfGenerator');
 // Generate a proposal and return Word doc or PDF
 router.post('/generate', async (req, res) => {
   try {
+    // DEBUG: Log the entire request body
+    console.log('=== PROPOSAL GENERATE REQUEST ===');
+    console.log('Full request body:', JSON.stringify(req.body, null, 2));
+
     const {
       customerName,
       customerContact,
@@ -18,6 +22,13 @@ router.post('/generate', async (req, res) => {
       contractTermYears,
       format = 'docx'  // Default to DOCX if not specified
     } = req.body;
+
+    // DEBUG: Log extracted format value
+    console.log('Extracted format value:', format);
+    console.log('Format type:', typeof format);
+    console.log('Format === "pdf":', format === 'pdf');
+    console.log('Format === "docx":', format === 'docx');
+    console.log('Format.toLowerCase():', format ? format.toLowerCase() : 'undefined');
 
     // Validation
     if (!customerName || !lineItems || !Array.isArray(lineItems) || lineItems.length === 0) {
@@ -40,22 +51,38 @@ router.post('/generate', async (req, res) => {
     };
 
     // Generate based on format
+    console.log('About to check format condition. Format:', format, 'Will generate:', format === 'pdf' ? 'PDF' : 'DOCX');
+
     if (format === 'pdf') {
       // Generate PDF
-      const pdfBuffer = await generatePDFBuffer(proposalPayload);
-      
-      // Send PDF as file download
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.pdf"`);
-      res.send(pdfBuffer);
+      console.log('Generating PDF...');
+      try {
+        const pdfBuffer = await generatePDFBuffer(proposalPayload);
+        console.log('PDF generated successfully. Buffer size:', pdfBuffer.length);
+
+        // Send PDF as file download
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.pdf"`);
+        res.send(pdfBuffer);
+      } catch (pdfError) {
+        console.error('PDF generation failed:', pdfError);
+        throw pdfError;
+      }
     } else {
       // Generate Word document (default)
-      const docBuffer = await generateProposal(proposalPayload);
-      
-      // Send Word doc as file download
-      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-      res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.docx"`);
-      res.send(docBuffer);
+      console.log('Generating Word document (.docx)...');
+      try {
+        const docBuffer = await generateProposal(proposalPayload);
+        console.log('Word document generated successfully. Buffer size:', docBuffer.length);
+
+        // Send Word doc as file download
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+        res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.docx"`);
+        res.send(docBuffer);
+      } catch (docError) {
+        console.error('Word document generation failed:', docError);
+        throw docError;
+      }
     }
   } catch (error) {
     console.error('Proposal generation error:', error);

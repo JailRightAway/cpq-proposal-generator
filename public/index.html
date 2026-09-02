@@ -4302,6 +4302,8 @@
         });
 
         console.log('Response status:', response.status, response.ok);
+        console.log('Response headers Content-Type:', response.headers.get('content-type'));
+        console.log('Response headers Content-Disposition:', response.headers.get('content-disposition'));
 
         if (!response.ok) {
           const errorText = await response.text();
@@ -4312,10 +4314,17 @@
         console.log('Getting blob...');
         const blob = await response.blob();
         console.log('Blob size:', blob.size);
+        console.log('Blob type:', blob.type);
+
+        // DEBUG: Log what we're about to download
+        console.log('DEBUG: exportFormat was set to:', exportFormat);
+        console.log('DEBUG: Blob content-type:', blob.type);
+        console.log('DEBUG: Expected format:', exportFormat);
 
         // Set filename based on format
         const fileExtension = exportFormat === 'pdf' ? 'pdf' : 'docx';
         const filename = `Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.${fileExtension}`;
+        console.log('DEBUG: Using filename extension:', fileExtension, '- Full filename:', filename);
         
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
