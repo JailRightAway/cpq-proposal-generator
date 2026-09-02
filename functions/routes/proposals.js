@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { generateProposal } = require('../services/proposalGenerator');
+const { generatePDFBuffer } = require('../services/pdfGenerator');
 
-// Generate a proposal and return Word doc
+// Generate a proposal and return Word doc or PDF
 router.post('/generate', async (req, res) => {
   try {
     const {
@@ -14,7 +15,8 @@ router.post('/generate', async (req, res) => {
       lineItems,
       discountAmount,
       discountPercentage,
-      contractTermYears
+      contractTermYears,
+      format = 'docx'  // Default to DOCX if not specified
     } = req.body;
 
     // Validation
@@ -25,7 +27,7 @@ router.post('/generate', async (req, res) => {
       });
     }
 
-    const docBuffer = await generateProposal({
+    const proposalPayload = {
       customerName,
       customerContact,
       customerEmail,
@@ -35,12 +37,26 @@ router.post('/generate', async (req, res) => {
       discountAmount,
       discountPercentage,
       contractTermYears: contractTermYears || 1
-    });
+    };
 
-    // Send Word doc as file download
-    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-    res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.docx"`);
-    res.send(docBuffer);
+    // Generate based on format
+    if (format === 'pdf') {
+      // Generate PDF
+      const pdfBuffer = await generatePDFBuffer(proposalPayload);
+      
+      // Send PDF as file download
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.pdf"`);
+      res.send(pdfBuffer);
+    } else {
+      // Generate Word document (default)
+      const docBuffer = await generateProposal(proposalPayload);
+      
+      // Send Word doc as file download
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename="Proposal_${customerName}_${new Date().toISOString().split('T')[0]}.docx"`);
+      res.send(docBuffer);
+    }
   } catch (error) {
     console.error('Proposal generation error:', error);
     res.status(500).json({ success: false, error: error.message });
