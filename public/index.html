@@ -3761,17 +3761,21 @@
         const year = item.year || 1;
         const productKey = item.productKey || item.name || 'Unknown';
 
+        // Extract module name from composite key (format: "Module__Tier")
+        // yearlyPricingOverrides and volumeConfig are keyed by module name only, not the composite key
+        const productKeyModule = productKey.includes('__') ? productKey.split('__')[0] : productKey;
+
         // Check for yearly pricing overrides first (use product-specific overrides)
         let implFee = item.overriddenImplementationFee !== null ? item.overriddenImplementationFee : item.implementationFee;
         let perAppFee = item.overriddenPerFileFee !== null ? item.overriddenPerFileFee : item.perFileFee;
 
-        // Apply yearly pricing overrides if they exist (look up by productKey)
-        if (yearlyPricingOverrides[productKey] && yearlyPricingOverrides[productKey][year]) {
-          if (yearlyPricingOverrides[productKey][year].oneTimeFee !== undefined && yearlyPricingOverrides[productKey][year].oneTimeFee > 0) {
-            implFee = yearlyPricingOverrides[productKey][year].oneTimeFee;
+        // Apply yearly pricing overrides if they exist (look up by module name extracted from composite key)
+        if (yearlyPricingOverrides[productKeyModule] && yearlyPricingOverrides[productKeyModule][year]) {
+          if (yearlyPricingOverrides[productKeyModule][year].oneTimeFee !== undefined && yearlyPricingOverrides[productKeyModule][year].oneTimeFee > 0) {
+            implFee = yearlyPricingOverrides[productKeyModule][year].oneTimeFee;
           }
-          if (yearlyPricingOverrides[productKey][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKey][year].perTransactionFee > 0) {
-            perAppFee = yearlyPricingOverrides[productKey][year].perTransactionFee;
+          if (yearlyPricingOverrides[productKeyModule][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKeyModule][year].perTransactionFee > 0) {
+            perAppFee = yearlyPricingOverrides[productKeyModule][year].perTransactionFee;
           }
         }
 
@@ -3783,7 +3787,7 @@
         let actualPerFileFee = perAppFee;
 
         // Auto-match tier based on volume for each year if needed (use product-specific volume)
-        const yearVolume = (volumeConfig[productKey] && volumeConfig[productKey][year]) || (volumeConfig[productKey] && volumeConfig[productKey][1]) || 0;
+        const yearVolume = (volumeConfig[productKeyModule] && volumeConfig[productKeyModule][year]) || (volumeConfig[productKeyModule] && volumeConfig[productKeyModule][1]) || 0;
 
         console.log(`[generateProposal] Product: ${item.name}, Key: ${productKey}, Year: ${item.year}, Volume: ${yearVolume}, Current tier: ${tierName}, Current perFileFee: ${perAppFee}, Has tiers: ${!!item.tiers}, Num tiers: ${item.tiers ? item.tiers.length : 0}`);
 
@@ -3829,9 +3833,9 @@
         }
 
         // Final override check: apply per-transaction fee override if it exists (use product-specific overrides)
-        if (yearlyPricingOverrides[productKey] && yearlyPricingOverrides[productKey][year] && yearlyPricingOverrides[productKey][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKey][year].perTransactionFee > 0) {
-          actualPerFileFee = yearlyPricingOverrides[productKey][year].perTransactionFee;
-          console.log(`[generateProposal] Applied per-transaction override for Product: ${productKey}, Year ${year}: ${actualPerFileFee}`);
+        if (yearlyPricingOverrides[productKeyModule] && yearlyPricingOverrides[productKeyModule][year] && yearlyPricingOverrides[productKeyModule][year].perTransactionFee !== undefined && yearlyPricingOverrides[productKeyModule][year].perTransactionFee > 0) {
+          actualPerFileFee = yearlyPricingOverrides[productKeyModule][year].perTransactionFee;
+          console.log(`[generateProposal] Applied per-transaction override for Product: ${productKeyModule}, Year ${year}: ${actualPerFileFee}`);
         }
 
         return {
@@ -3877,8 +3881,10 @@
         const mortgageLineItem = lineItems.find(item => item.name && item.name.toLowerCase().includes('mortgage') && item.year === 1);
         if (mortgageLineItem) {
           const mortgageProductKey = mortgageLineItem.productKey || mortgageLineItem.name;
-          year1Volume = (volumeConfig[mortgageProductKey] && volumeConfig[mortgageProductKey][1]) ? parseInt(volumeConfig[mortgageProductKey][1]) : 0;
-          console.log(`[generateProposal] Using Mortgage product Year 1 volume from key "${mortgageProductKey}": ${year1Volume}`);
+          // Extract module name from composite key (format: "Module__Tier")
+          const mortgageModuleKey = mortgageProductKey.includes('__') ? mortgageProductKey.split('__')[0] : mortgageProductKey;
+          year1Volume = (volumeConfig[mortgageModuleKey] && volumeConfig[mortgageModuleKey][1]) ? parseInt(volumeConfig[mortgageModuleKey][1]) : 0;
+          console.log(`[generateProposal] Using Mortgage product Year 1 volume from key "${mortgageModuleKey}": ${year1Volume}`);
         } else {
           // Fallback: try to find any Year 1 volume in any product
           for (const [productKey, yearConfig] of Object.entries(volumeConfig)) {
