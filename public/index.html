@@ -2095,13 +2095,23 @@
             perTransFeeInput.style.opacity = '0.5';
             perTransFeeInput.style.backgroundColor = '#1a1a1a';
           }
-          // When disabled, copy Year 1 configuration to Year 2+ in volumeConfig
+          // When disabled, copy Year 1 configuration to Year 2+ in volumeConfig AND yearlyPricingOverrides
           if (selectedProductForConfig) {
             if (!volumeConfig[selectedProductForConfig]) {
               volumeConfig[selectedProductForConfig] = {};
             }
             volumeConfig[selectedProductForConfig][year] = year1Volume;
             console.log(`[UI] Year ${year} volume set to Year 1 value (${year1Volume}) in volumeConfig`);
+
+            // Also copy Year 1's pricing overrides to Year 2+ for consistency
+            if (yearlyPricingOverrides[selectedProductForConfig] && yearlyPricingOverrides[selectedProductForConfig][1]) {
+              if (!yearlyPricingOverrides[selectedProductForConfig][year]) {
+                yearlyPricingOverrides[selectedProductForConfig][year] = {};
+              }
+              yearlyPricingOverrides[selectedProductForConfig][year].oneTimeFee = yearlyPricingOverrides[selectedProductForConfig][1].oneTimeFee;
+              yearlyPricingOverrides[selectedProductForConfig][year].perTransactionFee = yearlyPricingOverrides[selectedProductForConfig][1].perTransactionFee;
+              console.log(`[UI] Year ${year} pricing overrides copied from Year 1:`, yearlyPricingOverrides[selectedProductForConfig][year]);
+            }
           }
         }
       }
@@ -3308,6 +3318,23 @@
           tiers: allTierProducts  // Attach all tier variants as tiers array for auto-matching
         };
 
+        // Ensure yearlyPricingOverrides are populated for this year if not already set by updateVolumeConfig
+        if (!yearlyPricingOverrides[moduleKey]) {
+          yearlyPricingOverrides[moduleKey] = {};
+        }
+        if (!yearlyPricingOverrides[moduleKey][year]) {
+          yearlyPricingOverrides[moduleKey][year] = {};
+        }
+        // Only populate if not already manually set via updateVolumeConfig
+        if (yearlyPricingOverrides[moduleKey][year].perTransactionFee === undefined) {
+          yearlyPricingOverrides[moduleKey][year].perTransactionFee = perFileFee;
+          console.log(`[UI] Auto-populated yearlyPricingOverrides[${moduleKey}][${year}].perTransactionFee = ${perFileFee}`);
+        }
+        if (yearlyPricingOverrides[moduleKey][year].oneTimeFee === undefined && year === 1) {
+          yearlyPricingOverrides[moduleKey][year].oneTimeFee = matchedTier.oneTimeFee || 0;
+          console.log(`[UI] Auto-populated yearlyPricingOverrides[${moduleKey}][${year}].oneTimeFee = ${matchedTier.oneTimeFee || 0}`);
+        }
+
         lineItems.push(item);
       }
 
@@ -3811,6 +3838,16 @@
           for (let year = 2; year <= contractYears; year++) {
             volumeConfig[productKey][year] = year1Volume;
             console.log(`[generateProposal] Set volumeConfig[${productKey}][${year}] = ${year1Volume} (copied from Year 1)`);
+
+            // Also copy Year 1's pricing overrides to Year 2+ for consistency
+            if (yearlyPricingOverrides[productKey] && yearlyPricingOverrides[productKey][1]) {
+              if (!yearlyPricingOverrides[productKey][year]) {
+                yearlyPricingOverrides[productKey][year] = {};
+              }
+              yearlyPricingOverrides[productKey][year].oneTimeFee = yearlyPricingOverrides[productKey][1].oneTimeFee;
+              yearlyPricingOverrides[productKey][year].perTransactionFee = yearlyPricingOverrides[productKey][1].perTransactionFee;
+              console.log(`[generateProposal] Copied Year 1 pricing overrides to Year ${year}:`, yearlyPricingOverrides[productKey][year]);
+            }
           }
         });
       }
