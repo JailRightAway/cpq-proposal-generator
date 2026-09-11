@@ -274,7 +274,9 @@ async function generateProposal(proposalData) {
       ];
 
       if (hasPrimarySetupFees) {
-        dataCells.push(createDataCell(formatCurrency(item.setupFee || item.oneTimePrice || 0), true, isShaded));
+        // Only-time fees only appear for Year 1
+        const setupFeeDisplay = (item.year || 1) === 1 ? formatCurrency(item.setupFee || item.oneTimePrice || 0) : 'N/A';
+        dataCells.push(createDataCell(setupFeeDisplay, true, isShaded));
       }
 
       if (hasPrimaryAnnualFees) {
@@ -370,7 +372,11 @@ async function generateProposal(proposalData) {
           createDataCell(String(item.year || 1), true, isShaded)
         ];
 
-        if (hasSetupFees) dataCells.push(createDataCell(formatCurrency(item.setupFee || 0), true, isShaded));
+        if (hasSetupFees) {
+          // One-time fees only appear for Year 1
+          const setupFeeDisplay = (item.year || 1) === 1 ? formatCurrency(item.setupFee || 0) : 'N/A';
+          dataCells.push(createDataCell(setupFeeDisplay, true, isShaded));
+        }
         if (hasAnnualFees) dataCells.push(createDataCell(formatCurrency(item.annualFee || 0), true, isShaded));
 
         // Always show transaction fee for add-ons

@@ -3775,7 +3775,8 @@
               if (!yearlyPricingOverrides[productKey][year]) {
                 yearlyPricingOverrides[productKey][year] = {};
               }
-              yearlyPricingOverrides[productKey][year].oneTimeFee = yearlyPricingOverrides[productKey][1].oneTimeFee;
+              // Copy per-transaction fee, but set one-time fee to 0 for Year 2+ (one-time fees only apply to Year 1)
+              yearlyPricingOverrides[productKey][year].oneTimeFee = 0;
               yearlyPricingOverrides[productKey][year].perTransactionFee = yearlyPricingOverrides[productKey][1].perTransactionFee;
               console.log(`[generateProposal] Copied Year 1 pricing overrides to Year ${year}:`, yearlyPricingOverrides[productKey][year]);
             }
