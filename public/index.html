@@ -3198,11 +3198,43 @@
       // Get ALL products from the module (these represent all tiers)
       const allTierProducts = JSON.parse(selectedOption.dataset.products);
 
+      // When ramp is disabled, copy Year 1 volume to Years 2-5 BEFORE creating line items
+      const pricingRampCheckbox = document.getElementById('pricingRampCheckbox');
+      const pricingRampEnabled = pricingRampCheckbox ? pricingRampCheckbox.checked : true;
+
+      console.log(`[addProduct] pricingRampEnabled: ${pricingRampEnabled}`);
+      console.log(`[addProduct] contractYears: ${contractYears}`);
+      console.log(`[addProduct] moduleKey: ${moduleKey}`);
+      console.log(`[addProduct] volumeConfig BEFORE copy:`, JSON.stringify(volumeConfig[moduleKey]));
+
+      if (!pricingRampEnabled) {
+        const year1Volume = volumeConfig[moduleKey][1] || 0;
+        console.log(`[addProduct] Ramp is DISABLED - copying Year 1 volume (${year1Volume}) to Years 2-${contractYears}`);
+        for (let year = 2; year <= contractYears; year++) {
+          volumeConfig[moduleKey][year] = year1Volume;
+          console.log(`[addProduct] Copied: volumeConfig[${moduleKey}][${year}] = ${year1Volume}`);
+        }
+      } else {
+        console.log(`[addProduct] Ramp is ENABLED - keeping separate volumes for each year`);
+      }
+
+      console.log(`[addProduct] volumeConfig AFTER copy:`, JSON.stringify(volumeConfig[moduleKey]));
+
       // Create a line item for each year with volume entered
+      console.log(`[addProduct] Starting line-item creation loop for contractYears=${contractYears}`);
+      console.log(`[addProduct] moduleKey: ${moduleKey}, allTierProducts count: ${allTierProducts.length}`);
+
       for (let year = 1; year <= contractYears; year++) {
         const volume = volumeConfig[moduleKey][year] || 0;
 
-        if (volume <= 0) continue;
+        console.log(`[addProduct] Year ${year}: volume = ${volume}`);
+
+        if (volume <= 0) {
+          console.log(`[addProduct] Year ${year}: SKIPPED (volume <= 0)`);
+          continue;
+        }
+
+        console.log(`[addProduct] Year ${year}: Creating line item with volume ${volume}`);
 
         // Find the tier that matches this year's volume
         const matchedTier = findTierForVolume(allTierProducts, volume);
@@ -3267,7 +3299,11 @@
         }
 
         lineItems.push(item);
+        console.log(`[addProduct] Year ${year}: Line item CREATED and added to lineItems`, item);
       }
+
+      console.log(`[addProduct] COMPLETE: Total lineItems created = ${lineItems.length}`);
+      console.log(`[addProduct] All lineItems:`, JSON.stringify(lineItems.map(li => ({ year: li.year, volume: li.volume, name: li.name }))));
 
       updateUI();
       showStatus(`Product added for ${contractYears} year(s)`, 'success');
@@ -3753,6 +3789,8 @@
 
       console.log('DEBUG generateProposal: yearlyTierSelections =', yearlyTierSelections);
       console.log('DEBUG generateProposal: lineItems =', lineItems);
+      console.log('DEBUG generateProposal: lineItems SUMMARY:', JSON.stringify(lineItems.map(li => ({ year: li.year, volume: li.volume, name: li.name, id: li.id }))));
+      console.log('DEBUG generateProposal: lineItems.length =', lineItems.length);
       console.log('DEBUG generateProposal: selectedAddOns =', selectedAddOns);
       console.log('DEBUG generateProposal: volumeConfig =', volumeConfig);
       console.log('DEBUG generateProposal: yearlyPricingOverrides =', yearlyPricingOverrides);
